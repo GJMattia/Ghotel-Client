@@ -13,6 +13,7 @@ export default function NavBar({ user, setUser }) {
       <li><Link to='/'>Main Page</Link></li>
 
       <li><Link to='/profile'>Profile</Link></li>
+      <li><Link to='/client'>Client</Link></li>
       <li><Link to='' onClick={handleLogOut}>Log Out</Link></li>
 
     </ul>
