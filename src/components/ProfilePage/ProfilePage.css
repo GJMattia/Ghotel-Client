@@ -1,0 +1,19 @@
+.ProfileDiv {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: dodgerblue;
+}
+
+.FriendsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    background-color: crimson;
+}

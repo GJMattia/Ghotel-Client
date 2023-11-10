@@ -1,0 +1,18 @@
+.NavBar {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: black;
+    padding: 1rem;
+    margin: 0;
+}
+
+.NavBar>li {
+    color: white;
+}
+
+.NavBar>li>a {
+    color: white;
+}

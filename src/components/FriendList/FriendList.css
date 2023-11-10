@@ -1,0 +1,10 @@
+.FriendList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: rgb(255, 204, 0);
+    padding: 0;
+    list-style: none;
+}
