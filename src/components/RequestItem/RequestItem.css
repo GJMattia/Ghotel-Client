@@ -1,4 +1,35 @@
 .RequestLine {
-    margin: 1rem;
-    background-color: lawngreen;
+    width: 95%;
+    border: 1px dotted white;
+    margin: .1rem;
+}
+
+.RequestItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.RequestItem>button {
+    cursor: pointer;
+    border: 1px dotted white;
+    height: 2rem;
+    width: 3rem;
+    background-color: rgb(81, 81, 81);
+}
+
+.RequestItem>button:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+.Accept {
+    color: lawngreen;
+}
+
+
+
+
+.Decline {
+    color: red;
 }

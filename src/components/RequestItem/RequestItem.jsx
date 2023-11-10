@@ -28,10 +28,9 @@ export default function RequestItem({ user, request, friendRequestData, setFrien
         <li className='RequestLine'>
             <div className='RequestItem'>
 
-                <h3>{request.ID}</h3>
                 <h3>{request.name}</h3>
-                <button onClick={handleAccept}>accept</button>
-                <button onClick={handleDecline}>decline</button>
+                <button className='Accept' onClick={handleAccept}>✓</button>
+                <button className='Decline' onClick={handleDecline}>X</button>
 
             </div>
         </li>

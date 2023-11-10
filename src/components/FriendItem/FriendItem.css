@@ -1,0 +1,12 @@
+.FriendLine {
+    width: 95%;
+    margin: .1rem;
+    border: 1px dotted white;
+}
+
+.FriendLine>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

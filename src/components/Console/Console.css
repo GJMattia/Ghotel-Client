@@ -5,7 +5,7 @@
     align-items: center;
     width: 20rem;
     height: 25rem;
-    background-color: orange;
+    background-color: #fec42e;
     color: rgb(70, 68, 68);
     border-radius: 1rem;
     position: relative;
@@ -16,7 +16,7 @@
 }
 
 .ConsoleX {
-    background-color: orange;
+    background-color: #fec42e;
     border: 1px solid rgb(50, 50, 50);
     color: rgb(55, 14, 14);
     position: absolute;
@@ -27,8 +27,49 @@
 
 .ConsoleScreen {
     background-color: rgb(81, 81, 81);
-    width: 90%;
-    height: 65%;
+    width: 95%;
+    height: 16rem;
     border: 2px solid black;
     border-radius: .5rem;
+    overflow: auto;
+}
+
+.ConsoleNav {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    height: 4rem;
+    border-top: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.ConsoleNav>li {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.ConsoleNav>li>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ConsoleNav>li>div:hover {
+    background-color: #b58124;
+}
+
+.ActiveTab {
+    background-color: #b58124;
 }

@@ -8,6 +8,8 @@ export default function Client({ user }) {
 
     let [consoleDiv, setConsoleDiv] = useState(false);
 
+
+
     return (
         <div className='Client'>
 

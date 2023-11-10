@@ -1,15 +1,17 @@
-import './FriendList.css';
+import './ConsoleFriends.css';
 import { useState, useEffect } from 'react';
 import * as friendListAPI from '../../../utilities/friendlist-api';
 import FriendItem from '../FriendItem/FriendItem';
 
-export default function FriendList({ user, friends, setFriends }) {
+export default function ConsoleFriends({ user }) {
+
+    const [friendData, setFriendData] = useState(null);
 
     useEffect(function () {
         async function getFriends() {
             try {
                 const friends = await friendListAPI.getFriends();
-                setFriends(friends);
+                setFriendData(friends);
             } catch (error) {
                 console.error('Error Fetching Questions', error);
             }
@@ -17,19 +19,21 @@ export default function FriendList({ user, friends, setFriends }) {
         getFriends();
     }, []);
 
-
     let friendList = null;
-    if (friends) {
+    if (friendData) {
 
-        friendList = friends.map((friend, index) => (
+        friendList = friendData.map((friend, index) => (
             <FriendItem user={user} friend={friend} index={index} key={index} />
         ));
     };
 
 
     return (
-        <ul className='FriendList'>
-            {friendList}
-        </ul>
+        <>
+            <h3 className='FriendListTitle'>Friends</h3>
+            <ul className='FriendList'>
+                {friendList}
+            </ul>
+        </>
     )
 }

@@ -3,8 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    background-color: rgb(255, 204, 0);
-    padding: 0;
     list-style: none;
+    color: white;
+    padding: 0;
+    margin-top: .2rem;
+}
+
+.FriendListTitle {
+    text-align: center;
+    color: white;
 }

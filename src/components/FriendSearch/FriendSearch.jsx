@@ -53,20 +53,21 @@ export default function FriendSearch({ user }) {
 
     return (
         <div className='FriendSearch'>
-            <h1>Search for Friends</h1>
-            <input type="text"
-                value={searchInput}
-                onChange={handleInputChange} />
-            <button onClick={() => findUser(searchInput, users)}>Search</button>
+            <h3>Search for Friends</h3>
+
+            <div className='SearchDiv'>
+                <input type="text"
+                    placeholder='user'
+                    value={searchInput}
+                    onChange={handleInputChange} />
+                <button className='SearchButton' onClick={() => findUser(searchInput, users)}>Search User</button>
+            </div>
 
             {foundUser && <div className='FoundUser'>
-                <h1>{foundUser.username}</h1>
-                <p>{foundUser.ID}</p>
-                <button onClick={handleSendFriendRequest}>Friend Request</button>
+                <h3>{foundUser.username}</h3>
+                <button className='SearchButton' onClick={handleSendFriendRequest}>Send Request</button>
             </div>}
-
-            <p>{searchError}</p>
-
+            <p className='SearchResult'>{searchError}</p>
         </div>
     )
 }

@@ -3,8 +3,8 @@ import './FriendItem.css';
 export default function FriendItem({ friend }) {
 
     return (
-        <li><div>
-            <h3>{friend.name}</h3>
+        <li className='FriendLine'><div>
+            <p>{friend.name}</p>
 
         </div></li>
     )

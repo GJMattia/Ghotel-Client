@@ -1,20 +1,21 @@
-.FriendRequests {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: lightseagreen;
-    width: 50%;
-    list-style: none;
-    padding: 0;
-}
-
 .FriendRequestDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    margin: 1rem;
-    background-color: lightgreen;
+    width: 100%;
+    color: white;
+}
+
+
+
+.FriendRequests {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    margin: 0rem;
+    padding: 0;
 }

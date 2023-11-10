@@ -31,7 +31,7 @@ export default function FriendRequests({ user }) {
 
     return (
         <div className='FriendRequestDiv'>
-            <h1>Friend Requests</h1>
+            <h3>Friend Requests</h3>
             <ul className='FriendRequests'>
                 {requests}
             </ul>
