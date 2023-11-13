@@ -27,8 +27,9 @@ export default function FriendSearch({ user }) {
     }, []);
 
     function findUser(string, users) {
+        const lowerCaseString = string.toLowerCase();
 
-        const foundUser = users.find((user) => user.user.name === string);
+        const foundUser = users.find((user) => user.user.name.toLowerCase() === lowerCaseString);
 
         if (foundUser) {
             setFoundUser({

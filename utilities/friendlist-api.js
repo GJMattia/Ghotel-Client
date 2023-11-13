@@ -56,3 +56,14 @@ export async function acceptRequest(request) {
         console.error('error deleting request:', error);
     }
 }
+
+//For Removing a friend
+
+export async function removeFriend(deleteID) {
+    try {
+        console.log(deleteID)
+        await sendRequest(`${BASE_URL}/friends/${deleteID}`, 'DELETE')
+    } catch (error) {
+        console.error('error removing friend:', error);
+    }
+}

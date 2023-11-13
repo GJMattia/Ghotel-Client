@@ -2,10 +2,15 @@ import './ConsoleFriends.css';
 import { useState, useEffect } from 'react';
 import * as friendListAPI from '../../../utilities/friendlist-api';
 import FriendItem from '../FriendItem/FriendItem';
+import ConfirmRemoveFriend from '../ConfirmRemoveFriend/ConfirmRemoveFriend';
 
 export default function ConsoleFriends({ user }) {
 
     const [friendData, setFriendData] = useState(null);
+
+    const [removeFriendDiv, setRemoveFriendDiv] = useState(false);
+
+    const [friendToDelete, setFriendToDelete] = useState(null);
 
     useEffect(function () {
         async function getFriends() {
@@ -23,17 +28,18 @@ export default function ConsoleFriends({ user }) {
     if (friendData) {
 
         friendList = friendData.map((friend, index) => (
-            <FriendItem user={user} friend={friend} index={index} key={index} />
+            <FriendItem user={user} friend={friend} index={index} key={index} removeFriendDiv={removeFriendDiv} setRemoveFriendDiv={setRemoveFriendDiv} setFriendToDelete={setFriendToDelete} />
         ));
     };
 
 
     return (
-        <>
+        <div className='ConsoleFriends'>
+            {removeFriendDiv && <ConfirmRemoveFriend user={user} friendData={friendData} setFriendData={setFriendData} removeFriendDiv={removeFriendDiv} setRemoveFriendDiv={setRemoveFriendDiv} friendToDelete={friendToDelete} />}
             <h3 className='FriendListTitle'>Friends</h3>
             <ul className='FriendList'>
                 {friendList}
             </ul>
-        </>
+        </div>
     )
 }

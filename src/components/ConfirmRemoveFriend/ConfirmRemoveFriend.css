@@ -1,0 +1,36 @@
+.ConfirmRemoveFriend {
+    color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(81, 81, 81);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ConfirmRemoveFriend>h3 {
+    text-align: center;
+    width: 95%;
+}
+
+.CRFoptions {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.CRFoptions>button {
+    cursor: pointer;
+    border: 1px dotted white;
+    background-color: rgb(81, 81, 81);
+    padding: .5rem;
+    color: white;
+    width: 40%;
+}
+
+.CRFoptions>button:hover {
+    color: black;
+    background-color: darkred;
+}

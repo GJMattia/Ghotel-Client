@@ -8,6 +8,9 @@ import FriendSearch from '../FriendSearch/FriendSearch';
 export default function Console({ user, consoleDiv, setConsoleDiv }) {
 
     const [selectedTab, setSelectedTab] = useState('ConsoleProfile');
+    const [isDragging, setIsDragging] = useState(false);
+    const [initialX, setInitialX] = useState(0);
+    const [initialY, setInitialY] = useState(0);
 
     function closeConsole() {
         setConsoleDiv(!consoleDiv);
@@ -17,10 +20,34 @@ export default function Console({ user, consoleDiv, setConsoleDiv }) {
         setSelectedTab(componentName);
     };
 
+    function handleMouseDown(e) {
+        setIsDragging(true);
+        setInitialX(e.clientX);
+        setInitialY(e.clientY);
+    }
+
+    function handleMouseUp() {
+        setIsDragging(false);
+    }
+
+    function handleMouseMove(e) {
+        if (isDragging) {
+            const consoleElement = document.querySelector('.Console');
+            const newX = e.clientX - initialX + consoleElement.offsetLeft;
+            const newY = e.clientY - initialY + consoleElement.offsetTop;
+            consoleElement.style.left = newX + 'px';
+            consoleElement.style.top = newY + 'px';
+            setInitialX(e.clientX);
+            setInitialY(e.clientY);
+        }
+    }
 
 
     return (
-        <div className='Console'>
+        <div className='Console'
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}>
             <h3>Habbo Console</h3>
             <button onClick={closeConsole} className='ConsoleX'>X</button>
             <div className='ConsoleScreen'>

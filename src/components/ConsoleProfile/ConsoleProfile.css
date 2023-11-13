@@ -4,7 +4,15 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 90%;
     color: white;
     font-size: .7rem;
+
+}
+
+.ConsoleProfile>h3 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: .5rem;
     border-bottom: 2px dotted white;
 }
