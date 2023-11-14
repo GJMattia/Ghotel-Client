@@ -20,7 +20,7 @@ export default function Client({ user }) {
         <div className='Client'>
 
             {consoleDiv && <Console user={user} consoleDiv={consoleDiv} setConsoleDiv={setConsoleDiv} setUsersMessaged={setUsersMessaged} usersMessaged={usersMessaged} />}
-            {chatDiv && <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} />}
+            {chatDiv && <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} usersMessaged={usersMessaged} />}
             <ClientNav user={user} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} />
         </div>
     )
