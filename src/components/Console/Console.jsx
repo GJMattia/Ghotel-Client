@@ -5,7 +5,7 @@ import ConsoleFriends from '../ConsoleFriends/ConsoleFriends';
 import FriendRequests from '../FriendRequests/FriendRequests';
 import FriendSearch from '../FriendSearch/FriendSearch';
 
-export default function Console({ user, consoleDiv, setConsoleDiv }) {
+export default function Console({ user, consoleDiv, setConsoleDiv, setUsersMessaged, usersMessaged }) {
 
     const [selectedTab, setSelectedTab] = useState('ConsoleProfile');
     const [isDragging, setIsDragging] = useState(false);
@@ -53,7 +53,7 @@ export default function Console({ user, consoleDiv, setConsoleDiv }) {
             <div className='ConsoleScreen'>
 
                 {selectedTab === 'ConsoleProfile' && <ConsoleProfile user={user} />}
-                {selectedTab === 'ConsoleFriends' && <ConsoleFriends user={user} />}
+                {selectedTab === 'ConsoleFriends' && <ConsoleFriends user={user} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} />}
                 {selectedTab === 'FriendRequests' && <FriendRequests user={user} />}
                 {selectedTab === 'FriendSearch' && <FriendSearch user={user} />}
 

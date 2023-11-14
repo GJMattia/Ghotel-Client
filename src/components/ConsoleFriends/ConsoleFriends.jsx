@@ -4,7 +4,7 @@ import * as friendListAPI from '../../../utilities/friendlist-api';
 import FriendItem from '../FriendItem/FriendItem';
 import ConfirmRemoveFriend from '../ConfirmRemoveFriend/ConfirmRemoveFriend';
 
-export default function ConsoleFriends({ user }) {
+export default function ConsoleFriends({ user, setUsersMessaged, usersMessaged }) {
 
     const [friendData, setFriendData] = useState(null);
 
@@ -28,7 +28,7 @@ export default function ConsoleFriends({ user }) {
     if (friendData) {
 
         friendList = friendData.map((friend, index) => (
-            <FriendItem user={user} friend={friend} index={index} key={index} removeFriendDiv={removeFriendDiv} setRemoveFriendDiv={setRemoveFriendDiv} setFriendToDelete={setFriendToDelete} />
+            <FriendItem user={user} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} friend={friend} index={index} key={index} removeFriendDiv={removeFriendDiv} setRemoveFriendDiv={setRemoveFriendDiv} setFriendToDelete={setFriendToDelete} />
         ));
     };
 

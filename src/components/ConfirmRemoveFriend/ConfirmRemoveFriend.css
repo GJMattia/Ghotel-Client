@@ -10,9 +10,11 @@
     align-items: center;
 }
 
-.ConfirmRemoveFriend>h3 {
+.ConfirmRemoveFriend>p {
     text-align: center;
-    width: 95%;
+    width: 90%;
+    padding: .5rem;
+    border: 1px dotted white;
 }
 
 .CRFoptions {

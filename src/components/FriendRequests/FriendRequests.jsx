@@ -32,9 +32,13 @@ export default function FriendRequests({ user }) {
     return (
         <div className='FriendRequestDiv'>
             <h3>Friend Requests</h3>
-            <ul className='FriendRequests'>
-                {requests}
-            </ul>
+            {requests && requests.length > 0 ? (
+                <ul className='FriendRequests'>
+                    {requests}
+                </ul>
+            ) : (
+                <p>You currently have no requests</p>
+            )}
         </div>
     )
 }

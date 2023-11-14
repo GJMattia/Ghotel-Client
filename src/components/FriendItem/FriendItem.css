@@ -4,21 +4,33 @@
     border: 1px dotted white;
 }
 
+.FriendLine>div>p {
+    margin-left: 1rem;
+}
+
 .FriendLine>div {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
-.FriendLine>div>button {
+.FriendOptions {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.FriendOptions>button {
     cursor: pointer;
     border: 0;
     background-color: rgb(81, 81, 81);
-    padding: .5rem;
-    color: crimson;
+    padding: .2rem;
+    color: white;
+    border: 1px dotted white;
+    width: 3rem;
 }
 
-.FriendLine>div>button:hover {
-    color: black;
+.FriendOptions>button:hover {
+    color: lawngreen;
 }

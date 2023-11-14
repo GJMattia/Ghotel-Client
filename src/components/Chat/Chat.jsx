@@ -1,11 +1,15 @@
-import './MainPage.css';
+import './Chat.css';
 import io from 'socket.io-client';
 const socket = io.connect('http://localhost:4741');
 import { useEffect, useState } from 'react';
 
 
-export default function MainPage() {
 
+export default function Chat({ user, chatDiv, setChatDiv }) {
+
+    function toggleChatDiv() {
+        setChatDiv(!chatDiv);
+    };
 
     const [message, setMessage] = useState('');
     const [messageReceived, setMessageReceived] = useState([]);
@@ -33,35 +37,19 @@ export default function MainPage() {
     }, [socket]);
 
 
+
     function log(array) {
         return array.map((element, index) => (
             <li key={index}>{element}</li>
         ));
-    }
+    };
+
 
     return (
-        <div className='MainPage'>
-            <input
-                placeholder="Room Number..."
-                onChange={(event) => {
-                    setRoom(event.target.value);
-                }}
-            />
-            <button onClick={joinRoom}> Join Room</button>
-            <h2>Current Room {room} </h2>
-
-
-            <ul className='Messages'>
-                {log(messageReceived)}
-            </ul>
-
-
-            <input className='MessageInput' placeholder='message...' onChange={(event) => {
-                setMessage(event.target.value);
-            }} />
-
-            <button onClick={sendMessage}>Send Message</button>
-
+        <div className='ChatDiv'>
+            <h3>Chat</h3>
+            <div onClick={toggleChatDiv} className='ChatX'>X</div>
+            <input />
         </div>
     )
 }

@@ -8,6 +8,10 @@
 }
 
 
+.FriendRequestDiv>p {
+    padding: 1rem;
+    border: 1px dotted white;
+}
 
 .FriendRequests {
     display: flex;

@@ -23,7 +23,7 @@ export default function ConfirmRemoveFriend({ user, removeFriendDiv, setRemoveFr
 
     return (
         <div className='ConfirmRemoveFriend'>
-            <h3>Do you want to delete {friendToDelete.name} from your FriendList?</h3>
+            <p>Are you sure that you want to remove {friendToDelete.name} as a friend?</p>
             <div className='CRFoptions'>
                 <button onClick={handleRemoveFriend}>YES</button>
                 <button onClick={toggleRemoveFriendDiv}>NO</button>

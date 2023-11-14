@@ -19,11 +19,15 @@
 .ConsoleX {
     background-color: #fec42e;
     border: 1px solid rgb(50, 50, 50);
-    color: rgb(55, 14, 14);
     position: absolute;
     right: .5rem;
     top: .5rem;
     cursor: pointer;
+}
+
+.ConsoleX:hover {
+    color: white;
+    background-color: #b58124;
 }
 
 .ConsoleScreen {

@@ -19,7 +19,6 @@ export default function ConsoleProfile({ user }) {
     }, []);
 
 
-    console.log(friendRequestData.length)
     return (
         <div className='ConsoleProfile'>
             <h1>Username: {user.name}</h1>
