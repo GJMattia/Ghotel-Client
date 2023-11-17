@@ -45,7 +45,7 @@ export default function FriendSearch({ user }) {
 
     async function handleSendFriendRequest() {
         try {
-            await friendListAPI.sendFriendRequest({ friendID: foundUser.ID })
+            await friendListAPI.sendFriendRequest({ friendID: foundUser.ID, friendName: foundUser.username })
         } catch (error) {
             console.error('error creating note'.error)
         }

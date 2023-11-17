@@ -11,6 +11,7 @@ export default function Chat({ user, chatDiv, setChatDiv, usersMessaged }) {
     const [message, setMessage] = useState('');
     const [messageReceived, setMessageReceived] = useState([]);
 
+
     function toggleChatDiv() {
         setChatDiv(!chatDiv);
     };
