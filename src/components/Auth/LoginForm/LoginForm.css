@@ -1,0 +1,40 @@
+.LoginForm {
+    margin-top: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+
+}
+
+.GoAway {
+    position: absolute;
+    top: 30rem;
+}
+
+.LoginButton {
+    margin-left: 1rem;
+    border: 2px solid white;
+    color: white;
+    width: 5rem;
+    height: 2rem;
+    border-radius: .2rem;
+    background: linear-gradient(to top, black, gray);
+
+}
+
+.LoginForm {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(89, 89, 89);
+}
+
+.GhotelLogo {
+    width: 12%;
+}

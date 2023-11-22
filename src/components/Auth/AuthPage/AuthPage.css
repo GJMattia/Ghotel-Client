@@ -1,0 +1,27 @@
+.AuthPageTitle {
+    color: white;
+}
+
+.HomePageDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-top: 1px solid gray;
+    width: 60%;
+    height: 25rem;
+    background-image: url('../../../assets/images/landing/Homepage.png');
+    background-position: center center;
+    background-position: center 15%;
+}
+
+.JoinButton {
+    position: relative;
+    top: 1rem;
+    width: 15rem;
+    height: 8rem;
+    color: white;
+    font-size: 2.6rem;
+    background-color: rgb(99, 197, 0);
+    border: 3px solid green;
+    border-radius: .5rem;
+}
