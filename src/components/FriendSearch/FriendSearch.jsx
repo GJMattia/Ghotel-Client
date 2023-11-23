@@ -26,29 +26,39 @@ export default function FriendSearch({ user }) {
         getUsers();
     }, []);
 
+
     function findUser(string, users) {
         const lowerCaseString = string.toLowerCase();
 
         const foundUser = users.find((user) => user.user.name.toLowerCase() === lowerCaseString);
 
-        if (foundUser) {
+        if (foundUser && foundUser.user.name === user.name) {
+            setSearchError(`You can't friend request yourself`);
+            setFoundUser(null);
+        } else if (foundUser) {
             setFoundUser({
                 ID: foundUser.user._id,
                 username: foundUser.user.name
             });
-            setSearchError('You found a friend!')
+            setSearchError('You found a friend!');
         } else {
             setFoundUser(null);
-            setSearchError('No Users found with that name')
+            setSearchError('No users found with that name');
         }
-    }
+    };
+
 
     async function handleSendFriendRequest() {
         try {
-            await friendListAPI.sendFriendRequest({ friendID: foundUser.ID, friendName: foundUser.username })
+            await friendListAPI.sendFriendRequest({ friendID: foundUser.ID, friendName: foundUser.username });
+            setSearchInput('');
+            setFoundUser(null);
+            setSearchError('Friend Request Sent!');
+
         } catch (error) {
             console.error('error creating note'.error)
         }
+
     }
 
 
