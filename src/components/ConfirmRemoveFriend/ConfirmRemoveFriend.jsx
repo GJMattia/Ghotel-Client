@@ -6,13 +6,13 @@ export default function ConfirmRemoveFriend({ user, removeFriendDiv, setRemoveFr
     function toggleRemoveFriendDiv() {
         setRemoveFriendDiv(!removeFriendDiv);
 
-    }
+    };
 
     async function handleRemoveFriend() {
         try {
-            let deleteID = friendToDelete._id;
-            await friendListAPI.removeFriend(deleteID);
 
+            let deleteID = friendToDelete.ID;
+            await friendListAPI.removeFriend(deleteID);
             const friends = await friendListAPI.getFriends();
             setFriendData(friends);
             setRemoveFriendDiv(!removeFriendDiv);
@@ -20,6 +20,7 @@ export default function ConfirmRemoveFriend({ user, removeFriendDiv, setRemoveFr
             console.error('error creating note'.error)
         }
     };
+
 
     return (
         <div className='ConfirmRemoveFriend'>

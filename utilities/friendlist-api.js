@@ -67,3 +67,14 @@ export async function removeFriend(deleteID) {
         console.error('error removing friend:', error);
     }
 }
+
+// Get Requests Sent
+export async function getRequestsSent() {
+    return sendRequest(`${BASE_URL}/getrequestssent`);
+};
+
+//Get User Room
+
+export async function getUserRoom() {
+    return sendRequest(`${BASE_URL}/getuserroom`);
+};

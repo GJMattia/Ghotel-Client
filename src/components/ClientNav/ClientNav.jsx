@@ -9,16 +9,14 @@ export default function ClientNav({ user, consoleDiv, setConsoleDiv, chatDiv, se
         setConsoleDiv(!consoleDiv);
     };
 
-    function toggleChatDiv() {
-        setChatDiv(!chatDiv);
-    }
-
-
+    function toggleChat() {
+        setChatDiv(!chatDiv)
+    };
 
     return (
         <ul className='ClientNav'>
             <li><img onClick={toggleConsole} className='ClientNavIcon' src={ConsolePic} /></li>
-            <li><img onClick={toggleChatDiv} className='ClientNavIcon' src={ChatPic} /></li>
+            <li><img onClick={toggleChat} className='ClientNavIcon' src={ChatPic} /></li>
         </ul>
     )
 }

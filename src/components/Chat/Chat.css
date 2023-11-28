@@ -7,8 +7,13 @@
     height: 24rem;
     background-color: white;
     border-radius: .5rem;
-    position: relative;
+    position: absolute;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    cursor: grab;
+}
+
+.HideChat {
+    display: none;
 }
 
 .ChatDiv>h3 {
@@ -60,6 +65,8 @@
     justify-content: flex-start;
     align-items: center;
     border-bottom: 1px dotted gray;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 
@@ -67,7 +74,7 @@
 
 .Messages {
     position: absolute;
-    top: 4rem;
+    top: 4.1rem;
     padding: 0;
     list-style: none;
     width: 100%;
@@ -76,15 +83,15 @@
 }
 
 .Messages>li {
-    text-align: center;
-    width: 100%;
+    text-align: left;
+    padding: 0.2rem;
 }
 
-.Messages>li:nth-child(even) {
+
+.Messages>li.user {
     background-color: lightgray;
-    position: relative;
 }
 
-.Messages>li:nth-child(odd) {
+.Messages>li.sender {
     background-color: lightblue;
 }

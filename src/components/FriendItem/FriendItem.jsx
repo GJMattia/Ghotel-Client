@@ -1,23 +1,35 @@
 import './FriendItem.css';
 
-export default function FriendItem({ friend, removeFriendDiv, setRemoveFriendDiv, setFriendToDelete, usersMessaged, setUsersMessaged }) {
+export default function FriendItem({ friend, setChatDiv, userRoom, removeFriendDiv, setRemoveFriendDiv, setFriendToDelete, usersMessaged, setUsersMessaged, setRoom }) {
 
     function toggleRemoveFriend() {
         setRemoveFriendDiv(!removeFriendDiv);
         setFriendToDelete(friend)
-    }
+    };
+
+    function calculateRoom(room1, room2) {
+        return room1 + room2;
+    };
+
 
     function messageUser() {
+
+        const isUserAlreadyMessaged = usersMessaged.some(user => user.name === friend.name);
+
+        if (isUserAlreadyMessaged) {
+            return;
+        };
+
         let messagedUser = {
             name: friend.name,
-            room: 100
-        }
+            room: calculateRoom(friend.room, userRoom)
+        };
 
+        setChatDiv(true);
+        setRoom(messagedUser.room)
         const updatedUsersMessaged = [...usersMessaged, messagedUser];
-
-        console.log(usersMessaged)
         setUsersMessaged(updatedUsersMessaged);
-    }
+    };
 
     return (
         <li className='FriendLine'><div>
@@ -28,4 +40,4 @@ export default function FriendItem({ friend, removeFriendDiv, setRemoveFriendDiv
             </div>
         </div></li>
     )
-}
+};
