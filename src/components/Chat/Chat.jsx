@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import { useEffect, useState } from 'react';
 
 // const socket = io.connect('http://localhost:4741');
-const socket = io.connect('https://ghotel-client.onrender.com');
+const socket = io.connect('https://ghotel-api.onrender.com');
 
 export default function Chat({ user, usersMessaged, setUsersMessaged, room, setRoom, chatDiv, setChatDiv }) {
     const [message, setMessage] = useState('');
