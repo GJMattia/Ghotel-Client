@@ -1,0 +1,39 @@
+.SignUpFormDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid gray;
+    position: absolute;
+    top: 12rem;
+}
+
+.SignUpFormDiv>h2 {
+    color: white;
+}
+
+.SignUpForm {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20rem;
+    color: white;
+}
+
+.SignUpForm>input {
+    width: 50%;
+    margin: .5rem;
+}
+
+.SignUpError {
+    color: red;
+}
+
+.SignUpForm>button {
+    margin-top: 1rem;
+}

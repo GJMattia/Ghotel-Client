@@ -1,5 +1,8 @@
 .AuthPageTitle {
+    text-align: center;
+    width: 70%;
     color: white;
+    font-size: 1.8rem;
 }
 
 .HomePageDiv {
@@ -8,20 +11,75 @@
     align-items: flex-start;
     border-top: 1px solid gray;
     width: 75%;
-    height: 25rem;
+    height: 30rem;
     background-image: url('../../../assets/images/landing/Homepage.png');
     background-position: center center;
     background-position: center 15%;
+    background-repeat: no-repeat;
+}
+
+.JoinDiv {
+    position: relative;
+    top: 1rem;
+}
+
+.JoinDiv>p {
+    margin: .5rem;
+    font-weight: 900;
+    color: white;
+}
+
+.JoinDiv>p>span {
+    font-weight: 500;
+    color: gray;
 }
 
 .JoinButton {
-    position: relative;
-    top: 1rem;
     width: 15rem;
     height: 8rem;
     color: white;
     font-size: 2.6rem;
-    background-color: rgb(99, 197, 0);
+    background: linear-gradient(to bottom, rgb(99, 197, 0) 50%, green 50%);
     border: 3px solid green;
     border-radius: .5rem;
+    cursor: pointer;
+}
+
+.JoinButton:hover {
+    background: linear-gradient(to bottom, green 50%, rgb(99, 197, 0) 50%);
+}
+
+
+
+.AuthList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    width: 75%;
+    padding-bottom: 1rem;
+}
+
+.AuthList>li {
+    color: white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.AuthList>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+.AuthList>li>a:hover {
+    color: dodgerblue;
+}
+
+.AuthDisclaimer {
+    text-align: center;
+    width: 60%;
+    margin: 0;
+    color: gray;
+    font-size: .8rem;
 }
