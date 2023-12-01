@@ -1,6 +1,7 @@
 import './HomePageHeader.css';
 import Ghotel from '../../../assets/images/landing/GhotelLogo.gif';
 import * as userService from '../../../../utilities/user-services'
+import { NavLink } from 'react-router-dom';
 
 export default function HomePageHeader({ user, setUser }) {
 
@@ -11,9 +12,12 @@ export default function HomePageHeader({ user, setUser }) {
     return (
         <div className='HomePageHeader'>
             <img className='GhotelHP' src={Ghotel} />
-            <button className='OpenClientBtn' onClick={() => window.open('/client', '_blank')}>
+            <NavLink className='OpenClientBtn' activeClassName='active' to='/client' exact>
                 Enter Ghotel
-            </button>
+            </NavLink>
+            {/* <button className='OpenClientBtn' onClick={() => window.open('/client', '_blank')}>
+                Enter Ghotel
+            </button> */}
 
             <button className='SignOutBtn' onClick={handleLogOut}> Sign Out </button>
         </div>
