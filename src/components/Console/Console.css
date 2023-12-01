@@ -9,6 +9,7 @@
     color: rgb(70, 68, 68);
     border-radius: 1rem;
     position: absolute;
+    top: 10rem;
     cursor: grab;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }

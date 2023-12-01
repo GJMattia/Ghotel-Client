@@ -13,6 +13,7 @@
     width: 75%;
     height: 30rem;
     background-image: url('../../../assets/images/landing/Homepage.png');
+    image-rendering: pixelated;
     background-position: center center;
     background-position: center 15%;
     background-repeat: no-repeat;
