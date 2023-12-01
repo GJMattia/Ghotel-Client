@@ -1,0 +1,91 @@
+.Catalog {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 28rem;
+    height: 35rem;
+    background-color: rgb(239, 239, 239);
+    border: 1px solid black;
+    position: absolute;
+    top: 5rem;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.CatalogTop {
+    position: absolute;
+    image-rendering: pixelated;
+    width: 28.1rem;
+    top: -1rem;
+}
+
+.CatalogBottom {
+    position: absolute;
+    bottom: -.5rem;
+    width: 28.1rem;
+}
+
+
+.test {
+    margin-top: 3rem;
+}
+
+.CatalogNav {
+    position: absolute;
+    left: 28rem;
+    height: 33rem;
+    top: 1rem;
+    width: 10rem;
+    border-radius: .5rem;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+    background-color: rgb(142, 188, 234);
+
+}
+
+.LineList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    list-style: none;
+    background-color: rgb(237, 237, 237);
+    margin-top: 2.5rem;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid black;
+
+}
+
+
+
+.FurniLine {
+    width: 94%;
+    padding: .3rem;
+    border-bottom: 1px solid black;
+
+}
+
+.FurniLine:hover {
+    background-color: white;
+}
+
+.CloseCatalog {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    border: 0;
+    color: white;
+    background-color: rgb(142, 188, 234);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+.CloseCatalog:hover {
+    background-color: black;
+}

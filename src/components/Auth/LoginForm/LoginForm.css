@@ -28,7 +28,7 @@
 }
 
 .LoginButton:hover {
-    background: linear-gradient(to top, rgb(48, 48, 48) 50%, black 50%);
+    background: linear-gradient(to top, rgb(60, 60, 60) 50%, rgb(106, 106, 106) 50%);
 }
 
 

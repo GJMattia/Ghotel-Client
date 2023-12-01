@@ -47,7 +47,7 @@
 }
 
 .JoinButton:hover {
-    background: linear-gradient(to bottom, green 50%, rgb(99, 197, 0) 50%);
+    background: linear-gradient(to bottom, rgb(120, 239, 0) 50%, rgb(0, 192, 0) 50%);
 }
 
 
