@@ -1,0 +1,48 @@
+.CatalogShowcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    top: 16rem;
+    right: 1rem;
+    user-select: none;
+}
+
+.FurniTitle {
+    position: absolute;
+    top: 6rem;
+}
+
+.FurniDescription {
+    position: absolute;
+    top: 7.8rem;
+    font-size: .8rem;
+}
+
+.FurniPrice {
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+.Furni {
+    margin: 1rem;
+    image-rendering: pixelated;
+}
+
+.BuyBtn {
+    position: absolute;
+    bottom: 1rem;
+    font-weight: 900;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: .3rem;
+    box-shadow: 2px 2px 3px;
+    cursor: pointer;
+}
+
+.BuyBtn:hover {
+    background-color: aliceblue;
+}

@@ -10,7 +10,7 @@ export default function Client({ user }) {
 
     let [consoleDiv, setConsoleDiv] = useState(false);
     let [chatDiv, setChatDiv] = useState(false);
-    let [catalogDiv, setCatalogDiv] = useState(true);
+    let [catalogDiv, setCatalogDiv] = useState(false);
     let [room, setRoom] = useState(null);
     let [usersMessaged, setUsersMessaged] = useState([]);
 

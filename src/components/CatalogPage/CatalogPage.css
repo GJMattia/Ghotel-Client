@@ -1,0 +1,61 @@
+.CatalogPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.CatalogPage>p {
+    width: 80%;
+}
+
+.LineHeader {
+    margin-top: 2rem;
+}
+
+.CatalogPage>h4 {
+    position: absolute;
+    left: 1rem;
+    top: 13rem;
+}
+
+.CatalogItemList {
+    position: absolute;
+    left: 1rem;
+    top: 15rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 10rem;
+    justify-items: center;
+    gap: .4rem;
+}
+
+.CatalogItemList>li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: lightgray;
+    border-radius: .5rem;
+}
+
+.CatalogItemList>li:hover {
+    background-color: white;
+}
+
+.CatalogItem {
+    background-color: blue;
+}
+
+.FurniIcon {
+    image-rendering: pixelated;
+}
