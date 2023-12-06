@@ -121,7 +121,8 @@ export default function Chat({ user, usersMessaged, setUsersMessaged, room, setR
         <div
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
-            onMouseMove={handleMouseMove} className={`ChatDiv ${chatDiv ? '' : 'HideChat'}`}>
+            onMouseMove={handleMouseMove}
+            className={`ChatDiv ${chatDiv ? '' : 'HideChat'}`}>
             <h3>Chat</h3>
             <div onClick={toggleChat} className='ChatX'>X</div>
             <ul className='ConversationList'>{conversations}</ul>
