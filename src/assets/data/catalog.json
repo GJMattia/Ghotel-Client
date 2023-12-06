@@ -19,7 +19,7 @@
       },
       {
         "name": "Petal Patch",
-        "img": "src/assets/images/furni/rares/Petal.gif",
+        "img": "src/assets/images/furni/rares/petal.gif",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
         "description": "A little bit of outdoors indoors..",
         "price": 25
