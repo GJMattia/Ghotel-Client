@@ -1,14 +1,16 @@
 import './CatalogPage.css';
 
-export default function CatalogPage({ currentPage, setCurrentFurni }) {
+export default function CatalogPage({ currentPage, currentFurni, setCurrentFurni }) {
 
     function selectFurni(index) {
         setCurrentFurni(currentPage.furni[index]);
     }
 
     const Furni = currentPage.furni.map(function (furni, index) {
+        const isSelected = currentFurni === furni;
+
         return (
-            <li onClick={() => selectFurni(index)} index={index} key={index} className="FurniIcon">
+            <li onClick={() => selectFurni(index)} index={index} key={index} className={`CatalogItem ${isSelected ? 'selected' : ''}`}>
                 <img className='FurniIcon' src={furni.icon} />
             </li>
         );

@@ -9,17 +9,25 @@ import catalogData from '../../assets/data/catalog.json';
 
 export default function Catalog({ catalogDiv, setCatalogDiv }) {
 
-    const [currentPage, setCurrentPage] = useState(catalogData[1]);
+    const [currentPage, setCurrentPage] = useState(catalogData[0]);
 
     const [currentFurni, setCurrentFurni] = useState(0);
 
     function selectPage(index) {
+        setCurrentFurni(0);
         setCurrentPage(catalogData[index]);
     }
 
     const FurniLines = catalogData.map(function (item, index) {
+        const isSelected = currentPage === item;
+
         return (
-            <li onClick={() => selectPage(index)} index={index} key={item.name} className="FurniLine">
+            <li
+                onClick={() => selectPage(index)}
+                index={index}
+                key={item.name}
+                className={`FurniLine ${isSelected ? 'selected' : ''}`}
+            >
                 {item.name}
             </li>
         );
@@ -35,7 +43,7 @@ export default function Catalog({ catalogDiv, setCatalogDiv }) {
     return (
 
         <div className="Catalog">
-            <CatalogPage currentPage={currentPage} setCurrentFurni={setCurrentFurni} />
+            <CatalogPage currentPage={currentPage} setCurrentFurni={setCurrentFurni} currentFurni={currentFurni} />
             <CatalogShowcase currentFurni={currentFurni} />
             <img className='CatalogTop' src={CatalogTop} />
             <img className='CatalogBottom' src={CatalogBottom} />

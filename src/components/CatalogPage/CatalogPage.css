@@ -9,6 +9,7 @@
 }
 
 .CatalogPage>p {
+    text-align: center;
     width: 80%;
 }
 
@@ -38,7 +39,7 @@
     gap: .4rem;
 }
 
-.CatalogItemList>li {
+.CatalogItem {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,13 +49,16 @@
     border-radius: .5rem;
 }
 
-.CatalogItemList>li:hover {
+
+
+.CatalogItem:hover {
     background-color: white;
 }
 
-.CatalogItem {
-    background-color: blue;
+.CatalogItem.selected {
+    background-color: white;
 }
+
 
 .FurniIcon {
     image-rendering: pixelated;

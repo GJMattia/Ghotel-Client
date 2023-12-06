@@ -161,6 +161,57 @@
   {
     "name": "Habbo Exchange",
     "mast": "src/assets/images/catalog/masts/exchange-mast.gif",
-    "furni": []
+    "description": "Exchange your Credits for Furni!",
+    "furni": [
+      {
+        "name": "Bronze Coin",
+        "img": "src/assets/images/furni/exchange/bronzecoin.webp",
+        "icon": "src/assets/images/furni-icons/exchange/bronzecoin-icon.png",
+        "description": "Worth 1 Credit.",
+        "price": 1
+      },
+      {
+        "name": "Silver Coin",
+        "img": "src/assets/images/furni/exchange/silvercoin.webp",
+        "icon": "src/assets/images/furni-icons/exchange/silvercoin-icon.png",
+        "description": "Worth 5 Credits.",
+        "price": 5
+      },
+      {
+        "name": "Gold Coin",
+        "img": "src/assets/images/furni/exchange/goldcoin.webp",
+        "icon": "src/assets/images/furni-icons/exchange/goldcoin-icon.png",
+        "description": "Worth 10 Credits.",
+        "price": 10
+      },
+      {
+        "name": "Sack of Coins",
+        "img": "src/assets/images/furni/exchange/sack.webp",
+        "icon": "src/assets/images/furni-icons/exchange/sack-icon.png",
+        "description": "Worth 20 Credits.",
+        "price": 20
+      },
+      {
+        "name": "Gold Bar",
+        "img": "src/assets/images/furni/exchange/goldbar.webp",
+        "icon": "src/assets/images/furni-icons/exchange/goldbar-icon.png",
+        "description": "Worth 50 Credits.",
+        "price": 50
+      },
+      {
+        "name": "Platinum Bar",
+        "img": "src/assets/images/furni/exchange/platinum.png",
+        "icon": "src/assets/images/furni-icons/exchange/platinum-icon.png",
+        "description": "Worth 500 Credits.",
+        "price": 500
+      },
+      {
+        "name": "Jake's Crown",
+        "img": "src/assets/images/furni/exchange/crown.png",
+        "icon": "src/assets/images/furni-icons/exchange/crown-icon.png",
+        "description": "Worth 2500 Credits.",
+        "price": 2500
+      }
+    ]
   }
 ]

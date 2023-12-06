@@ -74,6 +74,10 @@
     background-color: white;
 }
 
+.FurniLine.selected {
+    background-color: white;
+}
+
 .CloseCatalog {
     position: absolute;
     top: .5rem;
