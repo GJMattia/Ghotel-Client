@@ -1,12 +1,12 @@
 {
-  "name": "pokedexclient",
+  "name": "ghotelclient",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && npm run copy-assets",
-    "copy-assets": "copyfiles -u 1 src/assets/images/**/* dist/src/assets/images",
+    "copy-assets": "mkdir -p dist/src/assets && cp -R src/assets dist/src",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
