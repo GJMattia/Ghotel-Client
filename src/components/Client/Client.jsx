@@ -11,6 +11,7 @@ import Credits from '../../assets/images/client/credits-icon.png';
 
 export default function Client({ user }) {
 
+
     const [accountData, setAccountData] = useState(null);
     const [consoleDiv, setConsoleDiv] = useState(false);
     const [chatDiv, setChatDiv] = useState(false);
@@ -41,8 +42,8 @@ export default function Client({ user }) {
                         <img src={Credits} />
                         <p>{accountData.credits}</p>
                     </div>
-                    {catalogDiv && <Catalog catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
-                    <Inventory inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
+                    {catalogDiv && <Catalog accountData={accountData} setAccountData={setAccountData} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
+                    <Inventory accountData={accountData} setAccountData={setAccountData} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
                     {consoleDiv && <Console user={user} setChatDiv={setChatDiv} setRoom={setRoom} consoleDiv={consoleDiv} setConsoleDiv={setConsoleDiv} setUsersMessaged={setUsersMessaged} usersMessaged={usersMessaged} />}
                     <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} room={room} setRoom={setRoom} />
                     <ClientNav user={user} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />

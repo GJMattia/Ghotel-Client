@@ -5,15 +5,36 @@ import CatalogPage from '../CatalogPage/CatalogPage';
 import CatalogShowcase from '../CatalogShowcase/CatalogShowcase';
 import { useState } from 'react';
 import catalogData from '../../assets/data/catalog.json';
+import * as accountAPI from '../../../utilities/account-api';
+import buySound from '../../assets/audio/buy.mp3'
 
-
-export default function Catalog({ catalogDiv, setCatalogDiv }) {
+export default function Catalog({ catalogDiv, setCatalogDiv, accountData, setAccountData }) {
 
     const [currentPage, setCurrentPage] = useState(catalogData[0]);
     const [currentFurni, setCurrentFurni] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
     const [initialY, setInitialY] = useState(0);
+    const [buyDiv, setBuyDiv] = useState(false);
+
+
+    async function buyFurni(event) {
+        try {
+            await accountAPI.buyFurni({ itemID: currentFurni.itemid, itemPrice: currentFurni.price, accountID: accountData._id });
+            const updatedAccountData = await accountAPI.getAccount();
+            const audio = new Audio(buySound);
+            audio.play();
+            setBuyDiv(false);
+            setAccountData(updatedAccountData);
+
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+    function closeBuy() {
+        setBuyDiv(false)
+    };
 
     function handleMouseDown(e) {
         setIsDragging(true);
@@ -64,26 +85,42 @@ export default function Catalog({ catalogDiv, setCatalogDiv }) {
         setCatalogDiv(!catalogDiv)
     };
 
-
     return (
-
         <div
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
-            className="Catalog">
+            className="Catalog"
+        >
             <CatalogPage currentPage={currentPage} setCurrentFurni={setCurrentFurni} currentFurni={currentFurni} />
-            <CatalogShowcase currentFurni={currentFurni} />
+            <CatalogShowcase setBuyDiv={setBuyDiv} currentFurni={currentFurni} />
             <img className='CatalogTop' src={CatalogTop} />
             <img className='CatalogBottom' src={CatalogBottom} />
             <div className="CatalogNav">
-
                 <button onClick={toggleCatalog} className="CloseCatalog">X</button>
-                <ul className="LineList" >
+                <ul className="LineList">
                     {FurniLines}
                 </ul>
             </div>
-        </div>
+            {buyDiv && (
+                <div className='BuyWindow'>
+                    <button onClick={closeBuy} className='InventoryX'>X</button>
+                    <h5>Purchase {currentFurni.name} </h5>
+                    {accountData.credits < currentFurni.price ? (
+                        <>
+                            <p>The {currentFurni.name} is {currentFurni.price} credits, you only have {accountData.credits} credits!</p>
+                            <button onClick={closeBuy} className='ConfirmBuy'>CLOSE</button>
+                        </>
+                    ) : (
+                        <>
 
-    )
+                            <p>Buy the {currentFurni.name} for {currentFurni.price} credits?</p>
+                            <button onClick={buyFurni} className='ConfirmBuy'>BUY</button>
+                        </>
+                    )}
+                </div>
+            )}
+        </div>
+    );
+
 }

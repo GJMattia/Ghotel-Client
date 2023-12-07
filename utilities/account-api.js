@@ -17,3 +17,14 @@ export async function createAccount(userID) {
 export async function getAccount() {
     return sendRequest(`${BASE_URL}/getaccount`);
 };
+
+
+//For Buying A Furni
+export async function buyFurni(itemID, accountID) {
+    try {
+        console.log(itemID, accountID)
+        await sendRequest(`${BASE_URL}/${accountID}`, 'PUT', itemID);
+    } catch (error) {
+        console.error('error updating note:', error);
+    }
+};

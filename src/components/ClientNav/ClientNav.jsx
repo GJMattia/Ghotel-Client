@@ -6,7 +6,6 @@ import CatalogIcon from '../../assets/images/clientnav/catalog.png';
 import NavIcon from '../../assets/images/clientnav/nav.png';
 import InventoryIcon from '../../assets/images/clientnav/inventory.png';
 import HelpIcon from '../../assets/images/clientnav/help.png';
-import { Link } from 'react-router-dom';
 
 
 export default function ClientNav({ user, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
@@ -25,6 +24,7 @@ export default function ClientNav({ user, consoleDiv, setConsoleDiv, chatDiv, se
     };
 
     function toggleInventory() {
+        console.log('hello')
         setInventoryDiv(!inventoryDiv)
     };
 

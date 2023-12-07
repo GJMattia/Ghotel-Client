@@ -1,11 +1,13 @@
 import './Inventory.css';
 import { useState } from 'react';
+import Furni from '../../assets/data/furni.json';
 
-export default function Inventory({ inventoryDiv, setInventoryDiv }) {
+export default function Inventory({ inventoryDiv, setInventoryDiv, accountData, setAccountData }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
     const [initialY, setInitialY] = useState(0);
+    const [showcaseFurni, setShowcaseFurni] = useState(0);
 
     function toggleInventory() {
         setInventoryDiv(!inventoryDiv)
@@ -33,6 +35,39 @@ export default function Inventory({ inventoryDiv, setInventoryDiv }) {
         }
     }
 
+    function selectFurni(itemid) {
+        setShowcaseFurni(itemid)
+    }
+
+    const inventoryFurni = accountData.inventory.reduce((groupedItems, itemid) => {
+        const existingItem = groupedItems.find((group) => group.itemid === itemid);
+
+        if (existingItem) {
+            existingItem.count += 1;
+        } else {
+            groupedItems.push({ itemid, count: 1 });
+        }
+
+        return groupedItems;
+    }, []).map((group, index) => {
+        const isSelected = group.itemid === showcaseFurni;
+
+        return (
+            <li
+                onClick={() => selectFurni(group.itemid)}
+                index={index}
+                key={index}
+                className={`InventoryItem ${isSelected ? 'SelectedInventoryItem' : ''}`}
+            >
+                <div>
+                    <img className='FurniIcon' src={Furni[group.itemid].icon} />
+                    {group.count > 1 && <div className="ItemCount">{group.count}</div>}
+                </div>
+            </li>
+        );
+    });
+
+
 
     return (
         <div
@@ -44,60 +79,14 @@ export default function Inventory({ inventoryDiv, setInventoryDiv }) {
             <h4>Inventory</h4>
             <h5>Your Furniture</h5>
             <ul className='InventoryItemList'>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src='src/assets/images/furni-icons/rares/throne_icon.png' />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src='src/assets/images/furni-icons/rares/petal_icon.png' />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src='src/assets/images/furni-icons/exchange/crown-icon.png' />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src='src/assets/images/furni-icons/exchange/platinum-icon.png' />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/rares/bbb_icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/rares/goldcup_icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/rares/bronzecup_icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/rares/gbb_icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/rares/typo_icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/rares/silvernelly_icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/rares/bronzenelly_icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/rares/goldnelly_icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/exchange/bronzecoin-icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/exchange/goldbar-icon.png" />
-                </li>
-                <li className='InventoryItem'>
-                    <img className='FurniIcon' src="src/assets/images/furni-icons/exchange/sack-icon.png" />
-                </li>
-
+                {inventoryFurni}
             </ul>
             <div className='InventoryShowcase'>
-                <img className='InventoryFurni' src="src/assets/images/furni/rares/bbb.png" />
-                <h5>Blue Fountain</h5>
-                <p>bbb, goin up.</p>
+                <img className='InventoryFurni' src={Furni[showcaseFurni].img} />
+                <h5>{Furni[showcaseFurni].name}</h5>
+                <p>{Furni[showcaseFurni].description}</p>
                 <button>Place in Room</button>
             </div>
-
         </div>
     )
 }

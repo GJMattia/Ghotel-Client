@@ -45,7 +45,7 @@
 
 .InventoryItemList {
     position: absolute;
-    top: 4rem;
+    top: 3.5rem;
     left: 1rem;
     padding: 0;
     list-style: none;
@@ -55,8 +55,13 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: 16rem;
+    height: 13.3rem;
     justify-items: center;
     gap: .4rem;
+    overflow-x: hidden;
+    margin-right: 20px;
+    padding-right: 2rem;
+
 }
 
 .InventoryItem {
@@ -67,8 +72,12 @@
     height: 3rem;
     background-color: lightgray;
     border-radius: .5rem;
+    position: relative;
 }
 
+.SelectedInventoryItem {
+    background-color: white;
+}
 
 
 .InventoryItem:hover {
@@ -87,36 +96,54 @@
     align-items: center;
     position: absolute;
     right: .5rem;
-    top: 5rem;
+    top: 3.5rem;
     width: 11rem;
-    height: 12rem;
+    height: 14rem;
 }
 
 .InventoryFurni {
-    margin-top: 1rem;
+    margin: 2rem;
+    image-rendering: pixelated;
 }
 
 .InventoryShowcase>h5 {
-    margin-top: 2rem;
-    margin-bottom: 0;
+    position: absolute;
+    top: 7.7rem;
+
 }
 
 .InventoryShowcase>p {
+    position: absolute;
+    top: 9.5rem;
     font-size: .8rem;
-    margin: 0;
+    width: 80%;
+    text-align: center;
+
 }
 
 
 .InventoryShowcase>button {
+    position: absolute;
+    top: 12.5rem;
     border: 1px solid black;
     width: 8rem;
     padding: .2rem;
-    margin-top: 1.5rem;
     border-radius: .2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
 .InventoryShowcase>button:hover {
+    background-color: white;
+}
+
+.ItemCount {
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    padding: .1rem;
+    color: rgb(71, 128, 172);
+    border: 1px solid rgb(128, 191, 255);
+    font-size: .8rem;
     background-color: white;
 }
