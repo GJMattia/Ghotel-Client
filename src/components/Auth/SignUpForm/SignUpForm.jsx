@@ -2,6 +2,7 @@ import './SignUpForm.css';
 import { Component } from 'react';
 import { signUp } from '../../../../utilities/user-services';
 import { createFriendList } from '../../../../utilities/friendlist-api';
+import { createAccount } from '../../../../utilities/account-api';
 
 export default class SignUpForm extends Component {
   state = {
@@ -30,6 +31,7 @@ export default class SignUpForm extends Component {
       const user = await signUp(formData)
       this.props.setUser(user)
       createFriendList({ userID: user._id });
+      createAccount({ userID: user._id });
     } catch (error) {
       this.setState({ error: 'Sign Up Failed - Try Again' })
     }

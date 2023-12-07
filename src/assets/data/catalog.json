@@ -15,91 +15,104 @@
         "img": "src/assets/images/furni/rares/throne.png",
         "icon": "src/assets/images/furni-icons/rares/throne_icon.png",
         "description": "Important Habbos Only",
-        "price": 25
+        "price": 25,
+        "itemid": 0
       },
       {
         "name": "Petal Patch",
         "img": "src/assets/images/furni/rares/petal.gif",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
         "description": "A little bit of outdoors indoors..",
-        "price": 25
+        "price": 25,
+        "itemid": 1
       },
       {
         "name": "Typewriter",
         "img": "src/assets/images/furni/rares/typo.gif",
         "icon": "src/assets/images/furni-icons/rares/typo_icon.png",
         "description": "Write that bestseller",
-        "price": 25
+        "price": 25,
+        "itemid": 2
       },
       {
         "name": "Gold Cup Trophy",
         "img": "src/assets/images/furni/rares/goldcup.png",
         "icon": "src/assets/images/furni-icons/rares/goldcup_icon.png",
         "description": "1st in the basketball match",
-        "price": 25
+        "price": 25,
+        "itemid": 3
       },
       {
         "name": "Silver Cup Trophy",
         "img": "src/assets/images/furni/rares/silvercup.png",
         "icon": "src/assets/images/furni-icons/rares/silvercup_icon.png",
         "description": "2nd in the basketball match",
-        "price": 25
+        "price": 25,
+        "itemid": 4
       },
       {
         "name": "Bronze Cup Trophy",
         "img": "src/assets/images/furni/rares/bronzecup.png",
         "icon": "src/assets/images/furni-icons/rares/bronzecup_icon.png",
         "description": "3rd in the basketball match",
-        "price": 25
+        "price": 25,
+        "itemid": 5
       },
       {
         "name": "Golden Elephant",
         "img": "src/assets/images/furni/rares/gnelly.png",
         "icon": "src/assets/images/furni-icons/rares/goldnelly_icon.png",
         "description": "imported handicrafts",
-        "price": 25
+        "price": 25,
+        "itemid": 6
       },
       {
         "name": "Silver Elephant",
         "img": "src/assets/images/furni/rares/snelly.png",
         "icon": "src/assets/images/furni-icons/rares/silvernelly_icon.png",
         "description": "imported handicrafts",
-        "price": 25
+        "price": 25,
+        "itemid": 7
       },
       {
         "name": "Bronze Elephant",
         "img": "src/assets/images/furni/rares/bnelly.png",
         "icon": "src/assets/images/furni-icons/rares/bronzenelly_icon.png",
         "description": "imported handicrafts",
-        "price": 25
+        "price": 25,
+        "itemid": 8
       },
       {
         "name": "Green Fountain",
         "img": "src/assets/images/furni/rares/gbb.png",
         "icon": "src/assets/images/furni-icons/rares/gbb_icon.png",
         "description": "gbb, goin up",
-        "price": 25
+        "price": 25,
+        "itemid": 9
       },
       {
         "name": "White Fountain",
         "img": "src/assets/images/furni/rares/wbb.png",
         "icon": "src/assets/images/furni-icons/rares/wbb_icon.png",
         "description": "wbb, goin up",
-        "price": 25
+        "price": 25,
+        "itemid": 10
       },
       {
         "name": "Red Fountain",
         "img": "src/assets/images/furni/rares/rbb.png",
         "icon": "src/assets/images/furni-icons/rares/rbb_icon.png",
         "description": "rbb, goin up",
-        "price": 25
+        "price": 25,
+        "itemid": 11
       },
       {
         "name": "Blue Fountain",
         "img": "src/assets/images/furni/rares/bbb.png",
         "icon": "src/assets/images/furni-icons/rares/bbb_icon.png",
         "description": "bbb, goin up",
-        "price": 25
+        "price": 25,
+        "itemid": 12
       }
     ]
   },
@@ -168,49 +181,56 @@
         "img": "src/assets/images/furni/exchange/bronzecoin.webp",
         "icon": "src/assets/images/furni-icons/exchange/bronzecoin-icon.png",
         "description": "Worth 1 Credit.",
-        "price": 1
+        "price": 1,
+        "itemid": 13
       },
       {
         "name": "Silver Coin",
         "img": "src/assets/images/furni/exchange/silvercoin.webp",
         "icon": "src/assets/images/furni-icons/exchange/silvercoin-icon.png",
         "description": "Worth 5 Credits.",
-        "price": 5
+        "price": 5,
+        "itemid": 14
       },
       {
         "name": "Gold Coin",
         "img": "src/assets/images/furni/exchange/goldcoin.webp",
         "icon": "src/assets/images/furni-icons/exchange/goldcoin-icon.png",
         "description": "Worth 10 Credits.",
-        "price": 10
+        "price": 10,
+        "itemid": 15
       },
       {
         "name": "Sack of Coins",
         "img": "src/assets/images/furni/exchange/sack.webp",
         "icon": "src/assets/images/furni-icons/exchange/sack-icon.png",
         "description": "Worth 20 Credits.",
-        "price": 20
+        "price": 20,
+        "itemid": 16
       },
       {
         "name": "Gold Bar",
         "img": "src/assets/images/furni/exchange/goldbar.webp",
         "icon": "src/assets/images/furni-icons/exchange/goldbar-icon.png",
         "description": "Worth 50 Credits.",
-        "price": 50
+        "price": 50,
+        "itemid": 17
       },
       {
         "name": "Platinum Bar",
         "img": "src/assets/images/furni/exchange/platinum.png",
         "icon": "src/assets/images/furni-icons/exchange/platinum-icon.png",
         "description": "Worth 500 Credits.",
-        "price": 500
+        "price": 500,
+        "itemid": 18
       },
       {
         "name": "Jake's Crown",
         "img": "src/assets/images/furni/exchange/crown.png",
         "icon": "src/assets/images/furni-icons/exchange/crown-icon.png",
         "description": "Worth 2500 Credits.",
-        "price": 2500
+        "price": 2500,
+        "itemid": 19
       }
     ]
   }
