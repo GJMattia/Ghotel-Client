@@ -2,8 +2,8 @@
 
 "Ghotel" is a single-page application developed using React, Socket.io, MongoDB, and Express. The primary objective of this project was to recreate the classic client-based Shockwave game 'Habbo Hotel.' This endeavor posed an extreme challenge due to the project's scale. It not only tested my existing skills on a larger scale but also compelled me to acquire proficiency in new technologies, such as Socket.io, to simulate real-time client-server interactions.
 
-![Ghotel Homepage](/src/assets/pictures/homescreen.png)
-![Ghotel Client](/src/assets/pictures/clientscreen.png)
+![Ghotel Homepage](/src/assets/images/homescreen.png)
+![Ghotel Client](/src/assets/images/clientscreen.png)
 
 
 ## Technology Used
