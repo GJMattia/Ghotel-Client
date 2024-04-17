@@ -14,7 +14,6 @@ export default function AuthPage({ setUser }) {
   return (
     <>
 
-
       <LoginForm setUser={setUser} />
 
 
@@ -30,14 +29,12 @@ export default function AuthPage({ setUser }) {
       </div>
 
       <ul className='AuthList'>
-        <li>Created by Greg Mattia</li>
-        <li><a className='underline' href='https://docs.google.com/document/d/1N5zmfwLDI_Z3wRA72dflyadcNCkvl4b-/edit?usp=sharing&ouid=115131069856658862221&rtpof=true&sd=true' target="_blank">Resume</a></li>
         <li><a className='underline' href='https://github.com/GJMattia' target="_blank">Github</a></li>
         <li><a className='underline' href='https://www.linkedin.com/in/greg-mattia/' target="_blank">LinkedIn</a></li>
-        <li>Powered by React.JS</li>
+        <li><a className='underline' href='https://www.gregmattia.dev/' target="_blank">© GM 2024</a></li>
       </ul>
       <p className='AuthDisclaimer'>This is a MERN stack application. A recreation of Habbo Hotel created by Greg Mattia. Made completely from scratch with the exception of borrowing some image assets that I found online.
-        The basis of this project was to recreate a classic game and hone my skills in the software engineering field. No rights reserved. GM - 2023</p>
+        GM - 2024</p>
     </>
   );
 }

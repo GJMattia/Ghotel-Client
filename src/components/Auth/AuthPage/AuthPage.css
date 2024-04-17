@@ -19,11 +19,6 @@
     background-repeat: no-repeat;
 }
 
-.JoinDiv {
-    position: relative;
-    top: 1rem;
-}
-
 .JoinDiv>p {
     margin: .5rem;
     font-weight: 900;
@@ -59,13 +54,12 @@
     align-items: center;
     border-bottom: 1px solid gray;
     width: 75%;
-    padding-bottom: 1rem;
+    padding: 0;
+    height: 2rem;
 }
 
 .AuthList>li {
     color: white;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 
 .AuthList>li>a {
@@ -83,4 +77,39 @@
     margin: 0;
     color: gray;
     font-size: .8rem;
+}
+
+
+@media (max-width: 1000px) {
+
+    .AuthPageTitle {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    .HomePageDiv {
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .AuthList {
+        width: 95%;
+    }
+
+    .JoinDiv>p {
+        display: none;
+    }
+
+    .JoinDiv>p>span {
+        display: none;
+    }
+
+    .AuthDisclaimer {
+        text-align: center;
+        width: 95%;
+        margin: 0;
+        color: gray;
+        font-size: .8rem;
+    }
 }
