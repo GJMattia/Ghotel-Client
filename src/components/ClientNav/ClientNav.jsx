@@ -8,8 +8,11 @@ import InventoryIcon from '../../assets/images/clientnav/inventory.png';
 import HelpIcon from '../../assets/images/clientnav/help.png';
 
 
-export default function ClientNav({ user, navigatorDiv, setNavigatorDiv, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
+export default function ClientNav({ setCurrentRoom, navigatorDiv, setNavigatorDiv, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
 
+    function toggleRoom() {
+        setCurrentRoom(0);
+    }
 
     function toggleNavigator() {
         setNavigatorDiv(!navigatorDiv)
@@ -34,7 +37,7 @@ export default function ClientNav({ user, navigatorDiv, setNavigatorDiv, console
 
     return (
         <ul className='ClientNav'>
-            <li><img className='ClientNavIcon' src={HotelIcon} /></li>
+            <li><img onClick={toggleRoom} className='ClientNavIcon' src={HotelIcon} /></li>
             <li><img onClick={toggleNavigator} className='ClientNavIcon' src={NavIcon} /></li>
             <li><img onClick={toggleCatalog} className='ClientNavIcon' src={CatalogIcon} /></li>
             <li><img onClick={toggleInventory} className='ClientNavIcon' src={InventoryIcon} /></li>

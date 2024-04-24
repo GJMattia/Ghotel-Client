@@ -4,11 +4,25 @@ import RoomActive from '../../assets/images/navigator/room-active.gif';
 import PublicNotActive from '../../assets/images/navigator/public-notactive.gif';
 import RoomNotActive from '../../assets/images/navigator/room-notactive.gif';
 import { useState } from 'react';
+import * as accountAPI from '../../../utilities/account-api';
 
-export default function Navigator({ navigatorDiv, setNavigatorDiv }) {
+export default function Navigator({ setCurrentRoom, navigatorDiv, setNavigatorDiv, accountData, setAccountData }) {
 
     const [currentNav, setCurrentNav] = useState('public');
 
+    async function createRoom() {
+        try {
+            await accountAPI.createRoom({ roomSize: 104 });
+            const updatedAccountData = await accountAPI.getAccount();
+            setAccountData(updatedAccountData);
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+    function handleRoomClick() {
+        setCurrentRoom(accountData.rooms)
+    }
 
     function toggleNavigator() {
         setNavigatorDiv(!navigatorDiv);
@@ -18,6 +32,7 @@ export default function Navigator({ navigatorDiv, setNavigatorDiv }) {
     function handleRoomOptionClick(option) {
         setCurrentNav(option);
     }
+
 
     return (
         <div className='Navigator'>
@@ -39,6 +54,14 @@ export default function Navigator({ navigatorDiv, setNavigatorDiv }) {
                     <h5>Rooms</h5>
                 </div>
             </div>
+
+            {/* <button onClick={createRoom} className='CreateRoom'>Create Room</button> */}
+            <ul className='RoomList'>
+
+
+                <li className='RoomItem' onClick={handleRoomClick}>Starter Room</li>
+
+            </ul>
         </div>
     );
 };

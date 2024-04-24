@@ -7,6 +7,7 @@
     border-radius: .2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     cursor: pointer;
+    z-index: 2;
 }
 
 .Inventory>h4 {

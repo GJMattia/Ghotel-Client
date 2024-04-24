@@ -18,3 +18,7 @@
     cursor: pointer;
     margin: 1rem;
 }
+
+.ClientNavIcon:hover {
+    filter: brightness(120%);
+}

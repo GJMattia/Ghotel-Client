@@ -5,6 +5,8 @@ import AuthPage from '../Auth/AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
 import './App.css';
 import Client from '../Client/Client';
+import Sauce from '../Sauce/Sauce';
+
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -19,6 +21,7 @@ function App() {
           </Routes>
         </> :
         <AuthPage setUser={setUser} />
+        // <Sauce />
       }
     </div>
   )

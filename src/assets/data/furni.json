@@ -67,7 +67,7 @@
     },
     {
         "name": "Red Fountain",
-        "img": "src/assets/images/furni/rares/rbb.png",
+        "img": "src/assets/images/furni/rares/rbb.on.gif",
         "icon": "src/assets/images/furni-icons/rares/rbb_icon.png",
         "description": "rbb, goin up"
     },
@@ -118,5 +118,11 @@
         "img": "src/assets/images/furni/exchange/crown.png",
         "icon": "src/assets/images/furni-icons/exchange/crown-icon.png",
         "description": "Worth 2500 Credits."
+    },
+    {
+        "name": "Dragon Egg",
+        "img": "src/assets/images/furni/rares/dino.gif",
+        "icon": "src/assets/images/furni-icons/exchange/crown-icon.png",
+        "description": "Electric Dragon?"
     }
 ]

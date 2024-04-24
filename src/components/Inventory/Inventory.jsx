@@ -2,7 +2,7 @@ import './Inventory.css';
 import { useState } from 'react';
 import Furni from '../../assets/data/furni.json';
 
-export default function Inventory({ inventoryDiv, setInventoryDiv, accountData, setAccountData }) {
+export default function Inventory({ inventoryDiv, setInventoryDiv, accountData, setAccountData, setPlaceFurni }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
@@ -37,6 +37,10 @@ export default function Inventory({ inventoryDiv, setInventoryDiv, accountData, 
 
     function selectFurni(itemid) {
         setShowcaseFurni(itemid)
+    }
+
+    function placeFurni() {
+        setPlaceFurni(showcaseFurni);
     }
 
     const inventoryFurni = accountData.inventory.reduce((groupedItems, itemid) => {
@@ -85,7 +89,7 @@ export default function Inventory({ inventoryDiv, setInventoryDiv, accountData, 
                 <img className='InventoryFurni' src={Furni[showcaseFurni].img} />
                 <h5>{Furni[showcaseFurni].name}</h5>
                 <p>{Furni[showcaseFurni].description}</p>
-                <button>Place in Room</button>
+                <button onClick={placeFurni}>Place in Room</button>
             </div>
         </div>
     )

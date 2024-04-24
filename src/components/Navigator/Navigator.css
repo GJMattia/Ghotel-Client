@@ -13,6 +13,7 @@
     cursor: pointer;
     background-color: #57899c;
     border: 1px solid aliceblue;
+    z-index: 1;
 }
 
 .Navigator>h4 {
@@ -42,4 +43,33 @@
 
 .RoomOption.active {
     background-color: #dddddd;
+}
+
+.CreateRoom {
+    width: 8rem;
+    margin-top: 4rem;
+}
+
+.RoomList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    width: 90%;
+
+}
+
+.RoomItem {
+    text-align: center;
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin: .75rem;
+    border-radius: .5rem;
+}
+
+.RoomItem:hover {
+    background-color: orange;
 }

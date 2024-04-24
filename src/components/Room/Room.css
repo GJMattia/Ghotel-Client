@@ -1,0 +1,85 @@
+.RoomBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: White;
+    background-color: black;
+}
+
+.Room {
+    position: relative;
+    margin-top: 5.5rem;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 29.2rem;
+    height: 14.4rem;
+    transform: rotate(-26.5deg) skewX(37deg);
+    z-index: 1;
+    background-color: brown;
+    /* background-color: #8c8c5d; */
+    transition: 5s ease;
+}
+
+.Tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .1px solid rgb(0, 0, 0, 0.5);
+}
+
+.Tile:hover {
+    opacity: 100%;
+    border: 4px solid white;
+}
+
+.FurniAnchor {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    transform: skewX(-37deg) rotate(26.5deg);
+    user-select: none;
+    /* background-color: blue; */
+}
+
+.FurniPoint {
+    position: relative;
+    display: flex;
+    right: .5rem;
+    /* top: -.6rem; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 2rem;
+    height: 2rem;
+    /* background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 5rem; */
+}
+
+.FurniImg {
+    pointer-events: none;
+    /* display: none; */
+}
+
+.FurniPoint:hover {
+    filter: brightness(150%) saturate(120%);
+}
+
+.ClearRoomBtn {
+    top: 5rem;
+    position: absolute;
+    background-color: crimson;
+    color: white;
+    border: 0;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.ClearRoomBtn:hover {
+    background-color: brown;
+}

@@ -8,6 +8,7 @@ import Inventory from '../Inventory/Inventory';
 import Navigator from '../Navigator/Navigator';
 import * as accountAPI from '../../../utilities/account-api';
 import Credits from '../../assets/images/client/credits-icon.png';
+import Room from '../Room/Room';
 
 
 export default function Client({ user }) {
@@ -21,7 +22,8 @@ export default function Client({ user }) {
     const [usersMessaged, setUsersMessaged] = useState([]);
     const [inventoryDiv, setInventoryDiv] = useState(false);
     const [navigatorDiv, setNavigatorDiv] = useState(false);
-
+    const [currentRoom, setCurrentRoom] = useState(0);
+    const [placeFurni, setPlaceFurni] = useState(null);
 
     useEffect(function () {
         async function getAccountData() {
@@ -35,7 +37,6 @@ export default function Client({ user }) {
         getAccountData();
     }, []);
 
-
     return (
         <div className='Client'>
             {accountData !== null ? (
@@ -44,12 +45,13 @@ export default function Client({ user }) {
                         <img src={Credits} />
                         <p>{accountData.credits}</p>
                     </div>
-                    {navigatorDiv && <Navigator navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} />}
+                    {currentRoom && <Room setCurrentRoom={setCurrentRoom} setAccountData={setAccountData} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} currentRoom={currentRoom} />}
+                    {navigatorDiv && <Navigator setCurrentRoom={setCurrentRoom} accountData={accountData} setAccountData={setAccountData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} />}
                     {catalogDiv && <Catalog accountData={accountData} setAccountData={setAccountData} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
-                    <Inventory accountData={accountData} setAccountData={setAccountData} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
+                    <Inventory setPlaceFurni={setPlaceFurni} accountData={accountData} setAccountData={setAccountData} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
                     {consoleDiv && <Console user={user} setChatDiv={setChatDiv} setRoom={setRoom} consoleDiv={consoleDiv} setConsoleDiv={setConsoleDiv} setUsersMessaged={setUsersMessaged} usersMessaged={usersMessaged} />}
                     <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} room={room} setRoom={setRoom} />
-                    <ClientNav user={user} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
+                    <ClientNav setCurrentRoom={setCurrentRoom} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
                 </>
             ) : (
                 <p>Loading...</p>
