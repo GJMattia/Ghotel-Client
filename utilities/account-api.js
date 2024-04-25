@@ -46,10 +46,20 @@ export async function addFurni(furniID, tileID) {
     }
 }
 
+
+//For Clearing an entire room
 export async function clearRoom() {
     try {
         await sendRequest(`${BASE_URL}/clear/room`, 'PUT');
     } catch (error) {
         console.error('error clearing room', error);
+    }
+}
+
+export async function pickUpFurni(furniID, tileID, furniIndex) {
+    try {
+        await sendRequest(`${BASE_URL}/pickup/furni`, 'PUT', furniID, tileID, furniIndex);
+    } catch (error) {
+        console.error('error picking up furni', error);
     }
 }

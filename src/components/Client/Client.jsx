@@ -22,7 +22,7 @@ export default function Client({ user }) {
     const [usersMessaged, setUsersMessaged] = useState([]);
     const [inventoryDiv, setInventoryDiv] = useState(false);
     const [navigatorDiv, setNavigatorDiv] = useState(false);
-    const [currentRoom, setCurrentRoom] = useState(0);
+    const [currentRoom, setCurrentRoom] = useState(null);
     const [placeFurni, setPlaceFurni] = useState(null);
 
     useEffect(function () {
