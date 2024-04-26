@@ -19,20 +19,20 @@
     },
     {
         "name": "Gold Cup Trophy",
-        "img": "src/assets/images/furni/rares/goldcup.png",
-        "icon": "src/assets/images/furni-icons/rares/goldcup_icon.png",
+        "img": "src/assets/images/furni/trophies/goldcup.png",
+        "icon": "src/assets/images/furni-icons/trophies/goldcup_icon.png",
         "description": "1st in the basketball match"
     },
     {
         "name": "Silver Cup Trophy",
-        "img": "src/assets/images/furni/rares/silvercup.png",
-        "icon": "src/assets/images/furni-icons/rares/silvercup_icon.png",
+        "img": "src/assets/images/furni/trophies/silvercup.png",
+        "icon": "src/assets/images/furni-icons/trophies/silvercup_icon.png",
         "description": "2nd in the basketball match"
     },
     {
         "name": "Bronze Cup Trophy",
-        "img": "src/assets/images/furni/rares/bronzecup.png",
-        "icon": "src/assets/images/furni-icons/rares/bronzecup_icon.png",
+        "img": "src/assets/images/furni/trophies/bronzecup.png",
+        "icon": "src/assets/images/furni-icons/trophies/bronzecup_icon.png",
         "description": "3rd in the basketball match"
     },
     {
@@ -67,7 +67,7 @@
     },
     {
         "name": "Red Fountain",
-        "img": "src/assets/images/furni/rares/rbb.on.gif",
+        "img": "src/assets/images/furni/rares/rbb.png",
         "icon": "src/assets/images/furni-icons/rares/rbb_icon.png",
         "description": "rbb, goin up"
     },
@@ -122,7 +122,157 @@
     {
         "name": "Dragon Egg",
         "img": "src/assets/images/furni/rares/dino.gif",
-        "icon": "src/assets/images/furni-icons/exchange/crown-icon.png",
-        "description": "Electric Dragon?"
+        "icon": "src/assets/images/furni-icons/rares/dino_icon.gif",
+        "description": "The stuff of legend"
+    },
+    {
+        "name": "Russian Samovar",
+        "img": "src/assets/images/furni/rares/samovar.gif",
+        "icon": "src/assets/images/furni-icons/rares/samovar_icon.gif",
+        "description": "Click for a refreshing cuppa"
+    },
+    {
+        "name": "DJ Turntable",
+        "img": "src/assets/images/furni/rares/djdeck.gif",
+        "icon": "src/assets/images/furni-icons/rares/djdeck_icon.gif",
+        "description": "The wheels of expression"
+    },
+    {
+        "name": "Aloe Vera",
+        "img": "src/assets/images/furni/rares/aloe.gif",
+        "icon": "src/assets/images/furni-icons/rares/aloe_icon.gif",
+        "description": "Goodbye Bert..."
+    },
+    {
+        "name": "Habbo Globe",
+        "img": "src/assets/images/furni/rares/globe.gif",
+        "icon": "src/assets/images/furni-icons/rares/globe_icon.gif",
+        "description": "Shake, don't break!"
+    },
+    {
+        "name": "Club Sofa",
+        "img": "src/assets/images/furni/club/hcs.gif",
+        "icon": "src/assets/images/furni-icons/club/hcs_icon.gif",
+        "description": "13c"
+    },
+    {
+        "name": "Dicemaster",
+        "img": "src/assets/images/furni/club/dm.gif",
+        "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
+        "description": "game?"
+    },
+    {
+        "name": "Majestic Chair",
+        "img": "src/assets/images/furni/club/majestic.gif",
+        "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
+        "description": "zaandarbrow"
+    },
+    {
+        "name": "Yukka",
+        "img": "src/assets/images/furni/plants/yukka.gif",
+        "icon": "src/assets/images/furni-icons/plants/yukka_icon.gif",
+        "description": "a tall plant"
+    },
+    {
+        "name": "Pine",
+        "img": "src/assets/images/furni/plants/pine.gif",
+        "icon": "src/assets/images/furni-icons/plants/pine_icon.gif",
+        "description": "a short plant"
+    },
+    {
+        "name": "Vase of flowers",
+        "img": "src/assets/images/furni/plants/vase.gif",
+        "icon": "src/assets/images/furni-icons/plants/vase_icon.gif",
+        "description": "a tall tree"
+    },
+    {
+        "name": "Director's Chair",
+        "img": "src/assets/images/furni/rares/dc.gif",
+        "icon": "src/assets/images/furni-icons/rares/dc_icon.gif",
+        "description": "ACTION!"
+    },
+    {
+        "name": "Gold Habbo Trophy",
+        "img": "src/assets/images/furni/trophies/ght.png",
+        "icon": "src/assets/images/furni-icons/trophies/ght_icon.gif",
+        "description": "it's gold"
+    },
+    {
+        "name": "Silver Habbo Trophy",
+        "img": "src/assets/images/furni/trophies/sht.gif",
+        "icon": "src/assets/images/furni-icons/trophies/sht_icon.gif",
+        "description": "it's silver"
+    },
+    {
+        "name": "Bronze Habbo Trophy",
+        "img": "src/assets/images/furni/trophies/bht.gif",
+        "icon": "src/assets/images/furni-icons/trophies/bht_icon.gif",
+        "description": "it's bronze"
+    },
+    {
+        "name": "Golden Dragon",
+        "img": "src/assets/images/furni/dragons/golddrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/golddrag_icon.gif",
+        "description": "it's bronze"
+    },
+    {
+        "name": "Silver Dragon",
+        "img": "src/assets/images/furni/dragons/silverdrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/silverdrag_icon.gif",
+        "description": "it's silver"
+    },
+    {
+        "name": "Bronze Dragon",
+        "img": "src/assets/images/furni/dragons/bronzedrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/bronzedrag_icon.gif",
+        "description": "it's bronze"
+    },
+    {
+        "name": "Forest Dragon",
+        "img": "src/assets/images/furni/dragons/forestdrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/forestdrag_icon.gif",
+        "description": "it's forest-colored"
+    },
+    {
+        "name": "Fire Dragon",
+        "img": "src/assets/images/furni/dragons/firedrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/firedrag_icon.gif",
+        "description": "it's fire-colored"
+    },
+    {
+        "name": "Frost Dragon",
+        "img": "src/assets/images/furni/dragons/frostdrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/frostdrag_icon.gif",
+        "description": "it's frost-colored"
+    },
+    {
+        "name": "Sky Dragon",
+        "img": "src/assets/images/furni/dragons/skydrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/skydrag_icon.gif",
+        "description": "it's sky-colored"
+    },
+    {
+        "name": "Black Dragon",
+        "img": "src/assets/images/furni/dragons/blackdrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/blackdrag_icon.gif",
+        "description": "it's black"
+    },
+    {
+        "name": "Jade Dragon",
+        "img": "src/assets/images/furni/dragons/jadedrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/jadedrag_icon.gif",
+        "description": "it's jade-colored"
+    },
+    {
+        "name": "Blue Dragon",
+        "img": "src/assets/images/furni/dragons/bluedrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/bluedrag_icon.gif",
+        "description": "it's blue"
+    },
+    {
+        "name": "Pink Dragon",
+        "img": "src/assets/images/furni/dragons/pinkdrag.webp",
+        "icon": "src/assets/images/furni-icons/dragons/pinkdrag_icon.png",
+        "description": "it's pink"
     }
 ]

@@ -10,7 +10,7 @@
     position: absolute;
     top: 10rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-    cursor: grab;
+    user-select: none;
 }
 
 .HideChat {

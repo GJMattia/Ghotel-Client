@@ -62,8 +62,8 @@
 }
 
 .FurniImg {
+    position: relative;
     pointer-events: none;
-    /* display: none; */
 }
 
 .FurniPoint:hover {
@@ -178,4 +178,11 @@
 
 .FurniSelectionOptions>li:hover {
     background-color: gray;
+}
+
+.follow-cursor {
+    position: absolute;
+    pointer-events: none;
+    opacity: .5;
+    z-index: 1000;
 }

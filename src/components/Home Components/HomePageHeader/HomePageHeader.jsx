@@ -12,7 +12,7 @@ export default function HomePageHeader({ user, setUser }) {
     return (
         <div className='HomePageHeader'>
             <img className='GhotelHP' src={Ghotel} />
-            <NavLink className='OpenClientBtn' activeClassName='active' to='/client' exact>
+            <NavLink className='OpenClientBtn' to='/client'>
                 Enter Ghotel
             </NavLink>
             {/* <button className='OpenClientBtn' onClick={() => window.open('/client', '_blank')}>

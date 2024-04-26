@@ -11,7 +11,7 @@ import HelpIcon from '../../assets/images/clientnav/help.png';
 export default function ClientNav({ setCurrentRoom, navigatorDiv, setNavigatorDiv, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
 
     function toggleRoom() {
-        setCurrentRoom(0);
+        setCurrentRoom(null);
     }
 
     function toggleNavigator() {

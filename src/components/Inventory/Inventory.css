@@ -6,8 +6,8 @@
     top: 15rem;
     border-radius: .2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
     z-index: 2;
+    user-select: none;
 }
 
 .Inventory>h4 {
@@ -20,7 +20,8 @@
 }
 
 .Inventory>h5 {
-    margin: 1rem;
+    margin-top: .5rem;
+    margin-left: 1rem;
 }
 
 .HideInventory {
@@ -61,7 +62,7 @@
     gap: .4rem;
     overflow-x: hidden;
     margin-right: 20px;
-    padding-right: 2rem;
+    padding-right: 1.5rem;
 
 }
 
@@ -93,7 +94,7 @@
 .InventoryShowcase {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     position: absolute;
     right: .5rem;
@@ -103,23 +104,21 @@
 }
 
 .InventoryFurni {
-    margin: 2rem;
+    margin-bottom: 4rem;
     image-rendering: pixelated;
 }
 
 .InventoryShowcase>h5 {
     position: absolute;
-    top: 7.7rem;
-
+    top: 8.75rem;
 }
 
 .InventoryShowcase>p {
     position: absolute;
-    top: 9.5rem;
-    font-size: .8rem;
-    width: 80%;
+    top: 10.5rem;
+    font-size: .7rem;
+    width: 90%;
     text-align: center;
-
 }
 
 
@@ -143,8 +142,8 @@
     top: 0rem;
     right: 0;
     padding: .1rem;
-    color: rgb(71, 128, 172);
-    border: 1px solid rgb(128, 191, 255);
+    color: rgb(106, 106, 106);
+    border: 1px solid rgb(218, 218, 218);
     font-size: .8rem;
     background-color: white;
 }

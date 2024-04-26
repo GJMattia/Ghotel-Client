@@ -1,15 +1,27 @@
 import './Room.css';
 import './Tiles.css';
+import './Furni.css';
 import Furniture from '../../assets/data/furni.json';
 import * as accountAPI from '../../../utilities/account-api';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 
 export default function Room({ placeFurni, setPlaceFurni, currentRoom, setAccountData, setCurrentRoom }) {
 
     const [selectedFurni, setSelectedFurni] = useState(null);
     const [selectedTile, setSelectedTile] = useState(null);
     const [selectedFurniIndex, setSelectedFurniIndex] = useState(null);
+    const [position, setPosition] = useState({ x: 0, y: 0 });
 
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            setPosition({ x: e.clientX, y: e.clientY });
+        };
+        document.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
 
     async function clearRoom() {
         try {
@@ -26,7 +38,6 @@ export default function Room({ placeFurni, setPlaceFurni, currentRoom, setAccoun
         if (selectedFurni === null || selectedTile === null || selectedFurniIndex === null) {
             return
         };
-
         try {
             await accountAPI.pickUpFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex });
             const updatedAccountData = await accountAPI.getAccount();
@@ -73,7 +84,13 @@ export default function Room({ placeFurni, setPlaceFurni, currentRoom, setAccoun
     return (
         <div className='RoomBox'>
             <button onClick={clearRoom} className='ClearRoomBtn'>CLEAR ROOM</button>
-
+            {placeFurni &&
+                <img
+                    src={Furniture[placeFurni].img}
+                    alt="Throne"
+                    className="follow-cursor"
+                    style={{ left: position.x, top: position.y }}
+                />}
 
             {selectedFurni !== null && (
                 <div className='FurniSelection'>
@@ -102,11 +119,12 @@ export default function Room({ placeFurni, setPlaceFurni, currentRoom, setAccoun
                     >
                         {tile.map((value, innerIndex) => (
                             <div key={innerIndex} className="FurniAnchor"  >
+
                                 <div className='FurniPoint'
                                     style={{ bottom: `${innerIndex + .6}rem` }}
                                     onClick={() => handleClick(value, index, innerIndex)}
                                 >
-                                    <img className='FurniImg' src={Furniture[value].img} />
+                                    <img className={`FurniImg Furni${value}`} src={Furniture[value].img} />
 
                                 </div>
                             </div>

@@ -1,11 +1,5 @@
 [
   {
-    "name": "Frontpage",
-    "description": "hey",
-    "mast": "",
-    "furni": []
-  },
-  {
     "name": "Rares",
     "description": "Finally all of those years of wanting to play habbo with access to all of the rares becomes a reality.",
     "mast": "src/assets/images/catalog/masts/rares-mast.gif",
@@ -19,12 +13,12 @@
         "itemid": 0
       },
       {
-        "name": "Petal Patch",
-        "img": "src/assets/images/furni/rares/petal.gif",
-        "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "A little bit of outdoors indoors..",
+        "name": "Director's Chair",
+        "img": "src/assets/images/furni/rares/dc.gif",
+        "icon": "src/assets/images/furni-icons/rares/dc_icon.gif",
+        "description": "ACTION!",
         "price": 25,
-        "itemid": 1
+        "itemid": 31
       },
       {
         "name": "Typewriter",
@@ -35,28 +29,28 @@
         "itemid": 2
       },
       {
-        "name": "Gold Cup Trophy",
-        "img": "src/assets/images/furni/rares/goldcup.png",
-        "icon": "src/assets/images/furni-icons/rares/goldcup_icon.png",
-        "description": "1st in the basketball match",
+        "name": "Petal Patch",
+        "img": "src/assets/images/furni/rares/petal.gif",
+        "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
+        "description": "A little bit of outdoors indoors..",
         "price": 25,
-        "itemid": 3
+        "itemid": 1
       },
       {
-        "name": "Silver Cup Trophy",
-        "img": "src/assets/images/furni/rares/silvercup.png",
-        "icon": "src/assets/images/furni-icons/rares/silvercup_icon.png",
-        "description": "2nd in the basketball match",
+        "name": "Dragon Egg",
+        "img": "src/assets/images/furni/rares/dino.gif",
+        "icon": "src/assets/images/furni-icons/rares/dino_icon.gif",
+        "description": "The stuff of legend",
         "price": 25,
-        "itemid": 4
+        "itemid": 20
       },
       {
-        "name": "Bronze Cup Trophy",
-        "img": "src/assets/images/furni/rares/bronzecup.png",
-        "icon": "src/assets/images/furni-icons/rares/bronzecup_icon.png",
-        "description": "3rd in the basketball match",
+        "name": "Russian Samovar",
+        "img": "src/assets/images/furni/rares/samovar.gif",
+        "icon": "src/assets/images/furni-icons/rares/samovar_icon.gif",
+        "description": "Click for a refreshing cuppa",
         "price": 25,
-        "itemid": 5
+        "itemid": 21
       },
       {
         "name": "Golden Elephant",
@@ -113,23 +107,210 @@
         "description": "bbb, goin up",
         "price": 25,
         "itemid": 12
+      },
+      {
+        "name": "DJ Turntable",
+        "img": "src/assets/images/furni/rares/djdeck.gif",
+        "icon": "src/assets/images/furni-icons/rares/djdeck_icon.gif",
+        "description": "The wheels of expression",
+        "price": 25,
+        "itemid": 22
+      },
+      {
+        "name": "Aloe Vera",
+        "img": "src/assets/images/furni/rares/aloe.gif",
+        "icon": "src/assets/images/furni-icons/rares/aloe_icon.gif",
+        "description": "Goodbye Bert...",
+        "price": 25,
+        "itemid": 23
+      },
+      {
+        "name": "Habbo Globe",
+        "img": "src/assets/images/furni/rares/globe.gif",
+        "icon": "src/assets/images/furni-icons/rares/globe_icon.gif",
+        "description": "Shake, don't break!",
+        "price": 25,
+        "itemid": 24
       }
     ]
   },
   {
     "name": "Clubshop",
     "mast": "src/assets/images/catalog/masts/hc-mast.gif",
-    "furni": []
+    "furni": [
+      {
+        "name": "Club Sofa",
+        "img": "src/assets/images/furni/club/hcs.gif",
+        "icon": "src/assets/images/furni-icons/club/hcs_icon.gif",
+        "description": "13c",
+        "price": 13,
+        "itemid": 25
+      },
+      {
+        "name": "Dicemaster",
+        "img": "src/assets/images/furni/club/dm.gif",
+        "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
+        "description": "game?",
+        "price": 12,
+        "itemid": 26
+      },
+      {
+        "name": "Majestic Chair",
+        "img": "src/assets/images/furni/club/majestic.gif",
+        "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
+        "description": "zaandarbrow",
+        "price": 16,
+        "itemid": 27
+      }
+    ]
   },
   {
-    "name": "Area",
-    "mast": "src/assets/images/catalog/masts/area-mast.gif",
-    "furni": []
+    "name": "Trophies",
+    "mast": "src/assets/images/catalog/masts/trophies-mast.gif",
+    "furni": [
+      {
+        "name": "Gold Cup Trophy",
+        "img": "src/assets/images/furni/trophies/goldcup.png",
+        "icon": "src/assets/images/furni-icons/trophies/goldcup_icon.png",
+        "description": "1st in the basketball match",
+        "price": 25,
+        "itemid": 3
+      },
+      {
+        "name": "Silver Cup Trophy",
+        "img": "src/assets/images/furni/trophies/silvercup.png",
+        "icon": "src/assets/images/furni-icons/trophies/silvercup_icon.png",
+        "description": "2nd in the basketball match",
+        "price": 25,
+        "itemid": 4
+      },
+      {
+        "name": "Bronze Cup Trophy",
+        "img": "src/assets/images/furni/trophies/bronzecup.png",
+        "icon": "src/assets/images/furni-icons/trophies/bronzecup_icon.png",
+        "description": "3rd in the basketball match",
+        "price": 25,
+        "itemid": 5
+      },
+      {
+        "name": "Gold Habbo Trophy",
+        "img": "src/assets/images/furni/trophies/ght.png",
+        "icon": "src/assets/images/furni-icons/trophies/ght_icon.gif",
+        "description": "it's gold",
+        "price": 25,
+        "itemid": 32
+      },
+      {
+        "name": "Silver Habbo Trophy",
+        "img": "src/assets/images/furni/trophies/sht.gif",
+        "icon": "src/assets/images/furni-icons/trophies/sht_icon.gif",
+        "description": "it's silver",
+        "price": 25,
+        "itemid": 33
+      },
+      {
+        "name": "Bronze Habbo Trophy",
+        "img": "src/assets/images/furni/trophies/bht.gif",
+        "icon": "src/assets/images/furni-icons/trophies/bht_icon.gif",
+        "description": "it's bronze",
+        "price": 25,
+        "itemid": 34
+      }
+    ]
   },
   {
-    "name": "Candy",
-    "mast": "src/assets/images/catalog/masts/candy-mast.gif",
-    "furni": []
+    "name": "Dragons",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Golden Dragon",
+        "img": "src/assets/images/furni/dragons/golddrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/golddrag_icon.gif",
+        "description": "it's bronze",
+        "price": 25,
+        "itemid": 35
+      },
+      {
+        "name": "Silver Dragon",
+        "img": "src/assets/images/furni/dragons/silverdrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/silverdrag_icon.gif",
+        "description": "it's silver",
+        "price": 25,
+        "itemid": 36
+      },
+      {
+        "name": "Bronze Dragon",
+        "img": "src/assets/images/furni/dragons/bronzedrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/bronzedrag_icon.gif",
+        "description": "it's bronze",
+        "price": 25,
+        "itemid": 37
+      },
+      {
+        "name": "Forest Dragon",
+        "img": "src/assets/images/furni/dragons/forestdrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/forestdrag_icon.gif",
+        "description": "it's forest-colored",
+        "price": 25,
+        "itemid": 38
+      },
+      {
+        "name": "Fire Dragon",
+        "img": "src/assets/images/furni/dragons/firedrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/firedrag_icon.gif",
+        "description": "it's fire-colored",
+        "price": 25,
+        "itemid": 39
+      },
+      {
+        "name": "Frost Dragon",
+        "img": "src/assets/images/furni/dragons/frostdrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/frostdrag_icon.gif",
+        "description": "it's frost-colored",
+        "price": 25,
+        "itemid": 40
+      },
+      {
+        "name": "Sky Dragon",
+        "img": "src/assets/images/furni/dragons/skydrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/skydrag_icon.gif",
+        "description": "it's sky-colored",
+        "price": 25,
+        "itemid": 41
+      },
+      {
+        "name": "Black Dragon",
+        "img": "src/assets/images/furni/dragons/blackdrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/blackdrag_icon.gif",
+        "description": "it's black",
+        "price": 25,
+        "itemid": 42
+      },
+      {
+        "name": "Jade Dragon",
+        "img": "src/assets/images/furni/dragons/jadedrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/jadedrag_icon.gif",
+        "description": "it's jade-colored",
+        "price": 25,
+        "itemid": 43
+      },
+      {
+        "name": "Blue Dragon",
+        "img": "src/assets/images/furni/dragons/bluedrag.gif",
+        "icon": "src/assets/images/furni-icons/dragons/bluedrag_icon.gif",
+        "description": "it's blue",
+        "price": 25,
+        "itemid": 44
+      },
+      {
+        "name": "Pink Dragon",
+        "img": "src/assets/images/furni/dragons/pinkdrag.webp",
+        "icon": "src/assets/images/furni-icons/dragons/pinkdrag_icon.png",
+        "description": "it's pink",
+        "price": 25,
+        "itemid": 45
+      }
+    ]
   },
   {
     "name": "Lodge",
@@ -149,7 +330,32 @@
   {
     "name": "Plants",
     "mast": "src/assets/images/catalog/masts/plants-mast.gif",
-    "furni": []
+    "furni": [
+      {
+        "name": "Yukka",
+        "img": "src/assets/images/furni/plants/yukka.gif",
+        "icon": "src/assets/images/furni-icons/plants/yukka_icon.gif",
+        "description": "a tall plant",
+        "price": 3,
+        "itemid": 28
+      },
+      {
+        "name": "Pine",
+        "img": "src/assets/images/furni/plants/pine.gif",
+        "icon": "src/assets/images/furni-icons/plants/pine_icon.gif",
+        "description": "a short plant",
+        "price": 3,
+        "itemid": 29
+      },
+      {
+        "name": "Vase of flowers",
+        "img": "src/assets/images/furni/plants/vase.gif",
+        "icon": "src/assets/images/furni-icons/plants/vase_icon.gif",
+        "description": "a tall tree",
+        "price": 3,
+        "itemid": 30
+      }
+    ]
   },
   {
     "name": "Rugs",
