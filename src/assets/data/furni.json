@@ -305,5 +305,41 @@
         "img": "src/assets/images/furni/rares/p4.png",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
         "description": "p4"
+    },
+    {
+        "name": "Yellow Marquee",
+        "img": "src/assets/images/furni/marquees/ym.gif",
+        "icon": "src/assets/images/furni-icons/marquees/ym_icon.gif",
+        "description": "slim shady"
+    },
+    {
+        "name": "White Lasergate",
+        "img": "src/assets/images/furni/lasers/whitelaser.gif",
+        "icon": "src/assets/images/furni-icons/lasers/whitelaser_icon.gif",
+        "description": "jack plasma"
+    },
+    {
+        "name": "Purple ICM",
+        "img": "src/assets/images/furni/icms/picm.gif",
+        "icon": "src/assets/images/furni-icons/icms/picm_icon.gif",
+        "description": "the fourth flavor"
+    },
+    {
+        "name": "Snow Drift",
+        "img": "src/assets/images/furni/pillows/wp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/wp_icon.gif",
+        "description": "the santa claus 3"
+    },
+    {
+        "name": "Yellow Fan",
+        "img": "src/assets/images/furni/fans/yfan.gif",
+        "icon": "src/assets/images/furni-icons/fans/yfan_icon.gif",
+        "description": "swoof swoof"
+    },
+    {
+        "name": "Blue Smoke Machine",
+        "img": "src/assets/images/furni/smokes/nsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/nsm_icon.gif",
+        "description": "aguh no smoke?"
     }
 ]

@@ -35,7 +35,7 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
     };
 
     const decrementCounter = () => {
-        if (stackMult > 1) {
+        if (stackMult > 0) {
             setStackMult(prevStackMult => prevStackMult - 1);
         }
     };
@@ -103,20 +103,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
             <div className='StackTool'>
                 <h4>Jawn's Stack Tool</h4>
                 <div className='StackChoices'>
-                    <div className={`StackChoice ${stackHeight === 0 ? 'StackSelection' : ''}`}>
-                        <button className='StackBtn' onClick={() => handleStackClick(0)}>Petal</button>
-                        <img className='StackImg' src={Furniture[1].icon} />
-                    </div>
-                    <div className={`StackChoice ${stackHeight === 0.3 ? 'StackSelection' : ''}`}>
-                        <button className='StackBtn' onClick={() => handleStackClick(0.3)}>Coin</button>
-                        <img className='StackImg' src={Furniture[13].icon} />
-                    </div>
-                    <div className={`StackChoice ${stackHeight === 0.8 ? 'StackSelection' : ''}`}>
-                        <button className='StackBtn' onClick={() => handleStackClick(0.8)}>Goldbar</button>
-                        <img className='StackImg' src={Furniture[17].icon} />
-                    </div>
-                    <div className={`StackChoice ${stackHeight === 1.2 ? 'StackSelection' : ''}`}>
-                        <button className='StackBtn' onClick={() => handleStackClick(1.2)}>Z-shelf</button>
+                    <div className='StackChoice'>
+                        <button className='StackBtn' onClick={() => handleStackClick(1)}>Apply</button>
                         <img className='StackImg' src={Furniture[46].icon} />
                     </div>
                 </div>
@@ -177,7 +165,7 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                         {tile.map((item, innerIndex) => (
                             <div key={innerIndex} className="FurniAnchor"  >
 
-                                <div className={'FurniPoint' + (item.furniID === 48 || item.furniID === 49 || item.furniID === 50 ? ' PetalTile' : '')}
+                                <div className='FurniPoint'
                                     style={{ bottom: `${item.height + .6}rem` }}
                                     onClick={() => handleClick(item.furniID, index, innerIndex)}
                                 >

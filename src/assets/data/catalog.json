@@ -313,9 +313,88 @@
     ]
   },
   {
-    "name": "Lodge",
-    "mast": "src/assets/images/catalog/masts/lodge-mast.gif",
-    "furni": []
+    "name": "Marquees",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Yellow Marquee",
+        "img": "src/assets/images/furni/marquees/ym.gif",
+        "icon": "src/assets/images/furni-icons/marquees/ym_icon.gif",
+        "description": "slim shady",
+        "price": 25,
+        "itemid": 51
+      }
+    ]
+  },
+  {
+    "name": "Laser Gates",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "White Lasergate",
+        "img": "src/assets/images/furni/lasers/whitelaser.gif",
+        "icon": "src/assets/images/furni-icons/lasers/whitelaser_icon.gif",
+        "description": "jack plasma",
+        "price": 25,
+        "itemid": 52
+      }
+    ]
+  },
+  {
+    "name": "ICMs",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Purple ICM",
+        "img": "src/assets/images/furni/icms/picm.gif",
+        "icon": "src/assets/images/furni-icons/icms/picm_icon.gif",
+        "description": "the fourth flavor",
+        "price": 25,
+        "itemid": 53
+      }
+    ]
+  },
+  {
+    "name": "Pillows",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Snow Drift",
+        "img": "src/assets/images/furni/pillows/wp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/wp_icon.gif",
+        "description": "the santa claus 3",
+        "price": 25,
+        "itemid": 54
+      }
+    ]
+  },
+  {
+    "name": "Fans",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Yellow Fan",
+        "img": "src/assets/images/furni/fans/yfan.gif",
+        "icon": "src/assets/images/furni-icons/fans/yfan_icon.gif",
+        "description": "swoof swoof",
+        "price": 25,
+        "itemid": 55
+      }
+    ]
+  },
+  {
+    "name": "Smoke Machines",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Blue Smoke Machine",
+        "img": "src/assets/images/furni/smokes/nsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/nsm_icon.gif",
+        "description": "aguh no smoke?",
+        "price": 25,
+        "itemid": 56
+      }
+    ]
   },
   {
     "name": "Mode",
@@ -330,11 +409,6 @@
         "itemid": 46
       }
     ]
-  },
-  {
-    "name": "Pura",
-    "mast": "src/assets/images/catalog/masts/pura-mast.gif",
-    "furni": []
   },
   {
     "name": "Plants",
@@ -365,26 +439,6 @@
         "itemid": 30
       }
     ]
-  },
-  {
-    "name": "Rugs",
-    "mast": "src/assets/images/catalog/masts/rugs-mast.gif",
-    "furni": []
-  },
-  {
-    "name": "Bathroom",
-    "mast": "src/assets/images/catalog/masts/bathroom-mast.gif",
-    "furni": []
-  },
-  {
-    "name": "Christmas",
-    "mast": "src/assets/images/catalog/masts/xmas-mast.gif",
-    "furni": []
-  },
-  {
-    "name": "Spaces",
-    "mast": "src/assets/images/catalog/masts/spaces-mast.gif",
-    "furni": []
   },
   {
     "name": "Habbo Exchange",
