@@ -149,7 +149,11 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                     <button onClick={xOutFurni} className='FurniSelectionX'>x</button>
                     <div className='FurniSelectionFurni'>
                         <p className='FurniSelectionFurniName'>{Furniture[selectedFurni].name}</p>
-                        <img className='FurniSelectionImg' src={Furniture[selectedFurni].img} />
+                        <img
+                            className='FurniSelectionImg'
+                            src={selectedFurni === 47 ? Furniture[selectedFurni].img2 : Furniture[selectedFurni].img}
+                        />
+
                         <p className='FurniSelectionFurniMotto'>{Furniture[selectedFurni].description}</p>
                     </div>
                     <ul className='FurniSelectionOptions'>
@@ -173,11 +177,12 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                         {tile.map((item, innerIndex) => (
                             <div key={innerIndex} className="FurniAnchor"  >
 
-                                <div className={`FurniPoint ${item.furniID === 47 ? 'GJM' : ''}`}
+                                <div className={'FurniPoint' + (item.furniID === 48 || item.furniID === 49 || item.furniID === 50 ? ' PetalTile' : '')}
                                     style={{ bottom: `${item.height + .6}rem` }}
                                     onClick={() => handleClick(item.furniID, index, innerIndex)}
                                 >
                                     <img className={`FurniImg Furni${item.furniID}`} src={Furniture[item.furniID].img} />
+
 
                                 </div>
                             </div>

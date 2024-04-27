@@ -327,3 +327,7 @@
 p {
     margin: .5rem;
 }
+
+.PetalTile {
+    pointer-events: none;
+}
