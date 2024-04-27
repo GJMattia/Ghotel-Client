@@ -131,6 +131,14 @@
         "description": "Shake, don't break!",
         "price": 25,
         "itemid": 24
+      },
+      {
+        "name": "Arch Teleporter",
+        "img": "src/assets/images/furni/rares/arch.gif",
+        "icon": "src/assets/images/furni-icons/rares/arch_icon.gif",
+        "description": "YEAH WATER",
+        "price": 25,
+        "itemid": 61
       }
     ]
   },
@@ -155,12 +163,28 @@
         "itemid": 26
       },
       {
+        "name": "Imperial Teleporter",
+        "img": "src/assets/images/furni/club/imp.png",
+        "icon": "src/assets/images/furni-icons/club/imp_icon.gif",
+        "description": "aww yeah",
+        "price": 10,
+        "itemid": 57
+      },
+      {
         "name": "Majestic Chair",
         "img": "src/assets/images/furni/club/majestic.gif",
         "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
         "description": "zaandarbrow",
         "price": 16,
         "itemid": 27
+      },
+      {
+        "name": "Butler",
+        "img": "src/assets/images/furni/club/butler.gif",
+        "icon": "src/assets/images/furni-icons/club/butler_icon.gif",
+        "description": "Breakfast is served!",
+        "price": 10,
+        "itemid": 58
       }
     ]
   },
@@ -365,6 +389,22 @@
         "description": "the santa claus 3",
         "price": 25,
         "itemid": 54
+      },
+      {
+        "name": "Black Pillow",
+        "img": "src/assets/images/furni/pillows/bp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/bp_icon.gif",
+        "description": "gordon heights cushion",
+        "price": 25,
+        "itemid": 59
+      },
+      {
+        "name": "Turquoise Pillow",
+        "img": "src/assets/images/furni/pillows/tp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/tp_icon.gif",
+        "description": "tortuga",
+        "price": 25,
+        "itemid": 60
       }
     ]
   },

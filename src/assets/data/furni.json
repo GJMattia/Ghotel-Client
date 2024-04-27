@@ -341,5 +341,35 @@
         "img": "src/assets/images/furni/smokes/nsm.gif",
         "icon": "src/assets/images/furni-icons/smokes/nsm_icon.gif",
         "description": "aguh no smoke?"
+    },
+    {
+        "name": "Imperial Teleporter",
+        "img": "src/assets/images/furni/club/imp.png",
+        "icon": "src/assets/images/furni-icons/club/imp_icon.gif",
+        "description": "aww yeah"
+    },
+    {
+        "name": "Butler",
+        "img": "src/assets/images/furni/club/butler.gif",
+        "icon": "src/assets/images/furni-icons/club/butler_icon.gif",
+        "description": "Breakfast is served!"
+    },
+    {
+        "name": "Black Pillow",
+        "img": "src/assets/images/furni/pillows/bp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/bp_icon.gif",
+        "description": "gordon heights cushion"
+    },
+    {
+        "name": "Turquoise Pillow",
+        "img": "src/assets/images/furni/pillows/tp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/tp_icon.gif",
+        "description": "tortuga"
+    },
+    {
+        "name": "Arch Teleporter",
+        "img": "src/assets/images/furni/rares/arch.gif",
+        "icon": "src/assets/images/furni-icons/rares/arch_icon.gif",
+        "description": "AW SICK DAVY JONES"
     }
 ]
