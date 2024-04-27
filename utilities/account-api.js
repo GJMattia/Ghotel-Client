@@ -1,6 +1,6 @@
 import sendRequest from "./send-request";
 // const BASE_URL = 'http://localhost:4741/account';
-const BASE_URL = 'https://ghotel-api.onrender.com/account'
+const BASE_URL = 'https://ghotel-api.onrender.com/account';
 
 
 //For Creating Account Schema, used upon account sign up
@@ -30,17 +30,17 @@ export async function buyFurni(itemID, accountID) {
 };
 
 //For Creating A Room (BETA)
-export async function createRoom(roomSize) {
+export async function createRoom(roomInfo) {
     try {
-        await sendRequest(`${BASE_URL}/create/room`, 'PUT', roomSize);
+        await sendRequest(`${BASE_URL}/create/room`, 'PUT', roomInfo);
     } catch (error) {
         console.error('error creating room:', error);
     }
 };
 
-export async function addFurni(furniID, tileID) {
+export async function placeFurni(furniInfo) {
     try {
-        await sendRequest(`${BASE_URL}/place/furni`, 'PUT', furniID, tileID);
+        await sendRequest(`${BASE_URL}/place/furni`, 'PUT', furniInfo);
     } catch (error) {
         console.error('error creating room', error);
     }
@@ -48,17 +48,17 @@ export async function addFurni(furniID, tileID) {
 
 
 //For Clearing an entire room
-export async function clearRoom() {
+export async function clearRoom(roomID) {
     try {
-        await sendRequest(`${BASE_URL}/clear/room`, 'PUT');
+        await sendRequest(`${BASE_URL}/clear/room`, 'PUT', roomID);
     } catch (error) {
         console.error('error clearing room', error);
     }
 }
 
-export async function pickUpFurni(furniID, tileID, furniIndex) {
+export async function pickUpFurni(pickupInfo) {
     try {
-        await sendRequest(`${BASE_URL}/pickup/furni`, 'PUT', furniID, tileID, furniIndex);
+        await sendRequest(`${BASE_URL}/pickup/furni`, 'PUT', pickupInfo);
     } catch (error) {
         console.error('error picking up furni', error);
     }

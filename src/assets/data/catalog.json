@@ -320,7 +320,16 @@
   {
     "name": "Mode",
     "mast": "src/assets/images/catalog/masts/mode-mast.gif",
-    "furni": []
+    "furni": [
+      {
+        "name": "Z Shelf",
+        "img": "src/assets/images/furni/mode/zshelf.gif",
+        "icon": "src/assets/images/furni-icons/mode/zshelf_icon.gif",
+        "description": "for stacking",
+        "price": 1,
+        "itemid": 46
+      }
+    ]
   },
   {
     "name": "Pura",

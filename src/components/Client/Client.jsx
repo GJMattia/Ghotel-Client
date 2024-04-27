@@ -37,6 +37,7 @@ export default function Client({ user }) {
         getAccountData();
     }, []);
 
+    console.log(accountData)
     return (
         <div className='Client'>
             {accountData !== null ? (
@@ -45,7 +46,7 @@ export default function Client({ user }) {
                         <img src={Credits} />
                         <p>{accountData.credits}</p>
                     </div>
-                    {currentRoom && <Room setCurrentRoom={setCurrentRoom} setAccountData={setAccountData} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} currentRoom={currentRoom} />}
+                    {(currentRoom !== null || currentRoom === 0) && <Room user={user} accountData={accountData} setCurrentRoom={setCurrentRoom} setAccountData={setAccountData} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} currentRoom={currentRoom} />}
                     {navigatorDiv && <Navigator setCurrentRoom={setCurrentRoom} accountData={accountData} setAccountData={setAccountData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} />}
                     {catalogDiv && <Catalog accountData={accountData} setAccountData={setAccountData} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
                     <Inventory setPlaceFurni={setPlaceFurni} accountData={accountData} setAccountData={setAccountData} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />

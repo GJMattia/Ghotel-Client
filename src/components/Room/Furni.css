@@ -1,3 +1,5 @@
+.Furni1 {}
+
 .Furni3 {
     left: .2rem;
     bottom: .3rem;
@@ -61,6 +63,8 @@
     top: .1rem;
 }
 
+.Furni20 {}
+
 .Furni23 {
     right: .1rem;
     bottom: .4rem;
@@ -92,4 +96,8 @@
 .Furni32 {
     right: .2rem;
     top: .6rem;
+}
+
+.Furni47 {
+    display: none;
 }

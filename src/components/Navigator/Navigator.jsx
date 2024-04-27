@@ -8,11 +8,11 @@ import * as accountAPI from '../../../utilities/account-api';
 
 export default function Navigator({ setCurrentRoom, navigatorDiv, setNavigatorDiv, accountData, setAccountData }) {
 
-    const [currentNav, setCurrentNav] = useState('public');
+    const [currentNav, setCurrentNav] = useState('rooms');
 
     async function createRoom() {
         try {
-            await accountAPI.createRoom({ roomSize: 104 });
+            await accountAPI.createRoom({ roomName: 'Room', roomDescription: 'Description here', floorColor: 'brown', roomSize: 104 });
             const updatedAccountData = await accountAPI.getAccount();
             setAccountData(updatedAccountData);
         } catch (error) {
@@ -20,8 +20,8 @@ export default function Navigator({ setCurrentRoom, navigatorDiv, setNavigatorDi
         }
     };
 
-    function handleRoomClick() {
-        setCurrentRoom(accountData.rooms)
+    function handleRoomClick(index) {
+        setCurrentRoom(index)
     }
 
     function toggleNavigator() {
@@ -32,7 +32,6 @@ export default function Navigator({ setCurrentRoom, navigatorDiv, setNavigatorDi
     function handleRoomOptionClick(option) {
         setCurrentNav(option);
     }
-
 
     return (
         <div className='Navigator'>
@@ -51,15 +50,20 @@ export default function Navigator({ setCurrentRoom, navigatorDiv, setNavigatorDi
                     onClick={() => handleRoomOptionClick('rooms')}
                 >
                     <img src={currentNav === 'rooms' ? RoomActive : RoomNotActive} alt="Rooms" />
-                    <h5>Rooms</h5>
+                    <h5>My Rooms</h5>
                 </div>
             </div>
 
-            {/* <button onClick={createRoom} className='CreateRoom'>Create Room</button> */}
+            <button onClick={createRoom} className='CreateRoom'>Create Room</button>
             <ul className='RoomList'>
 
 
-                <li className='RoomItem' onClick={handleRoomClick}>Starter Room</li>
+                {accountData.rooms.map((room, index) => (
+                    <li key={index} className='RoomItem' onClick={() => handleRoomClick(index)}>
+                        <p>{room.roomName}</p>
+                        <p>#{index}</p>
+                    </li>
+                ))}
 
             </ul>
         </div>

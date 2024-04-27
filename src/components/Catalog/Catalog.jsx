@@ -114,8 +114,8 @@ export default function Catalog({ catalogDiv, setCatalogDiv, accountData, setAcc
                     ) : (
                         <>
 
-                            <p>Buy the {currentFurni.name} for {currentFurni.price} credits?</p>
-                            <button onClick={buyFurni} className='ConfirmBuy'>BUY</button>
+                            <p>Buy 10 {currentFurni.name}'s for {currentFurni.price} credits?</p>
+                            <button onClick={buyFurni} className='ConfirmBuy'>BUY 10</button>
                         </>
                     )}
                 </div>

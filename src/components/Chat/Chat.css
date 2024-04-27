@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 16rem;
+    width: 18rem;
     height: 24rem;
     background-color: white;
     border-radius: .5rem;
@@ -11,6 +11,7 @@
     top: 10rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     user-select: none;
+    z-index: 1;
 }
 
 .HideChat {

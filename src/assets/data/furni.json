@@ -274,5 +274,17 @@
         "img": "src/assets/images/furni/dragons/pinkdrag.webp",
         "icon": "src/assets/images/furni-icons/dragons/pinkdrag_icon.png",
         "description": "it's pink"
+    },
+    {
+        "name": "Z Shelf",
+        "img": "src/assets/images/furni/mode/zshelf.gif",
+        "icon": "src/assets/images/furni-icons/mode/zshelf_icon.gif",
+        "description": "for stacking"
+    },
+    {
+        "name": "GM",
+        "img": "src/assets/images/furni/gm/gjm.png",
+        "icon": "src/assets/images/furni/gm/gjm.png",
+        "description": "petal tiles"
     }
 ]

@@ -48,7 +48,7 @@
 
 .CreateRoom {
     width: 8rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 
 .RoomList {
@@ -63,12 +63,18 @@
 }
 
 .RoomItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
     background-color: white;
     color: black;
     width: 80%;
     margin: .75rem;
     border-radius: .5rem;
+    height: 1.5rem;
+
 }
 
 .RoomItem:hover {
