@@ -11,7 +11,7 @@ import buySound from '../../assets/audio/buy.mp3'
 export default function Catalog({ catalogDiv, setCatalogDiv, accountData, setAccountData }) {
 
     const [currentPage, setCurrentPage] = useState(catalogData[0]);
-    const [currentFurni, setCurrentFurni] = useState(0);
+    const [currentFurni, setCurrentFurni] = useState(catalogData[0].furni[0]);
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
     const [initialY, setInitialY] = useState(0);
@@ -60,8 +60,8 @@ export default function Catalog({ catalogDiv, setCatalogDiv, accountData, setAcc
 
 
     function selectPage(index) {
-        setCurrentFurni(0);
         setCurrentPage(catalogData[index]);
+        setCurrentFurni(catalogData[index].furni[0]);
     }
 
     const FurniLines = catalogData.map(function (item, index) {

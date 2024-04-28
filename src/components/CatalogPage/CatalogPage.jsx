@@ -21,7 +21,6 @@ export default function CatalogPage({ currentPage, currentFurni, setCurrentFurni
     return (
         <div className='CatalogPage'>
             <img className='LineHeader' src={currentPage.mast} />
-            <p>{currentPage.description}</p>
             <h4>Select Product:</h4>
             <ul className='CatalogItemList'>
                 {Furni}
