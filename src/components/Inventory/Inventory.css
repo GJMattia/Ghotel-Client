@@ -97,10 +97,35 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: .5rem;
-    top: 3.5rem;
+    right: .3rem;
+    top: 2.75rem;
     width: 11rem;
-    height: 14rem;
+    height: 15rem;
+    background-color: rgb(228, 228, 228);
+    border-radius: .4rem;
+}
+
+.NoFurni {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    right: .5rem;
+    top: 2.75rem;
+    width: 11rem;
+    height: 15rem;
+    text-align: center;
+    background-color: rgb(228, 228, 228);
+    border-radius: .4rem;
+    user-select: none;
+}
+
+
+.Skeleton {
+    user-select: none;
+    pointer-events: none;
+    transform: scaleX(-1);
 }
 
 .InventoryFurni {

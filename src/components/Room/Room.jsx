@@ -4,6 +4,8 @@ import './Furni.css';
 import Furniture from '../../assets/data/furni.json';
 import * as accountAPI from '../../../utilities/account-api';
 import { useState, useEffect } from 'react';
+import Set from '../../assets/images/client/settings.gif';
+import ML from '../../assets/images/client/ml.gif';
 
 
 export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, setAccountData, setCurrentRoom, accountData }) {
@@ -13,9 +15,10 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
     const [selectedFurniIndex, setSelectedFurniIndex] = useState(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [stackHeight, setStackHeight] = useState(0);
-    const [stackMult, setStackMult] = useState(1);
+    const [stackMult, setStackMult] = useState(0);
 
     let PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
+
     useEffect(() => {
         const handleMouseMove = (e) => {
             setPosition({ x: e.clientX, y: e.clientY });
@@ -40,9 +43,71 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
         }
     };
 
+    async function roomColor() {
+        try {
+            await accountAPI.roomColor({ roomIndex: currentRoom });
+            const updatedAccountData = await accountAPI.getAccount();
+            setAccountData(updatedAccountData);
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+    async function deleteRoom() {
+        try {
+            await accountAPI.deleteRoom({ roomIndex: currentRoom });
+            setCurrentRoom(null);
+            const updatedAccountData = await accountAPI.getAccount();
+            setAccountData(updatedAccountData);
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
     async function clearRoom() {
         try {
             await accountAPI.clearRoom({ roomIndex: currentRoom, roomSize: 104 });
+            const updatedAccountData = await accountAPI.getAccount();
+            setAccountData(updatedAccountData);
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+    async function clearInventory() {
+        try {
+            await accountAPI.clearInventory();
+            const updatedAccountData = await accountAPI.getAccount();
+            setAccountData(updatedAccountData);
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+    async function useFurni() {
+        let useFurnis = [11, 58, 61]
+        if (selectedFurni === null || selectedTile === null || selectedFurniIndex === null) {
+            return
+        };
+        if (!useFurnis.includes(selectedFurni)) {
+            return;
+        };
+
+        try {
+            await accountAPI.useFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
+            const updatedAccountData = await accountAPI.getAccount();
+            setAccountData(updatedAccountData);
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+    async function rotateFurni() {
+        if (selectedFurni === null || selectedTile === null || selectedFurniIndex === null) {
+            return
+        };
+        try {
+            await accountAPI.rotateFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
             const updatedAccountData = await accountAPI.getAccount();
             setAccountData(updatedAccountData);
         } catch (error) {
@@ -76,7 +141,9 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
             await accountAPI.placeFurni({ furniID: placeFurni, tileID: tileID, roomIndex: currentRoom, furniHeight: stackHeight });
             const updatedAccountData = await accountAPI.getAccount();
             setAccountData(updatedAccountData);
-            setPlaceFurni(null);
+            if (updatedAccountData.inventory.includes(placeFurni) === false) {
+                setPlaceFurni(null);
+            }
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -99,7 +166,11 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
     }
     return (
         <div className='RoomBox'>
-            <button onClick={clearRoom} className='ClearRoomBtn'>CLEAR ROOM</button>
+            <div className='DevTools'>
+                <button onClick={clearRoom} className='DevBtn'>CLEAR ROOM</button>
+                <button onClick={clearInventory} className='DevBtn'>CLEAR INVENTORY</button>
+                <button onClick={() => setPlaceFurni(null)} className='DevBtn StopPlacing'>STOP PLACING</button>
+            </div>
             <div className='StackTool'>
                 <h4>Jawn's Stack Tool</h4>
                 <div className='StackChoices'>
@@ -111,17 +182,19 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                 <div className='StackMult'>
 
                     <button className='StackDec' onClick={decrementCounter}>-</button>
-                    <p>x{stackMult}</p>
+                    <p>{stackMult} z's</p>
                     <button className='StackInc' onClick={incrementCounter}>+</button>
                 </div>
             </div>
             <div className='RoomInfo'>
+                <img className='Set' src={Set} />
+                <img onClick={roomColor} className='ML' src={ML} />
                 <h4>Room Info</h4>
                 <button className='InventoryX'>X</button>
-                <h5>{accountData.rooms[currentRoom].roomName} #{currentRoom}</h5>
-                <p>Owner: {user.name}</p>
+                <h5>{accountData.rooms[currentRoom].roomName}</h5>
+                <h5>Owner: {user.name}</h5>
                 <p>{accountData.rooms[currentRoom].roomDescription}</p>
-                <img src={Furniture[26].icon} />
+                <button onClick={deleteRoom} className='DeleteRoom'>Delete Room</button>
             </div>
             {placeFurni !== null && (
                 <img
@@ -146,14 +219,14 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                     </div>
                     <ul className='FurniSelectionOptions'>
                         <li>Move</li>
-                        <li>Rotate</li>
+                        <li onClick={rotateFurni}>Rotate</li>
                         <li onClick={pickUpFurni}>Pick Up</li>
-                        <li>Use</li>
+                        <li onClick={useFurni}>Use</li>
                     </ul>
                 </div>
             )}
 
-            <div className='Room'>
+            <div className='Room' style={{ backgroundColor: accountData.rooms[currentRoom].floorColor }}>
                 {accountData.rooms[currentRoom].room.map((tile, index) => (
                     <div
                         key={index}
@@ -169,9 +242,10 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                                     style={{ bottom: `${item.height + .6}rem` }}
                                     onClick={() => handleClick(item.furniID, index, innerIndex)}
                                 >
-                                    <img className={`FurniImg Furni${item.furniID}`} src={Furniture[item.furniID].img} />
-
-
+                                    <img
+                                        className={`FurniImg Furni${item.furniID} ${item.rotation ? 'Rotate' : ''}`}
+                                        src={item.state ? Furniture[item.furniID].on : Furniture[item.furniID].img}
+                                    />
                                 </div>
                             </div>
                         ))}

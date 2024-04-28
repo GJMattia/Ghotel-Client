@@ -54,12 +54,61 @@ export async function clearRoom(roomID) {
     } catch (error) {
         console.error('error clearing room', error);
     }
-}
+};
 
+//Pick up a furni
 export async function pickUpFurni(pickupInfo) {
     try {
         await sendRequest(`${BASE_URL}/pickup/furni`, 'PUT', pickupInfo);
     } catch (error) {
         console.error('error picking up furni', error);
     }
-}
+};
+
+//Rotate Furni
+
+export async function rotateFurni(rotateInfo) {
+    try {
+        await sendRequest(`${BASE_URL}/rotate/furni`, 'PUT', rotateInfo);
+    } catch (error) {
+        console.error('error rotating furni', error);
+    }
+};
+
+// for using furni
+export async function useFurni(useInfo) {
+    try {
+        await sendRequest(`${BASE_URL}/use/furni`, 'PUT', useInfo);
+    } catch (error) {
+        console.error('error using up furni', error);
+    }
+};
+
+//for clearing inveotry
+export async function clearInventory() {
+    try {
+        await sendRequest(`${BASE_URL}/clear/inventory`, 'PUT');
+    } catch (error) {
+        console.error('error clearing room', error);
+    }
+};
+
+//for deleting a room
+
+export async function deleteRoom(roomIndex) {
+    try {
+        await sendRequest(`${BASE_URL}/delete/room`, 'PUT', roomIndex);
+    } catch (error) {
+        console.error('error deleting room', error);
+    }
+};
+
+//changing room color
+
+export async function roomColor(roomIndex) {
+    try {
+        await sendRequest(`${BASE_URL}/room/color`, 'PUT', roomIndex);
+    } catch (error) {
+        console.error('error changing room color', error);
+    }
+};

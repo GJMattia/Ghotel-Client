@@ -1,7 +1,6 @@
 [
   {
     "name": "Rares",
-    "description": "Finally all of those years of wanting to play habbo with access to all of the rares becomes a reality.",
     "mast": "src/assets/images/catalog/masts/rares-mast.gif",
     "furni": [
       {
@@ -133,12 +132,90 @@
         "itemid": 24
       },
       {
-        "name": "Arch Teleporter",
-        "img": "src/assets/images/furni/rares/arch.gif",
-        "icon": "src/assets/images/furni-icons/rares/arch_icon.gif",
-        "description": "YEAH WATER",
+        "name": "Habbo Cola Machine",
+        "img": "src/assets/images/furni/rares/hcola.gif",
+        "icon": "src/assets/images/furni-icons/rares/hcola_icon.gif",
+        "description": "it was a dark and stormy night",
         "price": 25,
-        "itemid": 61
+        "itemid": 62
+      },
+      {
+        "name": "Holoboy",
+        "img": "src/assets/images/furni/rares/hboy.gif",
+        "icon": "src/assets/images/furni-icons/rares/hboy_icon.gif",
+        "description": "DIGITAL STYLE",
+        "price": 25,
+        "itemid": 63
+      },
+      {
+        "name": "Hologirl",
+        "img": "src/assets/images/furni/rares/hgirl.gif",
+        "icon": "src/assets/images/furni-icons/rares/hgirl_icon.gif",
+        "description": "DIGITAL STYLE",
+        "price": 25,
+        "itemid": 64
+      },
+      {
+        "name": "Orange Para",
+        "img": "src/assets/images/furni/rares/opara.gif",
+        "icon": "src/assets/images/furni-icons/rares/opara_icon.gif",
+        "description": "marry poppins",
+        "price": 25,
+        "itemid": 66
+      },
+      {
+        "name": "Black Dragon Egg",
+        "img": "src/assets/images/furni/rares/bdino.png",
+        "icon": "src/assets/images/furni-icons/rares/bdino_icon.gif",
+        "description": "number 2, CHERZARD",
+        "price": 25,
+        "itemid": 72
+      },
+      {
+        "name": "Gold Pillar",
+        "img": "src/assets/images/furni/rares/gpil.gif",
+        "icon": "src/assets/images/furni-icons/rares/gpil_icon.gif",
+        "description": "big and gold",
+        "price": 25,
+        "itemid": 76
+      },
+      {
+        "name": "Speaker's Corner",
+        "img": "src/assets/images/furni/rares/speaker.gif",
+        "icon": "src/assets/images/furni-icons/rares/speaker_icon.gif",
+        "description": "speak now",
+        "price": 25,
+        "itemid": 78
+      }
+    ]
+  },
+  {
+    "name": "Ultra Rares",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Moodi Machine",
+        "img": "src/assets/images/furni/ultras/moodi.gif",
+        "icon": "src/assets/images/furni-icons/ultras/moodi_icon.png",
+        "description": "I'M HAVING A MAN BREAK",
+        "price": 25,
+        "itemid": 67
+      },
+      {
+        "name": "Golden Tablet",
+        "img": "src/assets/images/furni/ultras/gtab.png",
+        "icon": "src/assets/images/furni-icons/ultras/gtab_icon.png",
+        "description": "THROUGH THE TREASURE ROOM",
+        "price": 25,
+        "itemid": 68
+      },
+      {
+        "name": "Carl Ducksworth",
+        "img": "src/assets/images/furni/ultras/carl.png",
+        "icon": "src/assets/images/furni-icons/ultras/carl_icon.png",
+        "description": "it's a work of art",
+        "price": 25,
+        "itemid": 82
       }
     ]
   },
@@ -171,6 +248,14 @@
         "itemid": 57
       },
       {
+        "name": "Oil Lamp",
+        "img": "src/assets/images/furni/club/oil.gif",
+        "icon": "src/assets/images/furni-icons/club/oil_icon.gif",
+        "description": "powered by black gold",
+        "price": 10,
+        "itemid": 65
+      },
+      {
         "name": "Majestic Chair",
         "img": "src/assets/images/furni/club/majestic.gif",
         "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
@@ -185,6 +270,28 @@
         "description": "Breakfast is served!",
         "price": 10,
         "itemid": 58
+      }
+    ]
+  },
+  {
+    "name": "Collectables",
+    "mast": "src/assets/images/catalog/masts/collect-mast.gif",
+    "furni": [
+      {
+        "name": "Big Ben",
+        "img": "src/assets/images/furni/collects/bigben.gif",
+        "icon": "src/assets/images/furni-icons/collects/bigben_icon.gif",
+        "description": "tick TOCK",
+        "price": 25,
+        "itemid": 69
+      },
+      {
+        "name": "Architeuthis",
+        "img": "src/assets/images/furni/collects/arch.gif",
+        "icon": "src/assets/images/furni-icons/collects/arch_icon.gif",
+        "description": "YEAH WATER",
+        "price": 25,
+        "itemid": 61
       }
     ]
   },
@@ -347,6 +454,22 @@
         "description": "slim shady",
         "price": 25,
         "itemid": 51
+      },
+      {
+        "name": "Sky Blue Marquee",
+        "img": "src/assets/images/furni/marquees/sm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/sm_icon.gif",
+        "description": "butterfly in the sky",
+        "price": 25,
+        "itemid": 74
+      },
+      {
+        "name": "Purple Marquee",
+        "img": "src/assets/images/furni/marquees/pm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/pm_icon.gif",
+        "description": "the purple one",
+        "price": 25,
+        "itemid": 75
       }
     ]
   },
@@ -361,6 +484,14 @@
         "description": "jack plasma",
         "price": 25,
         "itemid": 52
+      },
+      {
+        "name": "Black Lasergate",
+        "img": "src/assets/images/furni/lasers/blaser.gif",
+        "icon": "src/assets/images/furni-icons/lasers/blaser_icon.gif",
+        "description": "zing zong",
+        "price": 25,
+        "itemid": 70
       }
     ]
   },
@@ -375,6 +506,14 @@
         "description": "the fourth flavor",
         "price": 25,
         "itemid": 53
+      },
+      {
+        "name": "Orange ICM",
+        "img": "src/assets/images/furni/icms/oicm.gif",
+        "icon": "src/assets/images/furni-icons/icms/oicm_icon.gif",
+        "description": "orange ice",
+        "price": 25,
+        "itemid": 73
       }
     ]
   },
@@ -383,10 +522,10 @@
     "mast": "src/assets/images/catalog/masts/limited-mast.gif",
     "furni": [
       {
-        "name": "Snow Drift",
+        "name": "White Pillow",
         "img": "src/assets/images/furni/pillows/wp.gif",
         "icon": "src/assets/images/furni-icons/pillows/wp_icon.gif",
-        "description": "the santa claus 3",
+        "description": "the santa clause 3",
         "price": 25,
         "itemid": 54
       },
@@ -405,6 +544,14 @@
         "description": "tortuga",
         "price": 25,
         "itemid": 60
+      },
+      {
+        "name": "Navy Pillow",
+        "img": "src/assets/images/furni/pillows/np.gif",
+        "icon": "src/assets/images/furni-icons/pillows/np_icon.gif",
+        "description": "not the navy!",
+        "price": 25,
+        "itemid": 81
       }
     ]
   },
@@ -419,6 +566,14 @@
         "description": "swoof swoof",
         "price": 25,
         "itemid": 55
+      },
+      {
+        "name": "Turquoise Fan",
+        "img": "src/assets/images/furni/fans/tfan.gif",
+        "icon": "src/assets/images/furni-icons/fans/tfan_icon.gif",
+        "description": "swoof swoof",
+        "price": 25,
+        "itemid": 80
       }
     ]
   },
@@ -433,6 +588,28 @@
         "description": "aguh no smoke?",
         "price": 25,
         "itemid": 56
+      },
+      {
+        "name": "Violet Smoke Machine",
+        "img": "src/assets/images/furni/smokes/vsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/vsm_icon.gif",
+        "description": "aguh no smoke?",
+        "price": 25,
+        "itemid": 79
+      }
+    ]
+  },
+  {
+    "name": "Space Doors",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "White Space Door",
+        "img": "src/assets/images/furni/space/wsd.gif",
+        "icon": "src/assets/images/furni-icons/space/wsd_icon.gif",
+        "description": "Jason X",
+        "price": 25,
+        "itemid": 83
       }
     ]
   },
@@ -447,6 +624,14 @@
         "description": "for stacking",
         "price": 1,
         "itemid": 46
+      },
+      {
+        "name": "Door Teleporter",
+        "img": "src/assets/images/furni/mode/door.gif",
+        "icon": "src/assets/images/furni-icons/mode/door_icon.gif",
+        "description": "open up",
+        "price": 7,
+        "itemid": 77
       }
     ]
   },
@@ -524,6 +709,14 @@
         "description": "Worth 50 Credits.",
         "price": 50,
         "itemid": 17
+      },
+      {
+        "name": "Staff of Ra",
+        "img": "src/assets/images/furni/exchange/spec.png",
+        "icon": "src/assets/images/furni-icons/exchange/spec_icon.png",
+        "description": "Worth 350 Credits.",
+        "price": 350,
+        "itemid": 71
       },
       {
         "name": "Platinum Bar",

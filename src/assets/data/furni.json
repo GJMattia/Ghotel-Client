@@ -68,6 +68,7 @@
     {
         "name": "Red Fountain",
         "img": "src/assets/images/furni/rares/rbb.png",
+        "on": "src/assets/images/furni/rares/rbb-on.gif",
         "icon": "src/assets/images/furni-icons/rares/rbb_icon.png",
         "description": "rbb, goin up"
     },
@@ -325,10 +326,10 @@
         "description": "the fourth flavor"
     },
     {
-        "name": "Snow Drift",
+        "name": "White Pillow",
         "img": "src/assets/images/furni/pillows/wp.gif",
         "icon": "src/assets/images/furni-icons/pillows/wp_icon.gif",
-        "description": "the santa claus 3"
+        "description": "the santa clause 3"
     },
     {
         "name": "Yellow Fan",
@@ -351,6 +352,7 @@
     {
         "name": "Butler",
         "img": "src/assets/images/furni/club/butler.gif",
+        "on": "src/assets/images/furni/club/butler-on.gif",
         "icon": "src/assets/images/furni-icons/club/butler_icon.gif",
         "description": "Breakfast is served!"
     },
@@ -367,9 +369,144 @@
         "description": "tortuga"
     },
     {
-        "name": "Arch Teleporter",
-        "img": "src/assets/images/furni/rares/arch.gif",
-        "icon": "src/assets/images/furni-icons/rares/arch_icon.gif",
+        "name": "Architeuthis",
+        "img": "src/assets/images/furni/collects/arch.gif",
+        "icon": "src/assets/images/furni-icons/collects/arch_icon.gif",
+        "on": "src/assets/images/furni/collects/arch-on.gif",
         "description": "AW SICK DAVY JONES"
+    },
+    {
+        "name": "Habbo Cola Machine",
+        "img": "src/assets/images/furni/rares/hcola.gif",
+        "icon": "src/assets/images/furni-icons/rares/hcola_icon.gif",
+        "description": "it was a dark and stormy night"
+    },
+    {
+        "name": "Holoboy",
+        "img": "src/assets/images/furni/rares/hboy.gif",
+        "icon": "src/assets/images/furni-icons/rares/hboy_icon.gif",
+        "description": "DIGITAL STYLE"
+    },
+    {
+        "name": "Hologirl",
+        "img": "src/assets/images/furni/rares/hgirl.gif",
+        "icon": "src/assets/images/furni-icons/rares/hgirl_icon.gif",
+        "description": "DIGITAL STYLE"
+    },
+    {
+        "name": "Oil Lamp",
+        "img": "src/assets/images/furni/club/oil.gif",
+        "icon": "src/assets/images/furni-icons/club/oil_icon.gif",
+        "description": "powered by black gold"
+    },
+    {
+        "name": "Orange Para",
+        "img": "src/assets/images/furni/rares/opara.gif",
+        "icon": "src/assets/images/furni-icons/rares/opara_icon.gif",
+        "description": "marry poppins"
+    },
+    {
+        "name": "Moodi Machine",
+        "img": "src/assets/images/furni/ultras/moodi.gif",
+        "icon": "src/assets/images/furni-icons/ultras/moodi_icon.png",
+        "description": "I'M HAVING A MAN BREAK"
+    },
+    {
+        "name": "Golden Tablet",
+        "img": "src/assets/images/furni/ultras/gtab.png",
+        "icon": "src/assets/images/furni-icons/ultras/gtab_icon.png",
+        "description": "THROUGH THE TREASURE ROOM"
+    },
+    {
+        "name": "Big Ben",
+        "img": "src/assets/images/furni/collects/bigben.gif",
+        "icon": "src/assets/images/furni-icons/collects/bigben_icon.gif",
+        "description": "tick TOCK"
+    },
+    {
+        "name": "Black Lasergate",
+        "img": "src/assets/images/furni/lasers/blaser.gif",
+        "icon": "src/assets/images/furni-icons/lasers/blaser_icon.gif",
+        "description": "zing zong"
+    },
+    {
+        "name": "Staff of Ra",
+        "img": "src/assets/images/furni/exchange/spec.png",
+        "icon": "src/assets/images/furni-icons/exchange/spec_icon.png",
+        "description": "Worth 350 Credits."
+    },
+    {
+        "name": "Black Dragon Egg",
+        "img": "src/assets/images/furni/rares/bdino.png",
+        "icon": "src/assets/images/furni-icons/rares/bdino_icon.gif",
+        "description": "number 2, CHERZARD"
+    },
+    {
+        "name": "Orange ICM",
+        "img": "src/assets/images/furni/icms/oicm.gif",
+        "icon": "src/assets/images/furni-icons/icms/oicm_icon.gif",
+        "description": "orange ice"
+    },
+    {
+        "name": "Sky Blue Marquee",
+        "img": "src/assets/images/furni/marquees/sm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/sm_icon.gif",
+        "description": "butterfly in the sky"
+    },
+    {
+        "name": "Purple Marquee",
+        "img": "src/assets/images/furni/marquees/pm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/pm_icon.gif",
+        "description": "the purple one"
+    },
+    {
+        "name": "Gold Pillar",
+        "img": "src/assets/images/furni/rares/gpil.gif",
+        "icon": "src/assets/images/furni-icons/rares/gpil_icon.gif",
+        "description": "big and gold",
+        "price": 25,
+        "itemid": 76
+    },
+    {
+        "name": "Door Teleporter",
+        "img": "src/assets/images/furni/mode/door.gif",
+        "icon": "src/assets/images/furni-icons/mode/door_icon.gif",
+        "description": "open up"
+    },
+    {
+        "name": "Speaker's Corner",
+        "img": "src/assets/images/furni/rares/speaker.gif",
+        "icon": "src/assets/images/furni-icons/rares/speaker_icon.gif",
+        "description": "speak now"
+    },
+    {
+        "name": "Violet Smoke Machine",
+        "img": "src/assets/images/furni/smokes/vsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/vsm_icon.gif",
+        "description": "aguh no smoke?"
+    },
+    {
+        "name": "Turquoise Fan",
+        "img": "src/assets/images/furni/fans/tfan.gif",
+        "icon": "src/assets/images/furni-icons/fans/tfan_icon.gif",
+        "description": "swoof swoof"
+    },
+    {
+        "name": "Navy Pillow",
+        "img": "src/assets/images/furni/pillows/np.gif",
+        "icon": "src/assets/images/furni-icons/pillows/np_icon.gif",
+        "description": "not the navy!"
+    },
+    {
+        "name": "Carl Ducksworth",
+        "img": "src/assets/images/furni/ultras/carl.png",
+        "icon": "src/assets/images/furni-icons/ultras/carl_icon.png",
+        "description": "it's a work of art"
+    },
+    {
+        "name": "White Space Door",
+        "img": "src/assets/images/furni/space/wsd.gif",
+        "icon": "src/assets/images/furni-icons/space/wsd_icon.gif",
+        "description": "Jason X"
     }
 ]

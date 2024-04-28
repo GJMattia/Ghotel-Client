@@ -1,14 +1,20 @@
 import './Inventory.css';
 import { useState } from 'react';
 import Furni from '../../assets/data/furni.json';
+import Skeleton from '../../assets/images/navigator/skeleton.gif';
 
-export default function Inventory({ inventoryDiv, setInventoryDiv, accountData, setAccountData, setPlaceFurni }) {
+export default function Inventory({ setCatalogDiv, placeFurni, inventoryDiv, setInventoryDiv, accountData, setPlaceFurni }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
     const [initialY, setInitialY] = useState(0);
     const [showcaseFurni, setShowcaseFurni] = useState(0);
 
+
+    function openCat() {
+        setCatalogDiv(true);
+        setInventoryDiv(false);
+    }
     function toggleInventory() {
         setInventoryDiv(!inventoryDiv)
     };
@@ -71,8 +77,6 @@ export default function Inventory({ inventoryDiv, setInventoryDiv, accountData, 
         );
     });
 
-
-
     return (
         <div
             onMouseDown={handleMouseDown}
@@ -85,12 +89,27 @@ export default function Inventory({ inventoryDiv, setInventoryDiv, accountData, 
             <ul className='InventoryItemList'>
                 {inventoryFurni}
             </ul>
-            <div className='InventoryShowcase'>
-                <img className='InventoryFurni' src={Furni[showcaseFurni].img} />
-                <h5>{Furni[showcaseFurni].name}</h5>
-                <p>{Furni[showcaseFurni].description}</p>
-                <button onClick={placeFurni}>Place in Room</button>
-            </div>
+            {accountData.inventory.length ? (
+                <div className='InventoryShowcase'>
+                    {accountData.inventory.includes(showcaseFurni) ? (
+                        <>
+                            <img className='InventoryFurni' src={Furni[showcaseFurni].img} />
+                            <h5>{Furni[showcaseFurni].name}</h5>
+                            <p>{Furni[showcaseFurni].description}</p>
+                            <button onClick={placeFurni}>Place in Room</button>
+                        </>
+                    ) : (
+                        setShowcaseFurni(accountData.inventory[0])
+                    )}
+                </div>
+            ) : (
+                <div className='NoFurni'>
+                    <h4>You have no furni</h4>
+                    <img className='Skeleton' src={Skeleton} />
+                    <h5>Go buy some</h5>
+                    <button onClick={openCat}>Open Catalog</button>
+                </div>
+            )}
         </div>
     )
 }

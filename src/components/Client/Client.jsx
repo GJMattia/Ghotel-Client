@@ -24,7 +24,7 @@ export default function Client({ user }) {
     const [navigatorDiv, setNavigatorDiv] = useState(false);
     const [currentRoom, setCurrentRoom] = useState(null);
     const [placeFurni, setPlaceFurni] = useState(null);
-
+    console.log(accountData)
     useEffect(function () {
         async function getAccountData() {
             try {
@@ -37,7 +37,6 @@ export default function Client({ user }) {
         getAccountData();
     }, []);
 
-    console.log(accountData)
     return (
         <div className='Client'>
             {accountData !== null ? (
@@ -47,9 +46,9 @@ export default function Client({ user }) {
                         <p>{accountData.credits}</p>
                     </div>
                     {(currentRoom !== null || currentRoom === 0) && <Room user={user} accountData={accountData} setCurrentRoom={setCurrentRoom} setAccountData={setAccountData} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} currentRoom={currentRoom} />}
-                    {navigatorDiv && <Navigator setCurrentRoom={setCurrentRoom} accountData={accountData} setAccountData={setAccountData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} />}
+                    {navigatorDiv && <Navigator user={user} setCurrentRoom={setCurrentRoom} accountData={accountData} setAccountData={setAccountData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} />}
                     {catalogDiv && <Catalog accountData={accountData} setAccountData={setAccountData} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
-                    <Inventory setPlaceFurni={setPlaceFurni} accountData={accountData} setAccountData={setAccountData} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
+                    <Inventory setCatalogDiv={setCatalogDiv} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} accountData={accountData} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
                     {consoleDiv && <Console user={user} setChatDiv={setChatDiv} setRoom={setRoom} consoleDiv={consoleDiv} setConsoleDiv={setConsoleDiv} setUsersMessaged={setUsersMessaged} usersMessaged={usersMessaged} />}
                     <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} room={room} setRoom={setRoom} />
                     <ClientNav setCurrentRoom={setCurrentRoom} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />

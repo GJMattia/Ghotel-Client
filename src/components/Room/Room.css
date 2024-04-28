@@ -10,6 +10,7 @@
 
 .Room {
     position: relative;
+    top: 2rem;
     margin-top: 5.5rem;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
@@ -20,9 +21,38 @@
     height: 14.4rem;
     transform: rotate(-26.5deg) skewX(37deg);
     z-index: 1;
-    background-color: brown;
     /* background-color: #8c8c5d; */
-    transition: 5s ease;
+    transition: .5s ease;
+}
+
+.DevTools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 2.5rem;
+    position: absolute;
+    width: 70%;
+}
+
+.DevBtn {
+    background-color: crimson;
+    color: white;
+    border: 0;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.DevBtn:hover {
+    background-color: brown;
+}
+
+.StopPlacing {
+    background-color: #367897;
+}
+
+.StopPlacing:hover {
+    background-color: rgb(35, 35, 106);
 }
 
 .Tile {
@@ -50,38 +80,22 @@
     position: relative;
     display: flex;
     right: .5rem;
-    /* top: -.6rem; */
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     width: 2rem;
     height: 2rem;
-    /* background-color: lightblue;
-    border: 1px solid black;
-    border-radius: 5rem; */
+    /* background-color: lightblue; */
 }
 
 .FurniImg {
     position: relative;
     pointer-events: none;
+
 }
 
 .FurniPoint:hover {
     filter: brightness(150%) saturate(120%);
-}
-
-.ClearRoomBtn {
-    top: 3.5rem;
-    position: absolute;
-    background-color: crimson;
-    color: white;
-    border: 0;
-    padding: .5rem;
-    cursor: pointer;
-}
-
-.ClearRoomBtn:hover {
-    background-color: brown;
 }
 
 .FurniSelection {
@@ -90,7 +104,7 @@
     align-items: center;
     justify-content: center;
     right: 1rem;
-    bottom: 5rem;
+    bottom: 3.5rem;
     position: absolute;
     z-index: 3;
 }
@@ -189,7 +203,7 @@
 
 .StackTool {
     position: absolute;
-    top: 4rem;
+    top: 3rem;
     left: 1rem;
     width: 12rem;
     height: 10rem;
@@ -295,8 +309,8 @@
     position: absolute;
     bottom: 5.5rem;
     left: 1rem;
-    width: 10rem;
-    height: 11rem;
+    width: 12rem;
+    height: 10rem;
     background-color: #f8f8f4;
     display: flex;
     flex-direction: column;
@@ -305,6 +319,8 @@
     color: black;
     border-radius: .2rem;
     user-select: none;
+    text-align: left;
+    z-index: 4;
 }
 
 .RoomInfo>h4 {
@@ -317,13 +333,51 @@
     background-color: #367897;
     border-bottom: 2px solid gray;
     font-size: .8rem;
+    margin-bottom: .5rem;
 }
 
-.RoomInfo>h5,
-p {
-    margin: .5rem;
+.RoomInfo>h5 {
+    width: 90%;
+    margin: .2rem;
 }
 
-.PetalTile {
-    pointer-events: none;
+.RoomInfo>p {
+    width: 90%;
+    margin: .2rem;
+    font-size: .75rem;
+    font-style: italic;
+}
+
+.DeleteRoom {
+    padding: .4rem;
+    color: white;
+    background-color: crimson;
+    margin-top: 1rem;
+    border: 0;
+    width: 50%;
+}
+
+.DeleteRoom:hover {
+    background-color: darkred;
+}
+
+.Set {
+    position: absolute;
+    top: 2.5rem;
+    right: .5rem;
+}
+
+.Set:hover {
+    filter: saturate(150%) brightness(150%);
+}
+
+.ML {
+    transform: scaleX(-1);
+    position: absolute;
+    top: 4rem;
+    right: 0rem;
+}
+
+.ML:hover {
+    filter: saturate(150%) brightness(150%);
 }

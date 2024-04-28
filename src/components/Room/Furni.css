@@ -1,3 +1,7 @@
+.Rotate {
+    transform: scaleX(-1);
+}
+
 .Furni3 {
     left: .2rem;
     bottom: .3rem;

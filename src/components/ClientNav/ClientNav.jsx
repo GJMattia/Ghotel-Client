@@ -1,11 +1,11 @@
 import './ClientNav.css';
 import ConsoleIcon from '../../assets/images/clientnav/console-2.png';
-import ChatIcon from '../../assets/images/clientnav/Chat.png';
+import ChatIcon from '../../assets/images/clientnav/chat.gif';
 import HotelIcon from '../../assets/images/clientnav/hotel-icon.png';
 import CatalogIcon from '../../assets/images/clientnav/catalog.png';
 import NavIcon from '../../assets/images/clientnav/nav.png';
 import InventoryIcon from '../../assets/images/clientnav/inventory.png';
-import HelpIcon from '../../assets/images/clientnav/help.png';
+import HelpIcon from '../../assets/images/clientnav/wonky.gif';
 
 
 export default function ClientNav({ setCurrentRoom, navigatorDiv, setNavigatorDiv, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
