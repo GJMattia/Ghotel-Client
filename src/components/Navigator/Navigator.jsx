@@ -51,12 +51,11 @@ export default function Navigator({ user, setCurrentRoom, navigatorDiv, setNavig
 
     async function createRoom() {
         try {
-            await accountAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104 });
+            let newRoom = await accountAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104 });
             setRoomName('');
             setRoomDescription('');
             setCreate(false);
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
+            setAccountData(newRoom);
         } catch (error) {
             console.error('error creating note'.error)
         }

@@ -45,9 +45,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function roomColor() {
         try {
-            await accountAPI.roomColor({ roomIndex: currentRoom });
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
+            let updatedRoom = await accountAPI.roomColor({ roomIndex: currentRoom });
+            setAccountData(updatedRoom);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -55,10 +54,9 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function deleteRoom() {
         try {
-            await accountAPI.deleteRoom({ roomIndex: currentRoom });
+            let updatedRooms = await accountAPI.deleteRoom({ roomIndex: currentRoom });
             setCurrentRoom(null);
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
+            setAccountData(updatedRooms);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -66,9 +64,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function clearRoom() {
         try {
-            await accountAPI.clearRoom({ roomIndex: currentRoom, roomSize: 104 });
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
+            let clearedRoom = await accountAPI.clearRoom({ roomIndex: currentRoom, roomSize: 104 });
+            setAccountData(clearedRoom);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -76,9 +73,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function clearInventory() {
         try {
-            await accountAPI.clearInventory();
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
+            let updatedInventory = await accountAPI.clearInventory();
+            setAccountData(updatedInventory);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -94,9 +90,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
         };
 
         try {
-            await accountAPI.useFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
+            let updatedRoom = await accountAPI.useFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
+            setAccountData(updatedRoom);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -107,9 +102,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
             return
         };
         try {
-            await accountAPI.rotateFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
+            let updatedRoom = await accountAPI.rotateFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
+            setAccountData(updatedRoom);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -117,17 +111,16 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function pickUpFurni() {
         if (selectedFurni === null || selectedTile === null || selectedFurniIndex === null) {
-            return
+            return;
         };
         try {
-            await accountAPI.pickUpFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
+            let updatedRoom = await accountAPI.pickUpFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
+            setAccountData(updatedRoom);
             setSelectedFurni(null);
         } catch (error) {
             console.error('error creating note'.error)
         }
-    }
+    };
 
     async function PlaceFurni(tileID) {
         try {
@@ -138,10 +131,9 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                 return;
             };
 
-            await accountAPI.placeFurni({ furniID: placeFurni, tileID: tileID, roomIndex: currentRoom, furniHeight: stackHeight });
-            const updatedAccountData = await accountAPI.getAccount();
-            setAccountData(updatedAccountData);
-            if (updatedAccountData.inventory.includes(placeFurni) === false) {
+            let updatedRoom = await accountAPI.placeFurni({ furniID: placeFurni, tileID: tileID, roomIndex: currentRoom, furniHeight: stackHeight });
+            setAccountData(updatedRoom);
+            if (updatedRoom.inventory.includes(placeFurni) === false) {
                 setPlaceFurni(null);
             }
         } catch (error) {

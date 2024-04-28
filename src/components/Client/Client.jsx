@@ -24,7 +24,7 @@ export default function Client({ user }) {
     const [navigatorDiv, setNavigatorDiv] = useState(false);
     const [currentRoom, setCurrentRoom] = useState(null);
     const [placeFurni, setPlaceFurni] = useState(null);
-    console.log(accountData)
+
     useEffect(function () {
         async function getAccountData() {
             try {
