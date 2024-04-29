@@ -19,6 +19,22 @@ export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigat
     const [roomName, setRoomName] = useState('Room');
     const [roomDescription, setRoomDescription] = useState('Description');
 
+    //For searching friends
+    const [userSearch, setUserSearch] = useState('');
+    const [foundRooms, setFoundRooms] = useState(null);
+
+
+
+    async function roomSearch() {
+        try {
+            const response = await accountAPI.roomSearch({ search: userSearch });
+            setFoundRooms(response);
+
+        } catch (error) {
+            console.error('Error searching user rooms', error);
+        }
+    };
+
     const handleRoomNameChange = (event) => {
         setRoomName(event.target.value);
     };
@@ -69,7 +85,7 @@ export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigat
         } catch (error) {
             console.error('Error Fetching Questions', error);
         }
-    }
+    };
 
     function handleRoomClick(index) {
         getRoomData(index)
@@ -160,7 +176,32 @@ export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigat
                 </div>
             ) : (
                 <div className='PublicRooms'>
+                    <div className='RoomSearch'>
+                        <input
+                            placeholder='search user'
+                            maxLength={24}
+                        // onChange={(event) => setUserSearch(event.target.value)}
+                        />
+                        <button>Search</button>
+                    </div>
 
+                    <ul className='RoomList'>
+
+
+                        <li className='RoomItem'>
+                            <p>more rooms</p>
+                            <p>⮕</p>
+                        </li>
+                        <li className='RoomItem'>
+                            <p>Rooms from another</p>
+                            <p>⮕</p>
+                        </li>
+                        <li className='RoomItem'>
+                            <p>pasta sauce</p>
+                            <p>⮕</p>
+                        </li>
+
+                    </ul>
                 </div>
             )}
 

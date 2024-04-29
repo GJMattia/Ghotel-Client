@@ -6,20 +6,19 @@ import * as accountAPI from '../../../utilities/account-api';
 import { useState, useEffect } from 'react';
 import Set from '../../assets/images/client/settings.gif';
 import ML from '../../assets/images/client/ml.gif';
+import DevTools from '../DevTools/DevTools';
 
 
-export default function Room({ inventory, setInventory, roomData, setRoomData, user, placeFurni, setPlaceFurni, roomIndex, setRoomIndex, setUserRoomsList }) {
+export default function Room({ setInventory, roomData, setRoomData, user, placeFurni, setPlaceFurni, roomIndex, setRoomIndex, setUserRoomsList }) {
 
     const [selectedFurni, setSelectedFurni] = useState(null);
     const [selectedTile, setSelectedTile] = useState(null);
     const [selectedFurniIndex, setSelectedFurniIndex] = useState(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [stackHeight, setStackHeight] = useState(0);
-    const [stackMult, setStackMult] = useState(0);
 
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
     const PETAL_TILES = [47, 48, 49, 50];
-
 
     useEffect(() => {
         const handleMouseMove = (e) => {
@@ -30,20 +29,6 @@ export default function Room({ inventory, setInventory, roomData, setRoomData, u
             document.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
-
-    const handleStackClick = (height) => {
-        setStackHeight(height * stackMult);
-    };
-
-    const incrementCounter = () => {
-        setStackMult(prevStackMult => prevStackMult + 1);
-    };
-
-    const decrementCounter = () => {
-        if (stackMult > 0) {
-            setStackMult(prevStackMult => prevStackMult - 1);
-        }
-    };
 
     async function roomColor() {
         try {
@@ -60,24 +45,6 @@ export default function Room({ inventory, setInventory, roomData, setRoomData, u
             setRoomIndex(null);
             setRoomData(null);
             setUserRoomsList(response);
-        } catch (error) {
-            console.error('error creating note'.error)
-        }
-    };
-
-    async function clearRoom() {
-        try {
-            let cleared = await accountAPI.clearRoom({ roomIndex: roomIndex, roomSize: 104 });
-            setRoomData(cleared);
-        } catch (error) {
-            console.error('error creating note'.error)
-        }
-    };
-
-    async function clearInventory() {
-        try {
-            let cleared = await accountAPI.clearInventory();
-            setInventory(cleared);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -137,17 +104,16 @@ export default function Room({ inventory, setInventory, roomData, setRoomData, u
 
             let response = await accountAPI.placeFurni({ furniID: placeFurni, tileID: tileID, roomIndex: roomIndex, furniHeight: stackHeight });
             setRoomData(response.room);
-            setInventory(response.inventory);
-            if (inventory.includes(placeFurni) === false) {
-                setPlaceFurni(null);
-            };
+            setInventory(prevInventory => {
+                const newInventory = response.inventory;
+                if (!newInventory.includes(placeFurni)) {
+                    setPlaceFurni(null);
+                }
+                return newInventory;
+            });
         } catch (error) {
             console.error('error placing furni'.error)
         };
-    };
-
-    function xOutFurni() {
-        setSelectedFurni(null);
     };
 
     const handleTileClick = async (tileID) => {
@@ -164,26 +130,8 @@ export default function Room({ inventory, setInventory, roomData, setRoomData, u
 
     return (
         <div className='RoomBox'>
-            <div className='DevTools'>
-                <button onClick={clearRoom} className='DevBtn'>CLEAR ROOM</button>
-                <button onClick={clearInventory} className='DevBtn'>CLEAR INVENTORY</button>
-                <button onClick={() => setPlaceFurni(null)} className='DevBtn StopPlacing'>STOP PLACING</button>
-            </div>
-            <div className='StackTool'>
-                <h4>Jawn's Stack Tool</h4>
-                <div className='StackChoices'>
-                    <div className='StackChoice'>
-                        <button className='StackBtn' onClick={() => handleStackClick(1)}>Apply</button>
-                        <img className='StackImg' src={Furniture[46].icon} />
-                    </div>
-                </div>
-                <div className='StackMult'>
+            <DevTools setSelectedFurni={setSelectedFurni} setStackHeight={setStackHeight} stackHeight={stackHeight} setRoomData={setRoomData} roomIndex={roomIndex} setInventory={setInventory} setPlaceFurni={setPlaceFurni} />
 
-                    <button className='StackDec' onClick={decrementCounter}>-</button>
-                    <p>{stackMult} z's</p>
-                    <button className='StackInc' onClick={incrementCounter}>+</button>
-                </div>
-            </div>
             <div className='RoomInfo'>
                 <img className='Set' src={Set} />
                 <img onClick={roomColor} className='ML' src={ML} />
@@ -205,11 +153,11 @@ export default function Room({ inventory, setInventory, roomData, setRoomData, u
 
             {selectedFurni !== null && (
                 <div className='FurniSelection'>
-                    <button onClick={xOutFurni} className='FurniSelectionX'>x</button>
+                    <button onClick={() => setSelectedFurni(null)} className='FurniSelectionX'>x</button>
                     <div className='FurniSelectionFurni'>
                         <p className='FurniSelectionFurniName'>{Furniture[selectedFurni].name}</p>
                         <img
-                            className={`FurniSelectionImg Furni${selectedFurni}`}
+                            className='FurniSelectionImg'
                             src={PETAL_TILES.includes(selectedFurni) ? Furniture[1].img : Furniture[selectedFurni].img}
                         />
 

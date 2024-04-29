@@ -93,7 +93,7 @@ export default function Inventory({ inventory, setCatalogDiv, placeFurni, invent
                 <div className='InventoryShowcase'>
                     {inventory.includes(showcaseFurni) ? (
                         <>
-                            <img className={`InventoryFurni Furni${showcaseFurni}`} src={Furni[showcaseFurni].img} />
+                            <img className='InventoryFurni' src={Furni[showcaseFurni].img} />
                             <h5>{Furni[showcaseFurni].name}</h5>
                             <p>{Furni[showcaseFurni].description}</p>
                             <button onClick={placeFurni}>Place in Room</button>

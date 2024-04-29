@@ -77,22 +77,20 @@
     position: absolute;
     top: .2rem;
     right: .2rem;
-    border: 0;
     color: white;
-    background-color: #57899c;
-    border: 1px solid white;
+    background-color: crimson;
+    border: 1px solid black;
     cursor: pointer;
     font-size: .7rem;
     height: 1rem;
     border-radius: .1rem;
+    font-weight: 900;
 }
 
 
 .CloseCatalog:hover {
-    background-color: black;
+    background-color: red;
 }
-
-
 
 .BuyWindow {
     display: flex;

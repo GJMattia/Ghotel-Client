@@ -63,12 +63,18 @@ export default function Client({ user }) {
                         <img src={Credits} />
                         <p>{credits}</p>
                     </div>
-                    {(roomData !== null || roomData === 0) && <Room inventory={inventory} setInventory={setInventory} roomData={roomData} setRoomData={setRoomData} user={user} roomIndex={roomIndex} setRoomIndex={setRoomIndex} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} setUserRoomsList={setUserRoomsList} />}
+                    {(roomData !== null || roomData === 0) && <Room setInventory={setInventory} roomData={roomData} setRoomData={setRoomData} user={user} roomIndex={roomIndex} setRoomIndex={setRoomIndex} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} setUserRoomsList={setUserRoomsList} />}
+
                     {navigatorDiv && <Navigator roomIndex={roomIndex} setRoomData={setRoomData} userRoomsList={userRoomsList} setUserRoomsList={setUserRoomsList} user={user} setRoomIndex={setRoomIndex} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} />}
+
                     {catalogDiv && <Catalog setInventory={setInventory} credits={credits} setCredits={setCredits} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
+
                     <Inventory roomData={roomData} inventory={inventory} setCatalogDiv={setCatalogDiv} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
+
                     {consoleDiv && <Console user={user} setChatDiv={setChatDiv} setRoom={setRoom} consoleDiv={consoleDiv} setConsoleDiv={setConsoleDiv} setUsersMessaged={setUsersMessaged} usersMessaged={usersMessaged} />}
+
                     <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} room={room} setRoom={setRoom} />
+
                     <ClientNav setRoomData={setRoomData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
                 </>
             ) : (

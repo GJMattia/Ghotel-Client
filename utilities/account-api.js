@@ -110,11 +110,18 @@ export async function deleteRoom(roomIndex) {
 };
 
 //changing room color
-
 export async function roomColor(roomIndex) {
     try {
         return await sendRequest(`${BASE_URL}/room/color`, 'PUT', roomIndex);
     } catch (error) {
         console.error('error changing room color', error);
+    }
+};
+
+export async function roomSearch(search) {
+    try {
+        return await sendRequest(`${BASE_URL}/search/user`, 'PUT', search);
+    } catch (error) {
+        console.error('error searching', error);
     }
 };
