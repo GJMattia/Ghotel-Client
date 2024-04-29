@@ -124,7 +124,8 @@
 }
 
 .InventoryFurni {
-    user-select: none;
+    position: relative;
+    pointer-events: none;
     image-rendering: pixelated;
 }
 

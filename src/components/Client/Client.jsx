@@ -13,23 +13,39 @@ import Room from '../Room/Room';
 
 export default function Client({ user }) {
 
+    //Account info grab
+    const [account, setAccount] = useState(false);
 
-    const [accountData, setAccountData] = useState(null);
+    //Navbar elements
     const [consoleDiv, setConsoleDiv] = useState(false);
     const [chatDiv, setChatDiv] = useState(false);
     const [catalogDiv, setCatalogDiv] = useState(false);
-    const [room, setRoom] = useState(null);
-    const [usersMessaged, setUsersMessaged] = useState([]);
     const [inventoryDiv, setInventoryDiv] = useState(false);
     const [navigatorDiv, setNavigatorDiv] = useState(false);
-    const [currentRoom, setCurrentRoom] = useState(null);
+
+    //chat elements
+    const [room, setRoom] = useState(null);
+    const [usersMessaged, setUsersMessaged] = useState([]);
+
+    //room variables
+    const [roomIndex, setRoomIndex] = useState(null);
     const [placeFurni, setPlaceFurni] = useState(null);
+
+    //account data
+    const [inventory, setInventory] = useState(null);
+    const [credits, setCredits] = useState(null);
+    const [userRoomsList, setUserRoomsList] = useState(null);
+    const [roomData, setRoomData] = useState(null);
+
 
     useEffect(function () {
         async function getAccountData() {
             try {
-                const account = await accountAPI.getAccount();
-                setAccountData(account);
+                const response = await accountAPI.getAccount();
+                setCredits(response.credits);
+                setInventory(response.inventory);
+                setUserRoomsList(response.roomNames);
+                setAccount(true);
             } catch (error) {
                 console.error('Error Fetching Questions', error);
             }
@@ -37,21 +53,23 @@ export default function Client({ user }) {
         getAccountData();
     }, []);
 
+
+
     return (
         <div className='Client'>
-            {accountData !== null ? (
+            {account ? (
                 <>
                     <div className='ClientHeader'>
                         <img src={Credits} />
-                        <p>{accountData.credits}</p>
+                        <p>{credits}</p>
                     </div>
-                    {(currentRoom !== null || currentRoom === 0) && <Room user={user} accountData={accountData} setCurrentRoom={setCurrentRoom} setAccountData={setAccountData} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} currentRoom={currentRoom} />}
-                    {navigatorDiv && <Navigator user={user} setCurrentRoom={setCurrentRoom} accountData={accountData} setAccountData={setAccountData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} />}
-                    {catalogDiv && <Catalog accountData={accountData} setAccountData={setAccountData} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
-                    <Inventory setCatalogDiv={setCatalogDiv} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} accountData={accountData} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
+                    {(roomData !== null || roomData === 0) && <Room inventory={inventory} setInventory={setInventory} roomData={roomData} setRoomData={setRoomData} user={user} roomIndex={roomIndex} setRoomIndex={setRoomIndex} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} setUserRoomsList={setUserRoomsList} />}
+                    {navigatorDiv && <Navigator roomIndex={roomIndex} setRoomData={setRoomData} userRoomsList={userRoomsList} setUserRoomsList={setUserRoomsList} user={user} setRoomIndex={setRoomIndex} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} />}
+                    {catalogDiv && <Catalog setInventory={setInventory} credits={credits} setCredits={setCredits} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
+                    <Inventory roomData={roomData} inventory={inventory} setCatalogDiv={setCatalogDiv} placeFurni={placeFurni} setPlaceFurni={setPlaceFurni} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
                     {consoleDiv && <Console user={user} setChatDiv={setChatDiv} setRoom={setRoom} consoleDiv={consoleDiv} setConsoleDiv={setConsoleDiv} setUsersMessaged={setUsersMessaged} usersMessaged={usersMessaged} />}
                     <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} room={room} setRoom={setRoom} />
-                    <ClientNav setCurrentRoom={setCurrentRoom} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
+                    <ClientNav setRoomData={setRoomData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
                 </>
             ) : (
                 <p>Loading...</p>

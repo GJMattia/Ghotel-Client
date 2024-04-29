@@ -9,7 +9,7 @@
         "name": "Petal Patch",
         "img": "src/assets/images/furni/rares/petal.gif",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "A little bit of outdoors indoors.."
+        "description": "A little bit of outdoors indoors..."
     },
     {
         "name": "Typewriter",
@@ -287,25 +287,25 @@
         "img": "src/assets/images/furni/rares/p1.png",
         "img2": "src/assets/images/furni/rares/petal.gif",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "A little bit of outdoors indoors.."
+        "description": "A little bit of outdoors indoors..."
     },
     {
-        "name": "P2",
+        "name": "Petal Patch",
         "img": "src/assets/images/furni/rares/p2.png",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "p2"
+        "description": "don't pickup"
     },
     {
-        "name": "P3",
+        "name": "Petal Patch",
         "img": "src/assets/images/furni/rares/p3.png",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "p3"
+        "description": "don't pickup"
     },
     {
-        "name": "P4",
+        "name": "Petal Patch",
         "img": "src/assets/images/furni/rares/p4.png",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "p4"
+        "description": "don't pickup"
     },
     {
         "name": "Yellow Marquee",

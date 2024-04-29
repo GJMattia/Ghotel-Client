@@ -190,7 +190,7 @@
     ]
   },
   {
-    "name": "Ultra Rares",
+    "name": "Ultras",
     "mast": "src/assets/images/catalog/masts/limited-mast.gif",
     "furni": [
       {
@@ -474,7 +474,7 @@
     ]
   },
   {
-    "name": "Laser Gates",
+    "name": "Lasers",
     "mast": "src/assets/images/catalog/masts/limited-mast.gif",
     "furni": [
       {
@@ -578,7 +578,7 @@
     ]
   },
   {
-    "name": "Smoke Machines",
+    "name": "Smokes",
     "mast": "src/assets/images/catalog/masts/limited-mast.gif",
     "furni": [
       {
@@ -666,7 +666,7 @@
     ]
   },
   {
-    "name": "Habbo Exchange",
+    "name": "G-Exchange",
     "mast": "src/assets/images/catalog/masts/exchange-mast.gif",
     "description": "Exchange your Credits for Furni!",
     "furni": [

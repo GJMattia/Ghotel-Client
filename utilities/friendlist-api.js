@@ -1,6 +1,6 @@
 import sendRequest from "./send-request";
-// const BASE_URL = 'http://localhost:4741/friendlist';
-const BASE_URL = 'https://ghotel-api.onrender.com/friendlist';
+const BASE_URL = 'http://localhost:4741/friendlist';
+// const BASE_URL = 'https://ghotel-api.onrender.com/friendlist';
 
 //For searching for users
 export async function getAll() {

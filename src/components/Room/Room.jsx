@@ -8,7 +8,7 @@ import Set from '../../assets/images/client/settings.gif';
 import ML from '../../assets/images/client/ml.gif';
 
 
-export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, setAccountData, setCurrentRoom, accountData }) {
+export default function Room({ inventory, setInventory, roomData, setRoomData, user, placeFurni, setPlaceFurni, roomIndex, setRoomIndex, setUserRoomsList }) {
 
     const [selectedFurni, setSelectedFurni] = useState(null);
     const [selectedTile, setSelectedTile] = useState(null);
@@ -17,7 +17,9 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
     const [stackHeight, setStackHeight] = useState(0);
     const [stackMult, setStackMult] = useState(0);
 
-    let PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
+    const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
+    const PETAL_TILES = [47, 48, 49, 50];
+
 
     useEffect(() => {
         const handleMouseMove = (e) => {
@@ -45,8 +47,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function roomColor() {
         try {
-            let updatedRoom = await accountAPI.roomColor({ roomIndex: currentRoom });
-            setAccountData(updatedRoom);
+            let updatedRoom = await accountAPI.roomColor({ roomIndex: roomIndex });
+            setRoomData(updatedRoom);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -54,9 +56,10 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function deleteRoom() {
         try {
-            let updatedRooms = await accountAPI.deleteRoom({ roomIndex: currentRoom });
-            setCurrentRoom(null);
-            setAccountData(updatedRooms);
+            let response = await accountAPI.deleteRoom({ roomIndex: roomIndex });
+            setRoomIndex(null);
+            setRoomData(null);
+            setUserRoomsList(response);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -64,8 +67,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function clearRoom() {
         try {
-            let clearedRoom = await accountAPI.clearRoom({ roomIndex: currentRoom, roomSize: 104 });
-            setAccountData(clearedRoom);
+            let cleared = await accountAPI.clearRoom({ roomIndex: roomIndex, roomSize: 104 });
+            setRoomData(cleared);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -73,8 +76,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
 
     async function clearInventory() {
         try {
-            let updatedInventory = await accountAPI.clearInventory();
-            setAccountData(updatedInventory);
+            let cleared = await accountAPI.clearInventory();
+            setInventory(cleared);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -90,8 +93,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
         };
 
         try {
-            let updatedRoom = await accountAPI.useFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
-            setAccountData(updatedRoom);
+            let room = await accountAPI.useFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: roomIndex });
+            setRoomData(room);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -102,8 +105,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
             return
         };
         try {
-            let updatedRoom = await accountAPI.rotateFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
-            setAccountData(updatedRoom);
+            let room = await accountAPI.rotateFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: roomIndex });
+            setRoomData(room)
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -114,8 +117,9 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
             return;
         };
         try {
-            let updatedRoom = await accountAPI.pickUpFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: currentRoom });
-            setAccountData(updatedRoom);
+            let response = await accountAPI.pickUpFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomIndex: roomIndex });
+            setRoomData(response.room);
+            setInventory(response.inventory);
             setSelectedFurni(null);
         } catch (error) {
             console.error('error creating note'.error)
@@ -131,14 +135,15 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                 return;
             };
 
-            let updatedRoom = await accountAPI.placeFurni({ furniID: placeFurni, tileID: tileID, roomIndex: currentRoom, furniHeight: stackHeight });
-            setAccountData(updatedRoom);
-            if (updatedRoom.inventory.includes(placeFurni) === false) {
+            let response = await accountAPI.placeFurni({ furniID: placeFurni, tileID: tileID, roomIndex: roomIndex, furniHeight: stackHeight });
+            setRoomData(response.room);
+            setInventory(response.inventory);
+            if (inventory.includes(placeFurni) === false) {
                 setPlaceFurni(null);
-            }
+            };
         } catch (error) {
-            console.error('error creating note'.error)
-        }
+            console.error('error placing furni'.error)
+        };
     };
 
     function xOutFurni() {
@@ -146,7 +151,7 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
     };
 
     const handleTileClick = async (tileID) => {
-        const clickedArray = accountData.rooms[currentRoom].room[tileID];
+        const clickedArray = roomData.room[tileID];
         console.log(`Clicked tile index: ${tileID}, Content:`, clickedArray);
         await PlaceFurni(tileID);
     };
@@ -156,6 +161,7 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
         setSelectedTile(index);
         setSelectedFurni(value);
     }
+
     return (
         <div className='RoomBox'>
             <div className='DevTools'>
@@ -183,9 +189,9 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                 <img onClick={roomColor} className='ML' src={ML} />
                 <h4>Room Info</h4>
                 <button className='InventoryX'>X</button>
-                <h5>{accountData.rooms[currentRoom].roomName}</h5>
+                <h5>{roomData.roomName}</h5>
                 <h5>Owner: {user.name}</h5>
-                <p>{accountData.rooms[currentRoom].roomDescription}</p>
+                <p>{roomData.roomDescription}</p>
                 <button onClick={deleteRoom} className='DeleteRoom'>Delete Room</button>
             </div>
             {placeFurni !== null && (
@@ -203,8 +209,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                     <div className='FurniSelectionFurni'>
                         <p className='FurniSelectionFurniName'>{Furniture[selectedFurni].name}</p>
                         <img
-                            className='FurniSelectionImg'
-                            src={selectedFurni === 47 ? Furniture[selectedFurni].img2 : Furniture[selectedFurni].img}
+                            className={`FurniSelectionImg Furni${selectedFurni}`}
+                            src={PETAL_TILES.includes(selectedFurni) ? Furniture[1].img : Furniture[selectedFurni].img}
                         />
 
                         <p className='FurniSelectionFurniMotto'>{Furniture[selectedFurni].description}</p>
@@ -218,8 +224,8 @@ export default function Room({ user, placeFurni, setPlaceFurni, currentRoom, set
                 </div>
             )}
 
-            <div className='Room' style={{ backgroundColor: accountData.rooms[currentRoom].floorColor }}>
-                {accountData.rooms[currentRoom].room.map((tile, index) => (
+            <div className='Room' style={{ backgroundColor: roomData.floorColor }}>
+                {roomData.room.map((tile, index) => (
                     <div
                         key={index}
                         index={index}

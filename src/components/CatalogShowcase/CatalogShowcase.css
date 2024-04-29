@@ -44,6 +44,7 @@
 }
 
 .Furni {
+    position: relative;
     pointer-events: none;
     margin: 1rem;
     image-rendering: pixelated;

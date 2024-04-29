@@ -8,10 +8,10 @@ import InventoryIcon from '../../assets/images/clientnav/inventory.png';
 import HelpIcon from '../../assets/images/clientnav/wonky.gif';
 
 
-export default function ClientNav({ setCurrentRoom, navigatorDiv, setNavigatorDiv, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
+export default function ClientNav({ setRoomData, navigatorDiv, setNavigatorDiv, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
 
     function toggleRoom() {
-        setCurrentRoom(null);
+        setRoomData(null);
     }
 
     function toggleNavigator() {

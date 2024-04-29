@@ -1,6 +1,6 @@
 import sendRequest from "./send-request";
-// const BASE_URL = 'http://localhost:4741/account';
-const BASE_URL = 'https://ghotel-api.onrender.com/account';
+const BASE_URL = 'http://localhost:4741/account';
+// const BASE_URL = 'https://ghotel-api.onrender.com/account';
 
 
 //For Creating Account Schema, used upon account sign up
@@ -13,17 +13,23 @@ export async function createAccount(userID) {
 };
 
 //Used for getting account data
-
 export async function getAccount() {
     return sendRequest(`${BASE_URL}/getaccount`);
 };
 
+export async function getRoomData(roomIndex) {
+    try {
+        return await sendRequest(`${BASE_URL}/get/room`, 'PUT', roomIndex);
+    } catch (error) {
+        console.error('Error creating friend list', error);
+    };
+}
+
 
 //For Buying A Furni
-export async function buyFurni(itemID, accountID) {
+export async function buyFurni(furniInfo) {
     try {
-        console.log(itemID, accountID)
-        await sendRequest(`${BASE_URL}/${accountID}`, 'PUT', itemID);
+        return await sendRequest(`${BASE_URL}/buy/furni`, 'PUT', furniInfo);
     } catch (error) {
         console.error('error buying furni', error);
     }

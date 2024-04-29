@@ -9,7 +9,7 @@ import Key from '../../assets/images/client/key.gif';
 import Plus from '../../assets/images/client/plus.gif';
 import RoomIcon from '../../assets/images/client/casino_room.gif';
 
-export default function Navigator({ user, setCurrentRoom, navigatorDiv, setNavigatorDiv, accountData, setAccountData }) {
+export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigatorDiv, userRoomsList, setUserRoomsList, setRoomData, roomIndex }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
@@ -51,18 +51,29 @@ export default function Navigator({ user, setCurrentRoom, navigatorDiv, setNavig
 
     async function createRoom() {
         try {
-            let newRoom = await accountAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104 });
+            let response = await accountAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104 });
             setRoomName('');
             setRoomDescription('');
             setCreate(false);
-            setAccountData(newRoom);
+            setUserRoomsList(response)
         } catch (error) {
             console.error('error creating note'.error)
         }
     };
 
+    async function getRoomData(ROOM_INDEX) {
+        try {
+            const response = await accountAPI.getRoomData({ roomIndex: ROOM_INDEX });
+            console.log(response);
+            setRoomData(response)
+        } catch (error) {
+            console.error('Error Fetching Questions', error);
+        }
+    }
+
     function handleRoomClick(index) {
-        setCurrentRoom(index);
+        getRoomData(index)
+        setRoomIndex(index);
         // setNavigatorDiv(false);
     };
 
@@ -136,9 +147,9 @@ export default function Navigator({ user, setCurrentRoom, navigatorDiv, setNavig
                         <div className='MyRoomDiv'>
                             <h4>{user.name}'s Rooms</h4>
                             <ul className='RoomList'>
-                                {accountData.rooms.map((room, index) => (
+                                {userRoomsList.map((room, index) => (
                                     <li key={index} className='RoomItem' onClick={() => handleRoomClick(index)}>
-                                        <p>{room.roomName}</p>
+                                        <p>{room}</p>
                                         <p>⮕</p>
                                     </li>
                                 ))}

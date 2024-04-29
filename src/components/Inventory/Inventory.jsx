@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Furni from '../../assets/data/furni.json';
 import Skeleton from '../../assets/images/navigator/skeleton.gif';
 
-export default function Inventory({ setCatalogDiv, placeFurni, inventoryDiv, setInventoryDiv, accountData, setPlaceFurni }) {
+export default function Inventory({ inventory, setCatalogDiv, placeFurni, inventoryDiv, setInventoryDiv, setPlaceFurni, roomData }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
@@ -39,17 +39,20 @@ export default function Inventory({ setCatalogDiv, placeFurni, inventoryDiv, set
             setInitialX(e.clientX);
             setInitialY(e.clientY);
         }
-    }
+    };
 
     function selectFurni(itemid) {
         setShowcaseFurni(itemid)
-    }
+    };
 
     function placeFurni() {
+        if (!roomData) {
+            return;
+        };
         setPlaceFurni(showcaseFurni);
-    }
+    };
 
-    const inventoryFurni = accountData.inventory.reduce((groupedItems, itemid) => {
+    const inventoryFurni = inventory.reduce((groupedItems, itemid) => {
         const existingItem = groupedItems.find((group) => group.itemid === itemid);
 
         if (existingItem) {
@@ -57,11 +60,9 @@ export default function Inventory({ setCatalogDiv, placeFurni, inventoryDiv, set
         } else {
             groupedItems.push({ itemid, count: 1 });
         }
-
         return groupedItems;
     }, []).map((group, index) => {
         const isSelected = group.itemid === showcaseFurni;
-
         return (
             <li
                 onClick={() => selectFurni(group.itemid)}
@@ -76,7 +77,6 @@ export default function Inventory({ setCatalogDiv, placeFurni, inventoryDiv, set
             </li>
         );
     });
-
     return (
         <div
             onMouseDown={handleMouseDown}
@@ -89,17 +89,17 @@ export default function Inventory({ setCatalogDiv, placeFurni, inventoryDiv, set
             <ul className='InventoryItemList'>
                 {inventoryFurni}
             </ul>
-            {accountData.inventory.length ? (
+            {inventory.length ? (
                 <div className='InventoryShowcase'>
-                    {accountData.inventory.includes(showcaseFurni) ? (
+                    {inventory.includes(showcaseFurni) ? (
                         <>
-                            <img className='InventoryFurni' src={Furni[showcaseFurni].img} />
+                            <img className={`InventoryFurni Furni${showcaseFurni}`} src={Furni[showcaseFurni].img} />
                             <h5>{Furni[showcaseFurni].name}</h5>
                             <p>{Furni[showcaseFurni].description}</p>
                             <button onClick={placeFurni}>Place in Room</button>
                         </>
                     ) : (
-                        setShowcaseFurni(accountData.inventory[0])
+                        setShowcaseFurni(inventory[0])
                     )}
                 </div>
             ) : (

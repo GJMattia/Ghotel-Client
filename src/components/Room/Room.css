@@ -154,6 +154,7 @@
 }
 
 .FurniSelectionImg {
+    position: relative;
     image-rendering: pixelated;
 }
 

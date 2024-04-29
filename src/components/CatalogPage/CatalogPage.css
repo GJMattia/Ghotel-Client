@@ -68,6 +68,6 @@
 
 
 .FurniIcon {
-    user-select: none;
+    pointer-events: none;
     image-rendering: pixelated;
 }
