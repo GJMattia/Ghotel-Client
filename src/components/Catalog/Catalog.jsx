@@ -95,8 +95,8 @@ export default function Catalog({ catalogDiv, setCatalogDiv, credits, setCredits
             {buyDiv && (
                 <div className='BuyWindow'>
                     <button onClick={closeBuy} className='InventoryX'>X</button>
-                    <h5>Purchase {currentFurni.name} </h5>
-                    {credits < currentFurni.price ? (
+                    <h5>Purchase {CatalogData[currentPage].furni[currentFurni].name} </h5>
+                    {credits < CatalogData[currentPage].furni[currentFurni].price ? (
                         <>
                             <p>The {CatalogData[currentPage].furni[currentFurni].name} is {CatalogData[currentPage].furni[currentFurni].price} credits, you only have {credits} credits!</p>
                             <button onClick={closeBuy} className='ConfirmBuy'>CLOSE</button>

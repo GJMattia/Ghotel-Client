@@ -65,6 +65,10 @@
     top: .1rem;
 }
 
+.Furni21 {
+    bottom: .2rem;
+}
+
 .Furni23 {
     right: .1rem;
     bottom: .4rem;
@@ -77,6 +81,10 @@
 .Furni25 {
     left: 1rem;
     top: .2rem;
+}
+
+.Furni27 {
+    bottom: .1rem;
 }
 
 .Furni28 {
@@ -113,7 +121,70 @@
     right: .02rem;
 }
 
+.Furni51 {
+    left: .5rem;
+}
+
 .Furni50 {
     top: .10rem;
     right: 0.36rem;
+}
+
+.Furni52 {
+    bottom: .1rem;
+}
+
+.Furni53 {
+    bottom: .2rem;
+}
+
+.Furni58 {
+    bottom: .1rem;
+    left: .1rem;
+}
+
+.Furni61 {
+    left: .1rem;
+    top: .1rem;
+}
+
+.Furni63 {
+    bottom: .2rem;
+}
+
+.Furni64 {
+    bottom: .2rem;
+}
+
+.Furni65 {
+    left: .2rem;
+    bottom: .2rem;
+}
+
+.Furni66 {
+    bottom: .5rem;
+}
+
+.Furni70 {
+    bottom: .1rem;
+}
+
+.Furni73 {
+    bottom: .2rem;
+}
+
+.Furni74 {
+    left: .5rem;
+}
+
+.Furni75 {
+    left: .5rem;
+}
+
+.Furni76 {
+    bottom: .2rem;
+}
+
+.Furni78 {
+    bottom: .1rem;
 }
