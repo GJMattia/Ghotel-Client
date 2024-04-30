@@ -1,11 +1,13 @@
 import './Room.css';
 import './Tiles.css';
 import './Furni.css';
+import './Walls.css';
 import Furniture from '../../assets/data/furni.json';
 import * as roomAPI from '../../../utilities/room-api';
 import { useState, useEffect } from 'react';
 import DevTools from '../DevTools/DevTools';
 import RoomInfo from '../RoomInfo/RoomInfo';
+import Walls from '../../assets/data/walls.json';
 
 
 export default function Room({ roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setRoomList }) {
@@ -15,6 +17,8 @@ export default function Room({ roomData, roomInfo, setRoomInfo, setInventory, se
     const [selectedFurniIndex, setSelectedFurniIndex] = useState(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [stackHeight, setStackHeight] = useState(0);
+
+    const [wall, setWall] = useState(4);
 
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
     const PETAL_TILES = [47, 48, 49, 50];
@@ -120,8 +124,9 @@ export default function Room({ roomData, roomInfo, setRoomInfo, setInventory, se
 
     return (
         <div className='RoomBox'>
-            <DevTools roomInfo={roomInfo} setSelectedFurni={setSelectedFurni} setStackHeight={setStackHeight} stackHeight={stackHeight} setRoomData={setRoomData} setInventory={setInventory} setPFurni={setPFurni} />
+            <DevTools setWall={setWall} roomInfo={roomInfo} setSelectedFurni={setSelectedFurni} setStackHeight={setStackHeight} stackHeight={stackHeight} setRoomData={setRoomData} setInventory={setInventory} setPFurni={setPFurni} />
             <RoomInfo setRoomList={setRoomList} user={user} roomInfo={roomInfo} setRoomInfo={setRoomInfo} setRoomData={setRoomData} />
+            <img className={`Wall Wall${wall}`} src={Walls[wall].img} />
             {pFurni !== null && (
                 <img
                     src={Furniture[pFurni].img}

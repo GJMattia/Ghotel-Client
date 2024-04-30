@@ -4,7 +4,7 @@ import * as roomAPI from '../../../utilities/room-api';
 import Z from '../../assets/images/furni/mode/zshelf.gif';
 import { useState } from 'react';
 
-export default function DevTools({ roomInfo, setSelectedFurni, setStackHeight, stackHeight, setRoomData, setInventory, setPFurni }) {
+export default function DevTools({ roomInfo, setSelectedFurni, setStackHeight, stackHeight, setRoomData, setInventory, setPFurni, setWall }) {
 
     const [counter, setCounter] = useState(0);
 
@@ -60,6 +60,7 @@ export default function DevTools({ roomInfo, setSelectedFurni, setStackHeight, s
             <div className='DevTools'>
                 <button onClick={clearRoom} className='DevBtn'>CLEAR ROOM</button>
                 <button onClick={clearInventory} className='DevBtn'>CLEAR INVENTORY</button>
+                <button onClick={() => setWall(Math.floor(Math.random() * 5))} className='DevBtn WallTool'>CHANGE WALL</button>
                 <button onClick={() => setPFurni(null)} className='DevBtn StopPlacing'>STOP PLACING</button>
             </div>
         </>

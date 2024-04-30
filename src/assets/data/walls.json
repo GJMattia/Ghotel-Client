@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Holly",
+        "img": "src/assets/images/walls/holly.png"
+    },
+    {
+        "name": "Dawn",
+        "img": "src/assets/images/walls/dawn.png"
+    },
+    {
+        "name": "Forest",
+        "img": "src/assets/images/walls/forest.png"
+    },
+    {
+        "name": "Jungle",
+        "img": "src/assets/images/walls/jungle.png"
+    },
+    {
+        "name": "Sunset",
+        "img": "src/assets/images/walls/sunset.png"
+    }
+]
