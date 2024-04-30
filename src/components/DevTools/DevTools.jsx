@@ -1,12 +1,12 @@
 import './DevTools.css';
 import * as accountAPI from '../../../utilities/account-api';
+import * as roomAPI from '../../../utilities/room-api';
 import Z from '../../assets/images/furni/mode/zshelf.gif';
 import { useState } from 'react';
 
-export default function DevTools({ setSelectedFurni, setRoomData, roomIndex, setInventory, setPlaceFurni, setStackHeight, stackHeight }) {
+export default function DevTools({ roomInfo, setSelectedFurni, setStackHeight, stackHeight, setRoomData, setInventory, setPFurni }) {
 
     const [counter, setCounter] = useState(0);
-    //stack tool 
 
     const incrementCounter = () => {
         setStackHeight(prevStackHeight => prevStackHeight + .9);
@@ -23,11 +23,10 @@ export default function DevTools({ setSelectedFurni, setRoomData, roomIndex, set
 
     };
 
-    //deleting stuff
     async function clearRoom() {
         try {
-            let cleared = await accountAPI.clearRoom({ roomIndex: roomIndex, roomSize: 104 });
-            setRoomData(cleared);
+            let room = await roomAPI.clearRoom({ roomID: roomInfo._id });
+            setRoomData(room);
             setSelectedFurni(null);
         } catch (error) {
             console.error('error creating note'.error)
@@ -61,7 +60,7 @@ export default function DevTools({ setSelectedFurni, setRoomData, roomIndex, set
             <div className='DevTools'>
                 <button onClick={clearRoom} className='DevBtn'>CLEAR ROOM</button>
                 <button onClick={clearInventory} className='DevBtn'>CLEAR INVENTORY</button>
-                <button onClick={() => setPlaceFurni(null)} className='DevBtn StopPlacing'>STOP PLACING</button>
+                <button onClick={() => setPFurni(null)} className='DevBtn StopPlacing'>STOP PLACING</button>
             </div>
         </>
     )

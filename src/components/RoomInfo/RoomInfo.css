@@ -1,0 +1,140 @@
+.RoomInfo {
+    position: absolute;
+    bottom: 5.5rem;
+    left: 1rem;
+    width: 12rem;
+    height: 10rem;
+    background-color: #f8f8f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    border-radius: .2rem;
+    user-select: none;
+    text-align: left;
+    z-index: 4;
+}
+
+.RoomInfo>h4 {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    color: white;
+    padding: .5rem;
+    background-color: #367897;
+    border-bottom: 2px solid gray;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+
+.RoomInfo>h5 {
+    width: 90%;
+    margin: .2rem;
+}
+
+.RoomInfo>p {
+    width: 90%;
+    margin: .2rem;
+    font-size: .75rem;
+    font-style: italic;
+}
+
+.DeleteRoom {
+    padding: .4rem;
+    color: white;
+    background-color: crimson;
+    margin-top: 1rem;
+    border: 0;
+    width: 50%;
+}
+
+.DeleteRoom:hover {
+    background-color: darkred;
+}
+
+.Set {
+    position: absolute;
+    top: 2.5rem;
+    right: .5rem;
+}
+
+.Set:hover {
+    filter: saturate(150%) brightness(150%);
+}
+
+.ML {
+    transform: scaleX(-1);
+    position: absolute;
+    top: 4rem;
+    right: 0rem;
+}
+
+.ML:hover {
+    filter: saturate(150%) brightness(150%);
+}
+
+.Moodlight {
+    position: absolute;
+    bottom: 1rem;
+    left: 12.5rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: #f8f8f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: .2rem;
+    user-select: none;
+    z-index: 4;
+}
+
+.Moodlight>h4 {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    color: white;
+    padding: .5rem;
+    background-color: #367897;
+    border-bottom: 2px solid gray;
+    font-size: .8rem;
+    margin-bottom: 0rem;
+}
+
+.Moodlight>button {
+    width: 50%;
+    position: absolute;
+    bottom: .4rem;
+}
+
+.MLcolors {
+    margin-top: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.MLcolor {
+    box-sizing: border-box;
+    border: 1px solid rgb(57, 57, 57);
+    width: 1rem;
+    height: 1rem;
+    margin: .2rem;
+    border-radius: .1rem;
+}
+
+.MLcolor:hover {
+    filter: saturate(150%);
+}
+
+.MLselect {
+    border: 3px solid black;
+}

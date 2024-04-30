@@ -104,8 +104,8 @@ export default function Catalog({ catalogDiv, setCatalogDiv, credits, setCredits
                     ) : (
                         <>
 
-                            <p>Buy 10 {CatalogData[currentPage].furni[currentFurni].name}'s for {CatalogData[currentPage].furni[currentFurni].price} credits?</p>
-                            <button onClick={buyFurni} className='ConfirmBuy'>BUY 10</button>
+                            <p>Buy the {CatalogData[currentPage].furni[currentFurni].name} for {CatalogData[currentPage].furni[currentFurni].price} credits?</p>
+                            <button onClick={buyFurni} className='ConfirmBuy'>BUY</button>
                         </>
                     )}
                 </div>

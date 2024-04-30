@@ -4,31 +4,28 @@ import RoomActive from '../../assets/images/navigator/room-active.gif';
 import PublicNotActive from '../../assets/images/navigator/public-notactive.gif';
 import RoomNotActive from '../../assets/images/navigator/room-notactive.gif';
 import { useState } from 'react';
-import * as accountAPI from '../../../utilities/account-api';
+import * as roomAPI from '../../../utilities/room-api';
 import Key from '../../assets/images/client/key.gif';
 import Plus from '../../assets/images/client/plus.gif';
 import RoomIcon from '../../assets/images/client/casino_room.gif';
 
-export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigatorDiv, userRoomsList, setUserRoomsList, setRoomData, roomIndex }) {
+export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv, setRoomData, setRoomInfo }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
     const [initialY, setInitialY] = useState(0);
-    const [currentNav, setCurrentNav] = useState(1);
+    const [currentNav, setCurrentNav] = useState(0);
     const [create, setCreate] = useState(false);
     const [roomName, setRoomName] = useState('Room');
     const [roomDescription, setRoomDescription] = useState('Description');
 
     //For searching friends
     const [userSearch, setUserSearch] = useState('');
-    const [foundRooms, setFoundRooms] = useState(null);
-
-
 
     async function roomSearch() {
         try {
-            const response = await accountAPI.roomSearch({ search: userSearch });
-            setFoundRooms(response);
+            const response = await roomAPI.roomSearch({ userSearch: userSearch });
+            setRoomList(response);
 
         } catch (error) {
             console.error('Error searching user rooms', error);
@@ -65,42 +62,54 @@ export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigat
         };
     };
 
-    async function createRoom() {
+    async function getUserRooms() {
         try {
-            let response = await accountAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104 });
-            setRoomName('');
-            setRoomDescription('');
-            setCreate(false);
-            setUserRoomsList(response)
+            let response = await roomAPI.getUserRooms();
+            setRoomList(response);
         } catch (error) {
             console.error('error creating note'.error)
         }
     };
 
-    async function getRoomData(ROOM_INDEX) {
+    async function createRoom() {
         try {
-            const response = await accountAPI.getRoomData({ roomIndex: ROOM_INDEX });
-            console.log(response);
-            setRoomData(response)
+            let response = await roomAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104 });
+            setRoomName('');
+            setRoomDescription('');
+            setCreate(false);
+            setRoomList(response);
         } catch (error) {
-            console.error('Error Fetching Questions', error);
+            console.error('error creating note'.error)
         }
     };
 
-    function handleRoomClick(index) {
-        getRoomData(index)
-        setRoomIndex(index);
+    async function getRoomData(roomID) {
+        try {
+            const response = await roomAPI.getRoomData(roomID);
+            setRoomData(response.room);
+            const { room, ...roomInfo } = response;
+            setRoomInfo(roomInfo);
+        } catch (error) {
+            console.error('Error getting room data', error);
+        }
+    };
+
+
+    function roomClick(roomID) {
+        getRoomData(roomID);
         // setNavigatorDiv(false);
     };
 
-    function toggleNavigator() {
-        setNavigatorDiv(!navigatorDiv);
-    };
 
-
-    function handleRoomOptionClick(option) {
+    function myRoomsClick(option) {
         setCurrentNav(option);
+        getUserRooms();
     };
+
+    function publicRoomsClick(option) {
+        setRoomList(null);
+        setCurrentNav(option);
+    }
 
     return (
         <div className='Navigator'
@@ -108,18 +117,18 @@ export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigat
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}>
             <h4>Hotel Navigator</h4>
-            <button onClick={toggleNavigator} className='InventoryX'>X</button>
+            <button onClick={() => setNavigatorDiv(false)} className='InventoryX'>X</button>
             <div className='RoomNav'>
                 <div
                     className={`RoomOption ${currentNav === 0 ? 'active' : ''}`}
-                    onClick={() => handleRoomOptionClick(0)}
+                    onClick={() => publicRoomsClick(0)}
                 >
                     <img src={currentNav === 0 ? PublicActive : PublicNotActive} alt="Public Spaces" />
                     <h5>Public Spaces</h5>
                 </div>
                 <div
                     className={`RoomOption ${currentNav === 1 ? 'active' : ''}`}
-                    onClick={() => handleRoomOptionClick(1)}
+                    onClick={() => myRoomsClick(1)}
                 >
                     <img src={currentNav === 1 ? RoomActive : RoomNotActive} alt="Rooms" />
                     <h5>My Rooms</h5>
@@ -162,14 +171,16 @@ export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigat
                     ) : (
                         <div className='MyRoomDiv'>
                             <h4>{user.name}'s Rooms</h4>
-                            <ul className='RoomList'>
-                                {userRoomsList.map((room, index) => (
-                                    <li key={index} className='RoomItem' onClick={() => handleRoomClick(index)}>
-                                        <p>{room}</p>
-                                        <p>⮕</p>
-                                    </li>
-                                ))}
-                            </ul>
+                            {roomList && (
+                                <ul className='RoomList'>
+                                    {roomList.map((room, index) => (
+                                        <li key={index} className='RoomItem' onClick={() => roomClick(room._id)}>
+                                            <p>{room.roomName}</p>
+                                            <p>⮕</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     )}
 
@@ -180,28 +191,21 @@ export default function Navigator({ user, setRoomIndex, navigatorDiv, setNavigat
                         <input
                             placeholder='search user'
                             maxLength={24}
-                        // onChange={(event) => setUserSearch(event.target.value)}
+                            onChange={(event) => setUserSearch(event.target.value)}
                         />
-                        <button>Search</button>
+                        <button onClick={roomSearch}>Search</button>
                     </div>
 
-                    <ul className='RoomList'>
-
-
-                        <li className='RoomItem'>
-                            <p>more rooms</p>
-                            <p>⮕</p>
-                        </li>
-                        <li className='RoomItem'>
-                            <p>Rooms from another</p>
-                            <p>⮕</p>
-                        </li>
-                        <li className='RoomItem'>
-                            <p>pasta sauce</p>
-                            <p>⮕</p>
-                        </li>
-
-                    </ul>
+                    {roomList && (
+                        <ul className='RoomList'>
+                            {roomList.map((room, index) => (
+                                <li key={index} className='RoomItem' onClick={() => roomClick(room._id)}>
+                                    <p>{room.roomName}</p>
+                                    <p>⮕</p>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
             )}
 

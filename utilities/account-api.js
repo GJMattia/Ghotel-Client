@@ -17,13 +17,6 @@ export async function getAccount() {
     return sendRequest(`${BASE_URL}/getaccount`);
 };
 
-export async function getRoomData(roomIndex) {
-    try {
-        return await sendRequest(`${BASE_URL}/get/room`, 'PUT', roomIndex);
-    } catch (error) {
-        console.error('Error creating friend list', error);
-    };
-}
 
 
 //For Buying A Furni
@@ -44,51 +37,6 @@ export async function createRoom(roomInfo) {
     }
 };
 
-export async function placeFurni(furniInfo) {
-    try {
-        return await sendRequest(`${BASE_URL}/place/furni`, 'PUT', furniInfo);
-    } catch (error) {
-        console.error('error creating room', error);
-    }
-};
-
-
-//For Clearing an entire room
-export async function clearRoom(roomID) {
-    try {
-        return await sendRequest(`${BASE_URL}/clear/room`, 'PUT', roomID);
-    } catch (error) {
-        console.error('error clearing room', error);
-    }
-};
-
-//Pick up a furni
-export async function pickUpFurni(pickupInfo) {
-    try {
-        return await sendRequest(`${BASE_URL}/pickup/furni`, 'PUT', pickupInfo);
-    } catch (error) {
-        console.error('error picking up furni', error);
-    }
-};
-
-//Rotate Furni
-
-export async function rotateFurni(rotateInfo) {
-    try {
-        return await sendRequest(`${BASE_URL}/rotate/furni`, 'PUT', rotateInfo);
-    } catch (error) {
-        console.error('error rotating furni', error);
-    }
-};
-
-// for using furni
-export async function useFurni(useInfo) {
-    try {
-        return await sendRequest(`${BASE_URL}/use/furni`, 'PUT', useInfo);
-    } catch (error) {
-        console.error('error using up furni', error);
-    }
-};
 
 //for clearing inventory
 export async function clearInventory() {
@@ -99,29 +47,6 @@ export async function clearInventory() {
     }
 };
 
-//for deleting a room
 
-export async function deleteRoom(roomIndex) {
-    try {
-        return await sendRequest(`${BASE_URL}/delete/room`, 'PUT', roomIndex);
-    } catch (error) {
-        console.error('error deleting room', error);
-    }
-};
 
-//changing room color
-export async function roomColor(roomIndex) {
-    try {
-        return await sendRequest(`${BASE_URL}/room/color`, 'PUT', roomIndex);
-    } catch (error) {
-        console.error('error changing room color', error);
-    }
-};
 
-export async function roomSearch(search) {
-    try {
-        return await sendRequest(`${BASE_URL}/search/user`, 'PUT', search);
-    } catch (error) {
-        console.error('error searching', error);
-    }
-};
