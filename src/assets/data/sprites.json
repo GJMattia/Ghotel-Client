@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Greg",
+        "stand": "src/assets/images/sprites/greg/greg-stand.gif",
+        "sit": "src/assets/images/sprites/greg/greg-sit.gif"
+    },
+    {
+        "name": "John",
+        "stand": "src/assets/images/sprites/john/john-stand.gif",
+        "sit": "src/assets/images/sprites/john/john-sit.gif"
+    }
+]

@@ -101,3 +101,12 @@ export async function roomSearch(userSearch) {
         console.error('error searching', error);
     }
 };
+
+//wall type
+export async function wallType(roomInfo) {
+    try {
+        return await sendRequest(`${BASE_URL}/room/wall`, 'PUT', roomInfo);
+    } catch (error) {
+        console.error('error changing room color', error);
+    }
+};

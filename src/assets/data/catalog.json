@@ -186,6 +186,14 @@
         "description": "speak now",
         "price": 25,
         "itemid": 78
+      },
+      {
+        "name": "Monster Plant",
+        "img": "src/assets/images/furni/rares/plant.gif",
+        "icon": "src/assets/images/furni-icons/rares/plant_icon.gif",
+        "description": "THE MONSTER MASH",
+        "price": 25,
+        "itemid": 86
       }
     ]
   },
@@ -216,6 +224,22 @@
         "description": "it's a work of art",
         "price": 25,
         "itemid": 82
+      },
+      {
+        "name": "Infobus",
+        "img": "src/assets/images/furni/ultras/infobus.gif",
+        "icon": "src/assets/images/furni-icons/ultras/infobus_icon.gif",
+        "description": "Tranzit",
+        "price": 25,
+        "itemid": 84
+      },
+      {
+        "name": "Ocean Sleepingbag",
+        "img": "src/assets/images/furni/ultras/ocean.gif",
+        "icon": "src/assets/images/furni-icons/ultras/ocean_icon.gif",
+        "description": "For Jake only",
+        "price": 999999,
+        "itemid": 85
       }
     ]
   },
@@ -492,6 +516,22 @@
         "description": "zing zong",
         "price": 25,
         "itemid": 70
+      },
+      {
+        "name": "Gold Lasergate",
+        "img": "src/assets/images/furni/lasers/glaser.gif",
+        "icon": "src/assets/images/furni-icons/lasers/glaser_icon.gif",
+        "description": "zing zong zap",
+        "price": 25,
+        "itemid": 87
+      },
+      {
+        "name": "Red Lasergate",
+        "img": "src/assets/images/furni/lasers/rlaser.gif",
+        "icon": "src/assets/images/furni-icons/lasers/rlaser_icon.gif",
+        "description": "zing zong zap zeep",
+        "price": 25,
+        "itemid": 88
       }
     ]
   },

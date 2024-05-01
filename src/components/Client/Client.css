@@ -21,6 +21,7 @@
     background-color: rgb(28, 28, 28);
     height: 2rem;
     color: white;
+    z-index: 1;
 }
 
 .ClientHeader>p {

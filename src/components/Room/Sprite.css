@@ -1,0 +1,11 @@
+.Sprite {
+    position: absolute;
+    z-index: 104;
+    image-rendering: pixelated;
+    user-select: none;
+    transition: 2s ease;
+}
+
+.Sprite:hover {
+    filter: brightness(150%) saturate(150%);
+}

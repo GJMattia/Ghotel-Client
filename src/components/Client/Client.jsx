@@ -7,7 +7,6 @@ import Catalog from '../Catalog/Catalog';
 import Inventory from '../Inventory/Inventory';
 import Navigator from '../Navigator/Navigator';
 import * as accountAPI from '../../../utilities/account-api';
-import * as roomAPI from '../../../utilities/room-api';
 import Credits from '../../assets/images/client/credits-icon.png';
 import Room from '../Room/Room';
 
@@ -35,10 +34,13 @@ export default function Client({ user }) {
     const [inventory, setInventory] = useState(null);
     const [credits, setCredits] = useState(null);
 
+    //Room Data
     const [roomList, setRoomList] = useState(null);
-
     const [roomData, setRoomData] = useState(null);
     const [roomInfo, setRoomInfo] = useState(null);
+
+    //sprite
+    const [sprite, setSprite] = useState(null);
 
 
 
@@ -48,6 +50,7 @@ export default function Client({ user }) {
                 const response = await accountAPI.getAccount();
                 setCredits(response.credits);
                 setInventory(response.inventory);
+                setSprite(response.sprite)
                 setAccount(true);
             } catch (error) {
                 console.error('Error Fetching Questions', error);
@@ -64,13 +67,13 @@ export default function Client({ user }) {
                         <img src={Credits} />
                         <p>{credits}</p>
                     </div>
-                    {(roomData) && <Room setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
+                    {(roomData) && <Room sprite={sprite} setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
 
                     {navigatorDiv && <Navigator roomList={roomList} setRoomInfo={setRoomInfo} setRoomList={setRoomList} setRoomData={setRoomData} user={user} setNavigatorDiv={setNavigatorDiv} />}
 
                     {catalogDiv && <Catalog setInventory={setInventory} credits={credits} setCredits={setCredits} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
 
-                    <Inventory roomData={roomData} inventory={inventory} setCatalogDiv={setCatalogDiv} pFurni={pFurni} setPFurni={setPFurni} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
+                    <Inventory user={user} roomInfo={roomInfo} roomData={roomData} inventory={inventory} setCatalogDiv={setCatalogDiv} pFurni={pFurni} setPFurni={setPFurni} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} />
 
                     {consoleDiv && <Console user={user} setChatDiv={setChatDiv} setRoom={setRoom} consoleDiv={consoleDiv} setConsoleDiv={setConsoleDiv} setUsersMessaged={setUsersMessaged} usersMessaged={usersMessaged} />}
 

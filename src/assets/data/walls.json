@@ -1,22 +1,27 @@
 [
     {
         "name": "Holly",
-        "img": "src/assets/images/walls/holly.png"
-    },
-    {
-        "name": "Dawn",
-        "img": "src/assets/images/walls/dawn.png"
+        "img": "src/assets/images/walls/holly.png",
+        "icon": "src/assets/images/walls/holly_icon.gif"
     },
     {
         "name": "Forest",
-        "img": "src/assets/images/walls/forest.png"
+        "img": "src/assets/images/walls/forest.png",
+        "icon": "src/assets/images/walls/forest_icon.png"
     },
     {
         "name": "Jungle",
-        "img": "src/assets/images/walls/jungle.png"
+        "img": "src/assets/images/walls/jungle.png",
+        "icon": "src/assets/images/walls/jungle_icon.png"
+    },
+    {
+        "name": "Dawn",
+        "img": "src/assets/images/walls/dawn.png",
+        "icon": "src/assets/images/walls/dawn_icon.png"
     },
     {
         "name": "Sunset",
-        "img": "src/assets/images/walls/sunset.png"
+        "img": "src/assets/images/walls/sunset.png",
+        "icon": "src/assets/images/walls/sunset_icon.png"
     }
 ]

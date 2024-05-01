@@ -73,7 +73,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
 
     async function createRoom() {
         try {
-            let response = await roomAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104 });
+            let response = await roomAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104, wallType: 1 });
             setRoomName('');
             setRoomDescription('');
             setCreate(false);
@@ -165,7 +165,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
                                 className='RoomDesText' />
                             <div className='CreateDiv'>
                                 <img className='RoomIcon' src={RoomIcon} />
-                                <button onClick={createRoom}>Create Room</button>
+                                <button className='CreateBtn' onClick={createRoom}>Create Room</button>
                             </div>
                         </div>
                     ) : (
@@ -193,7 +193,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
                             maxLength={24}
                             onChange={(event) => setUserSearch(event.target.value)}
                         />
-                        <button onClick={roomSearch}>Search</button>
+                        <button className='CreateBtn' onClick={roomSearch}>Search</button>
                     </div>
 
                     {roomList && (

@@ -3,34 +3,34 @@
     z-index: 0;
     image-rendering: pixelated;
     pointer-events: none;
+    user-select: none;
 }
 
 .Wall0 {
     margin-left: .5rem;
-    top: 10.8rem;
+    margin-bottom: 4.5rem;
     width: 46rem;
 }
 
 .Wall1 {
-    margin-left: 1rem;
-    top: 3.5rem;
-    width: 44rem;
+    margin-bottom: 10.8rem;
+    width: 47rem;
 }
 
 .Wall2 {
-    margin-left: .2rem;
-    top: 4.8rem;
+    margin-right: .3rem;
+    margin-bottom: 9.4rem;
     width: 47rem;
 }
 
 .Wall3 {
-    margin-left: 0rem;
-    width: 46rem;
-    top: 7.2rem;
+    margin-left: 1rem;
+    margin-bottom: 13rem;
+    width: 44rem;
 }
 
 .Wall4 {
-    margin-left: .4rem;
-    top: 3.7rem;
-    width: 43rem;
+    margin-left: 1rem;
+    margin-bottom: 13rem;
+    width: 44rem;
 }

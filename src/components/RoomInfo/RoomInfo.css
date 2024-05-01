@@ -2,8 +2,8 @@
     position: absolute;
     bottom: 5.5rem;
     left: 1rem;
-    width: 12rem;
-    height: 10rem;
+    width: 11rem;
+    height: 9rem;
     background-color: #f8f8f4;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,23 @@
     z-index: 4;
 }
 
-.RoomInfo>h4 {
+.SetBtn {
+    position: absolute;
+    box-sizing: border-box;
+    padding: .2rem;
+    bottom: .2rem;
+    width: 70%;
+    border: 1px solid rgb(85, 85, 85);
+    background-color: rgb(54, 169, 0);
+    color: white;
+    border-radius: .2rem;
+}
+
+.SetBtn:hover {
+    background-color: lawngreen;
+}
+
+.BoxHeader {
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -41,34 +57,31 @@
     font-style: italic;
 }
 
-.DeleteRoom {
-    padding: .4rem;
-    color: white;
-    background-color: crimson;
-    margin-top: 1rem;
-    border: 0;
-    width: 50%;
-}
-
-.DeleteRoom:hover {
-    background-color: darkred;
-}
-
 .Set {
     position: absolute;
-    top: 2.5rem;
-    right: .5rem;
+    bottom: .5rem;
+    left: .5rem;
 }
 
 .Set:hover {
     filter: saturate(150%) brightness(150%);
 }
 
+.Window {
+    position: absolute;
+    bottom: 0;
+    right: 0rem;
+}
+
+.Window:hover {
+    filter: saturate(150%) brightness(150%);
+}
+
 .ML {
     transform: scaleX(-1);
     position: absolute;
-    top: 4rem;
-    right: 0rem;
+    bottom: 0;
+    right: 4.3rem;
 }
 
 .ML:hover {
@@ -77,8 +90,8 @@
 
 .Moodlight {
     position: absolute;
-    bottom: 1rem;
-    left: 12.5rem;
+    bottom: .5rem;
+    left: 11.5rem;
     width: 8rem;
     height: 8rem;
     background-color: #f8f8f4;
@@ -91,27 +104,8 @@
     z-index: 4;
 }
 
-.Moodlight>h4 {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    text-align: center;
-    color: white;
-    padding: .5rem;
-    background-color: #367897;
-    border-bottom: 2px solid gray;
-    font-size: .8rem;
-    margin-bottom: 0rem;
-}
-
-.Moodlight>button {
-    width: 50%;
-    position: absolute;
-    bottom: .4rem;
-}
-
 .MLcolors {
-    margin-top: .8rem;
+    margin-top: .3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,4 +131,80 @@
 
 .MLselect {
     border: 3px solid black;
+}
+
+.WallSettings {
+    position: absolute;
+    top: .5rem;
+    left: 11.5rem;
+    width: 12rem;
+    height: 8rem;
+    background-color: #f8f8f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: .2rem;
+    user-select: none;
+    z-index: 4;
+}
+
+.WallList {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.WallChoice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+    margin: .6rem;
+    border-radius: .1rem;
+}
+
+.WallChoice:hover {
+    filter: saturate(150%) brightness(150%);
+
+}
+
+.WallSelect {
+    filter: saturate(150%) brightness(150%);
+}
+
+.RoomSettings {
+    position: absolute;
+    bottom: 10rem;
+    width: 11rem;
+    height: 8rem;
+    background-color: #f8f8f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: .2rem;
+    user-select: none;
+    z-index: 4;
+}
+
+.DeleteRoom {
+    padding: .4rem;
+    color: white;
+    background-color: crimson;
+    margin: .5rem;
+    border: 0;
+    width: 80%;
+}
+
+.DeleteRoom:hover {
+    background-color: darkred;
 }

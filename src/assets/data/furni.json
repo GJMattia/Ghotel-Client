@@ -317,6 +317,7 @@
         "name": "White Lasergate",
         "img": "src/assets/images/furni/lasers/whitelaser.gif",
         "icon": "src/assets/images/furni-icons/lasers/whitelaser_icon.gif",
+        "on": "src/assets/images/furni/lasers/wlaser-on.gif",
         "description": "jack plasma"
     },
     {
@@ -427,6 +428,7 @@
         "name": "Black Lasergate",
         "img": "src/assets/images/furni/lasers/blaser.gif",
         "icon": "src/assets/images/furni-icons/lasers/blaser_icon.gif",
+        "on": "src/assets/images/furni/lasers/blaser-on.gif",
         "description": "zing zong"
     },
     {
@@ -508,5 +510,37 @@
         "img": "src/assets/images/furni/space/wsd.gif",
         "icon": "src/assets/images/furni-icons/space/wsd_icon.gif",
         "description": "Jason X"
+    },
+    {
+        "name": "Infobus",
+        "img": "src/assets/images/furni/ultras/infobus.gif",
+        "icon": "src/assets/images/furni-icons/ultras/infobus_icon.gif",
+        "description": "Tranzit"
+    },
+    {
+        "name": "Ocean Sleepingbag",
+        "img": "src/assets/images/furni/ultras/ocean.gif",
+        "icon": "src/assets/images/furni-icons/ultras/ocean_icon.gif",
+        "description": "For Jake only"
+    },
+    {
+        "name": "Monster Plant",
+        "img": "src/assets/images/furni/rares/plant.gif",
+        "icon": "src/assets/images/furni-icons/rares/plant_icon.gif",
+        "description": "THE MONSTER MASH"
+    },
+    {
+        "name": "Gold Lasergate",
+        "img": "src/assets/images/furni/lasers/glaser.gif",
+        "icon": "src/assets/images/furni-icons/lasers/glaser_icon.gif",
+        "description": "zing zong zap",
+        "on": "src/assets/images/furni/lasers/glaser-on.gif"
+    },
+    {
+        "name": "Red Lasergate",
+        "img": "src/assets/images/furni/lasers/rlaser.gif",
+        "icon": "src/assets/images/furni-icons/lasers/rlaser_icon.gif",
+        "description": "zing zong zap zeep",
+        "on": "src/assets/images/furni/lasers/rlaser-on.gif"
     }
 ]

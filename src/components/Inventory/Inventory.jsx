@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Furni from '../../assets/data/furni.json';
 import Skeleton from '../../assets/images/navigator/skeleton.gif';
 
-export default function Inventory({ inventory, setCatalogDiv, inventoryDiv, setInventoryDiv, setPFurni, roomData }) {
+export default function Inventory({ user, roomInfo, inventory, setCatalogDiv, inventoryDiv, setInventoryDiv, setPFurni, roomData }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
@@ -46,9 +46,12 @@ export default function Inventory({ inventory, setCatalogDiv, inventoryDiv, setI
     };
 
     function placeFurni() {
-        if (!roomData) {
+        if (!roomData || !roomInfo) {
             return;
         };
+        if (user.name !== roomInfo.user.name) {
+            return;
+        }
         setPFurni(showcaseFurni);
     };
 
