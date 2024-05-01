@@ -542,5 +542,53 @@
         "icon": "src/assets/images/furni-icons/lasers/rlaser_icon.gif",
         "description": "zing zong zap zeep",
         "on": "src/assets/images/furni/lasers/rlaser-on.gif"
+    },
+    {
+        "name": "Turquoise ICM",
+        "img": "src/assets/images/furni/icms/ticm.gif",
+        "icon": "src/assets/images/furni-icons/icms/ticm_icon.gif",
+        "description": "it's cold"
+    },
+    {
+        "name": "Gold ICM",
+        "img": "src/assets/images/furni/icms/gicm.gif",
+        "icon": "src/assets/images/furni-icons/icms/gicm_icon.gif",
+        "description": "oooo yum yum yum"
+    },
+    {
+        "name": "Gold Pillow",
+        "img": "src/assets/images/furni/pillows/gp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/gp_icon.gif",
+        "description": "made from gold"
+    },
+    {
+        "name": "Bronze Pillow",
+        "img": "src/assets/images/furni/pillows/bronzep.png",
+        "icon": "src/assets/images/furni-icons/pillows/bronzep_icon.png",
+        "description": "the bronze age"
+    },
+    {
+        "name": "Raven",
+        "img": "src/assets/images/furni/ultras/raven.gif",
+        "icon": "src/assets/images/furni-icons/ultras/raven_icon.gif",
+        "description": "for in front of the door"
+    },
+    {
+        "name": "American Idol Trophy",
+        "img": "src/assets/images/furni/trophies/ai.gif",
+        "icon": "src/assets/images/furni-icons/trophies/ai_icon.gif",
+        "description": "david cook"
+    },
+    {
+        "name": "Poinsettia",
+        "img": "src/assets/images/furni/plants/poin.gif",
+        "icon": "src/assets/images/furni-icons/plants/poin_icon.gif",
+        "description": "DETAIN THEM"
+    },
+    {
+        "name": "Lodge Corner",
+        "img": "src/assets/images/furni/mode/corn.gif",
+        "icon": "src/assets/images/furni-icons/mode/corn_icon.gif",
+        "description": "WOOD BLOCK"
     }
 ]

@@ -240,6 +240,14 @@
         "description": "For Jake only",
         "price": 999999,
         "itemid": 85
+      },
+      {
+        "name": "Raven",
+        "img": "src/assets/images/furni/ultras/raven.gif",
+        "icon": "src/assets/images/furni-icons/ultras/raven_icon.gif",
+        "description": "for in front of the door",
+        "price": 25,
+        "itemid": 93
       }
     ]
   },
@@ -370,6 +378,14 @@
         "description": "it's bronze",
         "price": 25,
         "itemid": 34
+      },
+      {
+        "name": "American Idol Trophy",
+        "img": "src/assets/images/furni/trophies/ai.gif",
+        "icon": "src/assets/images/furni-icons/trophies/ai_icon.gif",
+        "description": "david cook",
+        "price": 25,
+        "itemid": 94
       }
     ]
   },
@@ -554,6 +570,22 @@
         "description": "orange ice",
         "price": 25,
         "itemid": 73
+      },
+      {
+        "name": "Turquoise ICM",
+        "img": "src/assets/images/furni/icms/ticm.gif",
+        "icon": "src/assets/images/furni-icons/icms/ticm_icon.gif",
+        "description": "it's cold",
+        "price": 25,
+        "itemid": 89
+      },
+      {
+        "name": "Gold ICM",
+        "img": "src/assets/images/furni/icms/gicm.gif",
+        "icon": "src/assets/images/furni-icons/icms/gicm_icon.gif",
+        "description": "oooo yum yum yum",
+        "price": 25,
+        "itemid": 90
       }
     ]
   },
@@ -592,6 +624,22 @@
         "description": "not the navy!",
         "price": 25,
         "itemid": 81
+      },
+      {
+        "name": "Gold Pillow",
+        "img": "src/assets/images/furni/pillows/gp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/gp_icon.gif",
+        "description": "made from gold",
+        "price": 25,
+        "itemid": 91
+      },
+      {
+        "name": "Bronze Pillow",
+        "img": "src/assets/images/furni/pillows/bronzep.png",
+        "icon": "src/assets/images/furni-icons/pillows/bronzep_icon.png",
+        "description": "the bronze age",
+        "price": 25,
+        "itemid": 92
       }
     ]
   },
@@ -672,6 +720,14 @@
         "description": "open up",
         "price": 7,
         "itemid": 77
+      },
+      {
+        "name": "Lodge Corner",
+        "img": "src/assets/images/furni/mode/corn.gif",
+        "icon": "src/assets/images/furni-icons/mode/corn_icon.gif",
+        "description": "WOOD BLOCK",
+        "price": 7,
+        "itemid": 96
       }
     ]
   },
@@ -702,6 +758,14 @@
         "description": "a tall tree",
         "price": 3,
         "itemid": 30
+      },
+      {
+        "name": "Poinsettia",
+        "img": "src/assets/images/furni/plants/poin.gif",
+        "icon": "src/assets/images/furni-icons/plants/poin_icon.gif",
+        "description": "DETAIN THEM",
+        "price": 3,
+        "itemid": 95
       }
     ]
   },

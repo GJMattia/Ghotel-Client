@@ -21,12 +21,13 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
     const [stackHeight, setStackHeight] = useState(0);
 
     const [move, setMove] = useState(true);
-    const [sit, setSit] = useState(true);
+    const [sit, setSit] = useState(false);
     const [rotate, setRotate] = useState(false);
 
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
     const PETAL_TILES = [47, 48, 49, 50];
     const USE_FURNI = [11, 52, 58, 61, 70, 87, 88];
+    const SIT_FURNI = [0, 25, 27, 31, 54, 59, 60, 81, 91, 92];
 
     useEffect(() => {
         const handleMouseMove = (e) => {
@@ -117,7 +118,7 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
             const habbo = document.querySelector('.Sprite');
             const clickX = event.clientX;
             const clickY = event.clientY;
-            habbo.style = `left: ${clickX - 20}px; top: ${clickY - 80}px; `;
+            habbo.style = `left: ${clickX - 900}px; top: ${clickY - 470}px; `;
         }
         if (pFurni === null) {
             return;
@@ -128,7 +129,7 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
 
     const handleClick = (value, index, innerIndex) => {
         if (move) {
-            if (value === 31 || value === 0) {
+            if (SIT_FURNI.includes(value)) {
                 setSit(true)
             } else {
                 setSit(false);
@@ -143,16 +144,11 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
     return (
         <div className='RoomBox' >
 
-
             <div className='SpriteTool'>
                 <h4 className='BoxHeader'>Sprite Tool</h4>
                 <button onClick={() => setMove(!move)}>toggle move</button>
                 <button onClick={() => setRotate(!rotate)}>rotate sprite</button>
             </div>
-
-
-            <img className={`Sprite ${rotate ? 'Rotate' : ''}`} src={sit ? Sprites[sprite].sit : Sprites[sprite].stand} />
-
 
             <div onClick={() => setPFurni(null)} className='AntiFurni'></div>
             {user.name === roomInfo.user.name ? (
@@ -220,6 +216,9 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
 
                 ))}
 
+            </div>
+            <div className='SpriteDiv'>
+                <img className={`Sprite ${rotate ? 'Rotate' : ''}`} src={sit ? Sprites[sprite].sit : Sprites[sprite].stand} />
             </div>
         </div>
     )

@@ -1,9 +1,19 @@
-.Sprite {
-    position: absolute;
+.SpriteDiv {
+    position: relative;
+    bottom: 12.5rem;
+    right: 3.9rem;
     z-index: 104;
     image-rendering: pixelated;
     user-select: none;
+    width: 1rem;
+    height: 1rem;
+    /* background-color: red; */
+}
+
+.Sprite {
+    user-select: none;
     transition: 2s ease;
+    position: absolute;
 }
 
 .Sprite:hover {
