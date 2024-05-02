@@ -19,7 +19,7 @@
 
 .Room {
     position: relative;
-    top: 5.25rem;
+    top: 7rem;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -29,7 +29,7 @@
     height: 14.4rem;
     transform: rotate(-26.5deg) skewX(37deg);
     z-index: 1;
-    /* background-color: #8c8c5d; */
+    background-color: #8c8c5d;
     transition: .5s ease;
 }
 
@@ -51,7 +51,7 @@
     height: 1rem;
     transform: skewX(-37deg) rotate(26.5deg);
     user-select: none;
-    /* background-color: blue; */
+    /* background-color: lawngreen; */
 }
 
 .FurniPoint {

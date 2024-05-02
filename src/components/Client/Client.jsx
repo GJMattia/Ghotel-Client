@@ -9,6 +9,7 @@ import Navigator from '../Navigator/Navigator';
 import * as accountAPI from '../../../utilities/account-api';
 import Credits from '../../assets/images/client/credits-icon.png';
 import Room from '../Room/Room';
+import RoomChat from '../RoomChat/RoomChat';
 
 
 export default function Client({ user }) {
@@ -42,15 +43,13 @@ export default function Client({ user }) {
     //sprite
     const [sprite, setSprite] = useState(null);
 
-
-
     useEffect(function () {
         async function getAccountData() {
             try {
                 const response = await accountAPI.getAccount();
                 setCredits(response.credits);
                 setInventory(response.inventory);
-                setSprite(response.sprite)
+                setSprite(response.sprite);
                 setAccount(true);
             } catch (error) {
                 console.error('Error Fetching Questions', error);
@@ -67,6 +66,9 @@ export default function Client({ user }) {
                         <img src={Credits} />
                         <p>{credits}</p>
                     </div>
+
+                    {(roomData) && <RoomChat user={user} roomInfo={roomInfo} />}
+
                     {(roomData) && <Room sprite={sprite} setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
 
                     {navigatorDiv && <Navigator roomList={roomList} setRoomInfo={setRoomInfo} setRoomList={setRoomList} setRoomData={setRoomData} user={user} setNavigatorDiv={setNavigatorDiv} />}

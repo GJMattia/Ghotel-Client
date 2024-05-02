@@ -86,6 +86,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
     async function getRoomData(roomID) {
         try {
             const response = await roomAPI.getRoomData(roomID);
+
             setRoomData(response.room);
             const { room, ...roomInfo } = response;
             setRoomInfo(roomInfo);

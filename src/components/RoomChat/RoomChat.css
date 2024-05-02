@@ -1,0 +1,70 @@
+.RoomChat {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0rem;
+    width: 40%;
+    height: 13rem;
+    z-index: 4;
+    pointer-events: none;
+    list-style: none;
+    padding: 0;
+}
+
+.RoomMessage {
+    box-sizing: border-box;
+    margin: .3rem;
+    padding: .5rem;
+    border-radius: .3rem;
+    background-color: rgb(246, 246, 246);
+    font-size: .8rem;
+    font-weight: 900;
+    transition: 1s ease;
+    opacity: 1;
+    transition: opacity 15s ease;
+}
+
+.Fade {
+    opacity: 0;
+}
+
+.RoomChatInput {
+    position: absolute;
+    width: 30%;
+    bottom: 4.5rem;
+    z-index: 344;
+    background-color: rgb(237, 237, 237);
+    border: 0;
+    box-sizing: border-box;
+    padding: .3rem;
+    border-radius: .3rem;
+}
+
+.RoomChatInput:focus {
+    outline: none;
+}
+
+.UserHistory {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 10rem;
+    height: 10rem;
+    top: 3rem;
+    right: 1rem;
+    z-index: 34;
+    background-color: #555555;
+    border-radius: .5rem;
+    overflow-y: scroll;
+}
+
+.UserHistory>p {
+    font-size: .7rem;
+    z-index: 400;
+    color: white;
+    margin-bottom: 0rem;
+}

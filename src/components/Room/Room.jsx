@@ -11,7 +11,6 @@ import RoomInfo from '../RoomInfo/RoomInfo';
 import WallData from '../../assets/data/walls.json';
 import Sprites from '../../assets/data/sprites.json';
 
-
 export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setRoomList }) {
 
     const [selectedFurni, setSelectedFurni] = useState(null);
@@ -21,8 +20,9 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
     const [stackHeight, setStackHeight] = useState(0);
 
     const [move, setMove] = useState(true);
+    const [rotate, setRotate] = useState(true);
     const [sit, setSit] = useState(false);
-    const [rotate, setRotate] = useState(false);
+    const [spriteHeight, setSpriteHeight] = useState(true);
 
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
     const PETAL_TILES = [47, 48, 49, 50];
@@ -38,7 +38,6 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
             document.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
-
 
     async function useFurni() {
         if (selectedFurni === null || selectedTile === null || selectedFurniIndex === null) {
@@ -112,18 +111,29 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
 
     const handleTileClick = async (tileID) => {
         const clickedArray = roomData[tileID];
-        console.log(`Clicked tile index: ${tileID}, Content:`, clickedArray);
-
+        console.log(`Tile #${tileID}`, clickedArray);
+        const tile = document.getElementById(`tile_${tileID}`);
         if (move) {
-            const habbo = document.querySelector('.Sprite');
-            const clickX = event.clientX;
-            const clickY = event.clientY;
-            habbo.style = `left: ${clickX - 900}px; top: ${clickY - 470}px; `;
+            const previousTile = document.querySelector('.SpriteAnchor');
+            if (previousTile) {
+                previousTile.parentNode.removeChild(previousTile);
+            };
+            const spriteAnchor = document.createElement('div');
+            spriteAnchor.className = 'SpriteAnchor';
+            const spritePoint = document.createElement('div');
+            spritePoint.className = 'SpritePoint';
+            const img = document.createElement('img');
+            img.className = 'Sprite';
+            img.src = sit ? Sprites[sprite].sit : Sprites[sprite].stand;
+            spritePoint.appendChild(img);
+            spriteAnchor.appendChild(spritePoint);
+            tile.appendChild(spriteAnchor);
+            // spritePoint.style.bottom = `1rem`;
         }
         if (pFurni === null) {
             return;
         } else {
-            await placeFurni(tileID)
+            await placeFurni(tileID);
         }
     };
 
@@ -134,23 +144,44 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
             } else {
                 setSit(false);
             }
-        }
+        };
+
         setSelectedFurniIndex(innerIndex);
         setSelectedTile(index);
         setSelectedFurni(value);
+
+        if (!move) {
+            if (spriteHeight) {
+                const spritePoint = document.querySelector('.SpritePoint');
+                spritePoint.style.bottom = `${roomData[index][innerIndex].height + 1}rem`;
+            } else return;
+        }
     };
 
+    function rotateSprite() {
+        const spritePoint = document.querySelector('.Sprite');
+        if (rotate) {
+            spritePoint.style.transform = 'scaleX(-1)';
+            setRotate(false);
+        } else {
+            spritePoint.style.transform = 'scaleX(1)';
+            setRotate(true);
+        }
+    };
 
     return (
-        <div className='RoomBox' >
+        <div className='RoomBox'>
 
             <div className='SpriteTool'>
                 <h4 className='BoxHeader'>Sprite Tool</h4>
-                <button onClick={() => setMove(!move)}>toggle move</button>
-                <button onClick={() => setRotate(!rotate)}>rotate sprite</button>
+                <button onClick={() => setMove(!move)}>{move ? 'freeze move' : 'set move'}</button>
+                <button onClick={() => setSpriteHeight(!spriteHeight)}>{spriteHeight ? 'freeze height' : 'set height'}</button>
+                <button onClick={rotateSprite}>rotate sprite</button>
             </div>
 
             <div onClick={() => setPFurni(null)} className='AntiFurni'></div>
+
+
             {user.name === roomInfo.user.name ? (
                 <DevTools roomInfo={roomInfo} setSelectedFurni={setSelectedFurni} setStackHeight={setStackHeight} stackHeight={stackHeight} setRoomData={setRoomData} setInventory={setInventory} />
             ) : null}
@@ -173,7 +204,6 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
                             className='FurniSelectionImg'
                             src={PETAL_TILES.includes(selectedFurni) ? Furniture[1].img : Furniture[selectedFurni].img}
                         />
-
                         <p className='FurniSelectionFurniMotto'>{Furniture[selectedFurni].description}</p>
                     </div>
 
@@ -186,21 +216,19 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
                         <li onClick={useFurni}>Use</li>
                     </ul>
 
-
                 </div>
             )}
             <div className='Room' style={{ backgroundColor: roomInfo.floorColor }}>
                 {roomData.map((tile, index) => (
                     <div
                         key={index}
+                        id={`tile_${index}`}
                         index={index}
                         className={`Tile T${index} `}
                         onClick={() => handleTileClick(index)}
                     >
-
                         {tile.map((item, innerIndex) => (
                             <div key={innerIndex} className="FurniAnchor"  >
-
                                 <div className='FurniPoint'
                                     style={{ bottom: `${item.height + .6}rem` }}
                                     onClick={() => handleClick(item.furniID, index, innerIndex)}
@@ -213,12 +241,7 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
                             </div>
                         ))}
                     </div>
-
                 ))}
-
-            </div>
-            <div className='SpriteDiv'>
-                <img className={`Sprite ${rotate ? 'Rotate' : ''}`} src={sit ? Sprites[sprite].sit : Sprites[sprite].stand} />
             </div>
         </div>
     )

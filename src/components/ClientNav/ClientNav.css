@@ -15,9 +15,11 @@
 }
 
 .ClientNavIcon {
+    position: relative;
     image-rendering: pixelated;
     cursor: pointer;
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .ClientNavIcon:hover {
