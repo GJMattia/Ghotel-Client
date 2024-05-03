@@ -1,11 +1,12 @@
-import './RoomChat.css';
+import './RoomSocket.css';
 import io from 'socket.io-client';
 import { useState, useEffect, useRef } from 'react';
+import Sprites from '../../assets/data/sprites.json';
 
 // const socket = io.connect('http://localhost:4741');
 const socket = io.connect('https://ghotel-api.onrender.com');
 
-export default function RoomChat({ user, roomInfo }) {
+export default function RoomSocket({ user, roomInfo, roomChange, roomData, setRoomData, liveSprite, setLiveSprite }) {
 
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
@@ -42,13 +43,16 @@ export default function RoomChat({ user, roomInfo }) {
     useEffect(() => {
         const liveRoom = document.querySelector('.UserHistory');
         liveRoom.innerHTML = '';
-        socket.emit('join_josh', { username: user.name, roomNumber: roomInfo.chat });
+        socket.emit('join_room', { username: user.name, roomNumber: roomInfo.chat });
+
         const handleUserJoined = ({ username }) => {
             liveRoom.innerHTML += `<p>${username} joined the room</p>`;
         };
+
         const handleUserLeft = ({ username }) => {
             liveRoom.innerHTML += `<p>${username} left the room</p>`;
         };
+
         socket.on('user_joined', handleUserJoined);
         socket.on('user_left', handleUserLeft);
         return () => {
@@ -64,6 +68,50 @@ export default function RoomChat({ user, roomInfo }) {
             sendMessage();
         }
     };
+
+    useEffect(() => {
+        socket.emit('send_change', { username: user.name, roomNumber: roomInfo.chat, roomChange: roomChange });
+    }, [roomChange]);
+
+    useEffect(() => {
+        socket.on('receive_change', ({ username, roomChange }) => {
+            if (!roomChange) {
+                return
+            };
+            if (username === user.name) {
+                return
+            } else {
+                setRoomData(prevRoomData => {
+                    const updatedRoomData = [...prevRoomData];
+                    updatedRoomData[roomChange.tileID] = roomChange.change;
+                    return updatedRoomData;
+                });
+            }
+        });
+        return () => {
+            socket.off('receive_change');
+        };
+    }, [roomInfo.chat]);
+
+    // useEffect(() => {
+    //     socket.emit('send_sprite', { username: user.name, roomNumber: roomInfo.chat, sprite: liveSprite });
+    //     // console.log('Room change:', roomChange);
+    // }, [liveSprite]);
+
+
+    // useEffect(() => {
+    //     socket.on('receive_sprite', ({ username, sprite }) => {
+    //         if (!liveSprite) {
+    //             return
+    //         };
+
+
+    //     });
+
+    //     return () => {
+    //         socket.off('receive_sprite');
+    //     };
+    // }, [liveSprite]);
 
     return (
         <>

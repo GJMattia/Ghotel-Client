@@ -12,6 +12,7 @@
     list-style: none;
     margin: 0;
     z-index: 2;
+    user-select: none;
 }
 
 .ClientNavIcon {

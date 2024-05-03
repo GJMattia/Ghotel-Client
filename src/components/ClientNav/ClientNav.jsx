@@ -6,9 +6,9 @@ import CatalogIcon from '../../assets/images/clientnav/catalog.png';
 import NavIcon from '../../assets/images/clientnav/nav.png';
 import InventoryIcon from '../../assets/images/clientnav/inventory.png';
 import HelpIcon from '../../assets/images/clientnav/wonky.gif';
+import SettingsIcon from '../../assets/images/clientnav/settings.gif';
 
-
-export default function ClientNav({ setRoomData, navigatorDiv, setNavigatorDiv, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
+export default function ClientNav({ settingsDiv, setSettingsDiv, setRoomData, navigatorDiv, setNavigatorDiv, consoleDiv, setConsoleDiv, chatDiv, setChatDiv, catalogDiv, setCatalogDiv, inventoryDiv, setInventoryDiv }) {
 
     return (
         <ul className='ClientNav'>
@@ -18,6 +18,7 @@ export default function ClientNav({ setRoomData, navigatorDiv, setNavigatorDiv, 
             <li><img onClick={() => setInventoryDiv(!inventoryDiv)} className='ClientNavIcon' src={InventoryIcon} /></li>
             <li><img onClick={() => setConsoleDiv(!consoleDiv)} className='ClientNavIcon' src={ConsoleIcon} /></li>
             <li><img onClick={() => setChatDiv(!chatDiv)} className='ClientNavIcon' src={ChatIcon} /></li>
+            <li><img onClick={() => setSettingsDiv(!settingsDiv)} className='ClientNavIcon' src={SettingsIcon} /></li>
             <li><img onClick={() => window.location.href = '/'} className='ClientNavIcon' src={HelpIcon} /></li>
         </ul>
     )

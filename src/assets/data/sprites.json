@@ -8,5 +8,35 @@
         "name": "John",
         "stand": "src/assets/images/sprites/john/john-stand.gif",
         "sit": "src/assets/images/sprites/john/john-sit.gif"
+    },
+    {
+        "name": "Frank",
+        "stand": "src/assets/images/sprites/frank.gif",
+        "sit": "src/assets/images/sprites/frank.gif"
+    },
+    {
+        "name": "Rasta",
+        "stand": "src/assets/images/sprites/rasta.gif",
+        "sit": "src/assets/images/sprites/rasta.gif"
+    },
+    {
+        "name": "Rodel",
+        "stand": "src/assets/images/sprites/rodel.gif",
+        "sit": "src/assets/images/sprites/rodel.gif"
+    },
+    {
+        "name": "Sherlock",
+        "stand": "src/assets/images/sprites/sherlock.gif",
+        "sit": "src/assets/images/sprites/sherlock.gif"
+    },
+    {
+        "name": "Mr. Sir",
+        "stand": "src/assets/images/sprites/shovel.gif",
+        "sit": "src/assets/images/sprites/shovel.gif"
+    },
+    {
+        "name": "Skeleton Jones",
+        "stand": "src/assets/images/sprites/ske.gif",
+        "sit": "src/assets/images/sprites/ske.gif"
     }
 ]

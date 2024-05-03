@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Habbo Staff",
+        "img": "src/assets/images/badges/ADM.gif"
+    },
+    {
+        "name": "Stonks",
+        "img": "src/assets/images/badges/CAH.gif"
+    },
+    {
+        "name": "Chef",
+        "img": "src/assets/images/badges/CHF.gif"
+    },
+    {
+        "name": "Earth",
+        "img": "src/assets/images/badges/EC5.gif"
+    },
+    {
+        "name": "Shrek",
+        "img": "src/assets/images/badges/FR068.gif"
+    },
+    {
+        "name": "GBC",
+        "img": "src/assets/images/badges/FR092.gif"
+    },
+    {
+        "name": "Eagle",
+        "img": "src/assets/images/badges/GLI.gif"
+    },
+    {
+        "name": "Diamond",
+        "img": "src/assets/images/badges/GM1.gif"
+    },
+    {
+        "name": "Emerald",
+        "img": "src/assets/images/badges/GM2.gif"
+    },
+    {
+        "name": "Sapphire",
+        "img": "src/assets/images/badges/GM3.gif"
+    },
+    {
+        "name": "Ruby",
+        "img": "src/assets/images/badges/GM4.gif"
+    },
+    {
+        "name": "HC",
+        "img": "src/assets/images/badges/HC1.gif"
+    },
+    {
+        "name": "Gold HC",
+        "img": "src/assets/images/badges/HC2.gif"
+    },
+    {
+        "name": "Classic Habbo",
+        "img": "src/assets/images/badges/MRG02.gif"
+    },
+    {
+        "name": "Typo",
+        "img": "src/assets/images/badges/NL008.png"
+    },
+    {
+        "name": "Field of Dreams",
+        "img": "src/assets/images/badges/PT414.png"
+    },
+    {
+        "name": "Thanksgiving '08",
+        "img": "src/assets/images/badges/USU.png"
+    },
+    {
+        "name": "VIP",
+        "img": "src/assets/images/badges/VIP.gif"
+    },
+    {
+        "name": "Xmas '06",
+        "img": "src/assets/images/badges/XM4.gif"
+    },
+    {
+        "name": "Xmas '08",
+        "img": "src/assets/images/badges/XMC.gif"
+    },
+    {
+        "name": "Ghotel X",
+        "img": "src/assets/images/badges/XXX.gif"
+    }
+]

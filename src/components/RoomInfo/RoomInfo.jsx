@@ -7,7 +7,7 @@ import * as roomAPI from '../../../utilities/room-api';
 import { useState } from 'react';
 import WallData from '../../assets/data/walls.json';
 
-export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, setRoomList, setSelectedFurni }) {
+export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, setRoomList, setSelectedFurni, setRoomChange }) {
     const COLORS = [
         'black',
         'white',

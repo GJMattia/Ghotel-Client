@@ -47,6 +47,12 @@ export async function clearInventory() {
     }
 };
 
-
+export async function changeSprite(sprite) {
+    try {
+        return await sendRequest(`${BASE_URL}/change/sprite`, 'PUT', sprite);
+    } catch (error) {
+        console.error('error changing sprite', error);
+    }
+};
 
 

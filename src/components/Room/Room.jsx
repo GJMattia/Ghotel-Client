@@ -11,7 +11,8 @@ import RoomInfo from '../RoomInfo/RoomInfo';
 import WallData from '../../assets/data/walls.json';
 import Sprites from '../../assets/data/sprites.json';
 
-export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setRoomList }) {
+
+export default function Room({ setLiveSprite, setRoomChange, sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setRoomList }) {
 
     const [selectedFurni, setSelectedFurni] = useState(null);
     const [selectedTile, setSelectedTile] = useState(null);
@@ -51,6 +52,7 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
             const updatedRoomData = [...roomData];
             updatedRoomData[response.tileID] = response.tile;
             setRoomData(updatedRoomData);
+            setRoomChange({ change: response.tile, tileID: response.tileID });
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -65,6 +67,7 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
             const updatedRoomData = [...roomData];
             updatedRoomData[response.tileID] = response.tile;
             setRoomData(updatedRoomData);
+            setRoomChange({ change: response.tile, tileID: response.tileID })
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -79,6 +82,7 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
             const updatedRoomData = [...roomData];
             updatedRoomData[response.tileID] = response.tile;
             setRoomData(updatedRoomData);
+            setRoomChange({ change: response.tile, tileID: response.tileID })
             setSelectedFurni(null);
         } catch (error) {
             console.error('error creating note'.error)
@@ -103,6 +107,8 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
                 const updatedRoomData = [...roomData];
                 updatedRoomData[tileID] = response;
                 setRoomData(updatedRoomData);
+                setRoomChange({ change: response, tileID: tileID })
+
             }
         } catch (error) {
             console.error('error placing furni'.error)
@@ -128,7 +134,6 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
             spritePoint.appendChild(img);
             spriteAnchor.appendChild(spritePoint);
             tile.appendChild(spriteAnchor);
-            // spritePoint.style.bottom = `1rem`;
         }
         if (pFurni === null) {
             return;
@@ -185,7 +190,7 @@ export default function Room({ sprite, roomData, roomInfo, setRoomInfo, setInven
             {user.name === roomInfo.user.name ? (
                 <DevTools roomInfo={roomInfo} setSelectedFurni={setSelectedFurni} setStackHeight={setStackHeight} stackHeight={stackHeight} setRoomData={setRoomData} setInventory={setInventory} />
             ) : null}
-            <RoomInfo setSelectedFurni={setSelectedFurni} setRoomList={setRoomList} user={user} roomInfo={roomInfo} setRoomInfo={setRoomInfo} setRoomData={setRoomData} />
+            <RoomInfo setRoomChange={setRoomChange} setSelectedFurni={setSelectedFurni} setRoomList={setRoomList} user={user} roomInfo={roomInfo} setRoomInfo={setRoomInfo} setRoomData={setRoomData} />
             <img className={`Wall Wall${roomInfo.wallType} `} src={WallData[roomInfo.wallType].img} />
             {pFurni !== null && (
                 <img

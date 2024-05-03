@@ -6,10 +6,12 @@ import Chat from '../Chat/Chat';
 import Catalog from '../Catalog/Catalog';
 import Inventory from '../Inventory/Inventory';
 import Navigator from '../Navigator/Navigator';
+import Settings from '../Settings/Settings';
 import * as accountAPI from '../../../utilities/account-api';
 import Credits from '../../assets/images/client/credits-icon.png';
 import Room from '../Room/Room';
-import RoomChat from '../RoomChat/RoomChat';
+import RoomSocket from '../RoomSocket/RoomSocket';
+
 
 
 export default function Client({ user }) {
@@ -23,6 +25,7 @@ export default function Client({ user }) {
     const [catalogDiv, setCatalogDiv] = useState(false);
     const [inventoryDiv, setInventoryDiv] = useState(false);
     const [navigatorDiv, setNavigatorDiv] = useState(false);
+    const [settingsDiv, setSettingsDiv] = useState(false);
 
     //chat elements
     const [room, setRoom] = useState(null);
@@ -42,6 +45,11 @@ export default function Client({ user }) {
 
     //sprite
     const [sprite, setSprite] = useState(null);
+
+    //Socket Stuff
+    const [liveSprite, setLiveSprite] = useState(null);
+    const [roomChange, setRoomChange] = useState(null);
+
 
     useEffect(function () {
         async function getAccountData() {
@@ -67,9 +75,9 @@ export default function Client({ user }) {
                         <p>{credits}</p>
                     </div>
 
-                    {(roomData) && <RoomChat user={user} roomInfo={roomInfo} />}
+                    {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} roomData={roomData} setRoomData={setRoomData} liveSprite={liveSprite} setLiveSprite={setLiveSprite} />}
 
-                    {(roomData) && <Room sprite={sprite} setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
+                    {(roomData) && <Room setLiveSprite={setLiveSprite} setRoomChange={setRoomChange} sprite={sprite} setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
 
                     {navigatorDiv && <Navigator roomList={roomList} setRoomInfo={setRoomInfo} setRoomList={setRoomList} setRoomData={setRoomData} user={user} setNavigatorDiv={setNavigatorDiv} />}
 
@@ -81,7 +89,9 @@ export default function Client({ user }) {
 
                     <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} room={room} setRoom={setRoom} />
 
-                    <ClientNav setRoomData={setRoomData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
+                    {settingsDiv && <Settings sprite={sprite} setSprite={setSprite} setSettingsDiv={setSettingsDiv} />}
+
+                    <ClientNav settingsDiv={settingsDiv} setSettingsDiv={setSettingsDiv} setRoomData={setRoomData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
                 </>
             ) : (
                 <p>Loading...</p>

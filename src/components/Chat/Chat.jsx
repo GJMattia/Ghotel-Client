@@ -38,7 +38,7 @@ export default function Chat({ user, usersMessaged, setUsersMessaged, room, setR
 
     const joinRoom = () => {
         if (room !== null) {
-            socket.emit('join_room', { room });
+            socket.emit('join_chat', { room });
         }
     };
 

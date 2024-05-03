@@ -8,3 +8,217 @@
     background-image: url('../../assets/images/homepage/bg-white.png');
     image-rendering: pixelated;
 }
+
+.GhotelHP {
+    width: 10rem;
+}
+
+.HomePageHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 5.5rem;
+    background-color: #afdcea;
+    border-bottom: 2px solid black;
+    user-select: none;
+}
+
+.OpenClientBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    width: 8rem;
+    height: 2rem;
+    color: white;
+    font-weight: 900;
+    background: linear-gradient(to bottom, rgb(99, 197, 0) 50%, green 50%);
+    border: 2px solid black;
+    border-radius: .2rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.OpenClientBtn:hover {
+    background: linear-gradient(to bottom, rgb(111, 222, 0) 50%, rgb(0, 197, 0) 50%);
+}
+
+.SignOutBtn {
+    width: 8rem;
+    height: 2rem;
+    color: white;
+    font-weight: 900;
+    background: linear-gradient(to bottom, crimson 50%, darkred 50%);
+    border: 2px solid black;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.SignOutBtn:hover {
+    background: linear-gradient(to bottom, rgb(255, 25, 25) 50%, rgb(201, 0, 0) 50%);
+}
+
+.MainContent {
+    box-sizing: border-box;
+    border-top: 1px solid rgb(156, 156, 156);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+.Welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35rem;
+    height: 15rem;
+    image-rendering: pixelated;
+    border-radius: .2rem;
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+    background-color: #707066;
+    border: 1px solid rgb(28, 28, 28);
+}
+
+.WelcomeMast {
+    position: relative;
+    left: 11rem;
+    pointer-events: none;
+}
+
+.WelcomeTile {
+    bottom: 1rem;
+    left: 1rem;
+    position: absolute;
+    pointer-events: none;
+}
+
+.WelcomeSprite {
+    bottom: 2.5rem;
+    left: 2.7rem;
+    position: absolute;
+    pointer-events: none;
+}
+
+.WelcomeArrow {
+    bottom: 8rem;
+    left: 2.7rem;
+    position: absolute;
+    pointer-events: none;
+}
+
+.Enter {
+    top: 1rem;
+    right: 5rem;
+    position: absolute;
+    user-select: none;
+}
+
+.WelcomeInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: .5rem;
+    right: 1rem;
+    background-color: #96968d;
+    width: 20rem;
+    height: 4.5rem;
+    border-radius: .2rem;
+    color: white;
+}
+
+.WelcomeInfo>h5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 5.3rem;
+    pointer-events: none;
+}
+
+.WelcomeBack {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: .5rem;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+.WelcomeArticle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 15rem;
+    height: 15rem;
+    background-image: url('../../assets/images/homepage/red.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    user-select: none;
+    border-radius: .3rem;
+}
+
+.WelcomeArticle>h5 {
+    margin-bottom: 0;
+}
+
+.WelcomeArticle>p {
+    font-style: italic;
+}
+
+.WelcomeArticle>img {
+    pointer-events: none;
+}
+
+.WelcomeFill {
+    margin-top: 2rem;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(167, 167, 167);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+.WelcomeFill>img {
+    image-rendering: pixelated;
+    border-radius: .5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 1000px) {
+
+    .MainContent {
+        flex-direction: column;
+
+    }
+
+    .WelcomeFill {
+        display: none;
+    }
+
+    .WelcomeArticle {
+        margin-top: 2rem;
+    }
+
+}
