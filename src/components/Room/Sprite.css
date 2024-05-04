@@ -5,7 +5,6 @@
     transform: skewX(-37deg) rotate(26.5deg);
     user-select: none;
     /* background-color: lawngreen; */
-    pointer-events: none;
 }
 
 .SpritePoint {
@@ -29,9 +28,9 @@
     /* opacity: .8; */
 }
 
-/* .Sprite:hover {
+.Sprite:hover {
     filter: brightness(150%) saturate(150%);
-} */
+}
 
 .Sprite3 {
     margin-left: -1rem;

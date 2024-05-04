@@ -47,7 +47,6 @@ export default function Client({ user }) {
     const [sprite, setSprite] = useState(null);
 
     //Socket Stuff
-    const [liveSprite, setLiveSprite] = useState(null);
     const [roomChange, setRoomChange] = useState(null);
 
 
@@ -75,9 +74,9 @@ export default function Client({ user }) {
                         <p>{credits}</p>
                     </div>
 
-                    {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} roomData={roomData} setRoomData={setRoomData} liveSprite={liveSprite} setLiveSprite={setLiveSprite} />}
+                    {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} roomData={roomData} setRoomData={setRoomData} />}
 
-                    {(roomData) && <Room setLiveSprite={setLiveSprite} setRoomChange={setRoomChange} sprite={sprite} setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
+                    {(roomData) && <Room setRoomChange={setRoomChange} sprite={sprite} setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
 
                     {navigatorDiv && <Navigator roomList={roomList} setRoomInfo={setRoomInfo} setRoomList={setRoomList} setRoomData={setRoomData} user={user} setNavigatorDiv={setNavigatorDiv} />}
 

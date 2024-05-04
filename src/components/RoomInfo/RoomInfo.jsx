@@ -20,6 +20,7 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
         'green',
         'purple',
     ];
+
     let [mood, setMood] = useState(false);
     let [mlColor, setMlColor] = useState('darkred');
 
@@ -27,6 +28,17 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
     let [wall, setWall] = useState(0);
 
     let [settings, setSettings] = useState(false);
+
+    function openMood() {
+        setMood(!mood);
+        setWallDiv(false);
+    };
+
+    function openWall() {
+        setWallDiv(!wallDiv);
+        setMood(false);
+
+    };
 
     async function clearRoom() {
         try {
@@ -83,7 +95,7 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
                         </div>
                     }
 
-                    <img onClick={() => setWallDiv(!wallDiv)} className='Window' src={Window} />
+                    <img onClick={openWall} className='Window' src={Window} />
                     {wallDiv &&
                         <div className='WallSettings'>
                             <h4 className='BoxHeader' >Select Wall</h4>
@@ -104,7 +116,7 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
                             <button className='SetBtn' onClick={wallType}>Apply</button>
                         </div>
                     }
-                    <img onClick={() => setMood(!mood)} className='ML' src={ML} />
+                    <img onClick={openMood} className='ML' src={ML} />
                     {mood &&
                         <div className='Moodlight'>
                             <h4 className='BoxHeader' >Select color</h4>

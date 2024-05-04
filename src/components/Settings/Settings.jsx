@@ -101,7 +101,7 @@ export default function Settings({ sprite, setSprite, setSettingsDiv }) {
 
                                 key={badge.id} onClick={() => setBadgeSelection(index)}>
 
-                                <img src={badge.img} alt={badge.name} />
+                                <img src={badge.img} alt={badge.name} draggable="false" />
 
                             </li>
                         ))}

@@ -10,9 +10,12 @@ import DevTools from '../DevTools/DevTools';
 import RoomInfo from '../RoomInfo/RoomInfo';
 import WallData from '../../assets/data/walls.json';
 import Sprites from '../../assets/data/sprites.json';
+import io from 'socket.io-client';
 
+// const socket = io.connect('http://localhost:4741');
+const socket = io.connect('https://ghotel-api.onrender.com');
 
-export default function Room({ setLiveSprite, setRoomChange, sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setRoomList }) {
+export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setRoomList }) {
 
     const [selectedFurni, setSelectedFurni] = useState(null);
     const [selectedTile, setSelectedTile] = useState(null);
@@ -22,13 +25,73 @@ export default function Room({ setLiveSprite, setRoomChange, sprite, roomData, r
 
     const [move, setMove] = useState(true);
     const [rotate, setRotate] = useState(true);
-    const [sit, setSit] = useState(false);
     const [spriteHeight, setSpriteHeight] = useState(true);
 
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
     const PETAL_TILES = [47, 48, 49, 50];
     const USE_FURNI = [11, 52, 58, 61, 70, 87, 88];
-    const SIT_FURNI = [0, 25, 27, 31, 54, 59, 60, 81, 91, 92];
+    // const SIT_FURNI = [0, 25, 27, 31, 54, 59, 60, 81, 91, 92];
+
+
+    useEffect(() => {
+        //Creates the users sprite
+        const userSprite = document.getElementById(user.name);
+        if (!userSprite) {
+            createSprite('tile_8', user.name, sprite, 0, false);
+        } else {
+            const tile = document.getElementById('tile_8');
+            tile.appendChild(userSprite);
+        };
+
+
+        //automatically places player sprite in user room
+        socket.emit('add_sprite', { username: user.name, roomNumber: roomInfo.chat, spriteID: sprite, tileID: 8, height: 0, rotation: false });
+
+        const spriteData = (data) => {
+            data.forEach(sprite => {
+                if (sprite.username !== user.name) {
+                    createSprite(`tile_${sprite.tileID}`, sprite.username, sprite.spriteID, sprite.height);
+                }
+            });
+        };
+
+        const spriteLeft = ({ username }) => {
+            const remove = document.getElementById(username); // Find sprite by username
+            if (remove) {
+                remove.remove(); // Remove the sprite from the DOM
+            };
+        };
+
+        const moveSprite = ({ username, tileID }) => {
+            if (username !== user.name) {
+                const tile = document.getElementById(`tile_${tileID}`);
+                const sprite = document.getElementById(`${username}`);
+                tile.appendChild(sprite);
+            }
+        };
+
+        const heightSprite = ({ username, height }) => {
+            if (username !== user.name) {
+                const spriteAnchor = document.getElementById(`${username}`);
+                const spritePoint = spriteAnchor.querySelector('.SpritePoint');
+                spritePoint.style.bottom = `${height}rem`;
+            }
+        };
+
+        socket.on('move2_sprite', heightSprite)
+        socket.on('move1_sprite', moveSprite);
+        socket.on('sprite_data', spriteData);
+        socket.on('sprite_left', spriteLeft);
+        return () => {
+            socket.off('move2_sprite', heightSprite)
+            socket.off('move_sprite', moveSprite)
+            socket.off('sprite_data', spriteData);
+            socket.off('sprite_left', spriteLeft);
+            socket.emit('leave_sprite', { username: user.name, roomNumber: roomInfo.chat });
+        };
+
+    }, [roomInfo.chat]);
+
 
     useEffect(() => {
         const handleMouseMove = (e) => {
@@ -39,6 +102,7 @@ export default function Room({ setLiveSprite, setRoomChange, sprite, roomData, r
             document.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
+
 
     async function useFurni() {
         if (selectedFurni === null || selectedTile === null || selectedFurniIndex === null) {
@@ -117,24 +181,20 @@ export default function Room({ setLiveSprite, setRoomChange, sprite, roomData, r
 
     const handleTileClick = async (tileID) => {
         const clickedArray = roomData[tileID];
-        console.log(`Tile #${tileID}`, clickedArray);
+        // console.log(`Tile #${tileID}`, clickedArray);
+
         const tile = document.getElementById(`tile_${tileID}`);
-        if (move) {
-            const previousTile = document.querySelector('.SpriteAnchor');
-            if (previousTile) {
-                previousTile.parentNode.removeChild(previousTile);
-            };
-            const spriteAnchor = document.createElement('div');
-            spriteAnchor.className = 'SpriteAnchor';
-            const spritePoint = document.createElement('div');
-            spritePoint.className = 'SpritePoint';
-            const img = document.createElement('img');
-            img.className = 'Sprite';
-            img.src = sit ? Sprites[sprite].sit : Sprites[sprite].stand;
-            spritePoint.appendChild(img);
-            spriteAnchor.appendChild(spritePoint);
-            tile.appendChild(spriteAnchor);
-        }
+
+
+
+        if (move && !pFurni) {
+            const userSprite = document.getElementById(`${user.name}`);
+            tile.appendChild(userSprite);
+            socket.emit('move_sprite', { username: user.name, roomNumber: roomInfo.chat, tileID: tileID });
+        };
+
+
+
         if (pFurni === null) {
             return;
         } else {
@@ -142,14 +202,30 @@ export default function Room({ setLiveSprite, setRoomChange, sprite, roomData, r
         }
     };
 
+    const createSprite = (tileID, username, spriteID, height, rotation) => {
+
+        const tile = document.getElementById(tileID);
+
+        const spriteAnchor = document.createElement('div');
+        spriteAnchor.className = 'SpriteAnchor';
+        spriteAnchor.id = username;
+
+        const spritePoint = document.createElement('div');
+        spritePoint.className = 'SpritePoint';
+        spritePoint.style.bottom = `${height}rem`;
+
+        const img = document.createElement('img');
+        img.className = 'Sprite';
+        img.src = Sprites[spriteID].stand;
+        rotation ? img.classList.add('Rotate') : null;
+        // Set the id attribute of the img element to the username
+
+        spritePoint.appendChild(img);
+        spriteAnchor.appendChild(spritePoint);
+        tile.appendChild(spriteAnchor);
+    };
+
     const handleClick = (value, index, innerIndex) => {
-        if (move) {
-            if (SIT_FURNI.includes(value)) {
-                setSit(true)
-            } else {
-                setSit(false);
-            }
-        };
 
         setSelectedFurniIndex(innerIndex);
         setSelectedTile(index);
@@ -157,8 +233,11 @@ export default function Room({ setLiveSprite, setRoomChange, sprite, roomData, r
 
         if (!move) {
             if (spriteHeight) {
-                const spritePoint = document.querySelector('.SpritePoint');
-                spritePoint.style.bottom = `${roomData[index][innerIndex].height + 1}rem`;
+                const spriteAnchor = document.getElementById(`${user.name}`);
+                const spritePoint = spriteAnchor.querySelector('.SpritePoint');
+                spritePoint.style.bottom = `${roomData[index][innerIndex].height}rem`;
+                let height = roomData[index][innerIndex].height;
+                socket.emit('height_sprite', { username: user.name, roomNumber: roomInfo.chat, height: height });
             } else return;
         }
     };
