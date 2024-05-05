@@ -39,7 +39,7 @@ export default function Client({ user }) {
     const [credits, setCredits] = useState(null);
 
     //Room Data
-    const [roomList, setRoomList] = useState(null);
+    const [roomList, setRoomList] = useState([]);
     const [roomData, setRoomData] = useState(null);
     const [roomInfo, setRoomInfo] = useState(null);
 
@@ -74,7 +74,7 @@ export default function Client({ user }) {
                         <p>{credits}</p>
                     </div>
 
-                    {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} roomData={roomData} setRoomData={setRoomData} />}
+                    {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} setRoomData={setRoomData} />}
 
                     {(roomData) && <Room setRoomChange={setRoomChange} sprite={sprite} setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
 

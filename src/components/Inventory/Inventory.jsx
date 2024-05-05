@@ -110,7 +110,7 @@ export default function Inventory({ user, roomInfo, inventory, setCatalogDiv, in
                     <h4>You have no furni</h4>
                     <img className='Skeleton' src={Skeleton} />
                     <h5>Go buy some</h5>
-                    <button onClick={openCat}>Open Catalog</button>
+                    <button className='OpenCatBtn' onClick={openCat}>Open Catalog</button>
                 </div>
             )}
         </div>

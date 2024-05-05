@@ -7,6 +7,24 @@ import { useState } from 'react';
 export default function DevTools({ roomInfo, setSelectedFurni, setStackHeight, setRoomData, setInventory }) {
 
     const [counter, setCounter] = useState(0);
+    const [wumbo, setWumbo] = useState(false);
+
+    function Wumbo() {
+        setWumbo(true);
+        const randomNumber1 = Math.random() * 360;
+        const randomNumber2 = Math.random() * 360;
+
+        const room = document.querySelector('.Room');
+
+        room.style.transform = `rotate(${randomNumber1}deg) skewX(${randomNumber2}deg)`;
+    };
+
+    function normalize() {
+        setWumbo(false);
+        const room = document.querySelector('.Room');
+
+        room.style.transform = `rotate(-26.5deg) skewX(37deg)`;
+    };
 
     const incrementCounter = () => {
         setStackHeight(prevStackHeight => prevStackHeight + .9);
@@ -49,6 +67,11 @@ export default function DevTools({ roomInfo, setSelectedFurni, setStackHeight, s
             </div>
             <div className='DevTools'>
                 <button onClick={clearInventory} className='DevBtn'>CLEAR INVENTORY</button>
+                {!wumbo ? (
+                    <button onClick={Wumbo} className='DevBtn Wumbo'>Wumbo</button>
+                ) : (
+                    <button onClick={normalize} className='DevBtn Wumbo'>Normalize</button>
+                )}
             </div>
         </>
     )

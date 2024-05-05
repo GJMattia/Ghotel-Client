@@ -8,6 +8,8 @@ import * as roomAPI from '../../../utilities/room-api';
 import Key from '../../assets/images/client/key.gif';
 import Plus from '../../assets/images/client/plus.gif';
 import RoomIcon from '../../assets/images/client/casino_room.gif';
+import Island from '../../assets/images/navigator/island.gif';
+import Point from '../../assets/images/navigator/point.gif';
 
 export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv, setRoomData, setRoomInfo }) {
 
@@ -26,7 +28,6 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
         try {
             const response = await roomAPI.roomSearch({ userSearch: userSearch });
             setRoomList(response);
-
         } catch (error) {
             console.error('Error searching user rooms', error);
         }
@@ -66,6 +67,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
         try {
             let response = await roomAPI.getUserRooms();
             setRoomList(response);
+
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -86,7 +88,6 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
     async function getRoomData(roomID) {
         try {
             const response = await roomAPI.getRoomData(roomID);
-
             setRoomData(response.room);
             const { room, ...roomInfo } = response;
             setRoomInfo(roomInfo);
@@ -108,7 +109,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
     };
 
     function publicRoomsClick(option) {
-        setRoomList(null);
+        setRoomList([]);
         setCurrentNav(option);
     }
 
@@ -172,7 +173,8 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
                     ) : (
                         <div className='MyRoomDiv'>
                             <h4>{user.name}'s Rooms</h4>
-                            {roomList && (
+
+                            {roomList.length ? (
                                 <ul className='RoomList'>
                                     {roomList.map((room, index) => (
                                         <li key={index} className='RoomItem' onClick={() => roomClick(room._id)}>
@@ -181,7 +183,14 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
                                         </li>
                                     ))}
                                 </ul>
+
+                            ) : (
+                                <div className='NavMessage1'>
+                                    <h4>You have no rooms. Go create one</h4>
+                                    <img className='Rotate' src={Point} draggable="false" />
+                                </div>
                             )}
+
                         </div>
                     )}
 
@@ -197,7 +206,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
                         <button className='CreateBtn' onClick={roomSearch}>Search</button>
                     </div>
 
-                    {roomList && (
+                    {roomList.length ? (
                         <ul className='RoomList'>
                             {roomList.map((room, index) => (
                                 <li key={index} className='RoomItem' onClick={() => roomClick(room._id)}>
@@ -206,6 +215,11 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
                                 </li>
                             ))}
                         </ul>
+                    ) : (
+                        <div className='NavMessage1'>
+                            <h4>The search begins...</h4>
+                            <img src={Island} draggable="false" />
+                        </div>
                     )}
                 </div>
             )}

@@ -110,3 +110,13 @@ export async function wallType(roomInfo) {
         console.error('error changing room color', error);
     }
 };
+
+//Edit Room Info
+
+export async function editRoom(roomInfo) {
+    try {
+        return await sendRequest(`${BASE_URL}/edit/room`, 'PUT', roomInfo);
+    } catch (error) {
+        console.error('error changing room info', error);
+    }
+};

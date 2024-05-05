@@ -29,15 +29,44 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
 
     let [settings, setSettings] = useState(false);
 
+    let [roomName, setRoomName] = useState(roomInfo.roomName);
+    let [roomDescription, setRoomDescription] = useState(roomInfo.roomDescription);
+
+    const roomChange = (event) => {
+        setRoomName(event.target.value);
+    };
+
+    const descriptionChange = (event) => {
+        setRoomDescription(event.target.value);
+    };
+
     function openMood() {
         setMood(!mood);
         setWallDiv(false);
+        setSettings(false);
     };
 
     function openWall() {
         setWallDiv(!wallDiv);
         setMood(false);
+        setSettings(false);
 
+    };
+
+    function openSettings() {
+        setSettings(!settings);
+        setMood(false);
+        setWallDiv(false);
+    }
+
+    async function editRoom() {
+        try {
+            let response = await roomAPI.editRoom({ roomID: roomInfo._id, roomName: roomName, roomDescription: roomDescription });
+            const updatedRoomInfo = { ...roomInfo, roomName: response.roomName, roomDescription: response.roomDescription };
+            setRoomInfo(updatedRoomInfo);
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
     };
 
     async function clearRoom() {
@@ -86,12 +115,23 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
         <div className='RoomInfo'>
             {user.name === roomInfo.user.name ? (
                 <>
-                    <img onClick={() => setSettings(!settings)} className='Set' src={Set} />
+                    <img onClick={openSettings} className='Set' src={Set} />
                     {settings &&
                         <div className='RoomSettings'>
                             <h4 className='BoxHeader'>Room Settings</h4>
-                            <button onClick={clearRoom} className='DeleteRoom'>Clear Room</button>
-                            <button onClick={deleteRoom} className='DeleteRoom'>Delete Room</button>
+
+
+                            <h5>Change Room Name</h5>
+                            <input onChange={roomChange} type="text" placeholder={roomInfo.roomName} minLength={3} maxLength={20} />
+
+                            <h5>Change Room Description</h5>
+                            <textarea onChange={descriptionChange} type="text" placeholder={roomInfo.roomDescription} minLength={3} maxLength={35} />
+
+                            <button onClick={editRoom} className='SaveRoom'>Save Room Changes</button>
+                            <div className='FormatBtns'>
+                                <button onClick={clearRoom} className='DeleteRoom'>Clear Room</button>
+                                <button onClick={deleteRoom} className='DeleteRoom'>Delete Room</button>
+                            </div>
                         </div>
                     }
 

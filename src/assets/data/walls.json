@@ -23,5 +23,20 @@
         "name": "Sunset",
         "img": "src/assets/images/walls/sunset.png",
         "icon": "src/assets/images/walls/sunset_icon.png"
+    },
+    {
+        "name": "Haunted",
+        "img": "src/assets/images/walls/haunted.png",
+        "icon": "src/assets/images/walls/haunted_icon.png"
+    },
+    {
+        "name": "Summer",
+        "img": "src/assets/images/walls/summer.png",
+        "icon": "src/assets/images/walls/summer_icon.png"
+    },
+    {
+        "name": "Summer",
+        "img": "src/assets/images/walls/winter.png",
+        "icon": "src/assets/images/walls/winter_icon.png"
     }
 ]

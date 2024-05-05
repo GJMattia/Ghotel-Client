@@ -137,7 +137,7 @@
     position: absolute;
     top: .5rem;
     left: 11.5rem;
-    width: 12rem;
+    width: 18rem;
     height: 8rem;
     background-color: #f8f8f4;
     display: flex;
@@ -183,9 +183,10 @@
 
 .RoomSettings {
     position: absolute;
-    bottom: 10rem;
-    width: 11rem;
-    height: 8rem;
+    left: 11.5rem;
+    bottom: 0rem;
+    width: 16rem;
+    height: 20rem;
     background-color: #f8f8f4;
     display: flex;
     flex-direction: column;
@@ -196,15 +197,61 @@
     z-index: 4;
 }
 
+.FormatBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 .DeleteRoom {
+    box-sizing: border-box;
     padding: .4rem;
     color: white;
     background-color: crimson;
     margin: .5rem;
     border: 0;
-    width: 80%;
+    width: 50%;
 }
 
 .DeleteRoom:hover {
     background-color: darkred;
+}
+
+.RoomSettings>h5 {
+    margin: .2rem;
+}
+
+.RoomSettings>input {
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(52, 52, 52);
+    border-radius: .2rem;
+    width: 80%;
+}
+
+.RoomSettings>textarea {
+    margin: .2rem;
+    border: 1px solid rgb(52, 52, 52);
+    border-radius: .2rem;
+    width: 90%;
+    resize: none;
+    height: 5.5rem;
+}
+
+.SaveRoom {
+    box-sizing: border-box;
+    width: 80%;
+    padding: .4rem;
+    font-weight: 900;
+    border: 1px solid black;
+    background-color: rgb(54, 169, 0);
+    color: white;
+    border-radius: .2rem;
+    margin: .7rem;
+}
+
+.SaveRoom:hover {
+    background-color: lawngreen;
 }

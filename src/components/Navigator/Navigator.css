@@ -240,3 +240,16 @@
     border-radius: .5rem;
     width: 12rem;
 }
+
+.NavMessage1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 82%;
+}
+
+.NavMessage1>h4 {
+    margin-bottom: 2rem;
+}

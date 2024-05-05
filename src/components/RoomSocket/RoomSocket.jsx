@@ -5,11 +5,59 @@ import { useState, useEffect, useRef } from 'react';
 // const socket = io.connect('http://localhost:4741');
 const socket = io.connect('https://ghotel-api.onrender.com');
 
-export default function RoomSocket({ user, roomInfo, roomChange, roomData, setRoomData }) {
+export default function RoomSocket({ user, roomInfo, roomChange, setRoomData }) {
 
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
     const inputRef = useRef(null);
+
+    useEffect(() => {
+        const liveRoom = document.querySelector('.UserHistory');
+        liveRoom.innerHTML = '';
+
+        socket.emit('join_room', { username: user.name, roomNumber: roomInfo.chat });
+
+        const handleUserJoined = (data) => {
+            data.forEach(user => {
+                let already = document.getElementById(`C_${user}`);
+                if (already) {
+                    return;
+                } else {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = user;
+                    paragraph.id = `C_${user}`;
+                    liveRoom.appendChild(paragraph);
+                }
+            })
+        };
+
+        const handleUserLeft = (username) => {
+            const remove = document.getElementById(`C_${username}`);
+            if (remove) {
+                remove.remove();
+            };
+        };
+
+        socket.on('user_joined', handleUserJoined);
+        socket.on('user_left', handleUserLeft);
+        return () => {
+            socket.off('user_joined', handleUserJoined);
+            socket.off('user_left', handleUserLeft);
+            socket.emit('leave_room', { username: user.name, roomNumber: roomInfo.chat });
+        };
+    }, [roomInfo.chat]);
+
+    useEffect(() => {
+        const handleBeforeUnload = () => {
+            socket.emit('leave_room', { username: user.name, roomNumber: roomInfo.chat });
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, []);
 
     const sendMessage = () => {
         if (message.trim() !== '') {
@@ -22,9 +70,7 @@ export default function RoomSocket({ user, roomInfo, roomChange, roomData, setRo
                     element.classList.add('Fade');
                 });
             }, 200);
-
         }
-
     };
 
     useEffect(() => {
@@ -43,30 +89,6 @@ export default function RoomSocket({ user, roomInfo, roomChange, roomData, setRo
             socket.off('receive_message');
         };
     }, [roomInfo.chat]);
-
-
-    useEffect(() => {
-        const liveRoom = document.querySelector('.UserHistory');
-        liveRoom.innerHTML = '';
-        socket.emit('join_room', { username: user.name, roomNumber: roomInfo.chat });
-
-        const handleUserJoined = ({ username }) => {
-            liveRoom.innerHTML += `<p>${username} joined the room</p>`;
-        };
-
-        const handleUserLeft = ({ username }) => {
-            liveRoom.innerHTML += `<p>${username} left the room</p>`;
-        };
-
-        socket.on('user_joined', handleUserJoined);
-        socket.on('user_left', handleUserLeft);
-        return () => {
-            socket.off('user_joined', handleUserJoined);
-            socket.off('user_left', handleUserLeft);
-            socket.emit('leave_room', { username: user.name, roomNumber: roomInfo.chat });
-        };
-    }, [roomInfo.chat]);
-
 
 
     const handleKeyDown = (event) => {
@@ -88,14 +110,27 @@ export default function RoomSocket({ user, roomInfo, roomChange, roomData, setRo
             if (username === user.name) {
                 return
             } else {
-                console.log(roomChange)
-                setRoomData(prevRoomData => {
-                    const updatedRoomData = [...prevRoomData];
-                    updatedRoomData[roomChange.tileID] = roomChange.change;
-                    return updatedRoomData;
-                });
+                if (typeof roomChange.change === 'object' && !Array.isArray(roomChange.change)) {
+
+                    setRoomData(prevRoomData => {
+                        const updatedRoomData = [...prevRoomData];
+
+                        updatedRoomData[roomChange.tileID] = roomChange.change.tile1;
+                        updatedRoomData[roomChange.tileID - 13] = roomChange.change.tile2;
+                        updatedRoomData[roomChange.tileID - 12] = roomChange.change.tile3;
+                        updatedRoomData[roomChange.tileID + 1] = roomChange.change.tile4;
+                        return updatedRoomData
+                    })
+                } else {
+                    setRoomData(prevRoomData => {
+                        const updatedRoomData = [...prevRoomData];
+                        updatedRoomData[roomChange.tileID] = roomChange.change;
+                        return updatedRoomData;
+                    });
+                }
             }
         });
+
         return () => {
             socket.off('receive_change');
         };
@@ -110,6 +145,7 @@ export default function RoomSocket({ user, roomInfo, roomChange, roomData, setRo
                 className='RoomChatInput'
                 placeholder='Type your message...'
                 ref={inputRef}
+                autoFocus
                 onKeyDown={handleKeyDown}
             />
 

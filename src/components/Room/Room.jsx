@@ -17,16 +17,20 @@ const socket = io.connect('https://ghotel-api.onrender.com');
 
 export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setRoomList }) {
 
+    //Furniture Variables
     const [selectedFurni, setSelectedFurni] = useState(null);
     const [selectedTile, setSelectedTile] = useState(null);
     const [selectedFurniIndex, setSelectedFurniIndex] = useState(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [stackHeight, setStackHeight] = useState(0);
 
+    //Sprite Variables
     const [move, setMove] = useState(true);
     const [rotate, setRotate] = useState(true);
     const [spriteHeight, setSpriteHeight] = useState(true);
+    const [spriteHistory, setSpriteHistory] = useState([]);
 
+    //Furniture Rules
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
     const PETAL_TILES = [47, 48, 49, 50];
     const USE_FURNI = [11, 52, 58, 61, 70, 87, 88];
@@ -43,19 +47,29 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
             tile.appendChild(userSprite);
         };
 
-
         //automatically places player sprite in user room
         socket.emit('add_sprite', { username: user.name, roomNumber: roomInfo.chat, spriteID: sprite, tileID: 8, height: 0, rotation: false });
 
         const spriteData = (data) => {
+            if (spriteHistory) {
+                spriteHistory.forEach(sprite => {
+                    let remove = document.getElementById(sprite);
+                    if (remove) {
+                        remove.remove();
+                    }
+                })
+            };
+
             data.forEach(sprite => {
                 if (sprite.username !== user.name) {
+                    setSpriteHistory(prevHistory => [...prevHistory, sprite.username]);
                     createSprite(`tile_${sprite.tileID}`, sprite.username, sprite.spriteID, sprite.height);
                 }
             });
         };
 
         const spriteLeft = ({ username }) => {
+
             const remove = document.getElementById(username); // Find sprite by username
             if (remove) {
                 remove.remove(); // Remove the sprite from the DOM
@@ -75,14 +89,24 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
                 const spriteAnchor = document.getElementById(`${username}`);
                 const spritePoint = spriteAnchor.querySelector('.SpritePoint');
                 spritePoint.style.bottom = `${height}rem`;
-            }
+            };
+        };
+        const rotateSprite = ({ username, rotation }) => {
+            if (username !== user.name) {
+                const spriteAnchor = document.getElementById(`${username}`);
+                const spritePoint = spriteAnchor.querySelector('.SpritePoint');
+                const sprite = spritePoint.querySelector('.Sprite');
+                sprite.classList.toggle('Rotate', rotation);
+            };
         };
 
-        socket.on('move2_sprite', heightSprite)
+        socket.on('move3_sprite', rotateSprite);
+        socket.on('move2_sprite', heightSprite);
         socket.on('move1_sprite', moveSprite);
         socket.on('sprite_data', spriteData);
         socket.on('sprite_left', spriteLeft);
         return () => {
+            socket.off('move3_sprite', rotateSprite);
             socket.off('move2_sprite', heightSprite)
             socket.off('move_sprite', moveSprite)
             socket.off('sprite_data', spriteData);
@@ -91,6 +115,18 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
         };
 
     }, [roomInfo.chat]);
+
+    useEffect(() => {
+        const handleBeforeUnload = () => {
+            socket.emit('leave_sprite', { username: user.name, roomNumber: roomInfo.chat });
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, []);
 
 
     useEffect(() => {
@@ -137,6 +173,7 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
         }
     };
 
+
     async function pickFurni() {
         if (selectedFurni === null || selectedTile === null || selectedFurniIndex === null) {
             return;
@@ -166,6 +203,8 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
                 updatedRoomData[tileID - 13] = response.tile2;
                 updatedRoomData[tileID - 12] = response.tile3;
                 updatedRoomData[tileID + 1] = response.tile4;
+
+                setRoomChange({ change: response, tileID: tileID })
                 setRoomData(updatedRoomData);
             } else {
                 const updatedRoomData = [...roomData];
@@ -184,8 +223,6 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
         // console.log(`Tile #${tileID}`, clickedArray);
 
         const tile = document.getElementById(`tile_${tileID}`);
-
-
 
         if (move && !pFurni) {
             const userSprite = document.getElementById(`${user.name}`);
@@ -226,7 +263,6 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
     };
 
     const handleClick = (value, index, innerIndex) => {
-
         setSelectedFurniIndex(innerIndex);
         setSelectedTile(index);
         setSelectedFurni(value);
@@ -243,14 +279,14 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
     };
 
     function rotateSprite() {
-        const spritePoint = document.querySelector('.Sprite');
-        if (rotate) {
-            spritePoint.style.transform = 'scaleX(-1)';
-            setRotate(false);
-        } else {
-            spritePoint.style.transform = 'scaleX(1)';
-            setRotate(true);
-        }
+        const spriteAnchor = document.getElementById(`${user.name}`);
+        const spritePoint = spriteAnchor.querySelector('.SpritePoint');
+        const sprite = spritePoint.querySelector('.Sprite');
+
+
+        sprite.classList.toggle('Rotate', rotate);
+        socket.emit('rotate_sprite', { username: user.name, roomNumber: roomInfo.chat, rotation: rotate });
+        setRotate(!rotate);
     };
 
     return (
@@ -258,13 +294,12 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
 
             <div className='SpriteTool'>
                 <h4 className='BoxHeader'>Sprite Tool</h4>
-                <button onClick={() => setMove(!move)}>{move ? 'freeze move' : 'set move'}</button>
-                <button onClick={() => setSpriteHeight(!spriteHeight)}>{spriteHeight ? 'freeze height' : 'set height'}</button>
-                <button onClick={rotateSprite}>rotate sprite</button>
+                <button className={move ? 'Freeze' : 'Unfreeze'} onClick={() => setMove(!move)}>{move ? 'Freeze Sprite XY' : 'Unfreeze Sprite XY'}</button>
+                <button className={spriteHeight ? 'Freeze' : 'Unfreeze'} onClick={() => setSpriteHeight(!spriteHeight)}>{spriteHeight ? 'Freeze Sprite Z' : 'Unfreeze Sprite Z'}</button>
+                <button className='RotateBtn' onClick={rotateSprite}>Rotate Sprite</button>
             </div>
 
             <div onClick={() => setPFurni(null)} className='AntiFurni'></div>
-
 
             {user.name === roomInfo.user.name ? (
                 <DevTools roomInfo={roomInfo} setSelectedFurni={setSelectedFurni} setStackHeight={setStackHeight} stackHeight={stackHeight} setRoomData={setRoomData} setInventory={setInventory} />

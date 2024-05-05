@@ -5,10 +5,9 @@
     align-items: center;
     justify-content: space-evenly;
     top: .3rem;
-    left: 15rem;
+    right: 1rem;
     position: absolute;
-    width: 10rem;
-    z-index: 3;
+    z-index: 300;
 }
 
 .DevBtn {
@@ -17,10 +16,24 @@
     border: 0;
     padding: .2rem;
     cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
+
+.Wumbo {
+    background-color: fuchsia;
+}
+
+
 
 .DevBtn:hover {
     background-color: brown;
+}
+
+.Wumbo:hover {
+    background-color: purple;
 }
 
 .StopPlacing {
@@ -34,9 +47,9 @@
 /* Stack Tool */
 .StackTool {
     position: absolute;
-    top: 3rem;
+    top: 22rem;
     left: 1rem;
-    width: 12rem;
+    width: 11rem;
     height: 10rem;
     background-color: #f8f8f4;
     display: flex;
@@ -131,25 +144,4 @@
 
 .StackInc:hover {
     background-color: darkgreen;
-}
-
-.SpriteTool {
-    position: absolute;
-    top: 20rem;
-    left: 1rem;
-    width: 12rem;
-    height: 10rem;
-    background-color: #f8f8f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    color: black;
-    border-radius: .2rem;
-    user-select: none;
-    z-index: 3;
-}
-
-.SpriteTool>button {
-    margin: .5rem;
 }

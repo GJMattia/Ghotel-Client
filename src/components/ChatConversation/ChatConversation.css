@@ -11,8 +11,12 @@
     color: white;
     font-size: .8rem;
     height: 2rem;
-    width: 5rem;
     background-color: rgb(81, 81, 81);
+}
+
+.ChatConversationItem>p {
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
 
 .ChatConversationItem.active {

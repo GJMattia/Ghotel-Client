@@ -52,6 +52,30 @@
         "itemid": 21
       },
       {
+        "name": "DJ Turntable",
+        "img": "src/assets/images/furni/rares/djdeck.gif",
+        "icon": "src/assets/images/furni-icons/rares/djdeck_icon.gif",
+        "description": "The wheels of expression",
+        "price": 25,
+        "itemid": 22
+      },
+      {
+        "name": "Aloe Vera",
+        "img": "src/assets/images/furni/rares/aloe.gif",
+        "icon": "src/assets/images/furni-icons/rares/aloe_icon.gif",
+        "description": "Goodbye Bert...",
+        "price": 25,
+        "itemid": 23
+      },
+      {
+        "name": "Diamond Elephant",
+        "img": "src/assets/images/furni/rares/dnelly.gif",
+        "icon": "src/assets/images/furni-icons/rares/dnelly_icon.png",
+        "description": "imported handicrafts",
+        "price": 25,
+        "itemid": 102
+      },
+      {
         "name": "Golden Elephant",
         "img": "src/assets/images/furni/rares/gnelly.png",
         "icon": "src/assets/images/furni-icons/rares/goldnelly_icon.png",
@@ -106,22 +130,6 @@
         "description": "bbb, goin up",
         "price": 25,
         "itemid": 12
-      },
-      {
-        "name": "DJ Turntable",
-        "img": "src/assets/images/furni/rares/djdeck.gif",
-        "icon": "src/assets/images/furni-icons/rares/djdeck_icon.gif",
-        "description": "The wheels of expression",
-        "price": 25,
-        "itemid": 22
-      },
-      {
-        "name": "Aloe Vera",
-        "img": "src/assets/images/furni/rares/aloe.gif",
-        "icon": "src/assets/images/furni-icons/rares/aloe_icon.gif",
-        "description": "Goodbye Bert...",
-        "price": 25,
-        "itemid": 23
       },
       {
         "name": "Habbo Globe",
@@ -186,14 +194,6 @@
         "description": "speak now",
         "price": 25,
         "itemid": 78
-      },
-      {
-        "name": "Monster Plant",
-        "img": "src/assets/images/furni/rares/plant.gif",
-        "icon": "src/assets/images/furni-icons/rares/plant_icon.gif",
-        "description": "THE MONSTER MASH",
-        "price": 25,
-        "itemid": 86
       }
     ]
   },
@@ -218,12 +218,12 @@
         "itemid": 68
       },
       {
-        "name": "Carl Ducksworth",
-        "img": "src/assets/images/furni/ultras/carl.png",
-        "icon": "src/assets/images/furni-icons/ultras/carl_icon.png",
-        "description": "it's a work of art",
-        "price": 25,
-        "itemid": 82
+        "name": "Ocean Sleepingbag",
+        "img": "src/assets/images/furni/ultras/ocean.gif",
+        "icon": "src/assets/images/furni-icons/ultras/ocean_icon.gif",
+        "description": "For Jake only",
+        "price": 999999,
+        "itemid": 85
       },
       {
         "name": "Infobus",
@@ -234,12 +234,28 @@
         "itemid": 84
       },
       {
-        "name": "Ocean Sleepingbag",
-        "img": "src/assets/images/furni/ultras/ocean.gif",
-        "icon": "src/assets/images/furni-icons/ultras/ocean_icon.gif",
-        "description": "For Jake only",
-        "price": 999999,
-        "itemid": 85
+        "name": "Cheeto Machine",
+        "img": "src/assets/images/furni/ultras/cheetos.gif",
+        "icon": "src/assets/images/furni-icons/ultras/cheetos_icon.gif",
+        "description": "it ain't easy",
+        "price": 50,
+        "itemid": 106
+      },
+      {
+        "name": "MTN Dew Machine",
+        "img": "src/assets/images/furni/ultras/md.gif",
+        "icon": "src/assets/images/furni-icons/ultras/md_icon.png",
+        "description": "Meal Deal A...",
+        "price": 275,
+        "itemid": 98
+      },
+      {
+        "name": "Toucan",
+        "img": "src/assets/images/furni/ultras/toucan.gif",
+        "icon": "src/assets/images/furni-icons/ultras/toucan_icon.gif",
+        "description": "the nobel bird",
+        "price": 1650,
+        "itemid": 107
       },
       {
         "name": "Raven",
@@ -248,6 +264,30 @@
         "description": "for in front of the door",
         "price": 25,
         "itemid": 93
+      },
+      {
+        "name": "Time Machine",
+        "img": "src/assets/images/furni/ultras/tm.png",
+        "icon": "src/assets/images/furni-icons/ultras/tm_icon.png",
+        "description": "88 MILES PER HOUR",
+        "price": 88,
+        "itemid": 108
+      },
+      {
+        "name": "Carl Ducksworth",
+        "img": "src/assets/images/furni/ultras/carl.png",
+        "icon": "src/assets/images/furni-icons/ultras/carl_icon.png",
+        "description": "it's a work of art",
+        "price": 25,
+        "itemid": 82
+      },
+      {
+        "name": "Zaandarbrow Painting",
+        "img": "src/assets/images/furni/ultras/zaandarbrow.gif",
+        "icon": "src/assets/images/furni-icons/ultras/zaandarbrow_icon.gif",
+        "description": "OH BOY",
+        "price": 1,
+        "itemid": 99
       }
     ]
   },
@@ -510,6 +550,22 @@
         "description": "the purple one",
         "price": 25,
         "itemid": 75
+      },
+      {
+        "name": "Red Marquee",
+        "img": "src/assets/images/furni/marquees/rm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/rm_icon.gif",
+        "description": "royal red my dude",
+        "price": 25,
+        "itemid": 100
+      },
+      {
+        "name": "White Marquee",
+        "img": "src/assets/images/furni/marquees/wm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/wm_icon.gif",
+        "description": "not a fan G",
+        "price": 25,
+        "itemid": 101
       }
     ]
   },
@@ -586,6 +642,14 @@
         "description": "oooo yum yum yum",
         "price": 25,
         "itemid": 90
+      },
+      {
+        "name": "Fuchsia ICM",
+        "img": "src/assets/images/furni/icms/ficm.gif",
+        "icon": "src/assets/images/furni-icons/icms/ficm_icon.gif",
+        "description": "the safari zone special",
+        "price": 25,
+        "itemid": 105
       }
     ]
   },
@@ -640,6 +704,14 @@
         "description": "the bronze age",
         "price": 25,
         "itemid": 92
+      },
+      {
+        "name": "Pink Pillow",
+        "img": "src/assets/images/furni/pillows/pp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/pp_icon.gif",
+        "description": "pinky2pretty",
+        "price": 25,
+        "itemid": 104
       }
     ]
   },
@@ -698,6 +770,14 @@
         "description": "Jason X",
         "price": 25,
         "itemid": 83
+      },
+      {
+        "name": "Black Space Door",
+        "img": "src/assets/images/furni/space/bsd.gif",
+        "icon": "src/assets/images/furni-icons/space/bsd_icon.gif",
+        "description": "Jason takes Manhattan",
+        "price": 25,
+        "itemid": 103
       }
     ]
   },
@@ -766,6 +846,14 @@
         "description": "DETAIN THEM",
         "price": 3,
         "itemid": 95
+      },
+      {
+        "name": "Monster Plant",
+        "img": "src/assets/images/furni/rares/plant.gif",
+        "icon": "src/assets/images/furni-icons/rares/plant_icon.gif",
+        "description": "THE MONSTER MASH",
+        "price": 25,
+        "itemid": 86
       }
     ]
   },
@@ -829,6 +917,14 @@
         "description": "Worth 500 Credits.",
         "price": 500,
         "itemid": 18
+      },
+      {
+        "name": "Donkey Kong Country",
+        "img": "src/assets/images/furni/exchange/dkc.png",
+        "icon": "src/assets/images/furni-icons/exchange/dkc_icon.png",
+        "description": "for SNES",
+        "price": 500,
+        "itemid": 97
       },
       {
         "name": "Jake's Crown",

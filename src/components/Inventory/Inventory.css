@@ -180,3 +180,19 @@
     font-size: .8rem;
     background-color: white;
 }
+
+.OpenCatBtn {
+    box-sizing: border-box;
+    width: 80%;
+    padding: .5rem;
+    font-weight: 900;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: rgb(54, 169, 0);
+    color: white;
+    border-radius: .2rem;
+}
+
+.OpenCatBtn:hover {
+    background-color: lawngreen;
+}
