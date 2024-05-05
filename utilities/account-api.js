@@ -55,4 +55,12 @@ export async function changeSprite(sprite) {
     }
 };
 
+//for getting a clicked users sprite
 
+export async function getSprite(username) {
+    try {
+        return await sendRequest(`${BASE_URL}/user/${username}`, 'GET');
+    } catch (error) {
+        console.error('error changing sprite', error);
+    }
+};

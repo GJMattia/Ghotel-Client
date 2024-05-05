@@ -8,11 +8,10 @@ import Inventory from '../Inventory/Inventory';
 import Navigator from '../Navigator/Navigator';
 import Settings from '../Settings/Settings';
 import * as accountAPI from '../../../utilities/account-api';
+import * as roomAPI from '../../../utilities/room-api';
 import Credits from '../../assets/images/client/credits-icon.png';
 import Room from '../Room/Room';
 import RoomSocket from '../RoomSocket/RoomSocket';
-
-
 
 export default function Client({ user }) {
 
@@ -39,7 +38,8 @@ export default function Client({ user }) {
     const [credits, setCredits] = useState(null);
 
     //Room Data
-    const [roomList, setRoomList] = useState([]);
+    const [userRoomList, setUserRoomList] = useState(null);
+    const [roomList, setRoomList] = useState(null);
     const [roomData, setRoomData] = useState(null);
     const [roomInfo, setRoomInfo] = useState(null);
 
@@ -54,6 +54,8 @@ export default function Client({ user }) {
         async function getAccountData() {
             try {
                 const response = await accountAPI.getAccount();
+                const userRooms = await roomAPI.getUserRooms();
+                setUserRoomList(userRooms);
                 setCredits(response.credits);
                 setInventory(response.inventory);
                 setSprite(response.sprite);
@@ -76,9 +78,9 @@ export default function Client({ user }) {
 
                     {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} setRoomData={setRoomData} />}
 
-                    {(roomData) && <Room setRoomChange={setRoomChange} sprite={sprite} setRoomList={setRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
+                    {(roomData) && <Room setRoomChange={setRoomChange} sprite={sprite} setUserRoomList={setUserRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
 
-                    {navigatorDiv && <Navigator roomList={roomList} setRoomInfo={setRoomInfo} setRoomList={setRoomList} setRoomData={setRoomData} user={user} setNavigatorDiv={setNavigatorDiv} />}
+                    {navigatorDiv && <Navigator userRoomList={userRoomList} setUserRoomList={setUserRoomList} roomList={roomList} setRoomInfo={setRoomInfo} setRoomList={setRoomList} setRoomData={setRoomData} user={user} setNavigatorDiv={setNavigatorDiv} />}
 
                     {catalogDiv && <Catalog setInventory={setInventory} credits={credits} setCredits={setCredits} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />}
 

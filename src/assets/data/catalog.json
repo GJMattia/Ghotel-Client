@@ -164,14 +164,6 @@
         "itemid": 64
       },
       {
-        "name": "Orange Para",
-        "img": "src/assets/images/furni/rares/opara.gif",
-        "icon": "src/assets/images/furni-icons/rares/opara_icon.gif",
-        "description": "marry poppins",
-        "price": 25,
-        "itemid": 66
-      },
-      {
         "name": "Black Dragon Egg",
         "img": "src/assets/images/furni/rares/bdino.png",
         "icon": "src/assets/images/furni-icons/rares/bdino_icon.gif",
@@ -180,20 +172,20 @@
         "itemid": 72
       },
       {
-        "name": "Gold Pillar",
-        "img": "src/assets/images/furni/rares/gpil.gif",
-        "icon": "src/assets/images/furni-icons/rares/gpil_icon.gif",
-        "description": "big and gold",
-        "price": 25,
-        "itemid": 76
-      },
-      {
         "name": "Speaker's Corner",
         "img": "src/assets/images/furni/rares/speaker.gif",
         "icon": "src/assets/images/furni-icons/rares/speaker_icon.gif",
         "description": "speak now",
         "price": 25,
         "itemid": 78
+      },
+      {
+        "name": "Monster Plant",
+        "img": "src/assets/images/furni/rares/plant.gif",
+        "icon": "src/assets/images/furni-icons/rares/plant_icon.gif",
+        "description": "THE MONSTER MASH",
+        "price": 25,
+        "itemid": 86
       }
     ]
   },
@@ -234,38 +226,6 @@
         "itemid": 84
       },
       {
-        "name": "Cheeto Machine",
-        "img": "src/assets/images/furni/ultras/cheetos.gif",
-        "icon": "src/assets/images/furni-icons/ultras/cheetos_icon.gif",
-        "description": "it ain't easy",
-        "price": 50,
-        "itemid": 106
-      },
-      {
-        "name": "MTN Dew Machine",
-        "img": "src/assets/images/furni/ultras/md.gif",
-        "icon": "src/assets/images/furni-icons/ultras/md_icon.png",
-        "description": "Meal Deal A...",
-        "price": 275,
-        "itemid": 98
-      },
-      {
-        "name": "Toucan",
-        "img": "src/assets/images/furni/ultras/toucan.gif",
-        "icon": "src/assets/images/furni-icons/ultras/toucan_icon.gif",
-        "description": "the nobel bird",
-        "price": 1650,
-        "itemid": 107
-      },
-      {
-        "name": "Raven",
-        "img": "src/assets/images/furni/ultras/raven.gif",
-        "icon": "src/assets/images/furni-icons/ultras/raven_icon.gif",
-        "description": "for in front of the door",
-        "price": 25,
-        "itemid": 93
-      },
-      {
         "name": "Time Machine",
         "img": "src/assets/images/furni/ultras/tm.png",
         "icon": "src/assets/images/furni-icons/ultras/tm_icon.png",
@@ -288,6 +248,44 @@
         "description": "OH BOY",
         "price": 1,
         "itemid": 99
+      }
+    ]
+  },
+  {
+    "name": "Brand Rares",
+    "mast": "src/assets/images/catalog/masts/real-mast.gif",
+    "furni": [
+      {
+        "name": "MTN Dew Machine",
+        "img": "src/assets/images/furni/brand/md.gif",
+        "icon": "src/assets/images/furni-icons/brand/md_icon.png",
+        "description": "Meal Deal A...",
+        "price": 275,
+        "itemid": 98
+      },
+      {
+        "name": "Cheeto Machine",
+        "img": "src/assets/images/furni/brand/cheetos.gif",
+        "icon": "src/assets/images/furni-icons/brand/cheetos_icon.gif",
+        "description": "it ain't easy",
+        "price": 50,
+        "itemid": 106
+      },
+      {
+        "name": "Blue Slurpee Machine",
+        "img": "src/assets/images/furni/brand/bs.gif",
+        "icon": "src/assets/images/furni-icons/brand/bs_icon.gif",
+        "description": "blue razz my dude",
+        "price": 50,
+        "itemid": 110
+      },
+      {
+        "name": "711 Cooler",
+        "img": "src/assets/images/furni/brand/cooler.gif",
+        "icon": "src/assets/images/furni-icons/brand/cooler_icon.gif",
+        "description": "god i hate this thing",
+        "price": 50,
+        "itemid": 111
       }
     ]
   },
@@ -331,7 +329,7 @@
         "name": "Majestic Chair",
         "img": "src/assets/images/furni/club/majestic.gif",
         "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
-        "description": "zaandarbrow",
+        "description": "red and comfy",
         "price": 16,
         "itemid": 27
       },
@@ -342,6 +340,14 @@
         "description": "Breakfast is served!",
         "price": 10,
         "itemid": 58
+      },
+      {
+        "name": "Knight",
+        "img": "src/assets/images/furni/club/hck.png",
+        "icon": "src/assets/images/furni-icons/club/hck_icon.png",
+        "description": "a watchful protector",
+        "price": 80,
+        "itemid": 115
       }
     ]
   },
@@ -520,6 +526,14 @@
         "description": "it's pink",
         "price": 25,
         "itemid": 45
+      },
+      {
+        "name": "Diamond Dragon",
+        "img": "src/assets/images/furni/dragons/dd.gif",
+        "icon": "src/assets/images/furni-icons/dragons/dd_icon.gif",
+        "description": "polished & sauced",
+        "price": 125,
+        "itemid": 109
       }
     ]
   },
@@ -782,6 +796,50 @@
     ]
   },
   {
+    "name": "Paras",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Orange Para",
+        "img": "src/assets/images/furni/paras/op.gif",
+        "icon": "src/assets/images/furni-icons/paras/op_icon.gif",
+        "description": "marry poppins",
+        "price": 25,
+        "itemid": 66
+      },
+      {
+        "name": "Green Para",
+        "img": "src/assets/images/furni/paras/gp.gif",
+        "icon": "src/assets/images/furni-icons/paras/gp_icon.gif",
+        "description": "Zon! Zon!",
+        "price": 25,
+        "itemid": 112
+      }
+    ]
+  },
+  {
+    "name": "Pillars",
+    "mast": "src/assets/images/catalog/masts/limited-mast.gif",
+    "furni": [
+      {
+        "name": "Gold Pillar",
+        "img": "src/assets/images/furni/pillars/gp.gif",
+        "icon": "src/assets/images/furni-icons/pillars/gp_icon.gif",
+        "description": "big and gold",
+        "price": 25,
+        "itemid": 76
+      },
+      {
+        "name": "Red Pillar",
+        "img": "src/assets/images/furni/pillars/rp.gif",
+        "icon": "src/assets/images/furni-icons/pillars/rp_icon.gif",
+        "description": "tall and red",
+        "price": 25,
+        "itemid": 113
+      }
+    ]
+  },
+  {
     "name": "Mode",
     "mast": "src/assets/images/catalog/masts/mode-mast.gif",
     "furni": [
@@ -812,6 +870,50 @@
     ]
   },
   {
+    "name": "Xmas",
+    "mast": "src/assets/images/catalog/masts/xmas-mast.gif",
+    "furni": [
+      {
+        "name": "Santa Butler",
+        "img": "src/assets/images/furni/xmas/xb.png",
+        "icon": "src/assets/images/furni-icons/xmas/xb_icon.png",
+        "description": "5 FLOORS OF CASH",
+        "price": 25,
+        "itemid": 116
+      }
+    ]
+  },
+  {
+    "name": "Animals",
+    "mast": "src/assets/images/catalog/masts/pet-mast.gif",
+    "furni": [
+      {
+        "name": "Toucan",
+        "img": "src/assets/images/furni/animals/toucan.gif",
+        "icon": "src/assets/images/furni-icons/animals/toucan_icon.gif",
+        "description": "the nobel bird",
+        "price": 1650,
+        "itemid": 107
+      },
+      {
+        "name": "Raven",
+        "img": "src/assets/images/furni/animals/raven.gif",
+        "icon": "src/assets/images/furni-icons/animals/raven_icon.gif",
+        "description": "for in front of the door",
+        "price": 66,
+        "itemid": 93
+      },
+      {
+        "name": "Crane",
+        "img": "src/assets/images/furni/animals/crane.png",
+        "icon": "src/assets/images/furni-icons/animals/crane_icon.png",
+        "description": "death... by exile",
+        "price": 40,
+        "itemid": 114
+      }
+    ]
+  },
+  {
     "name": "Plants",
     "mast": "src/assets/images/catalog/masts/plants-mast.gif",
     "furni": [
@@ -819,7 +921,7 @@
         "name": "Yukka",
         "img": "src/assets/images/furni/plants/yukka.gif",
         "icon": "src/assets/images/furni-icons/plants/yukka_icon.gif",
-        "description": "a tall plant",
+        "description": "a tall tree",
         "price": 3,
         "itemid": 28
       },
@@ -835,7 +937,7 @@
         "name": "Vase of flowers",
         "img": "src/assets/images/furni/plants/vase.gif",
         "icon": "src/assets/images/furni-icons/plants/vase_icon.gif",
-        "description": "a tall tree",
+        "description": "wow cool",
         "price": 3,
         "itemid": 30
       },
@@ -846,14 +948,6 @@
         "description": "DETAIN THEM",
         "price": 3,
         "itemid": 95
-      },
-      {
-        "name": "Monster Plant",
-        "img": "src/assets/images/furni/rares/plant.gif",
-        "icon": "src/assets/images/furni-icons/rares/plant_icon.gif",
-        "description": "THE MONSTER MASH",
-        "price": 25,
-        "itemid": 86
       }
     ]
   },

@@ -158,7 +158,7 @@
     },
     {
         "name": "Dicemaster",
-        "img": "src/assets/images/furni/club/dm.gif",
+        "img": "src/assets/images/furni/club/dm-test.gif",
         "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
         "description": "game?"
     },
@@ -166,13 +166,13 @@
         "name": "Majestic Chair",
         "img": "src/assets/images/furni/club/majestic.gif",
         "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
-        "description": "zaandarbrow"
+        "description": "red and"
     },
     {
         "name": "Yukka",
         "img": "src/assets/images/furni/plants/yukka.gif",
         "icon": "src/assets/images/furni-icons/plants/yukka_icon.gif",
-        "description": "a tall plant"
+        "description": "a tall tree"
     },
     {
         "name": "Pine",
@@ -184,7 +184,7 @@
         "name": "Vase of flowers",
         "img": "src/assets/images/furni/plants/vase.gif",
         "icon": "src/assets/images/furni-icons/plants/vase_icon.gif",
-        "description": "a tall tree"
+        "description": "wow cool"
     },
     {
         "name": "Director's Chair",
@@ -402,8 +402,8 @@
     },
     {
         "name": "Orange Para",
-        "img": "src/assets/images/furni/rares/opara.gif",
-        "icon": "src/assets/images/furni-icons/rares/opara_icon.gif",
+        "img": "src/assets/images/furni/paras/op.gif",
+        "icon": "src/assets/images/furni-icons/paras/op_icon.gif",
         "description": "marry poppins"
     },
     {
@@ -463,8 +463,8 @@
     },
     {
         "name": "Gold Pillar",
-        "img": "src/assets/images/furni/rares/gpil.gif",
-        "icon": "src/assets/images/furni-icons/rares/gpil_icon.gif",
+        "img": "src/assets/images/furni/pillars/gp.gif",
+        "icon": "src/assets/images/furni-icons/pillars/gp_icon.gif",
         "description": "big and gold",
         "price": 25,
         "itemid": 76
@@ -569,8 +569,8 @@
     },
     {
         "name": "Raven",
-        "img": "src/assets/images/furni/ultras/raven.gif",
-        "icon": "src/assets/images/furni-icons/ultras/raven_icon.gif",
+        "img": "src/assets/images/furni/animals/raven.gif",
+        "icon": "src/assets/images/furni-icons/animals/raven_icon.gif",
         "description": "for in front of the door"
     },
     {
@@ -599,8 +599,8 @@
     },
     {
         "name": "MTN Dew Machine",
-        "img": "src/assets/images/furni/ultras/md.gif",
-        "icon": "src/assets/images/furni-icons/ultras/md_icon.png",
+        "img": "src/assets/images/furni/brand/md.gif",
+        "icon": "src/assets/images/furni-icons/brand/md_icon.png",
         "description": "Meal Deal A..."
     },
     {
@@ -647,14 +647,14 @@
     },
     {
         "name": "Cheeto Machine",
-        "img": "src/assets/images/furni/ultras/cheetos.gif",
-        "icon": "src/assets/images/furni-icons/ultras/cheetos_icon.gif",
+        "img": "src/assets/images/furni/brand/cheetos.gif",
+        "icon": "src/assets/images/furni-icons/brand/cheetos_icon.gif",
         "description": "it ain't easy"
     },
     {
         "name": "Toucan",
-        "img": "src/assets/images/furni/ultras/toucan.gif",
-        "icon": "src/assets/images/furni-icons/ultras/toucan_icon.gif",
+        "img": "src/assets/images/furni/animals/toucan.gif",
+        "icon": "src/assets/images/furni-icons/animals/toucan_icon.gif",
         "description": "the nobel bird",
         "price": 1650,
         "itemid": 107
@@ -664,5 +664,53 @@
         "img": "src/assets/images/furni/ultras/tm.png",
         "icon": "src/assets/images/furni-icons/ultras/tm_icon.png",
         "description": "88 MILES PER HOUR"
+    },
+    {
+        "name": "Diamond Dragon",
+        "img": "src/assets/images/furni/dragons/dd.gif",
+        "icon": "src/assets/images/furni-icons/dragons/dd_icon.gif",
+        "description": "polished & sauced"
+    },
+    {
+        "name": "Blue Slurpee Machine",
+        "img": "src/assets/images/furni/brand/bs.gif",
+        "icon": "src/assets/images/furni-icons/brand/bs_icon.gif",
+        "description": "blue razz my dude"
+    },
+    {
+        "name": "711 Cooler",
+        "img": "src/assets/images/furni/brand/cooler.gif",
+        "icon": "src/assets/images/furni-icons/brand/cooler_icon.gif",
+        "description": "god i hate this thing"
+    },
+    {
+        "name": "Green Para",
+        "img": "src/assets/images/furni/paras/gp.gif",
+        "icon": "src/assets/images/furni-icons/paras/gp_icon.gif",
+        "description": "Zon! Zon!"
+    },
+    {
+        "name": "Red Pillar",
+        "img": "src/assets/images/furni/pillars/rp.gif",
+        "icon": "src/assets/images/furni-icons/pillars/rp_icon.gif",
+        "description": "tall and red"
+    },
+    {
+        "name": "Crane",
+        "img": "src/assets/images/furni/animals/crane.png",
+        "icon": "src/assets/images/furni-icons/animals/crane_icon.png",
+        "description": "death... by exile"
+    },
+    {
+        "name": "Knight",
+        "img": "src/assets/images/furni/club/hck.png",
+        "icon": "src/assets/images/furni-icons/club/hck_icon.png",
+        "description": "a watchful protector"
+    },
+    {
+        "name": "Santa Butler",
+        "img": "src/assets/images/furni/xmas/xb.png",
+        "icon": "src/assets/images/furni-icons/xmas/xb_icon.png",
+        "description": "5 FLOORS OF CASH"
     }
 ]

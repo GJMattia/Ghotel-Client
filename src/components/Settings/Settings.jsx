@@ -98,17 +98,15 @@ export default function Settings({ sprite, setSprite, setSettingsDiv }) {
                         {Badges.map((badge, index) => (
                             <li
                                 className={`BadgeItem ${index === badgeSelection ? 'SelectedBadge' : ''}`}
-
-                                key={badge.id} onClick={() => setBadgeSelection(index)}>
-
+                                key={index}
+                                onClick={() => setBadgeSelection(index)}
+                            >
                                 <img src={badge.img} alt={badge.name} draggable="false" />
-
                             </li>
                         ))}
                     </ul>
                     <p>{Badges[badgeSelection].name}</p>
                 </div>
-
             )}
         </div>
     )

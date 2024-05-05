@@ -5,17 +5,19 @@ import './Walls.css';
 import './Sprite.css';
 import Furniture from '../../assets/data/furni.json';
 import * as roomAPI from '../../../utilities/room-api';
+import * as accountAPI from '../../../utilities/account-api';
 import { useState, useEffect } from 'react';
 import DevTools from '../DevTools/DevTools';
 import RoomInfo from '../RoomInfo/RoomInfo';
 import WallData from '../../assets/data/walls.json';
 import Sprites from '../../assets/data/sprites.json';
 import io from 'socket.io-client';
+import Badges from '../../assets/data/badges.json';
 
 // const socket = io.connect('http://localhost:4741');
 const socket = io.connect('https://ghotel-api.onrender.com');
 
-export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setRoomList }) {
+export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setUserRoomList }) {
 
     //Furniture Variables
     const [selectedFurni, setSelectedFurni] = useState(null);
@@ -29,6 +31,7 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
     const [rotate, setRotate] = useState(true);
     const [spriteHeight, setSpriteHeight] = useState(true);
     const [spriteHistory, setSpriteHistory] = useState([]);
+    const [selectedSprite, setSelectedSprite] = useState(null);
 
     //Furniture Rules
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
@@ -36,6 +39,18 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
     const USE_FURNI = [11, 52, 58, 61, 70, 87, 88];
     // const SIT_FURNI = [0, 25, 27, 31, 54, 59, 60, 81, 91, 92];
 
+
+
+
+    async function getSprite(username) {
+        try {
+            let response = await accountAPI.getSprite(username);
+            setSelectedFurni(null);
+            setSelectedSprite(response);
+        } catch (error) {
+            console.error('error getting sprite'.error)
+        }
+    };
 
     useEffect(() => {
         //Creates the users sprite
@@ -240,22 +255,21 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
     };
 
     const createSprite = (tileID, username, spriteID, height, rotation) => {
-
         const tile = document.getElementById(tileID);
-
         const spriteAnchor = document.createElement('div');
         spriteAnchor.className = 'SpriteAnchor';
         spriteAnchor.id = username;
-
         const spritePoint = document.createElement('div');
         spritePoint.className = 'SpritePoint';
         spritePoint.style.bottom = `${height}rem`;
-
         const img = document.createElement('img');
         img.className = 'Sprite';
         img.src = Sprites[spriteID].stand;
         rotation ? img.classList.add('Rotate') : null;
-        // Set the id attribute of the img element to the username
+
+        spritePoint.addEventListener('click', () => {
+            getSprite(username);
+        });
 
         spritePoint.appendChild(img);
         spriteAnchor.appendChild(spritePoint);
@@ -263,6 +277,7 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
     };
 
     const handleClick = (value, index, innerIndex) => {
+        setSelectedSprite(null);
         setSelectedFurniIndex(innerIndex);
         setSelectedTile(index);
         setSelectedFurni(value);
@@ -304,7 +319,7 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
             {user.name === roomInfo.user.name ? (
                 <DevTools roomInfo={roomInfo} setSelectedFurni={setSelectedFurni} setStackHeight={setStackHeight} stackHeight={stackHeight} setRoomData={setRoomData} setInventory={setInventory} />
             ) : null}
-            <RoomInfo setRoomChange={setRoomChange} setSelectedFurni={setSelectedFurni} setRoomList={setRoomList} user={user} roomInfo={roomInfo} setRoomInfo={setRoomInfo} setRoomData={setRoomData} />
+            <RoomInfo setRoomChange={setRoomChange} setSelectedFurni={setSelectedFurni} setUserRoomList={setUserRoomList} user={user} roomInfo={roomInfo} setRoomInfo={setRoomInfo} setRoomData={setRoomData} />
             <img className={`Wall Wall${roomInfo.wallType} `} src={WallData[roomInfo.wallType].img} />
             {pFurni !== null && (
                 <img
@@ -313,6 +328,32 @@ export default function Room({ setRoomChange, sprite, roomData, roomInfo, setRoo
                     className="follow-cursor"
                     style={{ left: position.x, top: position.y }}
                 />
+            )}
+
+            {selectedSprite && (
+                <div className='SpriteSelection'>
+                    <div className='SpriteSelectionSprite'>
+                        <button onClick={() => setSelectedSprite(null)} className='FurniSelectionX'>x</button>
+                        <p className='FurniSelectionFurniName'>{selectedSprite.username}</p>
+
+                        <div className='SpriteInfo'>
+                            <div className='SpriteImgDiv'>
+                                <img src={Sprites[selectedSprite.sprite].stand} draggable="false" />
+                            </div>
+                            <div className='BadgeShowcase'>
+
+                                {selectedSprite.badges.map((badge, index) => (
+                                    <img key={index} src={Badges[badge].img} draggable="false" />
+                                ))}
+
+
+                            </div>
+                        </div>
+                        <p className='SpriteMotto'>{selectedSprite.motto}</p>
+                    </div>
+
+                    <button className='BetBtn'>Bet {selectedSprite.username}</button>
+                </div>
             )}
             {selectedFurni !== null && (
                 <div className='FurniSelection'>

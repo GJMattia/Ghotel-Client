@@ -11,7 +11,7 @@ import RoomIcon from '../../assets/images/client/casino_room.gif';
 import Island from '../../assets/images/navigator/island.gif';
 import Point from '../../assets/images/navigator/point.gif';
 
-export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv, setRoomData, setRoomInfo }) {
+export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv, setRoomData, setRoomInfo, userRoomList, setUserRoomList }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
@@ -23,6 +23,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
 
     //For searching friends
     const [userSearch, setUserSearch] = useState('');
+
 
     async function roomSearch() {
         try {
@@ -63,23 +64,13 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
         };
     };
 
-    async function getUserRooms() {
-        try {
-            let response = await roomAPI.getUserRooms();
-            setRoomList(response);
-
-        } catch (error) {
-            console.error('error creating note'.error)
-        }
-    };
-
     async function createRoom() {
         try {
             let response = await roomAPI.createRoom({ roomName: roomName, roomDescription: roomDescription, floorColor: 'brown', roomSize: 104, wallType: 1 });
             setRoomName('');
             setRoomDescription('');
             setCreate(false);
-            setRoomList(response);
+            setUserRoomList(response);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -105,11 +96,10 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
 
     function myRoomsClick(option) {
         setCurrentNav(option);
-        getUserRooms();
     };
 
     function publicRoomsClick(option) {
-        setRoomList([]);
+        setRoomList(null);
         setCurrentNav(option);
     }
 
@@ -174,9 +164,9 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
                         <div className='MyRoomDiv'>
                             <h4>{user.name}'s Rooms</h4>
 
-                            {roomList.length ? (
+                            {userRoomList?.length ? (
                                 <ul className='RoomList'>
-                                    {roomList.map((room, index) => (
+                                    {userRoomList.map((room, index) => (
                                         <li key={index} className='RoomItem' onClick={() => roomClick(room._id)}>
                                             <p>{room.roomName}</p>
                                             <p>⮕</p>
@@ -206,7 +196,7 @@ export default function Navigator({ user, roomList, setRoomList, setNavigatorDiv
                         <button className='CreateBtn' onClick={roomSearch}>Search</button>
                     </div>
 
-                    {roomList.length ? (
+                    {roomList?.length ? (
                         <ul className='RoomList'>
                             {roomList.map((room, index) => (
                                 <li key={index} className='RoomItem' onClick={() => roomClick(room._id)}>

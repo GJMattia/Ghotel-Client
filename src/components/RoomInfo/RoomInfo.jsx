@@ -7,7 +7,7 @@ import * as roomAPI from '../../../utilities/room-api';
 import { useState } from 'react';
 import WallData from '../../assets/data/walls.json';
 
-export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, setRoomList, setSelectedFurni, setRoomChange }) {
+export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, setUserRoomList, setSelectedFurni, setRoomChange }) {
     const COLORS = [
         'black',
         'white',
@@ -64,6 +64,7 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
             let response = await roomAPI.editRoom({ roomID: roomInfo._id, roomName: roomName, roomDescription: roomDescription });
             const updatedRoomInfo = { ...roomInfo, roomName: response.roomName, roomDescription: response.roomDescription };
             setRoomInfo(updatedRoomInfo);
+            setSettings(false);
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -82,7 +83,7 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
     async function deleteRoom() {
         try {
             let response = await roomAPI.deleteRoom(roomInfo._id);
-            setRoomList(response);
+            setUserRoomList(response);
             setRoomData(null);
             setRoomInfo(null);
         } catch (error) {

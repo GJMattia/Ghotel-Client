@@ -9,7 +9,6 @@ import Client from '../Client/Client';
 
 function App() {
   const [user, setUser] = useState(getUser())
-
   return (
     <div className='App'>
       {user ?

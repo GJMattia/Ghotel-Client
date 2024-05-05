@@ -44,7 +44,7 @@
 .LineList {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-weight: 900;
     list-style: none;
@@ -53,7 +53,8 @@
     width: 99%;
     padding: 0;
     border-top: 1px solid black;
-
+    overflow-y: scroll;
+    height: 25.7rem;
 }
 
 .FurniLine {

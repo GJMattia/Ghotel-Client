@@ -229,6 +229,94 @@
 }
 
 .RotateBtn {
-    background-color: rgb(0, 192, 125);
+    background-color: rgb(2, 0, 148);
 
+}
+
+/* Selected sprite */
+.SpriteSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 2rem;
+    bottom: 4rem;
+    position: absolute;
+    z-index: 3;
+    user-select: none;
+    image-rendering: pixelated;
+
+}
+
+.SpriteSelectionSprite {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 14rem;
+    height: 15rem;
+    background-color: #555555;
+    border-radius: .3rem;
+}
+
+.SpriteInfo {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 95%;
+    border-bottom: 1px solid rgb(30, 30, 30);
+    padding-bottom: .5rem;
+}
+
+.SpriteImgDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(141, 141, 141);
+    border: 1px solid black;
+    border-radius: .3rem;
+    width: 5rem;
+    height: 9rem;
+}
+
+.BadgeShowcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 9.5rem;
+    width: 6rem;
+
+}
+
+.SpriteMotto {
+    box-sizing: border-box;
+    padding: .2rem;
+    position: absolute;
+    bottom: -.3rem;
+    background-color: rgb(141, 141, 141);
+    font-size: .8rem;
+    width: 90%;
+    text-align: center;
+    font-style: italic;
+    border: 1px solid black;
+    border-radius: .2rem;
+}
+
+.BetBtn {
+    box-sizing: border-box;
+    padding: .3rem;
+    width: 85%;
+    border: 1px solid white;
+    background-color: #555555;
+    color: white;
+    border-radius: .2rem;
+    margin: .5rem;
+}
+
+.BetBtn:hover {
+    background-color: #a8a8a8;
 }
