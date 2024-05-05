@@ -158,7 +158,8 @@
     },
     {
         "name": "Dicemaster",
-        "img": "src/assets/images/furni/club/dm-test.gif",
+        "img": "src/assets/images/furni/club/dm.gif",
+        "on": "src/assets/images/furni/club/dm-test.gif",
         "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
         "description": "game?"
     },
