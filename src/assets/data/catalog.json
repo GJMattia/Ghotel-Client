@@ -164,14 +164,6 @@
         "itemid": 64
       },
       {
-        "name": "Black Dragon Egg",
-        "img": "src/assets/images/furni/rares/bdino.png",
-        "icon": "src/assets/images/furni-icons/rares/bdino_icon.gif",
-        "description": "number 2, CHERZARD",
-        "price": 25,
-        "itemid": 72
-      },
-      {
         "name": "Speaker's Corner",
         "img": "src/assets/images/furni/rares/speaker.gif",
         "icon": "src/assets/images/furni-icons/rares/speaker_icon.gif",
@@ -234,6 +226,14 @@
         "itemid": 108
       },
       {
+        "name": "Gramophone",
+        "img": "src/assets/images/furni/ultras/gram.png",
+        "icon": "src/assets/images/furni-icons/ultras/gram_icon.png",
+        "description": "Where'd you get those peepers?",
+        "price": 65,
+        "itemid": 122
+      },
+      {
         "name": "Carl Ducksworth",
         "img": "src/assets/images/furni/ultras/carl.png",
         "icon": "src/assets/images/furni-icons/ultras/carl_icon.png",
@@ -248,6 +248,28 @@
         "description": "OH BOY",
         "price": 1,
         "itemid": 99
+      }
+    ]
+  },
+  {
+    "name": "Limited Rares",
+    "mast": "src/assets/images/catalog/masts/limit-mast.png",
+    "furni": [
+      {
+        "name": "Black Dragon Egg",
+        "img": "src/assets/images/furni/limit/bdino.png",
+        "icon": "src/assets/images/furni-icons/limit/bdino_icon.gif",
+        "description": "number 2, CHERZARD",
+        "price": 25,
+        "itemid": 72
+      },
+      {
+        "name": "Golden Tub",
+        "img": "src/assets/images/furni/limit/gt.png",
+        "icon": "src/assets/images/furni-icons/limit/gt_icon.png",
+        "description": "FENTON",
+        "price": 50,
+        "itemid": 123
       }
     ]
   },
@@ -664,6 +686,22 @@
         "description": "the safari zone special",
         "price": 25,
         "itemid": 105
+      },
+      {
+        "name": "Green ICM",
+        "img": "src/assets/images/furni/icms/gcim.gif",
+        "icon": "src/assets/images/furni-icons/icms/gricm_icon.gif",
+        "description": "shamrock shake",
+        "price": 25,
+        "itemid": 117
+      },
+      {
+        "name": "Red ICM",
+        "img": "src/assets/images/furni/icms/ricm.gif",
+        "icon": "src/assets/images/furni-icons/icms/ricm_icon.gif",
+        "description": "snozberry",
+        "price": 25,
+        "itemid": 118
       }
     ]
   },
@@ -770,6 +808,30 @@
         "description": "aguh no smoke?",
         "price": 25,
         "itemid": 79
+      },
+      {
+        "name": "Black Smoke Machine",
+        "img": "src/assets/images/furni/smokes/bsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/bsm_icon.gif",
+        "description": "aguh no smoke?",
+        "price": 25,
+        "itemid": 119
+      },
+      {
+        "name": "White Smoke Machine",
+        "img": "src/assets/images/furni/smokes/wsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/wsm_icon.gif",
+        "description": "aguh no smoke?",
+        "price": 25,
+        "itemid": 120
+      },
+      {
+        "name": "Red Smoke Machine",
+        "img": "src/assets/images/furni/smokes/rsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/rsm_icon.gif",
+        "description": "aguh no smoke?",
+        "price": 25,
+        "itemid": 121
       }
     ]
   },
@@ -880,6 +942,14 @@
         "description": "5 FLOORS OF CASH",
         "price": 25,
         "itemid": 116
+      },
+      {
+        "name": "Poinsettia",
+        "img": "src/assets/images/furni/plants/poin.gif",
+        "icon": "src/assets/images/furni-icons/plants/poin_icon.gif",
+        "description": "DETAIN THEM",
+        "price": 3,
+        "itemid": 95
       }
     ]
   },
@@ -905,7 +975,7 @@
       },
       {
         "name": "Crane",
-        "img": "src/assets/images/furni/animals/crane.png",
+        "img": "src/assets/images/furni/animals/crane2.png",
         "icon": "src/assets/images/furni-icons/animals/crane_icon.png",
         "description": "death... by exile",
         "price": 40,
@@ -940,14 +1010,6 @@
         "description": "wow cool",
         "price": 3,
         "itemid": 30
-      },
-      {
-        "name": "Poinsettia",
-        "img": "src/assets/images/furni/plants/poin.gif",
-        "icon": "src/assets/images/furni-icons/plants/poin_icon.gif",
-        "description": "DETAIN THEM",
-        "price": 3,
-        "itemid": 95
       }
     ]
   },

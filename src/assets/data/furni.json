@@ -440,8 +440,8 @@
     },
     {
         "name": "Black Dragon Egg",
-        "img": "src/assets/images/furni/rares/bdino.png",
-        "icon": "src/assets/images/furni-icons/rares/bdino_icon.gif",
+        "img": "src/assets/images/furni/limit/bdino.png",
+        "icon": "src/assets/images/furni-icons/limit/bdino_icon.gif",
         "description": "number 2, CHERZARD"
     },
     {
@@ -698,7 +698,7 @@
     },
     {
         "name": "Crane",
-        "img": "src/assets/images/furni/animals/crane.png",
+        "img": "src/assets/images/furni/animals/crane2.png",
         "icon": "src/assets/images/furni-icons/animals/crane_icon.png",
         "description": "death... by exile"
     },
@@ -713,5 +713,47 @@
         "img": "src/assets/images/furni/xmas/xb.png",
         "icon": "src/assets/images/furni-icons/xmas/xb_icon.png",
         "description": "5 FLOORS OF CASH"
+    },
+    {
+        "name": "Green ICM",
+        "img": "src/assets/images/furni/icms/gcim.gif",
+        "icon": "src/assets/images/furni-icons/icms/gricm_icon.gif",
+        "description": "shamrock shake"
+    },
+    {
+        "name": "Red ICM",
+        "img": "src/assets/images/furni/icms/ricm.gif",
+        "icon": "src/assets/images/furni-icons/icms/ricm_icon.gif",
+        "description": "snozberry"
+    },
+    {
+        "name": "Black Smoke Machine",
+        "img": "src/assets/images/furni/smokes/bsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/bsm_icon.gif",
+        "description": "aguh no smoke?"
+    },
+    {
+        "name": "White Smoke Machine",
+        "img": "src/assets/images/furni/smokes/wsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/wsm_icon.gif",
+        "description": "aguh no smoke?"
+    },
+    {
+        "name": "Red Smoke Machine",
+        "img": "src/assets/images/furni/smokes/rsm.gif",
+        "icon": "src/assets/images/furni-icons/smokes/rsm_icon.gif",
+        "description": "aguh no smoke?"
+    },
+    {
+        "name": "Gramophone",
+        "img": "src/assets/images/furni/ultras/gram.png",
+        "icon": "src/assets/images/furni-icons/ultras/gram_icon.png",
+        "description": "Where'd you get those peepers?"
+    },
+    {
+        "name": "Golden Tub",
+        "img": "src/assets/images/furni/limit/gt.png",
+        "icon": "src/assets/images/furni-icons/limit/gt_icon.png",
+        "description": "FENTON"
     }
 ]
