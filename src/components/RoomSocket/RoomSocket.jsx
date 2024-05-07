@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 // const socket = io.connect('http://localhost:4741');
 const socket = io.connect('https://ghotel-api.onrender.com');
 
-export default function RoomSocket({ user, roomInfo, roomChange, setRoomData }) {
+export default function RoomSocket({ user, roomInfo, roomChange, setRoomData, setRoomInfo }) {
 
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
@@ -99,35 +99,60 @@ export default function RoomSocket({ user, roomInfo, roomChange, setRoomData }) 
     };
 
     useEffect(() => {
+        socket.emit('info_change', roomInfo);
+        const isEqual = (obj1, obj2) => {
+            return JSON.stringify(obj1) === JSON.stringify(obj2);
+        };
+        const handleInfoUpdate = (updatedInfo) => {
+            if (roomInfo.user.name === user.name) {
+                return;
+            } else if (isEqual(updatedInfo, roomInfo)) {
+                return;
+            } else {
+                setRoomInfo(updatedInfo);
+            }
+        };
+        socket.on('info_update', handleInfoUpdate);
+        return () => {
+            socket.off('info_update');
+            socket.off('info_update', handleInfoUpdate);
+        };
+    }, [roomInfo]);
+
+    useEffect(() => {
         socket.emit('send_change', { username: user.name, roomNumber: roomInfo.chat, roomChange: roomChange });
     }, [roomChange]);
 
     useEffect(() => {
         socket.on('receive_change', ({ username, roomChange }) => {
             if (!roomChange) {
-                return
+                return;
             };
+
             if (username === user.name) {
-                return
+                return;
+            };
+
+            if (roomChange === 50) {
+                const clear = Array.from({ length: 104 }, () => []);
+                setRoomData(clear);
+            };
+
+            if (typeof roomChange.change === 'object' && !Array.isArray(roomChange.change)) {
+                setRoomData(prevRoomData => {
+                    const updatedRoomData = [...prevRoomData];
+                    updatedRoomData[roomChange.tileID] = roomChange.change.tile1;
+                    updatedRoomData[roomChange.tileID - 13] = roomChange.change.tile2;
+                    updatedRoomData[roomChange.tileID - 12] = roomChange.change.tile3;
+                    updatedRoomData[roomChange.tileID + 1] = roomChange.change.tile4;
+                    return updatedRoomData
+                })
             } else {
-                if (typeof roomChange.change === 'object' && !Array.isArray(roomChange.change)) {
-
-                    setRoomData(prevRoomData => {
-                        const updatedRoomData = [...prevRoomData];
-
-                        updatedRoomData[roomChange.tileID] = roomChange.change.tile1;
-                        updatedRoomData[roomChange.tileID - 13] = roomChange.change.tile2;
-                        updatedRoomData[roomChange.tileID - 12] = roomChange.change.tile3;
-                        updatedRoomData[roomChange.tileID + 1] = roomChange.change.tile4;
-                        return updatedRoomData
-                    })
-                } else {
-                    setRoomData(prevRoomData => {
-                        const updatedRoomData = [...prevRoomData];
-                        updatedRoomData[roomChange.tileID] = roomChange.change;
-                        return updatedRoomData;
-                    });
-                }
+                setRoomData(prevRoomData => {
+                    const updatedRoomData = [...prevRoomData];
+                    updatedRoomData[roomChange.tileID] = roomChange.change;
+                    return updatedRoomData;
+                });
             }
         });
 
@@ -139,7 +164,7 @@ export default function RoomSocket({ user, roomInfo, roomChange, setRoomData }) 
     return (
         <>
             <input
-                maxLength={50}
+                maxLength={55}
                 type="text"
                 onChange={(event) => setMessage(event.target.value)}
                 className='RoomChatInput'

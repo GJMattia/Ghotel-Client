@@ -64,7 +64,7 @@
     box-sizing: border-box;
     border-top: 1px solid rgb(156, 156, 156);
     padding-top: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -78,14 +78,61 @@
     align-items: center;
     justify-content: flex-start;
     width: 35rem;
-    height: 15rem;
+    height: 17rem;
     image-rendering: pixelated;
     border-radius: .2rem;
     position: relative;
     user-select: none;
     overflow: hidden;
     background-color: #707066;
-    border: 1px solid rgb(28, 28, 28);
+}
+
+.MottoInput {
+    padding: .2rem;
+    position: absolute;
+    top: 10rem;
+    right: 5rem;
+    width: 50%;
+    border-radius: .2rem;
+    border: 0;
+}
+
+.MottoInput:focus {
+    outline: none;
+}
+
+.MottoBtn {
+    position: absolute;
+    bottom: 5.3rem;
+    right: .5rem;
+    border: 1px solid black;
+    border-radius: .2rem;
+    background-color: rgb(27, 219, 27);
+    color: white;
+    padding: .5rem;
+}
+
+.MottoBtn:hover {
+    background-color: lawngreen;
+}
+
+.WelcomeUser {
+    top: 8.8rem;
+    left: 9rem;
+    position: absolute;
+    color: white;
+}
+
+.UserCredits {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+    top: 10.5rem;
+    left: 16rem;
+    position: absolute;
+    color: white;
 }
 
 .WelcomeMast {
@@ -95,21 +142,21 @@
 }
 
 .WelcomeTile {
-    bottom: 1rem;
+    bottom: 4rem;
     left: 1rem;
     position: absolute;
     pointer-events: none;
 }
 
 .WelcomeSprite {
-    bottom: 2.5rem;
+    bottom: 5.5rem;
     left: 2.7rem;
     position: absolute;
     pointer-events: none;
 }
 
 .WelcomeArrow {
-    bottom: 8rem;
+    bottom: 11rem;
     left: 2.7rem;
     position: absolute;
     pointer-events: none;
@@ -122,28 +169,33 @@
     user-select: none;
 }
 
-.WelcomeInfo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+.WelcomeInfo2 {
+    list-style: none;
+    padding: 0;
     position: absolute;
-    bottom: .5rem;
-    right: 1rem;
-    background-color: #96968d;
-    width: 20rem;
-    height: 4.5rem;
-    border-radius: .2rem;
-    color: white;
+    bottom: -1rem;
+    width: 100%;
+    background-color: rgb(188, 188, 188);
 }
 
-.WelcomeInfo>h5 {
+.WelcomeInfo2>li {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    width: 5.3rem;
-    pointer-events: none;
+    box-sizing: border-box;
+    padding: .4rem;
+    font-size: .8rem;
 }
+
+.WelcomeInfo2>li>img {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.WelcomeDate {
+    border-top: 1px dotted black;
+}
+
 
 .WelcomeBack {
     box-sizing: border-box;

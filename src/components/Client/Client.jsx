@@ -45,6 +45,7 @@ export default function Client({ user }) {
 
     //sprite
     const [sprite, setSprite] = useState(null);
+    const [badges, setBadges] = useState(null);
 
     //Socket Stuff
     const [roomChange, setRoomChange] = useState(null);
@@ -59,6 +60,7 @@ export default function Client({ user }) {
                 setCredits(response.credits);
                 setInventory(response.inventory);
                 setSprite(response.sprite);
+                setBadges(response.badges)
                 setAccount(true);
             } catch (error) {
                 console.error('Error Fetching Questions', error);
@@ -76,7 +78,7 @@ export default function Client({ user }) {
                         <p>{credits}</p>
                     </div>
 
-                    {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} setRoomData={setRoomData} />}
+                    {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} setRoomData={setRoomData} setRoomInfo={setRoomInfo} />}
 
                     {(roomData) && <Room setRoomChange={setRoomChange} sprite={sprite} setUserRoomList={setUserRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
 
@@ -90,7 +92,7 @@ export default function Client({ user }) {
 
                     <Chat user={user} chatDiv={chatDiv} setChatDiv={setChatDiv} usersMessaged={usersMessaged} setUsersMessaged={setUsersMessaged} room={room} setRoom={setRoom} />
 
-                    {settingsDiv && <Settings sprite={sprite} setSprite={setSprite} setSettingsDiv={setSettingsDiv} />}
+                    {settingsDiv && <Settings badges={badges} setBadges={setBadges} sprite={sprite} setSprite={setSprite} setSettingsDiv={setSettingsDiv} />}
 
                     <ClientNav settingsDiv={settingsDiv} setSettingsDiv={setSettingsDiv} setRoomData={setRoomData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
                 </>

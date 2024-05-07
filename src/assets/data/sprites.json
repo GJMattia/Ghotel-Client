@@ -38,5 +38,20 @@
         "name": "Skeleton Jones",
         "stand": "src/assets/images/sprites/ske.gif",
         "sit": "src/assets/images/sprites/ske.gif"
+    },
+    {
+        "name": "Ozzy",
+        "stand": "src/assets/images/sprites/ozzy.gif",
+        "sit": "src/assets/images/sprites/ozzy.gif"
+    },
+    {
+        "name": "Vader",
+        "stand": "src/assets/images/sprites/darth.gif",
+        "sit": "src/assets/images/sprites/darth.gif"
+    },
+    {
+        "name": "C3PO",
+        "stand": "src/assets/images/sprites/c3po.gif",
+        "sit": "src/assets/images/sprites/c3po.gif"
     }
 ]

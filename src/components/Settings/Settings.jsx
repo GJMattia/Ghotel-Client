@@ -7,8 +7,13 @@ import Right from '../../assets/images/navigator/right.gif';
 import { useState } from 'react';
 import * as accountAPI from '../../../utilities/account-api';
 import Badges from '../../assets/data/badges.json';
+import Rack from '../../assets/images/navigator/sprite.gif';
+import Badge from '../../assets/images/navigator/badge.gif';
+import Go from '../../assets/images/navigator/go.gif';
+import No from '../../assets/images/navigator/no.gif';
+import Yes from '../../assets/images/navigator/yes.gif';
 
-export default function Settings({ sprite, setSprite, setSettingsDiv }) {
+export default function Settings({ sprite, setSprite, setSettingsDiv, badges, setBadges }) {
 
     const [isDragging, setIsDragging] = useState(false);
     const [initialX, setInitialX] = useState(0);
@@ -18,6 +23,8 @@ export default function Settings({ sprite, setSprite, setSettingsDiv }) {
 
     const [spriteSelection, setSpriteSelection] = useState(sprite);
     const [badgeSelection, setBadgeSelection] = useState(0);
+
+    const [badgeList, setBadgeList] = useState(badges);
 
     function handleMouseDown(e) {
         setIsDragging(true);
@@ -41,6 +48,15 @@ export default function Settings({ sprite, setSprite, setSettingsDiv }) {
         };
     };
 
+    async function changeBadges() {
+        try {
+            let response = await accountAPI.changeBadges(badgeList);
+            setBadges(response);
+        } catch (error) {
+            console.error('error changing sprite'.error)
+        }
+    };
+
     async function changeSprite() {
         try {
             let response = await accountAPI.changeSprite({ sprite: spriteSelection });
@@ -51,7 +67,7 @@ export default function Settings({ sprite, setSprite, setSettingsDiv }) {
     };
 
     const plusSprite = () => {
-        if (spriteSelection === 7) {
+        if (spriteSelection === 10) {
             setSpriteSelection(0);
         } else {
             setSpriteSelection(prevSpriteSelection => prevSpriteSelection + 1);
@@ -60,11 +76,33 @@ export default function Settings({ sprite, setSprite, setSettingsDiv }) {
 
     const minusSprite = () => {
         if (spriteSelection === 0) {
-            setSpriteSelection(7);
+            setSpriteSelection(10);
         } else {
             setSpriteSelection(prevSpriteSelection => prevSpriteSelection - 1);
         }
-    }
+    };
+
+    function addBadge() {
+        if (badgeList.length === 6) {
+            return;
+        }
+        if (badgeList.includes(badgeSelection)) {
+            return;
+        } else {
+            let newList = [...badgeList];
+            newList.push(badgeSelection);
+            setBadgeList(newList);
+        }
+    };
+
+    function removeBadge() {
+        if (!badgeList.length) {
+            return;
+        } else {
+            setBadgeList(badgeList.filter(badge => badge !== badgeSelection));
+        }
+    };
+
 
 
     return (
@@ -75,25 +113,58 @@ export default function Settings({ sprite, setSprite, setSettingsDiv }) {
             <button onClick={() => setSettingsDiv(false)} className='InventoryX'>X</button>
             <h4>Settings</h4>
             <div className='SBtns'>
-                <button onClick={() => setPage(true)}>Sprite</button>
-                <button onClick={() => setPage(false)}>Badges</button>
+                <button className={page ? "SBtnSelect" : ""} onClick={() => setPage(true)}>
+                    <h4>Sprite</h4>
+                    <img src={Rack} draggable="false" />
+                </button>
+                <button className={!page ? "SBtnSelect" : ""} onClick={() => setPage(false)}>
+                    <h4>Badges</h4>
+                    <img src={Badge} draggable="false" />
+                </button>
             </div>
 
             {page ? (
                 <div className='SpriteSettings'>
-                    <h3>Change Sprite</h3>
+
+                    <div className='SpriteOptions'>
+                        <h5>Current Sprite</h5>
+                        <h5>Change Sprite</h5>
+                    </div>
 
                     <div className='SpriteBox'>
-                        <img className={`SpriteShow Sprite${spriteSelection}`} src={Sprites[spriteSelection].stand} draggable="false" />
-                        <img onClick={minusSprite} className='SpriteArrow' src={Left} draggable="false" />
-                        <img src={Tile} draggable="false" />
-                        <img onClick={plusSprite} className='SpriteArrow' src={Right} draggable="false" />
+                        <div className='CurrentSprite'>
+
+                            <img className='EmptyTile' src={Tile} draggable="false" />
+                            <img src={Go} draggable="false" />
+                            <img className={`SpriteShow Sprite${sprite}`} src={Sprites[sprite].stand} />
+
+                            <h5 className='SpriteName'>{Sprites[sprite].name}</h5>
+                        </div>
+                        <div className='ChangeSprite'>
+
+
+                            <img className={`SpriteShow Sprite${spriteSelection}`} src={Sprites[spriteSelection].stand} draggable="false" />
+                            <img className='EmptyTile' src={Tile} draggable="false" />
+                            <div className='Arrows'>
+                                <img onClick={minusSprite} className='SpriteArrow' src={Left} draggable="false" />
+                                <img onClick={plusSprite} className='SpriteArrow' src={Right} draggable="false" />
+                            </div>
+                            <h5 className='SpriteName'>{Sprites[spriteSelection].name}</h5>
+                        </div>
+
                     </div>
-                    <h4>{Sprites[spriteSelection].name}</h4>
-                    <button onClick={changeSprite} className='CreateBtn'>Change Sprite</button>
+
+                    <button onClick={changeSprite} className='CreateBtn ChangeSpriteBtn'>Change Sprite</button>
                 </div>
             ) : (
                 <div className='BadgeSettings'>
+                    <h5 className='BadgeListTitle'>Select from:</h5>
+                    <h5 className='UserBadgesTitle'>Your badges:</h5>
+                    <div className='PlayerBadges'>
+                        {badgeList.map((badge, index) => (
+                            <img src={Badges[badge].img} key={index} draggable="false" />
+                        ))}
+                    </div>
                     <ul className='BadgesList'>
                         {Badges.map((badge, index) => (
                             <li
@@ -105,7 +176,15 @@ export default function Settings({ sprite, setSprite, setSettingsDiv }) {
                             </li>
                         ))}
                     </ul>
-                    <p>{Badges[badgeSelection].name}</p>
+                    <div className='BadgeSelection'>
+                        <img className='BadgeShow' src={Badges[badgeSelection].img} draggable="false" />
+                        <h5 className='BadgeName'>{Badges[badgeSelection].name}</h5>
+                        <div className='BadgeChoice'>
+                            <img onClick={addBadge} src={Yes} draggable="false" />
+                            <img onClick={removeBadge} src={No} draggable="false" />
+                        </div>
+                    </div>
+                    <button onClick={changeBadges} className='CreateBtn SBBtn'>Save Badges</button>
                 </div>
             )}
         </div>

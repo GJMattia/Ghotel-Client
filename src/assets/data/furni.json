@@ -159,7 +159,14 @@
     {
         "name": "Dicemaster",
         "img": "src/assets/images/furni/club/dm.gif",
-        "on": "src/assets/images/furni/club/dm-test.gif",
+        "0": "src/assets/images/furni/club/dm.gif",
+        "on": "src/assets/images/furni/club/dm_spin.gif",
+        "1": "src/assets/images/furni/club/dm1.gif",
+        "2": "src/assets/images/furni/club/dm2.gif",
+        "3": "src/assets/images/furni/club/dm3.gif",
+        "4": "src/assets/images/furni/club/dm4.gif",
+        "5": "src/assets/images/furni/club/dm5.gif",
+        "6": "src/assets/images/furni/club/dm6.gif",
         "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
         "description": "game?"
     },
@@ -755,5 +762,47 @@
         "img": "src/assets/images/furni/limit/gt.png",
         "icon": "src/assets/images/furni-icons/limit/gt_icon.png",
         "description": "FENTON"
+    },
+    {
+        "name": "Red Amber Lamp",
+        "img": "src/assets/images/furni/rares/ra.gif",
+        "icon": "src/assets/images/furni-icons/rares/ra_icon.gif",
+        "description": "SEALED IN AMBER"
+    },
+    {
+        "name": "Blue Amber Lamp",
+        "img": "src/assets/images/furni/rares/ba.gif",
+        "icon": "src/assets/images/furni-icons/rares/ba_icon.gif",
+        "description": "BLUE DAY NATURALLY"
+    },
+    {
+        "name": "Gold Amber Lamp",
+        "img": "src/assets/images/furni/rares/ga.gif",
+        "icon": "src/assets/images/furni-icons/rares/ga_icon.gif",
+        "description": "golden skuck"
+    },
+    {
+        "name": "Green Marquee",
+        "img": "src/assets/images/furni/marquees/gm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/gm_icon.gif",
+        "description": "Greg's tarp"
+    },
+    {
+        "name": "Majestic Marquee",
+        "img": "src/assets/images/furni/marquees/nm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/nm_icon.gif",
+        "description": "MMM YOU BET"
+    },
+    {
+        "name": "Red Fan",
+        "img": "src/assets/images/furni/fans/rf.gif",
+        "icon": "src/assets/images/furni-icons/fans/rf_icon.gif",
+        "description": "swoof swoof"
+    },
+    {
+        "name": "Green Fan",
+        "img": "src/assets/images/furni/fans/gf.gif",
+        "icon": "src/assets/images/furni-icons/fans/gf_icon.gif",
+        "description": "swoof swoof"
     }
 ]

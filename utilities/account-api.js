@@ -64,3 +64,19 @@ export async function getSprite(username) {
         console.error('error changing sprite', error);
     }
 };
+
+export async function changeBadges(badgeList) {
+    try {
+        return await sendRequest(`${BASE_URL}/change/badges`, 'PUT', badgeList);
+    } catch (error) {
+        console.error('error changing badges', error);
+    }
+};
+
+export async function changeMotto(motto) {
+    try {
+        return await sendRequest(`${BASE_URL}/change/motto`, 'PUT', motto);
+    } catch (error) {
+        console.error('error changing motto', error);
+    }
+};

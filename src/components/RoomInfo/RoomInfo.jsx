@@ -75,6 +75,7 @@ export default function RoomInfo({ user, roomInfo, setRoomInfo, setRoomData, set
             let room = await roomAPI.clearRoom({ roomID: roomInfo._id });
             setRoomData(room);
             setSelectedFurni(null);
+            setRoomChange(50);
         } catch (error) {
             console.error('error creating note'.error)
         }

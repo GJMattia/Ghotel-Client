@@ -132,20 +132,36 @@
         "itemid": 12
       },
       {
+        "name": "Red Amber Lamp",
+        "img": "src/assets/images/furni/rares/ra.gif",
+        "icon": "src/assets/images/furni-icons/rares/ra_icon.gif",
+        "description": "SEALED IN AMBER",
+        "price": 25,
+        "itemid": 124
+      },
+      {
+        "name": "Blue Amber Lamp",
+        "img": "src/assets/images/furni/rares/ba.gif",
+        "icon": "src/assets/images/furni-icons/rares/ba_icon.gif",
+        "description": "BLUE DAY NATURALLY",
+        "price": 25,
+        "itemid": 125
+      },
+      {
+        "name": "Gold Amber Lamp",
+        "img": "src/assets/images/furni/rares/ga.gif",
+        "icon": "src/assets/images/furni-icons/rares/ga_icon.gif",
+        "description": "golden skuck",
+        "price": 25,
+        "itemid": 126
+      },
+      {
         "name": "Habbo Globe",
         "img": "src/assets/images/furni/rares/globe.gif",
         "icon": "src/assets/images/furni-icons/rares/globe_icon.gif",
         "description": "Shake, don't break!",
         "price": 25,
         "itemid": 24
-      },
-      {
-        "name": "Habbo Cola Machine",
-        "img": "src/assets/images/furni/rares/hcola.gif",
-        "icon": "src/assets/images/furni-icons/rares/hcola_icon.gif",
-        "description": "it was a dark and stormy night",
-        "price": 25,
-        "itemid": 62
       },
       {
         "name": "Holoboy",
@@ -278,6 +294,14 @@
     "mast": "src/assets/images/catalog/masts/real-mast.gif",
     "furni": [
       {
+        "name": "Habbo Cola Machine",
+        "img": "src/assets/images/furni/rares/hcola.gif",
+        "icon": "src/assets/images/furni-icons/rares/hcola_icon.gif",
+        "description": "it was a dark and stormy night",
+        "price": 25,
+        "itemid": 62
+      },
+      {
         "name": "MTN Dew Machine",
         "img": "src/assets/images/furni/brand/md.gif",
         "icon": "src/assets/images/furni-icons/brand/md_icon.png",
@@ -326,6 +350,7 @@
       {
         "name": "Dicemaster",
         "img": "src/assets/images/furni/club/dm.gif",
+        "0": "src/assets/images/furni/club/dm.gif",
         "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
         "description": "game?",
         "price": 12,
@@ -602,6 +627,22 @@
         "description": "not a fan G",
         "price": 25,
         "itemid": 101
+      },
+      {
+        "name": "Green Marquee",
+        "img": "src/assets/images/furni/marquees/gm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/gm_icon.gif",
+        "description": "Greg's tarp",
+        "price": 25,
+        "itemid": 127
+      },
+      {
+        "name": "Majestic Marquee",
+        "img": "src/assets/images/furni/marquees/nm.gif",
+        "icon": "src/assets/images/furni-icons/marquees/nm_icon.gif",
+        "description": "MMM YOU BET",
+        "price": 25,
+        "itemid": 128
       }
     ]
   },
@@ -786,6 +827,22 @@
         "description": "swoof swoof",
         "price": 25,
         "itemid": 80
+      },
+      {
+        "name": "Red Fan",
+        "img": "src/assets/images/furni/fans/rf.gif",
+        "icon": "src/assets/images/furni-icons/fans/rf_icon.gif",
+        "description": "swoof swoof",
+        "price": 25,
+        "itemid": 129
+      },
+      {
+        "name": "Green Fan",
+        "img": "src/assets/images/furni/fans/gf.gif",
+        "icon": "src/assets/images/furni-icons/fans/gf_icon.gif",
+        "description": "swoof swoof",
+        "price": 25,
+        "itemid": 130
       }
     ]
   },

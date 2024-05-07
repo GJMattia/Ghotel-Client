@@ -4,7 +4,7 @@ import * as roomAPI from '../../../utilities/room-api';
 import Z from '../../assets/images/furni/mode/zshelf.gif';
 import { useState } from 'react';
 
-export default function DevTools({ roomInfo, setSelectedFurni, setStackHeight, setRoomData, setInventory }) {
+export default function DevTools({ setSelectedFurni, setStackHeight, setInventory, roomInfo, user }) {
 
     const [counter, setCounter] = useState(0);
     const [wumbo, setWumbo] = useState(false);
@@ -51,20 +51,21 @@ export default function DevTools({ roomInfo, setSelectedFurni, setStackHeight, s
 
     return (
         <>
-
-            <div className='StackTool'>
-                <h4>Jawn's Stack Tool</h4>
-                <div className='StackChoices'>
-                    <div className='StackChoice'>
-                        <img className='StackImg' src={Z} />
+            {user.name === roomInfo.user.name ? (
+                <div className='StackTool'>
+                    <h4>Jawn's Stack Tool</h4>
+                    <div className='StackChoices'>
+                        <div className='StackChoice'>
+                            <img className='StackImg' src={Z} />
+                        </div>
+                    </div>
+                    <div className='StackMult'>
+                        <button className='StackDec' onClick={decrementCounter}>-</button>
+                        <p>{counter} z's</p>
+                        <button className='StackInc' onClick={incrementCounter}>+</button>
                     </div>
                 </div>
-                <div className='StackMult'>
-                    <button className='StackDec' onClick={decrementCounter}>-</button>
-                    <p>{counter} z's</p>
-                    <button className='StackInc' onClick={incrementCounter}>+</button>
-                </div>
-            </div>
+            ) : null}
             <div className='DevTools'>
                 <button onClick={clearInventory} className='DevBtn'>CLEAR INVENTORY</button>
                 {!wumbo ? (
