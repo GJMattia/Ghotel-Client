@@ -78,9 +78,9 @@ export default function Client({ user }) {
                         <p>{credits}</p>
                     </div>
 
-                    {(roomData) && <RoomSocket user={user} roomInfo={roomInfo} roomChange={roomChange} setRoomData={setRoomData} setRoomInfo={setRoomInfo} />}
+                    {(roomData) && <RoomSocket credits={credits} setCredits={setCredits} user={user} roomInfo={roomInfo} roomChange={roomChange} setRoomData={setRoomData} setRoomInfo={setRoomInfo} />}
 
-                    {(roomData) && <Room setRoomChange={setRoomChange} sprite={sprite} setUserRoomList={setUserRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
+                    {(roomData) && <Room credits={credits} setCredits={setCredits} setRoomChange={setRoomChange} sprite={sprite} setUserRoomList={setUserRoomList} setInventory={setInventory} roomInfo={roomInfo} setRoomInfo={setRoomInfo} roomData={roomData} setRoomData={setRoomData} user={user} pFurni={pFurni} setPFurni={setPFurni} />}
 
                     {navigatorDiv && <Navigator userRoomList={userRoomList} setUserRoomList={setUserRoomList} roomList={roomList} setRoomInfo={setRoomInfo} setRoomList={setRoomList} setRoomData={setRoomData} user={user} setNavigatorDiv={setNavigatorDiv} />}
 

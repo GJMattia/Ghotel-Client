@@ -76,7 +76,7 @@ export default function HomePage({ user, setUser }) {
                     <div className='Welcome'>
                         <img className='WelcomeMast' src={Mast} />
                         <img className='WelcomeTile' src={Tile} />
-                        <img className='WelcomeSprite' src={Sprites[account.sprite].stand} />
+                        <img className={`WelcomeSprite Sprite${account.sprite}`} src={Sprites[account.sprite].stand} />
                         <img className='WelcomeArrow' src={Arrow} />
                         <Link to='/client' ><img className='Enter' src={Enter} /></Link>
 

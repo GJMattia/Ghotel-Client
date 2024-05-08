@@ -6,6 +6,7 @@
     align-items: center;
     border-bottom: 1px solid rgb(89, 89, 89);
     height: 5rem;
+    user-select: none;
 }
 
 .LoginForm {
@@ -25,6 +26,7 @@
     background: linear-gradient(to top, black 50%, rgb(48, 48, 48) 50%);
     font-weight: 900;
     cursor: pointer;
+    user-select: none;
 }
 
 .LoginButton:hover {
@@ -35,6 +37,7 @@
 .GhotelLogo {
     width: 15%;
     image-rendering: pixelated;
+    pointer-events: none;
 }
 
 .LoginSections {
@@ -49,6 +52,17 @@
 .LoginSections>label {
     color: white;
     font-size: .7rem;
+    margin-bottom: .2rem;
+    margin-left: .1rem;
+}
+
+.LogError {
+    padding: 1rem;
+    color: white;
+    position: absolute;
+    top: 8.5rem;
+    background-color: crimson;
+    border-radius: .2rem;
 }
 
 @media (max-width: 1000px) {

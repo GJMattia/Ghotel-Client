@@ -9,7 +9,7 @@ export default function LoginForm({ setUser }) {
     password: ''
   })
 
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
 
   function handleChange(evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value })
@@ -40,7 +40,9 @@ export default function LoginForm({ setUser }) {
         </div>
         <button className='LoginButton' type="submit">Login</button>
       </form >
-      <p className="error-message">&nbsp;{error}</p>
+
+      {error ? <h2 className="LogError">{error}</h2> : null}
+
     </div >
   )
 }

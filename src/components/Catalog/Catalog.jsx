@@ -6,7 +6,7 @@ import CatalogShowcase from '../CatalogShowcase/CatalogShowcase';
 import { useState } from 'react';
 import CatalogData from '../../assets/data/catalog.json';
 import * as accountAPI from '../../../utilities/account-api';
-import buySound from '../../assets/audio/buy.mp3'
+import buySound from '../../assets/audio/buy.mp3';
 
 export default function Catalog({ catalogDiv, setCatalogDiv, credits, setCredits, setInventory }) {
 

@@ -80,3 +80,19 @@ export async function changeMotto(motto) {
         console.error('error changing motto', error);
     }
 };
+
+export async function sendCredits(sendInfo) {
+    try {
+        return await sendRequest(`${BASE_URL}/send/credits`, 'PUT', sendInfo);
+    } catch (error) {
+        console.error('error sending credits', error);
+    }
+};
+
+export async function getCredits(credits) {
+    try {
+        return await sendRequest(`${BASE_URL}/get/credits`, 'PUT', credits);
+    } catch (error) {
+        console.error('error getting credits', error);
+    }
+};

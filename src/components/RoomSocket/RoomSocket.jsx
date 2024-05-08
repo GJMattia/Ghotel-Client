@@ -1,15 +1,40 @@
 import './RoomSocket.css';
 import io from 'socket.io-client';
 import { useState, useEffect, useRef } from 'react';
+import * as accountAPI from '../../../utilities/account-api';
+import buySound from '../../assets/audio/buy.mp3';
 
 // const socket = io.connect('http://localhost:4741');
 const socket = io.connect('https://ghotel-api.onrender.com');
 
-export default function RoomSocket({ user, roomInfo, roomChange, setRoomData, setRoomInfo }) {
+export default function RoomSocket({ user, roomInfo, roomChange, setRoomData, setRoomInfo, credits, setCredits }) {
 
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
     const inputRef = useRef(null);
+
+    useEffect(() => {
+        const getCredits = async (data) => {
+            if (data.person !== user.name) {
+                return
+            } else {
+                let response = await accountAPI.getCredits({ credits: data.credits });
+                setCredits(response);
+                let newMessage = `${data.sender} sent ${data.person} ${data.credits} credits!`;
+                socket.emit('send_message', { username: 'CREDITS SENT', message: newMessage, roomNumber: roomInfo.chat });
+                const audio = new Audio(buySound);
+                audio.play();
+            }
+
+        };
+        socket.on('get_credits', getCredits);
+        return () => {
+            socket.off('get_credits', getCredits)
+        };
+    }, []);
+
+
+
 
     useEffect(() => {
         const liveRoom = document.querySelector('.UserHistory');

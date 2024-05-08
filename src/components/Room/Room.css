@@ -82,7 +82,7 @@
     align-items: center;
     justify-content: center;
     right: 1rem;
-    bottom: 3.5rem;
+    bottom: 4rem;
     position: absolute;
     z-index: 3;
     user-select: none;
@@ -95,7 +95,7 @@
     align-items: center;
     justify-content: center;
     width: 14rem;
-    height: 14rem;
+    height: 14.5rem;
     background-color: #555555;
     border-radius: .3rem;
 }
@@ -157,6 +157,7 @@
     justify-content: flex-start;
     list-style: none;
     padding: 0;
+    margin: 0.5rem;
 }
 
 .FurniSelectionOptions>li {
@@ -319,4 +320,61 @@
 
 .BetBtn:hover {
     background-color: #a8a8a8;
+}
+
+/* Bet tool */
+
+.BetTool {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    background-color: #f8f8f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    border-radius: .2rem;
+    user-select: none;
+    z-index: 5;
+}
+
+.BetTool>h5 {
+    margin: .8rem;
+    width: 90%;
+    text-align: center;
+}
+
+.BetBtn2 {
+    background-color: gold;
+    padding: .2rem;
+    width: 80%;
+    margin: 1rem;
+    border: 1px solid rgb(140, 140, 140);
+    font-weight: 900;
+}
+
+.BetBtn2:hover {
+    background-color: yellow;
+}
+
+.BetInput {
+    margin: .5rem;
+    box-sizing: border-box;
+    padding: .3rem;
+    width: 50%;
+    border-radius: .3rem;
+    font-weight: 900;
+    border: 1px solid black;
+}
+
+.BetInput:focus {
+    outline: none;
+}
+
+.MaxBet {
+    font-size: .8rem;
+    margin: 0;
+    font-style: italic;
+    color: crimson;
 }
