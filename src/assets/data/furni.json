@@ -56,12 +56,14 @@
     {
         "name": "Green Fountain",
         "img": "src/assets/images/furni/rares/gbb.png",
+        "on": "src/assets/images/furni/rares/gbb-on.gif",
         "icon": "src/assets/images/furni-icons/rares/gbb_icon.png",
         "description": "gbb, goin up"
     },
     {
         "name": "White Fountain",
         "img": "src/assets/images/furni/rares/wbb.png",
+        "on": "src/assets/images/furni/rares/wbb-on.gif",
         "icon": "src/assets/images/furni-icons/rares/wbb_icon.png",
         "description": "wbb, goin up"
     },
@@ -76,6 +78,7 @@
         "name": "Blue Fountain",
         "img": "src/assets/images/furni/rares/bbb.png",
         "icon": "src/assets/images/furni-icons/rares/bbb_icon.png",
+        "on": "src/assets/images/furni/rares/bbb-on.gif",
         "description": "bbb, goin up"
     },
     {
@@ -159,14 +162,12 @@
     {
         "name": "Dicemaster",
         "img": "src/assets/images/furni/club/dm.gif",
-        "0": "src/assets/images/furni/club/dm.gif",
-        "on": "src/assets/images/furni/club/dm_spin.gif",
-        "1": "src/assets/images/furni/club/dm1.gif",
-        "2": "src/assets/images/furni/club/dm2.gif",
-        "3": "src/assets/images/furni/club/dm3.gif",
-        "4": "src/assets/images/furni/club/dm4.gif",
-        "5": "src/assets/images/furni/club/dm5.gif",
-        "6": "src/assets/images/furni/club/dm6.gif",
+        "1": "src/assets/images/furni/club/d1.gif",
+        "2": "src/assets/images/furni/club/d2.gif",
+        "3": "src/assets/images/furni/club/d3.gif",
+        "4": "src/assets/images/furni/club/d4.gif",
+        "5": "src/assets/images/furni/club/d5.gif",
+        "6": "src/assets/images/furni/club/d6.gif",
         "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
         "description": "game?"
     },
@@ -710,7 +711,7 @@
         "description": "death... by exile"
     },
     {
-        "name": "Knight",
+        "name": "Ghotel Knight",
         "img": "src/assets/images/furni/club/hck.png",
         "icon": "src/assets/images/furni-icons/club/hck_icon.png",
         "description": "a watchful protector"
@@ -804,5 +805,101 @@
         "img": "src/assets/images/furni/fans/gf.gif",
         "icon": "src/assets/images/furni-icons/fans/gf_icon.gif",
         "description": "swoof swoof"
+    },
+    {
+        "name": "Pepsi Machine",
+        "img": "src/assets/images/furni/brand/pepsi.gif",
+        "icon": "src/assets/images/furni-icons/brand/pepsi_icon.gif",
+        "description": "an ice cold sarsaparilla with the boys"
+    },
+    {
+        "name": "Orange Slurpee Machine",
+        "img": "src/assets/images/furni/brand/os.gif",
+        "icon": "src/assets/images/furni-icons/brand/os_icon.gif",
+        "description": "ORANGE SLOP"
+    },
+    {
+        "name": "Green Slurpee Machine",
+        "img": "src/assets/images/furni/brand/gs.gif",
+        "icon": "src/assets/images/furni-icons/brand/gs_icon.gif",
+        "description": "Green SKUCK DISPENSER"
+    },
+    {
+        "name": "Purple Slurpee Machine",
+        "img": "src/assets/images/furni/brand/ps.gif",
+        "icon": "src/assets/images/furni-icons/brand/ps_icon.gif",
+        "description": "grape ice dog"
+    },
+    {
+        "name": "Aqua Slurpee Machine",
+        "img": "src/assets/images/furni/brand/as.gif",
+        "icon": "src/assets/images/furni-icons/brand/as_icon.gif",
+        "description": "clear as DAY"
+    },
+    {
+        "name": "Red Slurpee Machine",
+        "img": "src/assets/images/furni/brand/rs.gif",
+        "icon": "src/assets/images/furni-icons/brand/rs_icon.gif",
+        "description": "cherry bomb"
+    },
+    {
+        "name": "Pink Slurpee Machine",
+        "img": "src/assets/images/furni/brand/pks.gif",
+        "icon": "src/assets/images/furni-icons/brand/pks_icon.gif",
+        "description": "GIVE ME THE BALL"
+    },
+    {
+        "name": "Green Pillow",
+        "img": "src/assets/images/furni/pillows/grp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/grp_icon.gif",
+        "description": "FRENCH GOT THE SHOVEL"
+    },
+    {
+        "name": "Red Pillow",
+        "img": "src/assets/images/furni/pillows/rp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/rp_icon.gif",
+        "description": "A festivus for the rest of us"
+    },
+    {
+        "name": "Rhino Nest",
+        "img": "src/assets/images/furni/animals/rn.gif",
+        "icon": "src/assets/images/furni-icons/animals/rn_icon.gif",
+        "description": "Rambi's bed"
+    },
+    {
+        "name": "Gnome",
+        "img": "src/assets/images/furni/collects/gnome.gif",
+        "icon": "src/assets/images/furni-icons/collects/ghome_icon.gif",
+        "description": "I WANT MY ****** GNOME"
+    },
+    {
+        "name": "Koala",
+        "img": "src/assets/images/furni/collects/koala.gif",
+        "icon": "src/assets/images/furni-icons/collects/koala_icon.gif",
+        "description": "look at him go!"
+    },
+    {
+        "name": "Basketball Hoop",
+        "img": "src/assets/images/furni/mode/bh.gif",
+        "icon": "src/assets/images/furni-icons/mode/bh_icon.gif",
+        "description": "I wish I was a baller"
+    },
+    {
+        "name": "The Inferno",
+        "img": "src/assets/images/furni/mode/ship.png",
+        "icon": "src/assets/images/furni-icons/mode/ship_icon.gif",
+        "description": "goonies never say die"
+    },
+    {
+        "name": "Crab",
+        "img": "src/assets/images/furni/animals/crab.gif",
+        "icon": "src/assets/images/furni-icons/animals/crab_icon.gif",
+        "description": "YEH IMMA PINCH YA"
+    },
+    {
+        "name": "Gothic Fountain",
+        "img": "src/assets/images/furni/ultras/gf.gif",
+        "icon": "src/assets/images/furni-icons/ultras/gf_icon.gif",
+        "description": "OH BOY"
     }
 ]

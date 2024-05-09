@@ -52,6 +52,7 @@ export default function Settings({ sprite, setSprite, setSettingsDiv, badges, se
         try {
             let response = await accountAPI.changeBadges(badgeList);
             setBadges(response);
+            setSettingsDiv(false);
         } catch (error) {
             console.error('error changing sprite'.error)
         }
@@ -60,7 +61,8 @@ export default function Settings({ sprite, setSprite, setSettingsDiv, badges, se
     async function changeSprite() {
         try {
             let response = await accountAPI.changeSprite({ sprite: spriteSelection });
-            setSprite(response)
+            setSprite(response);
+            setSettingsDiv(false);
         } catch (error) {
             console.error('error changing sprite'.error)
         }
@@ -162,7 +164,12 @@ export default function Settings({ sprite, setSprite, setSettingsDiv, badges, se
                     <h5 className='UserBadgesTitle'>Your badges:</h5>
                     <div className='PlayerBadges'>
                         {badgeList.map((badge, index) => (
-                            <img src={Badges[badge].img} key={index} draggable="false" />
+                            <img src={Badges[badge].img}
+                                key={index}
+                                draggable="false"
+                                onClick={() => setBadgeSelection(badge)}
+                                className='PlayersBadges' />
+
                         ))}
                     </div>
                     <ul className='BadgesList'>

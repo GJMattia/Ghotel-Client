@@ -11,11 +11,11 @@ import Arrow from '../../assets/images/homepage/arrow.gif';
 import Credits from '../../assets/images/client/credits-icon.png';
 import Throne from '../../assets/images/furni/rares/throne.png';
 import Enter from '../../assets/images/homepage/enter.gif';
-import Fill1 from '../../assets/images/homepage/fill1.gif';
-import Fill2 from '../../assets/images/homepage/fill2.gif';
-import Fill3 from '../../assets/images/homepage/fill3.gif';
 import Clock from '../../assets/images/homepage/clock.gif';
 import Tro from '../../assets/images/homepage/tro.gif';
+import WS1 from '../../assets/images/homepage/ws1.gif';
+import WS2 from '../../assets/images/homepage/ws2.gif';
+import WS3 from '../../assets/images/homepage/ws3.gif';
 
 export default function HomePage({ user, setUser }) {
 
@@ -69,7 +69,7 @@ export default function HomePage({ user, setUser }) {
                     <Link className='OpenClientBtn' to='/client'> Enter Ghotel </Link>
                     <button className='SignOutBtn' onClick={handleLogOut}> Sign Out </button>
                 </div>
-                <h1 className='WelcomeBack'>Welcome back {user.name}!</h1>
+                <h1 className='WelcomeBack'>Welcome to Ghotel {user.name}!</h1>
 
                 <div className='MainContent'>
 
@@ -108,9 +108,21 @@ export default function HomePage({ user, setUser }) {
                 </div>
 
                 <div className='WelcomeFill'>
-                    <img src={Fill2} />
-                    <img src={Fill1} />
-                    <img src={Fill3} />
+                    <div className='WelcomeStuff WS1'>
+                        <h2>Furniture is... INFINITE</h2>
+                        <img src={WS1} draggable="false" />
+                        <h5>Build as you please!</h5>
+                    </div>
+                    <div className='WelcomeStuff WS2'>
+                        <h2>BETTING IS LIVE</h2>
+                        <img src={WS2} draggable="false" />
+                        <h5>13, 21, poker, play whatever you want</h5>
+                    </div>
+                    <div className='WelcomeStuff WS3'>
+                        <h2>The game is FREE</h2>
+                        <img src={WS3} draggable="false" />
+                        <h5>not a cent to play</h5>
+                    </div>
                 </div>
             </div>
         ) : null

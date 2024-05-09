@@ -15,8 +15,8 @@ import io from 'socket.io-client';
 import Badges from '../../assets/data/badges.json';
 import buySound from '../../assets/audio/buy.mp3';
 
-// const socket = io.connect('http://localhost:4741');
-const socket = io.connect('https://ghotel-api.onrender.com');
+const socket = io.connect('http://localhost:4741');
+// const socket = io.connect('https://ghotel-api.onrender.com');
 
 export default function Room({ credits, setCredits, setRoomChange, sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setUserRoomList }) {
 
@@ -37,7 +37,7 @@ export default function Room({ credits, setCredits, setRoomChange, sprite, roomD
     //Furniture Rules
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
     const PETAL_TILES = [47, 48, 49, 50];
-    const USE_FURNI = [11, 26, 52, 58, 61, 70, 87, 88];
+    const USE_FURNI = [9, 10, 11, 12, 26, 52, 58, 61, 70, 87, 88];
     // const SIT_FURNI = [0, 25, 27, 31, 54, 59, 60, 81, 91, 92];
 
     //Betting
@@ -195,18 +195,6 @@ export default function Room({ credits, setCredits, setRoomChange, sprite, roomD
             setRoomData(updatedRoomData);
             setRoomChange({ change: response.tile, tileID: response.tileID });
 
-            if (response.tile[selectedFurniIndex].dice === 0 && !response.tile[selectedFurniIndex].state) {
-                return;
-            } else if (selectedFurni === 26) {
-                setTimeout(async () => {
-                    let response = await roomAPI.useFurni({ furniID: selectedFurni, tileID: selectedTile, furniIndex: selectedFurniIndex, roomID: roomInfo._id, });
-                    const updatedRoomData = [...roomData];
-                    updatedRoomData[response.tileID] = response.tile;
-                    setRoomData(updatedRoomData);
-                    setRoomChange({ change: response.tile, tileID: response.tileID });
-                }, 500);
-            };
-
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -289,23 +277,30 @@ export default function Room({ credits, setCredits, setRoomChange, sprite, roomD
     };
 
     const createSprite = (tileID, username, spriteID, height, rotation) => {
-        const tile = document.getElementById(tileID);
-        const spriteAnchor = document.createElement('div');
-        spriteAnchor.className = 'SpriteAnchor';
-        spriteAnchor.id = username;
-        const spritePoint = document.createElement('div');
-        spritePoint.className = 'SpritePoint';
-        spritePoint.style.bottom = `${height}rem`;
-        const img = document.createElement('img');
-        img.className = 'Sprite';
-        img.src = Sprites[spriteID].stand;
-        rotation ? img.classList.add('Rotate') : null;
-        spritePoint.addEventListener('click', () => {
-            getSprite(username);
-        });
-        spritePoint.appendChild(img);
-        spriteAnchor.appendChild(spritePoint);
-        tile.appendChild(spriteAnchor);
+        const check = document.getElementById(username);
+        if (check) {
+            return;
+        } else {
+            const tile = document.getElementById(tileID);
+            const spriteAnchor = document.createElement('div');
+            spriteAnchor.className = 'SpriteAnchor';
+            spriteAnchor.id = username;
+            const spritePoint = document.createElement('div');
+            spritePoint.className = 'SpritePoint';
+            spritePoint.style.bottom = `${height}rem`;
+            const img = document.createElement('img');
+            img.className = 'Sprite';
+            img.src = Sprites[spriteID].stand;
+            rotation ? img.classList.add('Rotate') : null;
+
+            spritePoint.addEventListener('click', () => {
+                getSprite(username);
+            });
+
+            spritePoint.appendChild(img);
+            spriteAnchor.appendChild(spritePoint);
+            tile.appendChild(spriteAnchor);
+        }
     };
 
     const handleClick = (value, index, innerIndex) => {
@@ -333,6 +328,8 @@ export default function Room({ credits, setCredits, setRoomChange, sprite, roomD
         setRotate(!rotate);
     };
 
+
+
     return (
         <div className='RoomBox'>
             {betDiv && selectedSprite &&
@@ -351,8 +348,8 @@ export default function Room({ credits, setCredits, setRoomChange, sprite, roomD
             }
             <div className='SpriteTool'>
                 <h4 className='BoxHeader'>Sprite Tool</h4>
-                <button className={move ? 'Freeze' : 'Unfreeze'} onClick={() => setMove(!move)}>{move ? 'Freeze Sprite XY' : 'Unfreeze Sprite XY'}</button>
-                <button className={spriteHeight ? 'Freeze' : 'Unfreeze'} onClick={() => setSpriteHeight(!spriteHeight)}>{spriteHeight ? 'Freeze Sprite Z' : 'Unfreeze Sprite Z'}</button>
+                <button className={move ? 'Freeze' : 'Unfreeze'} onClick={() => setMove(!move)}>{move ? 'Freeze Sprite XZ' : 'Unfreeze Sprite XZ'}</button>
+                <button className={spriteHeight ? 'Freeze' : 'Unfreeze'} onClick={() => setSpriteHeight(!spriteHeight)}>{spriteHeight ? 'Freeze Sprite Y' : 'Unfreeze Sprite Y'}</button>
                 <button className='RotateBtn' onClick={rotateSprite}>Rotate Sprite</button>
             </div>
             <div onClick={() => setPFurni(null)} className='AntiFurni'></div>
@@ -424,8 +421,24 @@ export default function Room({ credits, setCredits, setRoomChange, sprite, roomD
                                     onDoubleClick={useFurni}
                                 >
                                     <img
+
                                         className={`FurniImg Furni${item.furniID} ${item.rotation ? 'Rotate' : ''} `}
-                                        src={item.furniID === 26 ? (item.state ? Furniture[item.furniID].on : Furniture[item.furniID][item.dice]) : (item.state ? Furniture[item.furniID].on : Furniture[item.furniID].img)}
+                                        src={
+
+                                            item.furniID === 26 && !item.state ?
+                                                Furniture[item.furniID].img
+                                                :
+                                                (item.furniID === 26 && item.state ?
+                                                    Furniture[item.furniID][item.dice]
+                                                    :
+
+
+                                                    (item.state ?
+                                                        Furniture[item.furniID].on :
+                                                        Furniture[item.furniID].img
+                                                    )
+                                                )
+                                        }
                                     />
                                 </div>
                             </div>

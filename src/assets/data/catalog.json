@@ -264,6 +264,14 @@
         "description": "OH BOY",
         "price": 1,
         "itemid": 99
+      },
+      {
+        "name": "Gothic Fountain",
+        "img": "src/assets/images/furni/ultras/gf.gif",
+        "icon": "src/assets/images/furni-icons/ultras/gf_icon.gif",
+        "description": "OH BOY",
+        "price": 146,
+        "itemid": 146
       }
     ]
   },
@@ -318,12 +326,68 @@
         "itemid": 106
       },
       {
+        "name": "Pepsi Machine",
+        "img": "src/assets/images/furni/brand/pepsi.gif",
+        "icon": "src/assets/images/furni-icons/brand/pepsi_icon.gif",
+        "description": "an ice cold sarsaparilla with the boys",
+        "price": 50,
+        "itemid": 131
+      },
+      {
         "name": "Blue Slurpee Machine",
         "img": "src/assets/images/furni/brand/bs.gif",
         "icon": "src/assets/images/furni-icons/brand/bs_icon.gif",
         "description": "blue razz my dude",
         "price": 50,
         "itemid": 110
+      },
+      {
+        "name": "Orange Slurpee Machine",
+        "img": "src/assets/images/furni/brand/os.gif",
+        "icon": "src/assets/images/furni-icons/brand/os_icon.gif",
+        "description": "ORANGE SLOP",
+        "price": 50,
+        "itemid": 132
+      },
+      {
+        "name": "Green Slurpee Machine",
+        "img": "src/assets/images/furni/brand/gs.gif",
+        "icon": "src/assets/images/furni-icons/brand/gs_icon.gif",
+        "description": "Green SKUCK DISPENSER",
+        "price": 50,
+        "itemid": 133
+      },
+      {
+        "name": "Purple Slurpee Machine",
+        "img": "src/assets/images/furni/brand/ps.gif",
+        "icon": "src/assets/images/furni-icons/brand/ps_icon.gif",
+        "description": "grape ice dog",
+        "price": 50,
+        "itemid": 134
+      },
+      {
+        "name": "Aqua Slurpee Machine",
+        "img": "src/assets/images/furni/brand/as.gif",
+        "icon": "src/assets/images/furni-icons/brand/as_icon.gif",
+        "description": "clear as DAY",
+        "price": 50,
+        "itemid": 135
+      },
+      {
+        "name": "Red Slurpee Machine",
+        "img": "src/assets/images/furni/brand/rs.gif",
+        "icon": "src/assets/images/furni-icons/brand/rs_icon.gif",
+        "description": "cherry bomb",
+        "price": 50,
+        "itemid": 136
+      },
+      {
+        "name": "Pink Slurpee Machine",
+        "img": "src/assets/images/furni/brand/pks.gif",
+        "icon": "src/assets/images/furni-icons/brand/pks_icon.gif",
+        "description": "GIVE ME THE BALL",
+        "price": 50,
+        "itemid": 137
       },
       {
         "name": "711 Cooler",
@@ -389,7 +453,7 @@
         "itemid": 58
       },
       {
-        "name": "Knight",
+        "name": "Ghotel Knight",
         "img": "src/assets/images/furni/club/hck.png",
         "icon": "src/assets/images/furni-icons/club/hck_icon.png",
         "description": "a watchful protector",
@@ -417,6 +481,22 @@
         "description": "YEAH WATER",
         "price": 25,
         "itemid": 61
+      },
+      {
+        "name": "Gnome",
+        "img": "src/assets/images/furni/collects/gnome.gif",
+        "icon": "src/assets/images/furni-icons/collects/ghome_icon.gif",
+        "description": "I WANT MY ****** GNOME",
+        "price": 25,
+        "itemid": 141
+      },
+      {
+        "name": "Koala",
+        "img": "src/assets/images/furni/collects/koala.gif",
+        "icon": "src/assets/images/furni-icons/collects/koala_icon.gif",
+        "description": "look at him go!",
+        "price": 25,
+        "itemid": 142
       }
     ]
   },
@@ -805,6 +885,22 @@
         "description": "pinky2pretty",
         "price": 25,
         "itemid": 104
+      },
+      {
+        "name": "Green Pillow",
+        "img": "src/assets/images/furni/pillows/grp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/grp_icon.gif",
+        "description": "FRENCH GOT THE SHOVEL",
+        "price": 25,
+        "itemid": 138
+      },
+      {
+        "name": "Red Pillow",
+        "img": "src/assets/images/furni/pillows/rp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/rp_icon.gif",
+        "description": "A festivus for the rest of us",
+        "price": 25,
+        "itemid": 139
       }
     ]
   },
@@ -959,7 +1055,7 @@
     ]
   },
   {
-    "name": "Mode",
+    "name": "Norms",
     "mast": "src/assets/images/catalog/masts/mode-mast.gif",
     "furni": [
       {
@@ -985,6 +1081,22 @@
         "description": "WOOD BLOCK",
         "price": 7,
         "itemid": 96
+      },
+      {
+        "name": "Basketball Hoop",
+        "img": "src/assets/images/furni/mode/bh.gif",
+        "icon": "src/assets/images/furni-icons/mode/bh_icon.gif",
+        "description": "I wish I was a baller",
+        "price": 23,
+        "itemid": 143
+      },
+      {
+        "name": "The Inferno",
+        "img": "src/assets/images/furni/mode/ship.png",
+        "icon": "src/assets/images/furni-icons/mode/ship_icon.gif",
+        "description": "goonies never say die",
+        "price": 100,
+        "itemid": 144
       }
     ]
   },
@@ -1037,6 +1149,22 @@
         "description": "death... by exile",
         "price": 40,
         "itemid": 114
+      },
+      {
+        "name": "Crab",
+        "img": "src/assets/images/furni/animals/crab.gif",
+        "icon": "src/assets/images/furni-icons/animals/crab_icon.gif",
+        "description": "YEH IMMA PINCH YA",
+        "price": 30,
+        "itemid": 145
+      },
+      {
+        "name": "Rhino Nest",
+        "img": "src/assets/images/furni/animals/rn.gif",
+        "icon": "src/assets/images/furni-icons/animals/rn_icon.gif",
+        "description": "Rambi's bed",
+        "price": 5,
+        "itemid": 140
       }
     ]
   },

@@ -24,11 +24,10 @@
     user-select: none;
     position: absolute;
     z-index: 104;
-    /* transform: skewX(-37deg) rotate(26.5deg); */
-    /* opacity: .8; */
+    pointer-events: none;
 }
 
-.Sprite:hover {
+.SpritePoint:hover {
     filter: brightness(150%) saturate(150%);
 }
 

@@ -1,6 +1,6 @@
 import sendRequest from "./send-request";
-// const BASE_URL = 'http://localhost:4741/account';
-const BASE_URL = 'https://ghotel-api.onrender.com/account';
+const BASE_URL = 'http://localhost:4741/account';
+// const BASE_URL = 'https://ghotel-api.onrender.com/account';
 
 
 //For Creating Account Schema, used upon account sign up

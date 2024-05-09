@@ -97,6 +97,10 @@
     height: 1.5rem;
 }
 
+.SpriteOptions>h5 {
+    user-select: none;
+}
+
 .SpriteSettings>button {
     width: 75%;
 }
@@ -304,6 +308,7 @@
     left: 1.1rem;
     position: absolute;
     font-size: .8rem;
+    user-select: none;
 }
 
 .UserBadgesTitle {
@@ -311,4 +316,9 @@
     right: 1.3rem;
     position: absolute;
     font-size: .8rem;
+    user-select: none;
+}
+
+.PlayersBadges:hover {
+    filter: saturate(150%) brightness(150%);
 }
