@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 import * as accountAPI from '../../../utilities/account-api';
 import buySound from '../../assets/audio/buy.mp3';
 
-const socket = io.connect('http://localhost:4741');
-// const socket = io.connect('https://ghotel-api.onrender.com');
+// const socket = io.connect('http://localhost:4741');
+const socket = io.connect('https://ghotel-api.onrender.com');
 
 export default function RoomSocket({ user, roomInfo, roomChange, setRoomData, setRoomInfo, credits, setCredits }) {
 

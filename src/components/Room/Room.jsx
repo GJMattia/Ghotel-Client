@@ -15,8 +15,8 @@ import io from 'socket.io-client';
 import Badges from '../../assets/data/badges.json';
 import buySound from '../../assets/audio/buy.mp3';
 
-const socket = io.connect('http://localhost:4741');
-// const socket = io.connect('https://ghotel-api.onrender.com');
+// const socket = io.connect('http://localhost:4741');
+const socket = io.connect('https://ghotel-api.onrender.com');
 
 export default function Room({ credits, setCredits, setRoomChange, sprite, roomData, roomInfo, setRoomInfo, setInventory, setRoomData, user, pFurni, setPFurni, setUserRoomList }) {
 
