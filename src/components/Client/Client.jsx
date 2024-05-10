@@ -12,6 +12,7 @@ import * as roomAPI from '../../../utilities/room-api';
 import Credits from '../../assets/images/client/credits-icon.png';
 import Room from '../Room/Room';
 import RoomSocket from '../RoomSocket/RoomSocket';
+import Debugger from '../Debugger/Debugger';
 
 export default function Client({ user }) {
 
@@ -25,6 +26,7 @@ export default function Client({ user }) {
     const [inventoryDiv, setInventoryDiv] = useState(false);
     const [navigatorDiv, setNavigatorDiv] = useState(false);
     const [settingsDiv, setSettingsDiv] = useState(false);
+    const [debugDiv, setDebugDiv] = useState(true);
 
     //chat elements
     const [room, setRoom] = useState(null);
@@ -94,7 +96,9 @@ export default function Client({ user }) {
 
                     {settingsDiv && <Settings badges={badges} setBadges={setBadges} sprite={sprite} setSprite={setSprite} setSettingsDiv={setSettingsDiv} />}
 
-                    <ClientNav settingsDiv={settingsDiv} setSettingsDiv={setSettingsDiv} setRoomData={setRoomData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
+                    {debugDiv && <Debugger setDebugDiv={setDebugDiv} />}
+
+                    <ClientNav setDebugDiv={setDebugDiv} debugDiv={debugDiv} settingsDiv={settingsDiv} setSettingsDiv={setSettingsDiv} setRoomData={setRoomData} navigatorDiv={navigatorDiv} setNavigatorDiv={setNavigatorDiv} inventoryDiv={inventoryDiv} setInventoryDiv={setInventoryDiv} chatDiv={chatDiv} setChatDiv={setChatDiv} setConsoleDiv={setConsoleDiv} consoleDiv={consoleDiv} catalogDiv={catalogDiv} setCatalogDiv={setCatalogDiv} />
                 </>
             ) : (
                 <p>Loading...</p>
