@@ -26,7 +26,7 @@ export default function Client({ user }) {
     const [inventoryDiv, setInventoryDiv] = useState(false);
     const [navigatorDiv, setNavigatorDiv] = useState(false);
     const [settingsDiv, setSettingsDiv] = useState(false);
-    const [debugDiv, setDebugDiv] = useState(true);
+    const [debugDiv, setDebugDiv] = useState(false);
 
     //chat elements
     const [room, setRoom] = useState(null);
