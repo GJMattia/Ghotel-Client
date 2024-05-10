@@ -3,7 +3,7 @@
         "name": "Throne",
         "img": "src/assets/images/furni/rares/throne.png",
         "icon": "src/assets/images/furni-icons/rares/throne_icon.png",
-        "description": "Important Habbos Only"
+        "description": "Ghotel Staff Only"
     },
     {
         "name": "Petal Patch",
@@ -15,7 +15,7 @@
         "name": "Typewriter",
         "img": "src/assets/images/furni/rares/typo.gif",
         "icon": "src/assets/images/furni-icons/rares/typo_icon.png",
-        "description": "Write that bestseller"
+        "description": "typos kinda suckkk"
     },
     {
         "name": "Gold Cup Trophy",
@@ -39,19 +39,19 @@
         "name": "Golden Elephant",
         "img": "src/assets/images/furni/rares/gnelly.png",
         "icon": "src/assets/images/furni-icons/rares/goldnelly_icon.png",
-        "description": "imported handicrafts"
+        "description": "gold garnecia elefantis"
     },
     {
         "name": "Silver Elephant",
         "img": "src/assets/images/furni/rares/snelly.png",
         "icon": "src/assets/images/furni-icons/rares/silvernelly_icon.png",
-        "description": "imported handicrafts"
+        "description": "silver garnecia elefantis"
     },
     {
         "name": "Bronze Elephant",
         "img": "src/assets/images/furni/rares/bnelly.png",
         "icon": "src/assets/images/furni-icons/rares/bronzenelly_icon.png",
-        "description": "imported handicrafts"
+        "description": "bronze garnecia elefantis"
     },
     {
         "name": "Green Fountain",
@@ -85,79 +85,79 @@
         "name": "Bronze Coin",
         "img": "src/assets/images/furni/exchange/bronzecoin.webp",
         "icon": "src/assets/images/furni-icons/exchange/bronzecoin-icon.png",
-        "description": "Worth 1 Credit."
+        "description": "Worth 1 Credit"
     },
     {
         "name": "Silver Coin",
         "img": "src/assets/images/furni/exchange/silvercoin.webp",
         "icon": "src/assets/images/furni-icons/exchange/silvercoin-icon.png",
-        "description": "Worth 5 Credits."
+        "description": "Worth 5 Credits"
     },
     {
         "name": "Gold Coin",
         "img": "src/assets/images/furni/exchange/goldcoin.webp",
         "icon": "src/assets/images/furni-icons/exchange/goldcoin-icon.png",
-        "description": "Worth 10 Credits."
+        "description": "Worth 10 Credits"
     },
     {
         "name": "Sack of Coins",
         "img": "src/assets/images/furni/exchange/sack.webp",
         "icon": "src/assets/images/furni-icons/exchange/sack-icon.png",
-        "description": "Worth 20 Credits."
+        "description": "Worth 20 Credits"
     },
     {
         "name": "Gold Bar",
         "img": "src/assets/images/furni/exchange/goldbar.webp",
         "icon": "src/assets/images/furni-icons/exchange/goldbar-icon.png",
-        "description": "Worth 50 Credits."
+        "description": "Worth 50 Credits"
     },
     {
         "name": "Platinum Bar",
         "img": "src/assets/images/furni/exchange/platinum.png",
         "icon": "src/assets/images/furni-icons/exchange/platinum-icon.png",
-        "description": "Worth 500 Credits."
+        "description": "Worth 500 Credits"
     },
     {
         "name": "Jake's Crown",
         "img": "src/assets/images/furni/exchange/crown.png",
         "icon": "src/assets/images/furni-icons/exchange/crown-icon.png",
-        "description": "Worth 2500 Credits."
+        "description": "Worth 2500 Credits"
     },
     {
         "name": "Dragon Egg",
         "img": "src/assets/images/furni/rares/dino.gif",
         "icon": "src/assets/images/furni-icons/rares/dino_icon.gif",
-        "description": "The stuff of legend"
+        "description": "Are you ready Almak?"
     },
     {
         "name": "Russian Samovar",
         "img": "src/assets/images/furni/rares/samovar.gif",
         "icon": "src/assets/images/furni-icons/rares/samovar_icon.gif",
-        "description": "Click for a refreshing cuppa"
+        "description": "YO THAT'S BRAZY"
     },
     {
         "name": "DJ Turntable",
         "img": "src/assets/images/furni/rares/djdeck.gif",
         "icon": "src/assets/images/furni-icons/rares/djdeck_icon.gif",
-        "description": "The wheels of expression"
+        "description": "Some...BODY ONCE"
     },
     {
         "name": "Aloe Vera",
         "img": "src/assets/images/furni/rares/aloe.gif",
         "icon": "src/assets/images/furni-icons/rares/aloe_icon.gif",
-        "description": "Goodbye Bert..."
+        "description": "I started this company..."
     },
     {
-        "name": "Habbo Globe",
+        "name": "Ghotel Globe",
         "img": "src/assets/images/furni/rares/globe.gif",
         "icon": "src/assets/images/furni-icons/rares/globe_icon.gif",
-        "description": "Shake, don't break!"
+        "description": "I MADE COPIES"
     },
     {
         "name": "Club Sofa",
         "img": "src/assets/images/furni/club/hcs.gif",
         "icon": "src/assets/images/furni-icons/club/hcs_icon.gif",
-        "description": "13c"
+        "description": "buy for 11c, sell for 13c"
     },
     {
         "name": "Dicemaster",
@@ -175,115 +175,115 @@
         "name": "Majestic Chair",
         "img": "src/assets/images/furni/club/majestic.gif",
         "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
-        "description": "red and"
+        "description": "hiya johnny"
     },
     {
         "name": "Yukka",
         "img": "src/assets/images/furni/plants/yukka.gif",
         "icon": "src/assets/images/furni-icons/plants/yukka_icon.gif",
-        "description": "a tall tree"
+        "description": "you can count me out"
     },
     {
         "name": "Pine",
-        "img": "src/assets/images/furni/plants/pine.gif",
+        "img": "src/assets/imagßes/furni/plants/pine.gif",
         "icon": "src/assets/images/furni-icons/plants/pine_icon.gif",
-        "description": "a short plant"
+        "description": "THE PINE CHARLIE"
     },
     {
         "name": "Vase of flowers",
         "img": "src/assets/images/furni/plants/vase.gif",
         "icon": "src/assets/images/furni-icons/plants/vase_icon.gif",
-        "description": "wow cool"
+        "description": "flowers for algernon"
     },
     {
         "name": "Director's Chair",
         "img": "src/assets/images/furni/rares/dc.gif",
         "icon": "src/assets/images/furni-icons/rares/dc_icon.gif",
-        "description": "ACTION!"
+        "description": "mr dicaprio..."
     },
     {
         "name": "Gold Habbo Trophy",
         "img": "src/assets/images/furni/trophies/ght.png",
         "icon": "src/assets/images/furni-icons/trophies/ght_icon.gif",
-        "description": "it's gold"
+        "description": "LOOK THERE IT IS"
     },
     {
         "name": "Silver Habbo Trophy",
         "img": "src/assets/images/furni/trophies/sht.gif",
         "icon": "src/assets/images/furni-icons/trophies/sht_icon.gif",
-        "description": "it's silver"
+        "description": "The James Marinelli award"
     },
     {
         "name": "Bronze Habbo Trophy",
         "img": "src/assets/images/furni/trophies/bht.gif",
         "icon": "src/assets/images/furni-icons/trophies/bht_icon.gif",
-        "description": "it's bronze"
+        "description": "he was offended...?"
     },
     {
         "name": "Golden Dragon",
         "img": "src/assets/images/furni/dragons/golddrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/golddrag_icon.gif",
-        "description": "it's bronze"
+        "description": "RIP IGOLDY"
     },
     {
         "name": "Silver Dragon",
         "img": "src/assets/images/furni/dragons/silverdrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/silverdrag_icon.gif",
-        "description": "it's silver"
+        "description": "King Midas’ Silver"
     },
     {
         "name": "Bronze Dragon",
         "img": "src/assets/images/furni/dragons/bronzedrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/bronzedrag_icon.gif",
-        "description": "it's bronze"
+        "description": "The JTM special"
     },
     {
         "name": "Forest Dragon",
         "img": "src/assets/images/furni/dragons/forestdrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/forestdrag_icon.gif",
-        "description": "it's forest-colored"
+        "description": "from the tree people"
     },
     {
         "name": "Fire Dragon",
         "img": "src/assets/images/furni/dragons/firedrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/firedrag_icon.gif",
-        "description": "it's fire-colored"
+        "description": "Are the fires of hell a-glowing?"
     },
     {
         "name": "Frost Dragon",
         "img": "src/assets/images/furni/dragons/frostdrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/frostdrag_icon.gif",
-        "description": "it's frost-colored"
+        "description": "MMM RASTA RASTA"
     },
     {
         "name": "Sky Dragon",
         "img": "src/assets/images/furni/dragons/skydrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/skydrag_icon.gif",
-        "description": "it's sky-colored"
+        "description": "dragonite began to glow"
     },
     {
         "name": "Black Dragon",
         "img": "src/assets/images/furni/dragons/blackdrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/blackdrag_icon.gif",
-        "description": "it's black"
+        "description": "The SRC special"
     },
     {
         "name": "Jade Dragon",
         "img": "src/assets/images/furni/dragons/jadedrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/jadedrag_icon.gif",
-        "description": "it's jade-colored"
+        "description": "so we got her on tape ayy?"
     },
     {
         "name": "Blue Dragon",
         "img": "src/assets/images/furni/dragons/bluedrag.gif",
         "icon": "src/assets/images/furni-icons/dragons/bluedrag_icon.gif",
-        "description": "it's blue"
+        "description": "THE KRAKEN"
     },
     {
         "name": "Pink Dragon",
         "img": "src/assets/images/furni/dragons/pinkdrag.webp",
         "icon": "src/assets/images/furni-icons/dragons/pinkdrag_icon.png",
-        "description": "it's pink"
+        "description": "The GJM special"
     },
     {
         "name": "Z Shelf",
@@ -296,25 +296,25 @@
         "img": "src/assets/images/furni/rares/p1.png",
         "img2": "src/assets/images/furni/rares/petal.gif",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "A little bit of outdoors indoors..."
+        "description": "MY **** BUSH"
     },
     {
         "name": "Petal Patch",
         "img": "src/assets/images/furni/rares/p2.png",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "don't pickup"
+        "description": "MY **** BUSH"
     },
     {
         "name": "Petal Patch",
         "img": "src/assets/images/furni/rares/p3.png",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "don't pickup"
+        "description": "MY **** BUSH"
     },
     {
         "name": "Petal Patch",
         "img": "src/assets/images/furni/rares/p4.png",
         "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "don't pickup"
+        "description": "MY **** BUSH"
     },
     {
         "name": "Yellow Marquee",
@@ -357,7 +357,7 @@
         "name": "Imperial Teleporter",
         "img": "src/assets/images/furni/club/imp.png",
         "icon": "src/assets/images/furni-icons/club/imp_icon.gif",
-        "description": "aww yeah"
+        "description": "I'M GOIN BACK UP"
     },
     {
         "name": "Butler",
@@ -444,7 +444,7 @@
         "name": "Staff of Ra",
         "img": "src/assets/images/furni/exchange/spec.png",
         "icon": "src/assets/images/furni-icons/exchange/spec_icon.png",
-        "description": "Worth 350 Credits."
+        "description": "Worth 350 Credits"
     },
     {
         "name": "Black Dragon Egg",
@@ -482,13 +482,13 @@
         "name": "Door Teleporter",
         "img": "src/assets/images/furni/mode/door.gif",
         "icon": "src/assets/images/furni-icons/mode/door_icon.gif",
-        "description": "open up"
+        "description": "MY ROOM IS SMALL"
     },
     {
         "name": "Speaker's Corner",
         "img": "src/assets/images/furni/rares/speaker.gif",
         "icon": "src/assets/images/furni-icons/rares/speaker_icon.gif",
-        "description": "speak now"
+        "description": "SERENITY NOW"
     },
     {
         "name": "Violet Smoke Machine",
@@ -512,7 +512,7 @@
         "name": "Carl Ducksworth",
         "img": "src/assets/images/furni/ultras/carl.png",
         "icon": "src/assets/images/furni-icons/ultras/carl_icon.png",
-        "description": "it's a work of art"
+        "description": "It's the Ductor!"
     },
     {
         "name": "White Space Door",
@@ -524,7 +524,7 @@
         "name": "Infobus",
         "img": "src/assets/images/furni/ultras/infobus.gif",
         "icon": "src/assets/images/furni-icons/ultras/infobus_icon.gif",
-        "description": "Tranzit"
+        "description": "The Tranzit Bus"
     },
     {
         "name": "Ocean Sleepingbag",
@@ -568,7 +568,7 @@
         "name": "Gold Pillow",
         "img": "src/assets/images/furni/pillows/gp.gif",
         "icon": "src/assets/images/furni-icons/pillows/gp_icon.gif",
-        "description": "made from gold"
+        "description": "LET'S SKOINK RIGHT IN"
     },
     {
         "name": "Bronze Pillow",
@@ -580,7 +580,7 @@
         "name": "Raven",
         "img": "src/assets/images/furni/animals/raven.gif",
         "icon": "src/assets/images/furni-icons/animals/raven_icon.gif",
-        "description": "for in front of the door"
+        "description": "no... book?"
     },
     {
         "name": "American Idol Trophy",
@@ -598,13 +598,13 @@
         "name": "Lodge Corner",
         "img": "src/assets/images/furni/mode/corn.gif",
         "icon": "src/assets/images/furni-icons/mode/corn_icon.gif",
-        "description": "WOOD BLOCK"
+        "description": "aghuh like the woods"
     },
     {
         "name": "Donkey Kong Country",
         "img": "src/assets/images/furni/exchange/dkc.png",
         "icon": "src/assets/images/furni-icons/exchange/dkc_icon.png",
-        "description": "for SNES"
+        "description": "Worth 500 Bananas"
     },
     {
         "name": "MTN Dew Machine",
@@ -634,7 +634,7 @@
         "name": "Diamond Elephant",
         "img": "src/assets/images/furni/rares/dnelly.gif",
         "icon": "src/assets/images/furni-icons/rares/dnelly_icon.png",
-        "description": "imported handicrafts"
+        "description": "diamond garnecia elefantis"
     },
     {
         "name": "Black Space Door",
@@ -652,7 +652,7 @@
         "name": "Fuchsia ICM",
         "img": "src/assets/images/furni/icms/ficm.gif",
         "icon": "src/assets/images/furni-icons/icms/ficm_icon.gif",
-        "description": "the safari zone special"
+        "description": "the safari zone deluxe"
     },
     {
         "name": "Cheeto Machine",
@@ -756,13 +756,13 @@
         "name": "Gramophone",
         "img": "src/assets/images/furni/ultras/gram.png",
         "icon": "src/assets/images/furni-icons/ultras/gram_icon.png",
-        "description": "Where'd you get those peepers?"
+        "description": "where'd you get those peepers?"
     },
     {
         "name": "Golden Tub",
         "img": "src/assets/images/furni/limit/gt.png",
         "icon": "src/assets/images/furni-icons/limit/gt_icon.png",
-        "description": "FENTON"
+        "description": "FENTON, AW CHRIST"
     },
     {
         "name": "Red Amber Lamp",
@@ -810,7 +810,7 @@
         "name": "Pepsi Machine",
         "img": "src/assets/images/furni/brand/pepsi.gif",
         "icon": "src/assets/images/furni-icons/brand/pepsi_icon.gif",
-        "description": "an ice cold sarsaparilla with the boys"
+        "description": "an ice cold sarsaparilla"
     },
     {
         "name": "Orange Slurpee Machine",
@@ -870,7 +870,7 @@
         "name": "Gnome",
         "img": "src/assets/images/furni/collects/gnome.gif",
         "icon": "src/assets/images/furni-icons/collects/ghome_icon.gif",
-        "description": "I WANT MY ****** GNOME"
+        "description": "I WANT MY **** GNOME"
     },
     {
         "name": "Koala",
@@ -900,6 +900,64 @@
         "name": "Gothic Fountain",
         "img": "src/assets/images/furni/ultras/gf.gif",
         "icon": "src/assets/images/furni-icons/ultras/gf_icon.gif",
-        "description": "OH BOY"
+        "description": "blood of an irish goat"
+    },
+    {
+        "name": "Industrial Turbine",
+        "img": "src/assets/images/furni/ultras/it.gif",
+        "on": "src/assets/images/furni/ultras/it-on.gif",
+        "icon": "src/assets/images/furni-icons/ultras/it_icon.gif",
+        "description": "twister... wait up"
+    },
+    {
+        "name": "Telescope",
+        "img": "src/assets/images/furni/ultras/scope.png",
+        "icon": "src/assets/images/furni-icons/ultras/scope_icon.png",
+        "description": "EMMEEEETTTTTTT"
+    },
+    {
+        "name": "Father of Ghotel",
+        "img": "src/assets/images/furni/walls/father.gif",
+        "icon": "src/assets/images/furni-icons/walls/father_icon.gif",
+        "description": "He was #1"
+    },
+    {
+        "name": "Golden Record",
+        "img": "src/assets/images/furni/walls/record.gif",
+        "icon": "src/assets/images/furni-icons/walls/record_icon.gif",
+        "description": "Basil, the record"
+    },
+    {
+        "name": "Disco Sign",
+        "img": "src/assets/images/furni/walls/disco.gif",
+        "icon": "src/assets/images/furni-icons/walls/disco_icon.gif",
+        "description": "I SAW YOUR FACE AND WOW"
+    },
+    {
+        "name": "Wise Owl",
+        "img": "src/assets/images/furni/animals/owl.gif",
+        "icon": "src/assets/images/furni-icons/animals/owl_icon.png",
+        "description": "Mr. Owl, how many AHHH"
+    },
+    {
+        "name": "Mocca Master",
+        "img": "src/assets/images/furni/club/moc.gif",
+        "icon": "src/assets/images/furni-icons/club/moc_icon.gif",
+        "description": "how old you are?"
+    },
+    {
+        "name": "The Safe",
+        "img": "src/assets/images/furni/ultras/safe.gif",
+        "on": "src/assets/images/furni/ultras/safe-on.gif",
+        "icon": "src/assets/images/furni-icons/ultras/safe_icon.gif",
+        "description": "I PUT THE COAT ON HER"
+    },
+    {
+        "name": "Viking Loot",
+        "img": "src/assets/images/furni/exchange/loot.png",
+        "icon": "src/assets/images/furni-icons/exchange/loot_icon.png",
+        "description": "Worth 500 doubloons",
+        "price": 500,
+        "itemid": 155
     }
 ]

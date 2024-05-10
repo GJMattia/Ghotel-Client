@@ -41,6 +41,10 @@
     bottom: .2rem;
 }
 
+.Furni12 {
+    bottom: .2rem;
+}
+
 .Furni13 {
     bottom: .4rem;
 }
@@ -352,4 +356,27 @@
 .Furni146 {
     bottom: 1rem;
     left: 1rem;
+}
+
+.Furni149 {
+    bottom: .5rem;
+    left: .4rem;
+}
+
+.Furni150 {
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.Furni152 {
+    bottom: .5rem;
+    left: .4rem;
+}
+
+.Furni153 {
+    bottom: .1rem;
+}
+
+.Furni154 {
+    right: .9rem;
 }

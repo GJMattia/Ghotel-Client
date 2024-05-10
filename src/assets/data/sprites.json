@@ -53,5 +53,15 @@
         "name": "C3PO",
         "stand": "src/assets/images/sprites/c3po.gif",
         "sit": "src/assets/images/sprites/c3po.gif"
+    },
+    {
+        "name": "Sean",
+        "stand": "src/assets/images/sprites/sean.gif",
+        "sit": "src/assets/images/sprites/sean.gif"
+    },
+    {
+        "name": "Wonka",
+        "stand": "src/assets/images/sprites/wonka.gif",
+        "sit": "src/assets/images/sprites/wonka.gif"
     }
 ]

@@ -69,7 +69,7 @@ export default function Settings({ sprite, setSprite, setSettingsDiv, badges, se
     };
 
     const plusSprite = () => {
-        if (spriteSelection === 10) {
+        if (spriteSelection === 12) {
             setSpriteSelection(0);
         } else {
             setSpriteSelection(prevSpriteSelection => prevSpriteSelection + 1);
@@ -78,7 +78,7 @@ export default function Settings({ sprite, setSprite, setSettingsDiv, badges, se
 
     const minusSprite = () => {
         if (spriteSelection === 0) {
-            setSpriteSelection(10);
+            setSpriteSelection(12);
         } else {
             setSpriteSelection(prevSpriteSelection => prevSpriteSelection - 1);
         }
