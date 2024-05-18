@@ -319,6 +319,7 @@
     {
         "name": "Yellow Marquee",
         "img": "src/assets/images/furni/marquees/ym.gif",
+        "on": "src/assets/images/furni/marquees/ym-on.gif",
         "icon": "src/assets/images/furni-icons/marquees/ym_icon.gif",
         "description": "slim shady"
     },

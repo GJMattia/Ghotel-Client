@@ -37,7 +37,7 @@ export default function Room({ credits, setCredits, setRoomChange, sprite, roomD
     //Furniture Rules
     const PETAL_RULES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 38, 51, 64, 77, 90, 103];
     const PETAL_TILES = [47, 48, 49, 50];
-    const USE_FURNI = [9, 10, 11, 12, 26, 52, 58, 61, 70, 87, 88, 147, 154];
+    const USE_FURNI = [9, 10, 11, 12, 26, 51, 52, 58, 61, 70, 87, 88, 147, 154];
     // const SIT_FURNI = [0, 25, 27, 31, 54, 59, 60, 81, 91, 92];
 
     //Betting
