@@ -63,5 +63,10 @@
         "name": "Wonka",
         "stand": "src/assets/images/sprites/wonka.gif",
         "sit": "src/assets/images/sprites/wonka.gif"
+    },
+    {
+        "name": "Jake",
+        "stand": "src/assets/images/sprites/jake.gif",
+        "sit": "src/assets/images/sprites/jake.gif"
     }
 ]
