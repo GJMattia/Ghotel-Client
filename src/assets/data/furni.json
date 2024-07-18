@@ -1,964 +1,964 @@
 [
-    {
-        "name": "Throne",
-        "img": "src/assets/images/furni/rares/throne.png",
-        "icon": "src/assets/images/furni-icons/rares/throne_icon.png",
-        "description": "Ghotel Staff Only"
-    },
-    {
-        "name": "Petal Patch",
-        "img": "src/assets/images/furni/rares/petal.gif",
-        "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "A little bit of outdoors indoors..."
-    },
-    {
-        "name": "Typewriter",
-        "img": "src/assets/images/furni/rares/typo.gif",
-        "icon": "src/assets/images/furni-icons/rares/typo_icon.png",
-        "description": "typos kinda suckkk"
-    },
-    {
-        "name": "Gold Cup Trophy",
-        "img": "src/assets/images/furni/trophies/goldcup.png",
-        "icon": "src/assets/images/furni-icons/trophies/goldcup_icon.png",
-        "description": "1st in the basketball match"
-    },
-    {
-        "name": "Silver Cup Trophy",
-        "img": "src/assets/images/furni/trophies/silvercup.png",
-        "icon": "src/assets/images/furni-icons/trophies/silvercup_icon.png",
-        "description": "2nd in the basketball match"
-    },
-    {
-        "name": "Bronze Cup Trophy",
-        "img": "src/assets/images/furni/trophies/bronzecup.png",
-        "icon": "src/assets/images/furni-icons/trophies/bronzecup_icon.png",
-        "description": "3rd in the basketball match"
-    },
-    {
-        "name": "Golden Elephant",
-        "img": "src/assets/images/furni/rares/gnelly.png",
-        "icon": "src/assets/images/furni-icons/rares/goldnelly_icon.png",
-        "description": "gold garnecia elefantis"
-    },
-    {
-        "name": "Silver Elephant",
-        "img": "src/assets/images/furni/rares/snelly.png",
-        "icon": "src/assets/images/furni-icons/rares/silvernelly_icon.png",
-        "description": "silver garnecia elefantis"
-    },
-    {
-        "name": "Bronze Elephant",
-        "img": "src/assets/images/furni/rares/bnelly.png",
-        "icon": "src/assets/images/furni-icons/rares/bronzenelly_icon.png",
-        "description": "bronze garnecia elefantis"
-    },
-    {
-        "name": "Green Fountain",
-        "img": "src/assets/images/furni/rares/gbb.png",
-        "on": "src/assets/images/furni/rares/gbb-on.gif",
-        "icon": "src/assets/images/furni-icons/rares/gbb_icon.png",
-        "description": "gbb, goin up"
-    },
-    {
-        "name": "White Fountain",
-        "img": "src/assets/images/furni/rares/wbb.png",
-        "on": "src/assets/images/furni/rares/wbb-on.gif",
-        "icon": "src/assets/images/furni-icons/rares/wbb_icon.png",
-        "description": "wbb, goin up"
-    },
-    {
-        "name": "Red Fountain",
-        "img": "src/assets/images/furni/rares/rbb.png",
-        "on": "src/assets/images/furni/rares/rbb-on.gif",
-        "icon": "src/assets/images/furni-icons/rares/rbb_icon.png",
-        "description": "rbb, goin up"
-    },
-    {
-        "name": "Blue Fountain",
-        "img": "src/assets/images/furni/rares/bbb.png",
-        "icon": "src/assets/images/furni-icons/rares/bbb_icon.png",
-        "on": "src/assets/images/furni/rares/bbb-on.gif",
-        "description": "bbb, goin up"
-    },
-    {
-        "name": "Bronze Coin",
-        "img": "src/assets/images/furni/exchange/bronzecoin.webp",
-        "icon": "src/assets/images/furni-icons/exchange/bronzecoin-icon.png",
-        "description": "Worth 1 Credit"
-    },
-    {
-        "name": "Silver Coin",
-        "img": "src/assets/images/furni/exchange/silvercoin.webp",
-        "icon": "src/assets/images/furni-icons/exchange/silvercoin-icon.png",
-        "description": "Worth 5 Credits"
-    },
-    {
-        "name": "Gold Coin",
-        "img": "src/assets/images/furni/exchange/goldcoin.webp",
-        "icon": "src/assets/images/furni-icons/exchange/goldcoin-icon.png",
-        "description": "Worth 10 Credits"
-    },
-    {
-        "name": "Sack of Coins",
-        "img": "src/assets/images/furni/exchange/sack.webp",
-        "icon": "src/assets/images/furni-icons/exchange/sack-icon.png",
-        "description": "Worth 20 Credits"
-    },
-    {
-        "name": "Gold Bar",
-        "img": "src/assets/images/furni/exchange/goldbar.webp",
-        "icon": "src/assets/images/furni-icons/exchange/goldbar-icon.png",
-        "description": "Worth 50 Credits"
-    },
-    {
-        "name": "Platinum Bar",
-        "img": "src/assets/images/furni/exchange/platinum.png",
-        "icon": "src/assets/images/furni-icons/exchange/platinum-icon.png",
-        "description": "Worth 500 Credits"
-    },
-    {
-        "name": "Jake's Crown",
-        "img": "src/assets/images/furni/exchange/crown.png",
-        "icon": "src/assets/images/furni-icons/exchange/crown-icon.png",
-        "description": "Worth 2500 Credits"
-    },
-    {
-        "name": "Dragon Egg",
-        "img": "src/assets/images/furni/rares/dino.gif",
-        "icon": "src/assets/images/furni-icons/rares/dino_icon.gif",
-        "description": "Are you ready Almak?"
-    },
-    {
-        "name": "Russian Samovar",
-        "img": "src/assets/images/furni/rares/samovar.gif",
-        "icon": "src/assets/images/furni-icons/rares/samovar_icon.gif",
-        "description": "YO THAT'S BRAZY"
-    },
-    {
-        "name": "DJ Turntable",
-        "img": "src/assets/images/furni/rares/djdeck.gif",
-        "icon": "src/assets/images/furni-icons/rares/djdeck_icon.gif",
-        "description": "Some...BODY ONCE"
-    },
-    {
-        "name": "Aloe Vera",
-        "img": "src/assets/images/furni/rares/aloe.gif",
-        "icon": "src/assets/images/furni-icons/rares/aloe_icon.gif",
-        "description": "I started this company..."
-    },
-    {
-        "name": "Ghotel Globe",
-        "img": "src/assets/images/furni/rares/globe.gif",
-        "icon": "src/assets/images/furni-icons/rares/globe_icon.gif",
-        "description": "I MADE COPIES"
-    },
-    {
-        "name": "Club Sofa",
-        "img": "src/assets/images/furni/club/hcs.gif",
-        "icon": "src/assets/images/furni-icons/club/hcs_icon.gif",
-        "description": "buy for 11c, sell for 13c"
-    },
-    {
-        "name": "Dicemaster",
-        "img": "src/assets/images/furni/club/dm.gif",
-        "1": "src/assets/images/furni/club/d1.gif",
-        "2": "src/assets/images/furni/club/d2.gif",
-        "3": "src/assets/images/furni/club/d3.gif",
-        "4": "src/assets/images/furni/club/d4.gif",
-        "5": "src/assets/images/furni/club/d5.gif",
-        "6": "src/assets/images/furni/club/d6.gif",
-        "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
-        "description": "game?"
-    },
-    {
-        "name": "Majestic Chair",
-        "img": "src/assets/images/furni/club/majestic.gif",
-        "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
-        "description": "hiya johnny"
-    },
-    {
-        "name": "Yukka",
-        "img": "src/assets/images/furni/plants/yukka.gif",
-        "icon": "src/assets/images/furni-icons/plants/yukka_icon.gif",
-        "description": "you can count me out"
-    },
-    {
-        "name": "Pine",
-        "img": "src/assets/images/furni/plants/pine.gif",
-        "icon": "src/assets/images/furni-icons/plants/pine_icon.gif",
-        "description": "THE PINE CHARLIE"
-    },
-    {
-        "name": "Vase of flowers",
-        "img": "src/assets/images/furni/plants/vase.gif",
-        "icon": "src/assets/images/furni-icons/plants/vase_icon.gif",
-        "description": "flowers for algernon"
-    },
-    {
-        "name": "Director's Chair",
-        "img": "src/assets/images/furni/rares/dc.gif",
-        "icon": "src/assets/images/furni-icons/rares/dc_icon.gif",
-        "description": "mr dicaprio..."
-    },
-    {
-        "name": "Gold Habbo Trophy",
-        "img": "src/assets/images/furni/trophies/ght.png",
-        "icon": "src/assets/images/furni-icons/trophies/ght_icon.gif",
-        "description": "LOOK THERE IT IS"
-    },
-    {
-        "name": "Silver Habbo Trophy",
-        "img": "src/assets/images/furni/trophies/sht.gif",
-        "icon": "src/assets/images/furni-icons/trophies/sht_icon.gif",
-        "description": "The James Marinelli award"
-    },
-    {
-        "name": "Bronze Habbo Trophy",
-        "img": "src/assets/images/furni/trophies/bht.gif",
-        "icon": "src/assets/images/furni-icons/trophies/bht_icon.gif",
-        "description": "he was offended...?"
-    },
-    {
-        "name": "Golden Dragon",
-        "img": "src/assets/images/furni/dragons/golddrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/golddrag_icon.gif",
-        "description": "RIP IGOLDY"
-    },
-    {
-        "name": "Silver Dragon",
-        "img": "src/assets/images/furni/dragons/silverdrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/silverdrag_icon.gif",
-        "description": "King Midas’ Silver"
-    },
-    {
-        "name": "Bronze Dragon",
-        "img": "src/assets/images/furni/dragons/bronzedrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/bronzedrag_icon.gif",
-        "description": "The JTM special"
-    },
-    {
-        "name": "Forest Dragon",
-        "img": "src/assets/images/furni/dragons/forestdrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/forestdrag_icon.gif",
-        "description": "from the tree people"
-    },
-    {
-        "name": "Fire Dragon",
-        "img": "src/assets/images/furni/dragons/firedrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/firedrag_icon.gif",
-        "description": "Are the fires of hell a-glowing?"
-    },
-    {
-        "name": "Frost Dragon",
-        "img": "src/assets/images/furni/dragons/frostdrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/frostdrag_icon.gif",
-        "description": "MMM RASTA RASTA"
-    },
-    {
-        "name": "Sky Dragon",
-        "img": "src/assets/images/furni/dragons/skydrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/skydrag_icon.gif",
-        "description": "dragonite began to glow"
-    },
-    {
-        "name": "Black Dragon",
-        "img": "src/assets/images/furni/dragons/blackdrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/blackdrag_icon.gif",
-        "description": "The SRC special"
-    },
-    {
-        "name": "Jade Dragon",
-        "img": "src/assets/images/furni/dragons/jadedrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/jadedrag_icon.gif",
-        "description": "so we got her on tape ayy?"
-    },
-    {
-        "name": "Blue Dragon",
-        "img": "src/assets/images/furni/dragons/bluedrag.gif",
-        "icon": "src/assets/images/furni-icons/dragons/bluedrag_icon.gif",
-        "description": "THE KRAKEN"
-    },
-    {
-        "name": "Pink Dragon",
-        "img": "src/assets/images/furni/dragons/pinkdrag.webp",
-        "icon": "src/assets/images/furni-icons/dragons/pinkdrag_icon.png",
-        "description": "The GJM special"
-    },
-    {
-        "name": "Z Shelf",
-        "img": "src/assets/images/furni/mode/zshelf.gif",
-        "icon": "src/assets/images/furni-icons/mode/zshelf_icon.gif",
-        "description": "for stacking"
-    },
-    {
-        "name": "Petal Patch",
-        "img": "src/assets/images/furni/rares/p1.png",
-        "img2": "src/assets/images/furni/rares/petal.gif",
-        "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "MY **** BUSH"
-    },
-    {
-        "name": "Petal Patch",
-        "img": "src/assets/images/furni/rares/p2.png",
-        "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "MY **** BUSH"
-    },
-    {
-        "name": "Petal Patch",
-        "img": "src/assets/images/furni/rares/p3.png",
-        "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "MY **** BUSH"
-    },
-    {
-        "name": "Petal Patch",
-        "img": "src/assets/images/furni/rares/p4.png",
-        "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
-        "description": "MY **** BUSH"
-    },
-    {
-        "name": "Yellow Marquee",
-        "img": "src/assets/images/furni/marquees/ym.gif",
-        "on": "src/assets/images/furni/marquees/ym-on.gif",
-        "icon": "src/assets/images/furni-icons/marquees/ym_icon.gif",
-        "description": "slim shady"
-    },
-    {
-        "name": "White Lasergate",
-        "img": "src/assets/images/furni/lasers/whitelaser.gif",
-        "icon": "src/assets/images/furni-icons/lasers/whitelaser_icon.gif",
-        "on": "src/assets/images/furni/lasers/wlaser-on.gif",
-        "description": "jack plasma"
-    },
-    {
-        "name": "Purple ICM",
-        "img": "src/assets/images/furni/icms/picm.gif",
-        "icon": "src/assets/images/furni-icons/icms/picm_icon.gif",
-        "description": "the fourth flavor"
-    },
-    {
-        "name": "White Pillow",
-        "img": "src/assets/images/furni/pillows/wp.gif",
-        "icon": "src/assets/images/furni-icons/pillows/wp_icon.gif",
-        "description": "the santa clause 3"
-    },
-    {
-        "name": "Yellow Fan",
-        "img": "src/assets/images/furni/fans/yfan.gif",
-        "icon": "src/assets/images/furni-icons/fans/yfan_icon.gif",
-        "description": "swoof swoof"
-    },
-    {
-        "name": "Blue Smoke Machine",
-        "img": "src/assets/images/furni/smokes/nsm.gif",
-        "icon": "src/assets/images/furni-icons/smokes/nsm_icon.gif",
-        "description": "aguh no smoke?"
-    },
-    {
-        "name": "Imperial Teleporter",
-        "img": "src/assets/images/furni/club/imp.png",
-        "icon": "src/assets/images/furni-icons/club/imp_icon.gif",
-        "description": "I'M GOIN BACK UP"
-    },
-    {
-        "name": "Butler",
-        "img": "src/assets/images/furni/club/butler.gif",
-        "on": "src/assets/images/furni/club/butler-on.gif",
-        "icon": "src/assets/images/furni-icons/club/butler_icon.gif",
-        "description": "Breakfast is served!"
-    },
-    {
-        "name": "Black Pillow",
-        "img": "src/assets/images/furni/pillows/bp.gif",
-        "icon": "src/assets/images/furni-icons/pillows/bp_icon.gif",
-        "description": "gordon heights cushion"
-    },
-    {
-        "name": "Turquoise Pillow",
-        "img": "src/assets/images/furni/pillows/tp.gif",
-        "icon": "src/assets/images/furni-icons/pillows/tp_icon.gif",
-        "description": "tortuga"
-    },
-    {
-        "name": "Architeuthis",
-        "img": "src/assets/images/furni/collects/arch.gif",
-        "icon": "src/assets/images/furni-icons/collects/arch_icon.gif",
-        "on": "src/assets/images/furni/collects/arch-on.gif",
-        "description": "AW SICK DAVY JONES"
-    },
-    {
-        "name": "Habbo Cola Machine",
-        "img": "src/assets/images/furni/rares/hcola.gif",
-        "icon": "src/assets/images/furni-icons/rares/hcola_icon.gif",
-        "description": "it was a dark and stormy night"
-    },
-    {
-        "name": "Holoboy",
-        "img": "src/assets/images/furni/rares/hboy.gif",
-        "icon": "src/assets/images/furni-icons/rares/hboy_icon.gif",
-        "description": "DIGITAL STYLE"
-    },
-    {
-        "name": "Hologirl",
-        "img": "src/assets/images/furni/rares/hgirl.gif",
-        "icon": "src/assets/images/furni-icons/rares/hgirl_icon.gif",
-        "description": "DIGITAL STYLE"
-    },
-    {
-        "name": "Oil Lamp",
-        "img": "src/assets/images/furni/club/oil.gif",
-        "icon": "src/assets/images/furni-icons/club/oil_icon.gif",
-        "description": "powered by black gold"
-    },
-    {
-        "name": "Orange Para",
-        "img": "src/assets/images/furni/paras/op.gif",
-        "icon": "src/assets/images/furni-icons/paras/op_icon.gif",
-        "description": "marry poppins"
-    },
-    {
-        "name": "Moodi Machine",
-        "img": "src/assets/images/furni/ultras/moodi.gif",
-        "icon": "src/assets/images/furni-icons/ultras/moodi_icon.png",
-        "description": "I'M HAVING A MAN BREAK"
-    },
-    {
-        "name": "Golden Tablet",
-        "img": "src/assets/images/furni/ultras/gtab.png",
-        "icon": "src/assets/images/furni-icons/ultras/gtab_icon.png",
-        "description": "THROUGH THE TREASURE ROOM"
-    },
-    {
-        "name": "Big Ben",
-        "img": "src/assets/images/furni/collects/bigben.gif",
-        "icon": "src/assets/images/furni-icons/collects/bigben_icon.gif",
-        "description": "tick TOCK"
-    },
-    {
-        "name": "Black Lasergate",
-        "img": "src/assets/images/furni/lasers/blaser.gif",
-        "icon": "src/assets/images/furni-icons/lasers/blaser_icon.gif",
-        "on": "src/assets/images/furni/lasers/blaser-on.gif",
-        "description": "zing zong"
-    },
-    {
-        "name": "Staff of Ra",
-        "img": "src/assets/images/furni/exchange/spec.png",
-        "icon": "src/assets/images/furni-icons/exchange/spec_icon.png",
-        "description": "Worth 350 Credits"
-    },
-    {
-        "name": "Black Dragon Egg",
-        "img": "src/assets/images/furni/limit/bdino.png",
-        "icon": "src/assets/images/furni-icons/limit/bdino_icon.gif",
-        "description": "number 2, CHERZARD"
-    },
-    {
-        "name": "Orange ICM",
-        "img": "src/assets/images/furni/icms/oicm.gif",
-        "icon": "src/assets/images/furni-icons/icms/oicm_icon.gif",
-        "description": "orange ice"
-    },
-    {
-        "name": "Sky Blue Marquee",
-        "img": "src/assets/images/furni/marquees/sm.gif",
-        "icon": "src/assets/images/furni-icons/marquees/sm_icon.gif",
-        "description": "butterfly in the sky"
-    },
-    {
-        "name": "Purple Marquee",
-        "img": "src/assets/images/furni/marquees/pm.gif",
-        "icon": "src/assets/images/furni-icons/marquees/pm_icon.gif",
-        "description": "the purple one"
-    },
-    {
-        "name": "Gold Pillar",
-        "img": "src/assets/images/furni/pillars/gp.gif",
-        "icon": "src/assets/images/furni-icons/pillars/gp_icon.gif",
-        "description": "big and gold",
-        "price": 25,
-        "itemid": 76
-    },
-    {
-        "name": "Door Teleporter",
-        "img": "src/assets/images/furni/mode/door.gif",
-        "icon": "src/assets/images/furni-icons/mode/door_icon.gif",
-        "description": "MY ROOM IS SMALL"
-    },
-    {
-        "name": "Speaker's Corner",
-        "img": "src/assets/images/furni/rares/speaker.gif",
-        "icon": "src/assets/images/furni-icons/rares/speaker_icon.gif",
-        "description": "SERENITY NOW"
-    },
-    {
-        "name": "Violet Smoke Machine",
-        "img": "src/assets/images/furni/smokes/vsm.gif",
-        "icon": "src/assets/images/furni-icons/smokes/vsm_icon.gif",
-        "description": "aguh no smoke?"
-    },
-    {
-        "name": "Turquoise Fan",
-        "img": "src/assets/images/furni/fans/tfan.gif",
-        "icon": "src/assets/images/furni-icons/fans/tfan_icon.gif",
-        "description": "swoof swoof"
-    },
-    {
-        "name": "Navy Pillow",
-        "img": "src/assets/images/furni/pillows/np.gif",
-        "icon": "src/assets/images/furni-icons/pillows/np_icon.gif",
-        "description": "not the navy!"
-    },
-    {
-        "name": "Carl Ducksworth",
-        "img": "src/assets/images/furni/ultras/carl.png",
-        "icon": "src/assets/images/furni-icons/ultras/carl_icon.png",
-        "description": "It's the Ductor!"
-    },
-    {
-        "name": "White Space Door",
-        "img": "src/assets/images/furni/space/wsd.gif",
-        "icon": "src/assets/images/furni-icons/space/wsd_icon.gif",
-        "description": "Jason X"
-    },
-    {
-        "name": "Infobus",
-        "img": "src/assets/images/furni/ultras/infobus.gif",
-        "icon": "src/assets/images/furni-icons/ultras/infobus_icon.gif",
-        "description": "The Tranzit Bus"
-    },
-    {
-        "name": "Ocean Sleepingbag",
-        "img": "src/assets/images/furni/ultras/ocean.gif",
-        "icon": "src/assets/images/furni-icons/ultras/ocean_icon.gif",
-        "description": "For Jake only"
-    },
-    {
-        "name": "Monster Plant",
-        "img": "src/assets/images/furni/rares/plant.gif",
-        "icon": "src/assets/images/furni-icons/rares/plant_icon.gif",
-        "description": "THE MONSTER MASH"
-    },
-    {
-        "name": "Gold Lasergate",
-        "img": "src/assets/images/furni/lasers/glaser.gif",
-        "icon": "src/assets/images/furni-icons/lasers/glaser_icon.gif",
-        "description": "zing zong zap",
-        "on": "src/assets/images/furni/lasers/glaser-on.gif"
-    },
-    {
-        "name": "Red Lasergate",
-        "img": "src/assets/images/furni/lasers/rlaser.gif",
-        "icon": "src/assets/images/furni-icons/lasers/rlaser_icon.gif",
-        "description": "zing zong zap zeep",
-        "on": "src/assets/images/furni/lasers/rlaser-on.gif"
-    },
-    {
-        "name": "Turquoise ICM",
-        "img": "src/assets/images/furni/icms/ticm.gif",
-        "icon": "src/assets/images/furni-icons/icms/ticm_icon.gif",
-        "description": "it's cold"
-    },
-    {
-        "name": "Gold ICM",
-        "img": "src/assets/images/furni/icms/gicm.gif",
-        "icon": "src/assets/images/furni-icons/icms/gicm_icon.gif",
-        "description": "oooo yum yum yum"
-    },
-    {
-        "name": "Gold Pillow",
-        "img": "src/assets/images/furni/pillows/gp.gif",
-        "icon": "src/assets/images/furni-icons/pillows/gp_icon.gif",
-        "description": "LET'S SKOINK RIGHT IN"
-    },
-    {
-        "name": "Bronze Pillow",
-        "img": "src/assets/images/furni/pillows/bronzep.png",
-        "icon": "src/assets/images/furni-icons/pillows/bronzep_icon.png",
-        "description": "the bronze age"
-    },
-    {
-        "name": "Raven",
-        "img": "src/assets/images/furni/animals/raven.gif",
-        "icon": "src/assets/images/furni-icons/animals/raven_icon.gif",
-        "description": "no... book?"
-    },
-    {
-        "name": "American Idol Trophy",
-        "img": "src/assets/images/furni/trophies/ai.gif",
-        "icon": "src/assets/images/furni-icons/trophies/ai_icon.gif",
-        "description": "david cook"
-    },
-    {
-        "name": "Poinsettia",
-        "img": "src/assets/images/furni/plants/poin.gif",
-        "icon": "src/assets/images/furni-icons/plants/poin_icon.gif",
-        "description": "DETAIN THEM"
-    },
-    {
-        "name": "Lodge Corner",
-        "img": "src/assets/images/furni/mode/corn.gif",
-        "icon": "src/assets/images/furni-icons/mode/corn_icon.gif",
-        "description": "aghuh like the woods"
-    },
-    {
-        "name": "Donkey Kong Country",
-        "img": "src/assets/images/furni/exchange/dkc.png",
-        "icon": "src/assets/images/furni-icons/exchange/dkc_icon.png",
-        "description": "Worth 500 Bananas"
-    },
-    {
-        "name": "MTN Dew Machine",
-        "img": "src/assets/images/furni/brand/md.gif",
-        "icon": "src/assets/images/furni-icons/brand/md_icon.png",
-        "description": "Meal Deal A..."
-    },
-    {
-        "name": "Zaandarbrow Painting",
-        "img": "src/assets/images/furni/ultras/zaandarbrow.gif",
-        "icon": "src/assets/images/furni-icons/ultras/zaandarbrow_icon.gif",
-        "description": "OH BOY"
-    },
-    {
-        "name": "Red Marquee",
-        "img": "src/assets/images/furni/marquees/rm.gif",
-        "icon": "src/assets/images/furni-icons/marquees/rm_icon.gif",
-        "description": "royal red my dude"
-    },
-    {
-        "name": "White Marquee",
-        "img": "src/assets/images/furni/marquees/wm.gif",
-        "icon": "src/assets/images/furni-icons/marquees/wm_icon.gif",
-        "description": "not a fan G"
-    },
-    {
-        "name": "Diamond Elephant",
-        "img": "src/assets/images/furni/rares/dnelly.gif",
-        "icon": "src/assets/images/furni-icons/rares/dnelly_icon.png",
-        "description": "diamond garnecia elefantis"
-    },
-    {
-        "name": "Black Space Door",
-        "img": "src/assets/images/furni/space/bsd.gif",
-        "icon": "src/assets/images/furni-icons/space/bsd_icon.gif",
-        "description": "Jason takes Manhattan"
-    },
-    {
-        "name": "Pink Pillow",
-        "img": "src/assets/images/furni/pillows/pp.gif",
-        "icon": "src/assets/images/furni-icons/pillows/pp_icon.gif",
-        "description": "pinky2pretty"
-    },
-    {
-        "name": "Fuchsia ICM",
-        "img": "src/assets/images/furni/icms/ficm.gif",
-        "icon": "src/assets/images/furni-icons/icms/ficm_icon.gif",
-        "description": "the safari zone deluxe"
-    },
-    {
-        "name": "Cheeto Machine",
-        "img": "src/assets/images/furni/brand/cheetos.gif",
-        "icon": "src/assets/images/furni-icons/brand/cheetos_icon.gif",
-        "description": "it ain't easy"
-    },
-    {
-        "name": "Toucan",
-        "img": "src/assets/images/furni/animals/toucan.gif",
-        "icon": "src/assets/images/furni-icons/animals/toucan_icon.gif",
-        "description": "the nobel bird",
-        "price": 1650,
-        "itemid": 107
-    },
-    {
-        "name": "Time Machine",
-        "img": "src/assets/images/furni/ultras/tm.png",
-        "icon": "src/assets/images/furni-icons/ultras/tm_icon.png",
-        "description": "88 MILES PER HOUR"
-    },
-    {
-        "name": "Diamond Dragon",
-        "img": "src/assets/images/furni/dragons/dd.gif",
-        "icon": "src/assets/images/furni-icons/dragons/dd_icon.gif",
-        "description": "polished & sauced"
-    },
-    {
-        "name": "Blue Slurpee Machine",
-        "img": "src/assets/images/furni/brand/bs.gif",
-        "icon": "src/assets/images/furni-icons/brand/bs_icon.gif",
-        "description": "blue razz my dude"
-    },
-    {
-        "name": "711 Cooler",
-        "img": "src/assets/images/furni/brand/cooler.gif",
-        "icon": "src/assets/images/furni-icons/brand/cooler_icon.gif",
-        "description": "god i hate this thing"
-    },
-    {
-        "name": "Green Para",
-        "img": "src/assets/images/furni/paras/gp.gif",
-        "icon": "src/assets/images/furni-icons/paras/gp_icon.gif",
-        "description": "Zon! Zon!"
-    },
-    {
-        "name": "Red Pillar",
-        "img": "src/assets/images/furni/pillars/rp.gif",
-        "icon": "src/assets/images/furni-icons/pillars/rp_icon.gif",
-        "description": "tall and red"
-    },
-    {
-        "name": "Crane",
-        "img": "src/assets/images/furni/animals/crane2.png",
-        "icon": "src/assets/images/furni-icons/animals/crane_icon.png",
-        "description": "death... by exile"
-    },
-    {
-        "name": "Ghotel Knight",
-        "img": "src/assets/images/furni/club/hck.png",
-        "icon": "src/assets/images/furni-icons/club/hck_icon.png",
-        "description": "a watchful protector"
-    },
-    {
-        "name": "Santa Butler",
-        "img": "src/assets/images/furni/xmas/xb.png",
-        "icon": "src/assets/images/furni-icons/xmas/xb_icon.png",
-        "description": "5 FLOORS OF CASH"
-    },
-    {
-        "name": "Green ICM",
-        "img": "src/assets/images/furni/icms/gcim.gif",
-        "icon": "src/assets/images/furni-icons/icms/gricm_icon.gif",
-        "description": "shamrock shake"
-    },
-    {
-        "name": "Red ICM",
-        "img": "src/assets/images/furni/icms/ricm.gif",
-        "icon": "src/assets/images/furni-icons/icms/ricm_icon.gif",
-        "description": "snozberry"
-    },
-    {
-        "name": "Black Smoke Machine",
-        "img": "src/assets/images/furni/smokes/bsm.gif",
-        "icon": "src/assets/images/furni-icons/smokes/bsm_icon.gif",
-        "description": "aguh no smoke?"
-    },
-    {
-        "name": "White Smoke Machine",
-        "img": "src/assets/images/furni/smokes/wsm.gif",
-        "icon": "src/assets/images/furni-icons/smokes/wsm_icon.gif",
-        "description": "aguh no smoke?"
-    },
-    {
-        "name": "Red Smoke Machine",
-        "img": "src/assets/images/furni/smokes/rsm.gif",
-        "icon": "src/assets/images/furni-icons/smokes/rsm_icon.gif",
-        "description": "aguh no smoke?"
-    },
-    {
-        "name": "Gramophone",
-        "img": "src/assets/images/furni/ultras/gram.png",
-        "icon": "src/assets/images/furni-icons/ultras/gram_icon.png",
-        "description": "where'd you get those peepers?"
-    },
-    {
-        "name": "Golden Tub",
-        "img": "src/assets/images/furni/limit/gt.png",
-        "icon": "src/assets/images/furni-icons/limit/gt_icon.png",
-        "description": "FENTON, AW CHRIST"
-    },
-    {
-        "name": "Red Amber Lamp",
-        "img": "src/assets/images/furni/rares/ra.gif",
-        "icon": "src/assets/images/furni-icons/rares/ra_icon.gif",
-        "description": "SEALED IN AMBER"
-    },
-    {
-        "name": "Blue Amber Lamp",
-        "img": "src/assets/images/furni/rares/ba.gif",
-        "icon": "src/assets/images/furni-icons/rares/ba_icon.gif",
-        "description": "BLUE DAY NATURALLY"
-    },
-    {
-        "name": "Gold Amber Lamp",
-        "img": "src/assets/images/furni/rares/ga.gif",
-        "icon": "src/assets/images/furni-icons/rares/ga_icon.gif",
-        "description": "golden skuck"
-    },
-    {
-        "name": "Green Marquee",
-        "img": "src/assets/images/furni/marquees/gm.gif",
-        "icon": "src/assets/images/furni-icons/marquees/gm_icon.gif",
-        "description": "Greg's tarp"
-    },
-    {
-        "name": "Majestic Marquee",
-        "img": "src/assets/images/furni/marquees/nm.gif",
-        "icon": "src/assets/images/furni-icons/marquees/nm_icon.gif",
-        "description": "MMM YOU BET"
-    },
-    {
-        "name": "Red Fan",
-        "img": "src/assets/images/furni/fans/rf.gif",
-        "icon": "src/assets/images/furni-icons/fans/rf_icon.gif",
-        "description": "swoof swoof"
-    },
-    {
-        "name": "Green Fan",
-        "img": "src/assets/images/furni/fans/gf.gif",
-        "icon": "src/assets/images/furni-icons/fans/gf_icon.gif",
-        "description": "swoof swoof"
-    },
-    {
-        "name": "Pepsi Machine",
-        "img": "src/assets/images/furni/brand/pepsi.gif",
-        "icon": "src/assets/images/furni-icons/brand/pepsi_icon.gif",
-        "description": "an ice cold sarsaparilla"
-    },
-    {
-        "name": "Orange Slurpee Machine",
-        "img": "src/assets/images/furni/brand/os.gif",
-        "icon": "src/assets/images/furni-icons/brand/os_icon.gif",
-        "description": "ORANGE SLOP"
-    },
-    {
-        "name": "Green Slurpee Machine",
-        "img": "src/assets/images/furni/brand/gs.gif",
-        "icon": "src/assets/images/furni-icons/brand/gs_icon.gif",
-        "description": "Green SKUCK DISPENSER"
-    },
-    {
-        "name": "Purple Slurpee Machine",
-        "img": "src/assets/images/furni/brand/ps.gif",
-        "icon": "src/assets/images/furni-icons/brand/ps_icon.gif",
-        "description": "grape ice dog"
-    },
-    {
-        "name": "Aqua Slurpee Machine",
-        "img": "src/assets/images/furni/brand/as.gif",
-        "icon": "src/assets/images/furni-icons/brand/as_icon.gif",
-        "description": "clear as DAY"
-    },
-    {
-        "name": "Red Slurpee Machine",
-        "img": "src/assets/images/furni/brand/rs.gif",
-        "icon": "src/assets/images/furni-icons/brand/rs_icon.gif",
-        "description": "cherry bomb"
-    },
-    {
-        "name": "Pink Slurpee Machine",
-        "img": "src/assets/images/furni/brand/pks.gif",
-        "icon": "src/assets/images/furni-icons/brand/pks_icon.gif",
-        "description": "GIVE ME THE BALL"
-    },
-    {
-        "name": "Green Pillow",
-        "img": "src/assets/images/furni/pillows/grp.gif",
-        "icon": "src/assets/images/furni-icons/pillows/grp_icon.gif",
-        "description": "FRENCH GOT THE SHOVEL"
-    },
-    {
-        "name": "Red Pillow",
-        "img": "src/assets/images/furni/pillows/rp.gif",
-        "icon": "src/assets/images/furni-icons/pillows/rp_icon.gif",
-        "description": "A festivus for the rest of us"
-    },
-    {
-        "name": "Rhino Nest",
-        "img": "src/assets/images/furni/animals/rn.gif",
-        "icon": "src/assets/images/furni-icons/animals/rn_icon.gif",
-        "description": "Rambi's bed"
-    },
-    {
-        "name": "Gnome",
-        "img": "src/assets/images/furni/collects/gnome.gif",
-        "icon": "src/assets/images/furni-icons/collects/ghome_icon.gif",
-        "description": "I WANT MY **** GNOME"
-    },
-    {
-        "name": "Koala",
-        "img": "src/assets/images/furni/collects/koala.gif",
-        "icon": "src/assets/images/furni-icons/collects/koala_icon.gif",
-        "description": "look at him go!"
-    },
-    {
-        "name": "Basketball Hoop",
-        "img": "src/assets/images/furni/mode/bh.gif",
-        "icon": "src/assets/images/furni-icons/mode/bh_icon.gif",
-        "description": "I wish I was a baller"
-    },
-    {
-        "name": "The Inferno",
-        "img": "src/assets/images/furni/mode/ship.png",
-        "icon": "src/assets/images/furni-icons/mode/ship_icon.gif",
-        "description": "goonies never say die"
-    },
-    {
-        "name": "Crab",
-        "img": "src/assets/images/furni/animals/crab.gif",
-        "icon": "src/assets/images/furni-icons/animals/crab_icon.gif",
-        "description": "YEH IMMA PINCH YA"
-    },
-    {
-        "name": "Gothic Fountain",
-        "img": "src/assets/images/furni/ultras/gf.gif",
-        "icon": "src/assets/images/furni-icons/ultras/gf_icon.gif",
-        "description": "blood of an irish goat"
-    },
-    {
-        "name": "Industrial Turbine",
-        "img": "src/assets/images/furni/ultras/it.gif",
-        "on": "src/assets/images/furni/ultras/it-on.gif",
-        "icon": "src/assets/images/furni-icons/ultras/it_icon.gif",
-        "description": "twister... wait up"
-    },
-    {
-        "name": "Telescope",
-        "img": "src/assets/images/furni/ultras/scope.png",
-        "icon": "src/assets/images/furni-icons/ultras/scope_icon.png",
-        "description": "EMMEEEETTTTTTT"
-    },
-    {
-        "name": "Father of Ghotel",
-        "img": "src/assets/images/furni/walls/father.gif",
-        "icon": "src/assets/images/furni-icons/walls/father_icon.gif",
-        "description": "He was #1"
-    },
-    {
-        "name": "Golden Record",
-        "img": "src/assets/images/furni/walls/record.gif",
-        "icon": "src/assets/images/furni-icons/walls/record_icon.gif",
-        "description": "Basil, the record"
-    },
-    {
-        "name": "Disco Sign",
-        "img": "src/assets/images/furni/walls/disco.gif",
-        "icon": "src/assets/images/furni-icons/walls/disco_icon.gif",
-        "description": "I SAW YOUR FACE AND WOW"
-    },
-    {
-        "name": "Wise Owl",
-        "img": "src/assets/images/furni/animals/owl.gif",
-        "icon": "src/assets/images/furni-icons/animals/owl_icon.png",
-        "description": "Mr. Owl, how many AHHH"
-    },
-    {
-        "name": "Mocca Master",
-        "img": "src/assets/images/furni/club/moc.gif",
-        "icon": "src/assets/images/furni-icons/club/moc_icon.gif",
-        "description": "how old you are?"
-    },
-    {
-        "name": "The Safe",
-        "img": "src/assets/images/furni/ultras/safe.gif",
-        "on": "src/assets/images/furni/ultras/safe-on.gif",
-        "icon": "src/assets/images/furni-icons/ultras/safe_icon.gif",
-        "description": "I PUT THE COAT ON HER"
-    },
-    {
-        "name": "Viking Loot",
-        "img": "src/assets/images/furni/exchange/loot.png",
-        "icon": "src/assets/images/furni-icons/exchange/loot_icon.png",
-        "description": "Worth 500 doubloons",
-        "price": 500,
-        "itemid": 155
-    }
+  {
+    "name": "Throne",
+    "img": "src/assets/images/furni/rares/throne.png",
+    "icon": "src/assets/images/furni-icons/rares/throne_icon.png",
+    "description": "Ghotel Staff Only"
+  },
+  {
+    "name": "Petal Patch",
+    "img": "src/assets/images/furni/rares/petal.gif",
+    "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
+    "description": "A little bit of outdoors indoors..."
+  },
+  {
+    "name": "Typewriter",
+    "img": "src/assets/images/furni/rares/typo.gif",
+    "icon": "src/assets/images/furni-icons/rares/typo_icon.png",
+    "description": "typos kinda suckkk"
+  },
+  {
+    "name": "Gold Cup Trophy",
+    "img": "src/assets/images/furni/trophies/goldcup.png",
+    "icon": "src/assets/images/furni-icons/trophies/goldcup_icon.png",
+    "description": "1st in the basketball match"
+  },
+  {
+    "name": "Silver Cup Trophy",
+    "img": "src/assets/images/furni/trophies/silvercup.png",
+    "icon": "src/assets/images/furni-icons/trophies/silvercup_icon.png",
+    "description": "2nd in the basketball match"
+  },
+  {
+    "name": "Bronze Cup Trophy",
+    "img": "src/assets/images/furni/trophies/bronzecup.png",
+    "icon": "src/assets/images/furni-icons/trophies/bronzecup_icon.png",
+    "description": "3rd in the basketball match"
+  },
+  {
+    "name": "Golden Elephant",
+    "img": "src/assets/images/furni/rares/gnelly.png",
+    "icon": "src/assets/images/furni-icons/rares/goldnelly_icon.png",
+    "description": "gold garnecia elefantis"
+  },
+  {
+    "name": "Silver Elephant",
+    "img": "src/assets/images/furni/rares/snelly.png",
+    "icon": "src/assets/images/furni-icons/rares/silvernelly_icon.png",
+    "description": "silver garnecia elefantis"
+  },
+  {
+    "name": "Bronze Elephant",
+    "img": "src/assets/images/furni/rares/bnelly.png",
+    "icon": "src/assets/images/furni-icons/rares/bronzenelly_icon.png",
+    "description": "bronze garnecia elefantis"
+  },
+  {
+    "name": "Green Fountain",
+    "img": "src/assets/images/furni/rares/gbb.png",
+    "on": "src/assets/images/furni/rares/gbb-on.gif",
+    "icon": "src/assets/images/furni-icons/rares/gbb_icon.png",
+    "description": "gbb, goin up"
+  },
+  {
+    "name": "White Fountain",
+    "img": "src/assets/images/furni/rares/wbb.png",
+    "on": "src/assets/images/furni/rares/wbb-on.gif",
+    "icon": "src/assets/images/furni-icons/rares/wbb_icon.png",
+    "description": "wbb, goin up"
+  },
+  {
+    "name": "Red Fountain",
+    "img": "src/assets/images/furni/rares/rbb.png",
+    "on": "src/assets/images/furni/rares/rbb-on.gif",
+    "icon": "src/assets/images/furni-icons/rares/rbb_icon.png",
+    "description": "rbb, goin up"
+  },
+  {
+    "name": "Blue Fountain",
+    "img": "src/assets/images/furni/rares/bbb.png",
+    "icon": "src/assets/images/furni-icons/rares/bbb_icon.png",
+    "on": "src/assets/images/furni/rares/bbb-on.gif",
+    "description": "bbb, goin up"
+  },
+  {
+    "name": "Bronze Coin",
+    "img": "src/assets/images/furni/exchange/bronzecoin.webp",
+    "icon": "src/assets/images/furni-icons/exchange/bronzecoin-icon.png",
+    "description": "Worth 1 Credit"
+  },
+  {
+    "name": "Silver Coin",
+    "img": "src/assets/images/furni/exchange/silvercoin.webp",
+    "icon": "src/assets/images/furni-icons/exchange/silvercoin-icon.png",
+    "description": "Worth 5 Credits"
+  },
+  {
+    "name": "Gold Coin",
+    "img": "src/assets/images/furni/exchange/goldcoin.webp",
+    "icon": "src/assets/images/furni-icons/exchange/goldcoin-icon.png",
+    "description": "Worth 10 Credits"
+  },
+  {
+    "name": "Sack of Coins",
+    "img": "src/assets/images/furni/exchange/sack.webp",
+    "icon": "src/assets/images/furni-icons/exchange/sack-icon.png",
+    "description": "Worth 20 Credits"
+  },
+  {
+    "name": "Gold Bar",
+    "img": "src/assets/images/furni/exchange/goldbar.webp",
+    "icon": "src/assets/images/furni-icons/exchange/goldbar-icon.png",
+    "description": "Worth 50 Credits"
+  },
+  {
+    "name": "Platinum Bar",
+    "img": "src/assets/images/furni/exchange/platinum.png",
+    "icon": "src/assets/images/furni-icons/exchange/platinum-icon.png",
+    "description": "Worth 500 Credits"
+  },
+  {
+    "name": "Jake's Crown",
+    "img": "src/assets/images/furni/exchange/crown.png",
+    "icon": "src/assets/images/furni-icons/exchange/crown-icon.png",
+    "description": "Worth 2500 Credits"
+  },
+  {
+    "name": "Dragon Egg",
+    "img": "src/assets/images/furni/rares/dino.gif",
+    "icon": "src/assets/images/furni-icons/rares/dino_icon.gif",
+    "description": "Are you ready Almak?"
+  },
+  {
+    "name": "Russian Samovar",
+    "img": "src/assets/images/furni/rares/samovar.gif",
+    "icon": "src/assets/images/furni-icons/rares/samovar_icon.gif",
+    "description": "YO THAT'S BRAZY"
+  },
+  {
+    "name": "DJ Turntable",
+    "img": "src/assets/images/furni/rares/djdeck.gif",
+    "icon": "src/assets/images/furni-icons/rares/djdeck_icon.gif",
+    "description": "Some...BODY ONCE"
+  },
+  {
+    "name": "Aloe Vera",
+    "img": "src/assets/images/furni/rares/aloe.gif",
+    "icon": "src/assets/images/furni-icons/rares/aloe_icon.gif",
+    "description": "I started this company..."
+  },
+  {
+    "name": "Ghotel Globe",
+    "img": "src/assets/images/furni/rares/globe.gif",
+    "icon": "src/assets/images/furni-icons/rares/globe_icon.gif",
+    "description": "I MADE COPIES"
+  },
+  {
+    "name": "Club Sofa",
+    "img": "src/assets/images/furni/club/hcs.gif",
+    "icon": "src/assets/images/furni-icons/club/hcs_icon.gif",
+    "description": "buy for 11c, sell for 13c"
+  },
+  {
+    "name": "Dicemaster",
+    "img": "src/assets/images/furni/club/dm.gif",
+    "1": "src/assets/images/furni/club/d1.gif",
+    "2": "src/assets/images/furni/club/d2.gif",
+    "3": "src/assets/images/furni/club/d3.gif",
+    "4": "src/assets/images/furni/club/d4.gif",
+    "5": "src/assets/images/furni/club/d5.gif",
+    "6": "src/assets/images/furni/club/d6.gif",
+    "icon": "src/assets/images/furni-icons/club/dm_icon.gif",
+    "description": "game?"
+  },
+  {
+    "name": "Majestic Chair",
+    "img": "src/assets/images/furni/club/majestic.gif",
+    "icon": "src/assets/images/furni-icons/club/majestic_icon.gif",
+    "description": "hiya johnny"
+  },
+  {
+    "name": "Yukka",
+    "img": "src/assets/images/furni/plants/yukka.gif",
+    "icon": "src/assets/images/furni-icons/plants/yukka_icon.gif",
+    "description": "you can count me out"
+  },
+  {
+    "name": "Pine",
+    "img": "src/assets/images/furni/plants/pine.gif",
+    "icon": "src/assets/images/furni-icons/plants/pine_icon.gif",
+    "description": "THE PINE CHARLIE"
+  },
+  {
+    "name": "Vase of flowers",
+    "img": "src/assets/images/furni/plants/vase.gif",
+    "icon": "src/assets/images/furni-icons/plants/vase_icon.gif",
+    "description": "flowers for algernon"
+  },
+  {
+    "name": "Director's Chair",
+    "img": "src/assets/images/furni/rares/dc.gif",
+    "icon": "src/assets/images/furni-icons/rares/dc_icon.gif",
+    "description": "mr dicaprio..."
+  },
+  {
+    "name": "Gold Habbo Trophy",
+    "img": "src/assets/images/furni/trophies/ght.png",
+    "icon": "src/assets/images/furni-icons/trophies/ght_icon.gif",
+    "description": "LOOK THERE IT IS"
+  },
+  {
+    "name": "Silver Habbo Trophy",
+    "img": "src/assets/images/furni/trophies/sht.gif",
+    "icon": "src/assets/images/furni-icons/trophies/sht_icon.gif",
+    "description": "The James Marinelli award"
+  },
+  {
+    "name": "Bronze Habbo Trophy",
+    "img": "src/assets/images/furni/trophies/bht.gif",
+    "icon": "src/assets/images/furni-icons/trophies/bht_icon.gif",
+    "description": "he was offended...?"
+  },
+  {
+    "name": "Golden Dragon",
+    "img": "src/assets/images/furni/dragons/golddrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/golddrag_icon.gif",
+    "description": "RIP IGOLDY"
+  },
+  {
+    "name": "Silver Dragon",
+    "img": "src/assets/images/furni/dragons/silverdrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/silverdrag_icon.gif",
+    "description": "King Midas’ Silver"
+  },
+  {
+    "name": "Bronze Dragon",
+    "img": "src/assets/images/furni/dragons/bronzedrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/bronzedrag_icon.gif",
+    "description": "The JTM special"
+  },
+  {
+    "name": "Forest Dragon",
+    "img": "src/assets/images/furni/dragons/forestdrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/forestdrag_icon.gif",
+    "description": "from the tree people"
+  },
+  {
+    "name": "Fire Dragon",
+    "img": "src/assets/images/furni/dragons/firedrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/firedrag_icon.gif",
+    "description": "Are the fires of hell a-glowing?"
+  },
+  {
+    "name": "Frost Dragon",
+    "img": "src/assets/images/furni/dragons/frostdrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/frostdrag_icon.gif",
+    "description": "MMM RASTA RASTA"
+  },
+  {
+    "name": "Sky Dragon",
+    "img": "src/assets/images/furni/dragons/skydrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/skydrag_icon.gif",
+    "description": "dragonite began to glow"
+  },
+  {
+    "name": "Black Dragon",
+    "img": "src/assets/images/furni/dragons/blackdrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/blackdrag_icon.gif",
+    "description": "The SRC special"
+  },
+  {
+    "name": "Jade Dragon",
+    "img": "src/assets/images/furni/dragons/jadedrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/jadedrag_icon.gif",
+    "description": "so we got her on tape ayy?"
+  },
+  {
+    "name": "Blue Dragon",
+    "img": "src/assets/images/furni/dragons/bluedrag.gif",
+    "icon": "src/assets/images/furni-icons/dragons/bluedrag_icon.gif",
+    "description": "THE KRAKEN"
+  },
+  {
+    "name": "Pink Dragon",
+    "img": "src/assets/images/furni/dragons/pinkdrag.webp",
+    "icon": "src/assets/images/furni-icons/dragons/pinkdrag_icon.png",
+    "description": "The GJM special"
+  },
+  {
+    "name": "Z Shelf",
+    "img": "src/assets/images/furni/mode/zshelf.gif",
+    "icon": "src/assets/images/furni-icons/mode/zshelf_icon.gif",
+    "description": "for stacking"
+  },
+  {
+    "name": "Petal Patch",
+    "img": "src/assets/images/furni/rares/p1.png",
+    "img2": "src/assets/images/furni/rares/petal.gif",
+    "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
+    "description": "MY **** BUSH"
+  },
+  {
+    "name": "Petal Patch",
+    "img": "src/assets/images/furni/rares/p2.png",
+    "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
+    "description": "MY **** BUSH"
+  },
+  {
+    "name": "Petal Patch",
+    "img": "src/assets/images/furni/rares/p3.png",
+    "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
+    "description": "MY **** BUSH"
+  },
+  {
+    "name": "Petal Patch",
+    "img": "src/assets/images/furni/rares/p4.png",
+    "icon": "src/assets/images/furni-icons/rares/petal_icon.png",
+    "description": "MY **** BUSH"
+  },
+  {
+    "name": "Yellow Marquee",
+    "img": "src/assets/images/furni/marquees/ym.gif",
+    "on": "src/assets/images/furni/marquees/ym-on.gif",
+    "icon": "src/assets/images/furni-icons/marquees/ym_icon.gif",
+    "description": "slim shady"
+  },
+  {
+    "name": "White Lasergate",
+    "img": "src/assets/images/furni/lasers/whitelaser.gif",
+    "icon": "src/assets/images/furni-icons/lasers/whitelaser_icon.gif",
+    "on": "src/assets/images/furni/lasers/wlaser-on.gif",
+    "description": "jack plasma"
+  },
+  {
+    "name": "Purple ICM",
+    "img": "src/assets/images/furni/icms/picm.gif",
+    "icon": "src/assets/images/furni-icons/icms/picm_icon.gif",
+    "description": "the fourth flavor"
+  },
+  {
+    "name": "White Pillow",
+    "img": "src/assets/images/furni/pillows/wp.gif",
+    "icon": "src/assets/images/furni-icons/pillows/wp_icon.gif",
+    "description": "the santa clause 3"
+  },
+  {
+    "name": "Yellow Fan",
+    "img": "src/assets/images/furni/fans/yfan.gif",
+    "icon": "src/assets/images/furni-icons/fans/yfan_icon.gif",
+    "description": "swoof swoof"
+  },
+  {
+    "name": "Blue Smoke Machine",
+    "img": "src/assets/images/furni/smokes/nsm.gif",
+    "icon": "src/assets/images/furni-icons/smokes/nsm_icon.gif",
+    "description": "aguh no smoke?"
+  },
+  {
+    "name": "Imperial Teleporter",
+    "img": "src/assets/images/furni/club/imp.png",
+    "icon": "src/assets/images/furni-icons/club/imp_icon.gif",
+    "description": "I'M GOIN BACK UP"
+  },
+  {
+    "name": "Butler",
+    "img": "src/assets/images/furni/club/butler.gif",
+    "on": "src/assets/images/furni/club/butler-on.gif",
+    "icon": "src/assets/images/furni-icons/club/butler_icon.gif",
+    "description": "Breakfast is served!"
+  },
+  {
+    "name": "Black Pillow",
+    "img": "src/assets/images/furni/pillows/bp.gif",
+    "icon": "src/assets/images/furni-icons/pillows/bp_icon.gif",
+    "description": "gordon heights cushion"
+  },
+  {
+    "name": "Turquoise Pillow",
+    "img": "src/assets/images/furni/pillows/tp.gif",
+    "icon": "src/assets/images/furni-icons/pillows/tp_icon.gif",
+    "description": "tortuga"
+  },
+  {
+    "name": "Architeuthis",
+    "img": "src/assets/images/furni/collects/arch.gif",
+    "icon": "src/assets/images/furni-icons/collects/arch_icon.gif",
+    "on": "src/assets/images/furni/collects/arch-on.gif",
+    "description": "AW SICK DAVY JONES"
+  },
+  {
+    "name": "Habbo Cola Machine",
+    "img": "src/assets/images/furni/rares/hcola.gif",
+    "icon": "src/assets/images/furni-icons/rares/hcola_icon.gif",
+    "description": "it was a dark and stormy night"
+  },
+  {
+    "name": "Holoboy",
+    "img": "src/assets/images/furni/rares/hboy.gif",
+    "icon": "src/assets/images/furni-icons/rares/hboy_icon.gif",
+    "description": "DIGITAL STYLE"
+  },
+  {
+    "name": "Hologirl",
+    "img": "src/assets/images/furni/rares/hgirl.gif",
+    "icon": "src/assets/images/furni-icons/rares/hgirl_icon.gif",
+    "description": "DIGITAL STYLE"
+  },
+  {
+    "name": "Oil Lamp",
+    "img": "src/assets/images/furni/club/oil.gif",
+    "icon": "src/assets/images/furni-icons/club/oil_icon.gif",
+    "description": "powered by black gold"
+  },
+  {
+    "name": "Orange Para",
+    "img": "src/assets/images/furni/paras/op.gif",
+    "icon": "src/assets/images/furni-icons/paras/op_icon.gif",
+    "description": "marry poppins"
+  },
+  {
+    "name": "Moodi Machine",
+    "img": "src/assets/images/furni/ultras/moodi.gif",
+    "icon": "src/assets/images/furni-icons/ultras/moodi_icon.png",
+    "description": "I'M HAVING A MAN BREAK"
+  },
+  {
+    "name": "Golden Tablet",
+    "img": "src/assets/images/furni/ultras/gtab.png",
+    "icon": "src/assets/images/furni-icons/ultras/gtab_icon.png",
+    "description": "THROUGH THE TREASURE ROOM"
+  },
+  {
+    "name": "Big Ben",
+    "img": "src/assets/images/furni/collects/bigben.gif",
+    "icon": "src/assets/images/furni-icons/collects/bigben_icon.gif",
+    "description": "tick TOCK"
+  },
+  {
+    "name": "Black Lasergate",
+    "img": "src/assets/images/furni/lasers/blaser.gif",
+    "icon": "src/assets/images/furni-icons/lasers/blaser_icon.gif",
+    "on": "src/assets/images/furni/lasers/blaser-on.gif",
+    "description": "zing zong"
+  },
+  {
+    "name": "Staff of Ra",
+    "img": "src/assets/images/furni/exchange/spec.png",
+    "icon": "src/assets/images/furni-icons/exchange/spec_icon.png",
+    "description": "Worth 350 Credits"
+  },
+  {
+    "name": "Black Dragon Egg",
+    "img": "src/assets/images/furni/limit/bdino.png",
+    "icon": "src/assets/images/furni-icons/limit/bdino_icon.gif",
+    "description": "number 2, CHERZARD"
+  },
+  {
+    "name": "Orange ICM",
+    "img": "src/assets/images/furni/icms/oicm.gif",
+    "icon": "src/assets/images/furni-icons/icms/oicm_icon.gif",
+    "description": "orange ice"
+  },
+  {
+    "name": "Sky Blue Marquee",
+    "img": "src/assets/images/furni/marquees/sm.gif",
+    "icon": "src/assets/images/furni-icons/marquees/sm_icon.gif",
+    "description": "butterfly in the sky"
+  },
+  {
+    "name": "Purple Marquee",
+    "img": "src/assets/images/furni/marquees/pm.gif",
+    "icon": "src/assets/images/furni-icons/marquees/pm_icon.gif",
+    "description": "the purple one"
+  },
+  {
+    "name": "Gold Pillar",
+    "img": "src/assets/images/furni/pillars/gp.gif",
+    "icon": "src/assets/images/furni-icons/pillars/gp_icon.gif",
+    "description": "big and gold"
+  },
+  {
+    "name": "Door Teleporter",
+    "img": "src/assets/images/furni/mode/door.gif",
+    "icon": "src/assets/images/furni-icons/mode/door_icon.gif",
+    "description": "MY ROOM IS SMALL"
+  },
+  {
+    "name": "Speaker's Corner",
+    "img": "src/assets/images/furni/rares/speaker.gif",
+    "icon": "src/assets/images/furni-icons/rares/speaker_icon.gif",
+    "description": "SERENITY NOW"
+  },
+  {
+    "name": "Violet Smoke Machine",
+    "img": "src/assets/images/furni/smokes/vsm.gif",
+    "icon": "src/assets/images/furni-icons/smokes/vsm_icon.gif",
+    "description": "aguh no smoke?"
+  },
+  {
+    "name": "Turquoise Fan",
+    "img": "src/assets/images/furni/fans/tfan.gif",
+    "icon": "src/assets/images/furni-icons/fans/tfan_icon.gif",
+    "description": "swoof swoof"
+  },
+  {
+    "name": "Navy Pillow",
+    "img": "src/assets/images/furni/pillows/np.gif",
+    "icon": "src/assets/images/furni-icons/pillows/np_icon.gif",
+    "description": "not the navy!"
+  },
+  {
+    "name": "Carl Ducksworth",
+    "img": "src/assets/images/furni/ultras/carl.png",
+    "icon": "src/assets/images/furni-icons/ultras/carl_icon.png",
+    "description": "It's the Ductor!"
+  },
+  {
+    "name": "White Space Door",
+    "img": "src/assets/images/furni/space/wsd.gif",
+    "icon": "src/assets/images/furni-icons/space/wsd_icon.gif",
+    "description": "Jason X"
+  },
+  {
+    "name": "Infobus",
+    "img": "src/assets/images/furni/ultras/infobus.gif",
+    "icon": "src/assets/images/furni-icons/ultras/infobus_icon.gif",
+    "description": "The Tranzit Bus"
+  },
+  {
+    "name": "Ocean Sleepingbag",
+    "img": "src/assets/images/furni/ultras/ocean.gif",
+    "icon": "src/assets/images/furni-icons/ultras/ocean_icon.gif",
+    "description": "For Jake only"
+  },
+  {
+    "name": "Monster Plant",
+    "img": "src/assets/images/furni/rares/plant.gif",
+    "icon": "src/assets/images/furni-icons/rares/plant_icon.gif",
+    "description": "THE MONSTER MASH"
+  },
+  {
+    "name": "Gold Lasergate",
+    "img": "src/assets/images/furni/lasers/glaser.gif",
+    "icon": "src/assets/images/furni-icons/lasers/glaser_icon.gif",
+    "description": "zing zong zap",
+    "on": "src/assets/images/furni/lasers/glaser-on.gif"
+  },
+  {
+    "name": "Red Lasergate",
+    "img": "src/assets/images/furni/lasers/rlaser.gif",
+    "icon": "src/assets/images/furni-icons/lasers/rlaser_icon.gif",
+    "description": "zing zong zap zeep",
+    "on": "src/assets/images/furni/lasers/rlaser-on.gif"
+  },
+  {
+    "name": "Turquoise ICM",
+    "img": "src/assets/images/furni/icms/ticm.gif",
+    "icon": "src/assets/images/furni-icons/icms/ticm_icon.gif",
+    "description": "it's cold"
+  },
+  {
+    "name": "Gold ICM",
+    "img": "src/assets/images/furni/icms/gicm.gif",
+    "icon": "src/assets/images/furni-icons/icms/gicm_icon.gif",
+    "description": "oooo yum yum yum"
+  },
+  {
+    "name": "Gold Pillow",
+    "img": "src/assets/images/furni/pillows/gp.gif",
+    "icon": "src/assets/images/furni-icons/pillows/gp_icon.gif",
+    "description": "LET'S SKOINK RIGHT IN"
+  },
+  {
+    "name": "Bronze Pillow",
+    "img": "src/assets/images/furni/pillows/bronzep.png",
+    "icon": "src/assets/images/furni-icons/pillows/bronzep_icon.png",
+    "description": "the bronze age"
+  },
+  {
+    "name": "Raven",
+    "img": "src/assets/images/furni/animals/raven.gif",
+    "icon": "src/assets/images/furni-icons/animals/raven_icon.gif",
+    "description": "no... book?"
+  },
+  {
+    "name": "American Idol Trophy",
+    "img": "src/assets/images/furni/trophies/ai.gif",
+    "icon": "src/assets/images/furni-icons/trophies/ai_icon.gif",
+    "description": "david cook"
+  },
+  {
+    "name": "Poinsettia",
+    "img": "src/assets/images/furni/plants/poin.gif",
+    "icon": "src/assets/images/furni-icons/plants/poin_icon.gif",
+    "description": "DETAIN THEM"
+  },
+  {
+    "name": "Lodge Corner",
+    "img": "src/assets/images/furni/mode/corn.gif",
+    "icon": "src/assets/images/furni-icons/mode/corn_icon.gif",
+    "description": "aghuh like the woods"
+  },
+  {
+    "name": "Donkey Kong Country",
+    "img": "src/assets/images/furni/exchange/dkc.png",
+    "icon": "src/assets/images/furni-icons/exchange/dkc_icon.png",
+    "description": "Worth 500 Bananas"
+  },
+  {
+    "name": "MTN Dew Machine",
+    "img": "src/assets/images/furni/brand/md.gif",
+    "icon": "src/assets/images/furni-icons/brand/md_icon.png",
+    "description": "Meal Deal A..."
+  },
+  {
+    "name": "Zaandarbrow Painting",
+    "img": "src/assets/images/furni/ultras/zaandarbrow.gif",
+    "icon": "src/assets/images/furni-icons/ultras/zaandarbrow_icon.gif",
+    "description": "OH BOY"
+  },
+  {
+    "name": "Red Marquee",
+    "img": "src/assets/images/furni/marquees/rm.gif",
+    "icon": "src/assets/images/furni-icons/marquees/rm_icon.gif",
+    "description": "royal red my dude"
+  },
+  {
+    "name": "White Marquee",
+    "img": "src/assets/images/furni/marquees/wm.gif",
+    "icon": "src/assets/images/furni-icons/marquees/wm_icon.gif",
+    "description": "not a fan G"
+  },
+  {
+    "name": "Diamond Elephant",
+    "img": "src/assets/images/furni/rares/dnelly.gif",
+    "icon": "src/assets/images/furni-icons/rares/dnelly_icon.png",
+    "description": "diamond garnecia elefantis"
+  },
+  {
+    "name": "Black Space Door",
+    "img": "src/assets/images/furni/space/bsd.gif",
+    "icon": "src/assets/images/furni-icons/space/bsd_icon.gif",
+    "description": "Jason takes Manhattan"
+  },
+  {
+    "name": "Pink Pillow",
+    "img": "src/assets/images/furni/pillows/pp.gif",
+    "icon": "src/assets/images/furni-icons/pillows/pp_icon.gif",
+    "description": "pinky2pretty"
+  },
+  {
+    "name": "Fuchsia ICM",
+    "img": "src/assets/images/furni/icms/ficm.gif",
+    "icon": "src/assets/images/furni-icons/icms/ficm_icon.gif",
+    "description": "the safari zone deluxe"
+  },
+  {
+    "name": "Cheeto Machine",
+    "img": "src/assets/images/furni/brand/cheetos.gif",
+    "icon": "src/assets/images/furni-icons/brand/cheetos_icon.gif",
+    "description": "it ain't easy"
+  },
+  {
+    "name": "Toucan",
+    "img": "src/assets/images/furni/animals/toucan.gif",
+    "icon": "src/assets/images/furni-icons/animals/toucan_icon.gif",
+    "description": "the nobel bird"
+  },
+  {
+    "name": "Time Machine",
+    "img": "src/assets/images/furni/ultras/tm.png",
+    "icon": "src/assets/images/furni-icons/ultras/tm_icon.png",
+    "description": "88 MILES PER HOUR"
+  },
+  {
+    "name": "Diamond Dragon",
+    "img": "src/assets/images/furni/dragons/dd.gif",
+    "icon": "src/assets/images/furni-icons/dragons/dd_icon.gif",
+    "description": "polished & sauced"
+  },
+  {
+    "name": "Blue Slurpee Machine",
+    "img": "src/assets/images/furni/brand/bs.gif",
+    "icon": "src/assets/images/furni-icons/brand/bs_icon.gif",
+    "description": "blue razz my dude"
+  },
+  {
+    "name": "711 Cooler",
+    "img": "src/assets/images/furni/brand/cooler.gif",
+    "icon": "src/assets/images/furni-icons/brand/cooler_icon.gif",
+    "description": "god i hate this thing"
+  },
+  {
+    "name": "Green Para",
+    "img": "src/assets/images/furni/paras/gp.gif",
+    "icon": "src/assets/images/furni-icons/paras/gp_icon.gif",
+    "description": "Zon! Zon!"
+  },
+  {
+    "name": "Red Pillar",
+    "img": "src/assets/images/furni/pillars/rp.gif",
+    "icon": "src/assets/images/furni-icons/pillars/rp_icon.gif",
+    "description": "tall and red"
+  },
+  {
+    "name": "Crane",
+    "img": "src/assets/images/furni/animals/crane2.png",
+    "icon": "src/assets/images/furni-icons/animals/crane_icon.png",
+    "description": "death... by exile"
+  },
+  {
+    "name": "Ghotel Knight",
+    "img": "src/assets/images/furni/club/hck.png",
+    "icon": "src/assets/images/furni-icons/club/hck_icon.png",
+    "description": "a watchful protector"
+  },
+  {
+    "name": "Santa Butler",
+    "img": "src/assets/images/furni/xmas/xb.png",
+    "icon": "src/assets/images/furni-icons/xmas/xb_icon.png",
+    "description": "5 FLOORS OF CASH"
+  },
+  {
+    "name": "Green ICM",
+    "img": "src/assets/images/furni/icms/gcim.gif",
+    "icon": "src/assets/images/furni-icons/icms/gricm_icon.gif",
+    "description": "shamrock shake"
+  },
+  {
+    "name": "Red ICM",
+    "img": "src/assets/images/furni/icms/ricm.gif",
+    "icon": "src/assets/images/furni-icons/icms/ricm_icon.gif",
+    "description": "snozberry"
+  },
+  {
+    "name": "Black Smoke Machine",
+    "img": "src/assets/images/furni/smokes/bsm.gif",
+    "icon": "src/assets/images/furni-icons/smokes/bsm_icon.gif",
+    "description": "aguh no smoke?"
+  },
+  {
+    "name": "White Smoke Machine",
+    "img": "src/assets/images/furni/smokes/wsm.gif",
+    "icon": "src/assets/images/furni-icons/smokes/wsm_icon.gif",
+    "description": "aguh no smoke?"
+  },
+  {
+    "name": "Red Smoke Machine",
+    "img": "src/assets/images/furni/smokes/rsm.gif",
+    "icon": "src/assets/images/furni-icons/smokes/rsm_icon.gif",
+    "description": "aguh no smoke?"
+  },
+  {
+    "name": "Gramophone",
+    "img": "src/assets/images/furni/ultras/gram.png",
+    "icon": "src/assets/images/furni-icons/ultras/gram_icon.png",
+    "description": "where'd you get those peepers?"
+  },
+  {
+    "name": "Golden Tub",
+    "img": "src/assets/images/furni/limit/gt.png",
+    "icon": "src/assets/images/furni-icons/limit/gt_icon.png",
+    "description": "FENTON, AW CHRIST"
+  },
+  {
+    "name": "Red Amber Lamp",
+    "img": "src/assets/images/furni/rares/ra.gif",
+    "icon": "src/assets/images/furni-icons/rares/ra_icon.gif",
+    "description": "SEALED IN AMBER"
+  },
+  {
+    "name": "Blue Amber Lamp",
+    "img": "src/assets/images/furni/rares/ba.gif",
+    "icon": "src/assets/images/furni-icons/rares/ba_icon.gif",
+    "description": "BLUE DAY NATURALLY"
+  },
+  {
+    "name": "Gold Amber Lamp",
+    "img": "src/assets/images/furni/rares/ga.gif",
+    "icon": "src/assets/images/furni-icons/rares/ga_icon.gif",
+    "description": "golden skuck"
+  },
+  {
+    "name": "Green Marquee",
+    "img": "src/assets/images/furni/marquees/gm.gif",
+    "icon": "src/assets/images/furni-icons/marquees/gm_icon.gif",
+    "description": "Greg's tarp"
+  },
+  {
+    "name": "Majestic Marquee",
+    "img": "src/assets/images/furni/marquees/nm.gif",
+    "icon": "src/assets/images/furni-icons/marquees/nm_icon.gif",
+    "description": "MMM YOU BET"
+  },
+  {
+    "name": "Red Fan",
+    "img": "src/assets/images/furni/fans/rf.gif",
+    "icon": "src/assets/images/furni-icons/fans/rf_icon.gif",
+    "description": "swoof swoof"
+  },
+  {
+    "name": "Green Fan",
+    "img": "src/assets/images/furni/fans/gf.gif",
+    "icon": "src/assets/images/furni-icons/fans/gf_icon.gif",
+    "description": "swoof swoof"
+  },
+  {
+    "name": "Pepsi Machine",
+    "img": "src/assets/images/furni/brand/pepsi.gif",
+    "icon": "src/assets/images/furni-icons/brand/pepsi_icon.gif",
+    "description": "an ice cold sarsaparilla"
+  },
+  {
+    "name": "Orange Slurpee Machine",
+    "img": "src/assets/images/furni/brand/os.gif",
+    "icon": "src/assets/images/furni-icons/brand/os_icon.gif",
+    "description": "ORANGE SLOP"
+  },
+  {
+    "name": "Green Slurpee Machine",
+    "img": "src/assets/images/furni/brand/gs.gif",
+    "icon": "src/assets/images/furni-icons/brand/gs_icon.gif",
+    "description": "Green SKUCK DISPENSER"
+  },
+  {
+    "name": "Purple Slurpee Machine",
+    "img": "src/assets/images/furni/brand/ps.gif",
+    "icon": "src/assets/images/furni-icons/brand/ps_icon.gif",
+    "description": "grape ice dog"
+  },
+  {
+    "name": "Aqua Slurpee Machine",
+    "img": "src/assets/images/furni/brand/as.gif",
+    "icon": "src/assets/images/furni-icons/brand/as_icon.gif",
+    "description": "clear as DAY"
+  },
+  {
+    "name": "Red Slurpee Machine",
+    "img": "src/assets/images/furni/brand/rs.gif",
+    "icon": "src/assets/images/furni-icons/brand/rs_icon.gif",
+    "description": "cherry bomb"
+  },
+  {
+    "name": "Pink Slurpee Machine",
+    "img": "src/assets/images/furni/brand/pks.gif",
+    "icon": "src/assets/images/furni-icons/brand/pks_icon.gif",
+    "description": "GIVE ME THE BALL"
+  },
+  {
+    "name": "Green Pillow",
+    "img": "src/assets/images/furni/pillows/grp.gif",
+    "icon": "src/assets/images/furni-icons/pillows/grp_icon.gif",
+    "description": "FRENCH GOT THE SHOVEL"
+  },
+  {
+    "name": "Red Pillow",
+    "img": "src/assets/images/furni/pillows/rp.gif",
+    "icon": "src/assets/images/furni-icons/pillows/rp_icon.gif",
+    "description": "A festivus for the rest of us"
+  },
+  {
+    "name": "Rhino Nest",
+    "img": "src/assets/images/furni/animals/rn.gif",
+    "icon": "src/assets/images/furni-icons/animals/rn_icon.gif",
+    "description": "Rambi's bed"
+  },
+  {
+    "name": "Gnome",
+    "img": "src/assets/images/furni/collects/gnome.gif",
+    "icon": "src/assets/images/furni-icons/collects/ghome_icon.gif",
+    "description": "I WANT MY **** GNOME"
+  },
+  {
+    "name": "Koala",
+    "img": "src/assets/images/furni/collects/koala.gif",
+    "icon": "src/assets/images/furni-icons/collects/koala_icon.gif",
+    "description": "look at him go!"
+  },
+  {
+    "name": "Basketball Hoop",
+    "img": "src/assets/images/furni/mode/bh.gif",
+    "icon": "src/assets/images/furni-icons/mode/bh_icon.gif",
+    "description": "I wish I was a baller"
+  },
+  {
+    "name": "The Inferno",
+    "img": "src/assets/images/furni/mode/ship.png",
+    "icon": "src/assets/images/furni-icons/mode/ship_icon.gif",
+    "description": "goonies never say die"
+  },
+  {
+    "name": "Crab",
+    "img": "src/assets/images/furni/animals/crab.gif",
+    "icon": "src/assets/images/furni-icons/animals/crab_icon.gif",
+    "description": "YEH IMMA PINCH YA"
+  },
+  {
+    "name": "Gothic Fountain",
+    "img": "src/assets/images/furni/ultras/gf.gif",
+    "icon": "src/assets/images/furni-icons/ultras/gf_icon.gif",
+    "description": "blood of an irish goat"
+  },
+  {
+    "name": "Industrial Turbine",
+    "img": "src/assets/images/furni/ultras/it.gif",
+    "on": "src/assets/images/furni/ultras/it-on.gif",
+    "icon": "src/assets/images/furni-icons/ultras/it_icon.gif",
+    "description": "twister... wait up"
+  },
+  {
+    "name": "Telescope",
+    "img": "src/assets/images/furni/ultras/scope.png",
+    "icon": "src/assets/images/furni-icons/ultras/scope_icon.png",
+    "description": "EMMEEEETTTTTTT"
+  },
+  {
+    "name": "Father of Ghotel",
+    "img": "src/assets/images/furni/walls/father.gif",
+    "icon": "src/assets/images/furni-icons/walls/father_icon.gif",
+    "description": "He was #1"
+  },
+  {
+    "name": "Golden Record",
+    "img": "src/assets/images/furni/walls/record.gif",
+    "icon": "src/assets/images/furni-icons/walls/record_icon.gif",
+    "description": "Basil, the record"
+  },
+  {
+    "name": "Disco Sign",
+    "img": "src/assets/images/furni/walls/disco.gif",
+    "icon": "src/assets/images/furni-icons/walls/disco_icon.gif",
+    "description": "I SAW YOUR FACE AND WOW"
+  },
+  {
+    "name": "Wise Owl",
+    "img": "src/assets/images/furni/animals/owl.gif",
+    "icon": "src/assets/images/furni-icons/animals/owl_icon.png",
+    "description": "Mr. Owl, how many AHHH"
+  },
+  {
+    "name": "Mocca Master",
+    "img": "src/assets/images/furni/club/moc.gif",
+    "icon": "src/assets/images/furni-icons/club/moc_icon.gif",
+    "description": "how old you are?"
+  },
+  {
+    "name": "The Safe",
+    "img": "src/assets/images/furni/ultras/safe.gif",
+    "on": "src/assets/images/furni/ultras/safe-on.gif",
+    "icon": "src/assets/images/furni-icons/ultras/safe_icon.gif",
+    "description": "I PUT THE COAT ON HER"
+  },
+  {
+    "name": "Viking Loot",
+    "img": "src/assets/images/furni/exchange/loot.png",
+    "icon": "src/assets/images/furni-icons/exchange/loot_icon.png",
+    "description": "Worth 500 doubloons"
+  },
+  {
+    "name": "Purple Pillow",
+    "img": "src/assets/images/furni/pillows/purpp.gif",
+    "icon": "src/assets/images/furni-icons/pillows/purpp_icon.gif",
+    "description": "Medium hamburger, ty"
+  }
 ]

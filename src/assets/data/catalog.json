@@ -909,6 +909,14 @@
         "description": "A festivus for the rest of us",
         "price": 25,
         "itemid": 139
+      },
+      {
+        "name": "Purple Pillow",
+        "img": "src/assets/images/furni/pillows/purpp.gif",
+        "icon": "src/assets/images/furni-icons/pillows/purpp_icon.gif",
+        "description": "Medium hamburger, ty",
+        "price": 25,
+        "itemid": 156
       }
     ]
   },
